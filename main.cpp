@@ -70,25 +70,25 @@ int main() {
 
     constexpr auto tup = std::make_tuple(0,1,2,3,4,5,6,7,8,9,10);
 
-    constexpr auto lol = tuple_split<11>(tup);
+    constexpr auto split1 = tuple_split<11>(tup);
     //decltype(lol)::foo = 1;
-    std::cout << "lol " << lol << std::endl;
+    std::cout << "split1 " << split1 << std::endl;
 
-    constexpr auto lol2 = tuple_split_from<5,6>(tup);
-    std::cout << "lol " << lol2 << std::endl;
+    constexpr auto split2 = tuple_split_from<5,6>(tup);
+    std::cout << "split2 " << split2 << std::endl;
 
     //TODO: split tuple and recreate lost indices
-    constexpr auto lol3 = recreate_index_tuple<0,3,2,0,4>(tup);
-    constexpr auto lol4 = recreate_index_tuple<0,3,2,1,4>(tup);
-    constexpr auto lol5 = recreate_index_tuple<0,3,2,2,4>(tup);
-    std::cout << lol3 << std::endl;
-    std::cout << lol4 << std::endl;
-    std::cout << lol5 << std::endl;
+    constexpr auto rec_split1 = recreate_index_tuple<0,3,2,0,4>(tup);
+    constexpr auto rec_split2 = recreate_index_tuple<0,3,2,1,4>(tup);
+    constexpr auto rec_split3 = recreate_index_tuple<0,3,2,2,4>(tup);
+    std::cout << rec_split1 << std::endl;
+    std::cout << rec_split2 << std::endl;
+    std::cout << rec_split3 << std::endl;
 
 
     //tuple of tuples
     constexpr auto look = recreate_for_index_sequence<0,3,2,4,3>(tup);
-    //decltype(look)::foo = 1;
+    decltype(look)::foo = 1;
     std::cout << look << std::endl;
 
     return 0;

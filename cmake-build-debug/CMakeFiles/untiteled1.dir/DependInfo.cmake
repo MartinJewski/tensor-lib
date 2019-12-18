@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/martin/CLionProjects/untitled1/main.cpp" "/home/martin/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untiteled1.dir/main.cpp.o"
+  "/home/martin/CLionProjects/tensor-library-v1/main.cpp" "/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/CMakeFiles/untiteled1.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

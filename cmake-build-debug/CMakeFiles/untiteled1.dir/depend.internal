@@ -100,13 +100,13 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/zip.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/zip_with.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/std/detail/associated_types.hpp
- /home/martin/CLionProjects/untitled1/main.cpp
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/make_index_sequence_from.h
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/range_of_nonviewable_container_show.h
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/recreate_for_index_sequence.h
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/recreate_index_tuple.h
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/tensor_cartesian_product.h
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/tensor_enumerate_range.h
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/tuple_show.h
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/tuple_split.h
- /home/martin/CLionProjects/untitled1/tensor-lib/tensor-builder/tuple_split_from.h
+ /home/martin/CLionProjects/tensor-library-v1/main.cpp
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/make_index_sequence_from.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/range_of_nonviewable_container_show.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/recreate_for_index_sequence.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/recreate_index_tuple.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/tensor_cartesian_product.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/tensor_enumerate_range.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/tuple_show.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/tuple_split.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder/tuple_split_from.h

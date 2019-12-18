@@ -11,7 +11,34 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="" />
+    <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,11 +48,15 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/main.cpp" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/tensor-lib/tensor-builder/tensor_cartesian_product.h" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1UIWCf9vhebClMAqptDzOEQ35YO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -34,7 +65,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BachelorThesis_TensorsV2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager">
@@ -71,7 +102,8 @@
       <workItem from="1575646316792" duration="16835000" />
       <workItem from="1575965141416" duration="1623000" />
       <workItem from="1575967298283" duration="13861000" />
-      <workItem from="1575981407045" duration="48815000" />
+      <workItem from="1575981407045" duration="50330000" />
+      <workItem from="1576669410082" duration="470000" />
     </task>
     <servers />
   </component>
@@ -83,26 +115,26 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="405" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.732@0.0.1366.732" timestamp="1576074164671" />
-    <state x="628" y="132" key="FileChooserDialogImpl" timestamp="1575285099139">
+    <state x="628" y="132" key="FileChooserDialogImpl" timestamp="1576668976032">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="628" y="132" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1575285099139" />
-    <state width="1197" height="154" key="GridCell.Tab.0.bottom" timestamp="1576507159315">
+    <state x="628" y="132" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1576668976032" />
+    <state width="1197" height="154" key="GridCell.Tab.0.bottom" timestamp="1576669192463">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1197" height="154" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1576507159315" />
-    <state width="1197" height="154" key="GridCell.Tab.0.center" timestamp="1576507159314">
+    <state width="1197" height="154" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1576669192463" />
+    <state width="1197" height="154" key="GridCell.Tab.0.center" timestamp="1576669192462">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1197" height="154" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1576507159314" />
-    <state width="1197" height="154" key="GridCell.Tab.0.left" timestamp="1576507159314">
+    <state width="1197" height="154" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1576669192462" />
+    <state width="1197" height="154" key="GridCell.Tab.0.left" timestamp="1576669192451">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1197" height="154" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1576507159314" />
-    <state width="1197" height="154" key="GridCell.Tab.0.right" timestamp="1576507159315">
+    <state width="1197" height="154" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1576669192451" />
+    <state width="1197" height="154" key="GridCell.Tab.0.right" timestamp="1576669192463">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1197" height="154" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1576507159315" />
+    <state width="1197" height="154" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1576669192463" />
     <state x="299" y="0" width="1007" height="732" key="SettingsEditor" timestamp="1575646728868">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
