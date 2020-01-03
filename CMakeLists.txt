@@ -4,13 +4,18 @@ project(untiteled1 C CXX)
 set(CMAKE_CXX_STANDARD 20)
 
 set(SOURCE_FILES main.cpp
-        header/ranges.h
-        header/tensor.h
-        header/tensor_specification.h
+        tensor-lib/tensor-definition/tensor_specification.h
         tensor-lib/tensor-builder-utilities/cartesian_product.h
+        tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
         tensor-lib/tensor-builder-utilities/tuple_show.h
         tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h
-        tensor-lib/tensor-builder-utilities/enumerate_range.h tensor-lib/tensor-builder-utilities/tuple_split.h tensor-lib/tensor-builder-utilities/make_index_sequence_from.h tensor-lib/tensor-builder-utilities/tuple_split_from.h tensor-lib/tensor-builder-utilities/recreate_index_tuple.h tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h tensor-lib/tensor-builder-utilities/save_as_array.h)
+        tensor-lib/tensor-builder-utilities/enumerate_range.h
+        tensor-lib/tensor-builder-utilities/tuple_split.h
+        tensor-lib/tensor-builder-utilities/make_index_sequence_from.h
+        tensor-lib/tensor-builder-utilities/tuple_split_from.h
+        tensor-lib/tensor-builder-utilities/recreate_index_tuple.h
+        tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
+        tensor-lib/tensor-builder-utilities/save_as_array.h)
 
 add_library(range_v3 INTERFACE IMPORTED)
 set_target_properties(range_v3 PROPERTIES

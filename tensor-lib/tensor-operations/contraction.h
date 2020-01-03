@@ -10,10 +10,12 @@
 template<std::size_t skipPos1, std::size_t skipPos2, typename T1, typename T2>
 constexpr auto contraction(T1&& tensor1, T2&& tensor2){
 
+    //TODO: CONTRACTION ALGO
+
     auto std::vector<TENSOR_DATATYPE> finalTensor = {};
 
-    auto sris_tensor1 = save_recreated_index_sequence<offset, N, skipPos1, length, times>(cartesian_product finalTensor);
-    auto sris_tensor2 = save_recreated_index_sequence<offset, N, skipPos2, length, times>(cartesian_product finalTensor);
+    auto sris_tensor1 = save_recreated_index_sequence<offset, N, skipPos1, length, times>(tensor1.calculate_indices());
+    auto sris_tensor2 = save_recreated_index_sequence<offset, N, skipPos2, length, times>(tensor2.calculate_indices());
 
     for(length of sris_t1){
 

@@ -2255,6 +2255,10 @@ tensor-lib/tensor-builder-utilities/save_as_array.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_as_array.h
 tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h
+tensor-lib/tensor-definition/tensor.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
+tensor-lib/tensor-definition/tensor_specification.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h
 range/v3/view/indices.hpp
@@ -2339,4 +2343,12 @@ make_index_sequence_from.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/make_index_sequence_from.h
 tuple_split.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_split.h
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
+vector
+-
+tuple
+-
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 

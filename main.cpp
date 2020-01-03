@@ -33,6 +33,9 @@
 #include "tensor-lib/tensor-builder-utilities/save_as_array.h"
 #include "tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h"
 
+#include "tensor-lib/tensor-definition/tensor.h"
+#include "tensor-lib/tensor-definition/tensor_specification.h"
+
 
 using std::cout;
 
@@ -107,6 +110,12 @@ int main() {
 
     //RIGHT NOW IT TAKES A CARTESIAN PRODUCT AND DOES A OPERATION FOR EVERY TUPLE
     auto elooo = save_recreated_index_sequence<0,1,1,2,5>(cart1);
+
+    tensor<double, up_t, low_t> tensorTest(1.0,2.0,3.0,4.0,5.0,6.0);
+
+    tensorTest.calculate_indices();
+
+
 
     return 0;
 }

@@ -90,19 +90,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/header/ranges.h">
-			<Option target="untiteled1"/>
-		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/header/tensor.h">
-			<Option target="untiteled1"/>
-		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/header/tensor_specification.h">
-			<Option target="untiteled1"/>
-		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/main.cpp">
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h">
+			<Option target="untiteled1"/>
+		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h">
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/enumerate_range.h">
@@ -130,6 +124,9 @@
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_split_from.h">
+			<Option target="untiteled1"/>
+		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h">
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/CMakeLists.txt">

@@ -116,3 +116,5 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_split.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_split_from.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
