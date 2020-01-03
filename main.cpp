@@ -20,20 +20,25 @@
 
 #include <tuple>
 
-#include "tensor-lib/tensor-builder/tensor_cartesian_product.h"
-#include "tensor-lib/tensor-builder/range_of_nonviewable_container_show.h"
-#include "tensor-lib/tensor-builder/tensor_enumerate_range.h"
-#include "tensor-lib/tensor-builder/tuple_show.h"
-#include "tensor-lib/tensor-builder/tuple_split.h"
-#include "tensor-lib/tensor-builder/tuple_split_from.h"
-#include "tensor-lib/tensor-builder/make_index_sequence_from.h"
-#include "tensor-lib/tensor-builder/recreate_index_tuple.h"
-#include "tensor-lib/tensor-builder/recreate_for_index_sequence.h"
+#include "tensor-lib/tensor-builder-utilities/cartesian_product.h"
+#include "tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h"
+#include "tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h"
+#include "tensor-lib/tensor-builder-utilities/enumerate_range.h"
+#include "tensor-lib/tensor-builder-utilities/tuple_show.h"
+#include "tensor-lib/tensor-builder-utilities/tuple_split.h"
+#include "tensor-lib/tensor-builder-utilities/tuple_split_from.h"
+#include "tensor-lib/tensor-builder-utilities/make_index_sequence_from.h"
+#include "tensor-lib/tensor-builder-utilities/recreate_index_tuple.h"
+#include "tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h"
+#include "tensor-lib/tensor-builder-utilities/save_as_array.h"
+#include "tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h"
 
 
 using std::cout;
 
 int main() {
+
+    auto cart1 = cartesian_product_to_vec<2,2>();
 
     //--------------------------------------------------
     //a tuple will contain the position indices
@@ -86,10 +91,22 @@ int main() {
     std::cout << rec_split3 << std::endl;
 
 
+    std::cout << " " << tup << std::endl;
+    std::cout << "tup: " << tup << std::endl;
     //tuple of tuples
     constexpr auto look = recreate_for_index_sequence<0,3,2,4,3>(tup);
-    decltype(look)::foo = 1;
+    constexpr auto look2 = recreate_for_index_sequence<4,7,2,4,3>(tup);
+    //decltype(look)::foo = 1;
     std::cout << look << std::endl;
+    std::cout << look2 << std::endl;
+
+    auto myArr = save_as_array<decltype(look), 2>(look, look2);
+    //decltype(look)::foo = 1;
+
+    std::cout << "-----------" << std::endl;
+
+    //RIGHT NOW IT TAKES A CARTESIAN PRODUCT AND DOES A OPERATION FOR EVERY TUPLE
+    auto elooo = save_recreated_index_sequence<0,1,1,2,5>(cart1);
 
     return 0;
 }

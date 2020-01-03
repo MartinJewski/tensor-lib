@@ -2,28 +2,29 @@
 // Created by martin on 10.12.19.
 //
 
-#ifndef UNTITELED1_TENSOR_CARTESIAN_PRODUCT_H
-#define UNTITELED1_TENSOR_CARTESIAN_PRODUCT_H
+#ifndef UNTITELED1_CARTESIAN_PRODUCT_H
+#define UNTITELED1_CARTESIAN_PRODUCT_H
 
 #include <range/v3/view/indices.hpp>
 #include <range/v3/view/cartesian_product.hpp>
+#include <range/v3/range/conversion.hpp>
 
-//pack expansion
+
 
 template<std::size_t length, std::size_t... is>
-constexpr auto tensor_cartesian_product(std::index_sequence<is...>) {
+constexpr auto cartesian_product(std::index_sequence<is...>) {
     const auto cart_input1 = ranges::view::indices(length);
     return ranges::view::cartesian_product((is, cart_input1)...);
 }
 
 template<std::size_t length, std::size_t N>
-constexpr auto tensor_cartesian_product(){
-    return tensor_cartesian_product<length>(std::make_index_sequence<N>{});
+constexpr auto cartesian_product(){
+    return cartesian_product<length>(std::make_index_sequence<N>{});
 }
 
 
 
-#endif //UNTITELED1_TENSOR_CARTESIAN_PRODUCT_H
+#endif //UNTITELED1_CARTESIAN_PRODUCT_H
 
 
 //--------------------------------------------------

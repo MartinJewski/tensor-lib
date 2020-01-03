@@ -2,8 +2,8 @@
 // Created by martin on 11.12.19.
 //
 
-#ifndef UNTITELED1_TENSOR_ENUMERATE_RANGE_H
-#define UNTITELED1_TENSOR_ENUMERATE_RANGE_H
+#ifndef UNTITELED1_ENUMERATE_RANGE_H
+#define UNTITELED1_ENUMERATE_RANGE_H
 
 #include <range/v3/view/enumerate.hpp>
 
@@ -15,4 +15,4 @@ constexpr auto tensor_enumerate_range(const T& container){
 }
 
 
-#endif //UNTITELED1_TENSOR_ENUMERATE_RANGE_H
+#endif //UNTITELED1_ENUMERATE_RANGE_H

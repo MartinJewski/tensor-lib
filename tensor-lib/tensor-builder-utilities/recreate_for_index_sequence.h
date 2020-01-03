@@ -6,6 +6,7 @@
 #define UNTITELED1_RECREATE_FOR_INDEX_SEQUENCE_H
 
 #include "recreate_index_tuple.h"
+#include "save_as_array.h"
 
 template<std::size_t offset, std::size_t N, std::size_t skipPos, std::size_t length, std::size_t ...times, typename T>
 constexpr auto recreate_for_index_sequence_i(T& tuple, std::index_sequence<times...>){
@@ -20,4 +21,5 @@ constexpr auto recreate_for_index_sequence(T& tuple){
     return recreate_for_index_sequence_i<offset, N, skipPos, length>(tuple,std::make_index_sequence<times>{});
 
 }
+
 #endif //UNTITELED1_RECREATE_FOR_INDEX_SEQUENCE_H
