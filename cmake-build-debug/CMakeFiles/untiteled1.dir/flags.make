@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -fconcepts -fpermissive -std=gnu++2a
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include 
+CXX_INCLUDES = -I/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities -I/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition -I/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operation -isystem /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include 
 

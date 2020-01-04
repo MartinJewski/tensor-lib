@@ -10,7 +10,7 @@ int constexpr compiletime_pow(){
     if constexpr(exponent == 0){
         return 1;
     }else{
-        return base * pow<base, exponent-1>();
+        return base * compiletime_pow<base, exponent-1>();
     }
 }
 

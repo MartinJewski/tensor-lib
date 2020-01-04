@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+../tensor-lib/tensor-builder-utilities/compiletime_pow.h
+
+../tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h
+remove_ith_tuple_element.h
+../tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h
+
+../tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h
+
+../tensor-lib/tensor-definition/tensor.h
+vector
+-
+tuple
+-
+tensor_specification.h
+../tensor-lib/tensor-definition/tensor_specification.h
+array
+-
+compiletime_pow.h
+../tensor-lib/tensor-definition/compiletime_pow.h
+array
+-
+
 /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/concepts/concepts.hpp
 initializer_list
 -
@@ -2353,8 +2375,22 @@ tuple
 -
 tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
+array
+-
+compiletime_pow.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/compiletime_pow.h
+array
+-
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
+remove_ith_concat_tuple.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/remove_ith_concat_tuple.h
+tensor_specification.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor_specification.h
+tensor.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor.h
+tuple
+-
 

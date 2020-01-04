@@ -112,9 +112,17 @@ int main() {
     //RIGHT NOW IT TAKES A CARTESIAN PRODUCT AND DOES A OPERATION FOR EVERY TUPLE
     auto elooo = save_recreated_index_sequence<0,1,1,2,5>(cart1);
 
-    tensor<double, up_t, low_t> tensorTest(1.0,2.0,3.0,4.0,5.0,6.0);
+    constexpr tensor<double, up_t, low_t> tensorTest1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    constexpr tensor<double, up_t, low_t> tensorTest2(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
+    remove_ith_concat_tuple<0,0,  decltype(tensorTest1)::indices_tup , decltype(tensorTest1)::indices_tup >::type brob;
 
+    constexpr Dummy<double> dum(3);
+
+    myfunction<tensorTest1.indices_amount, tensorTest2.indices_amount>();
+
+    //decltype(jop)::type;
+    //contraction<0,0>(tensorTest1, tensorTest2);
 
 
     return 0;

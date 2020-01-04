@@ -5,17 +5,17 @@
 #ifndef UNTITELED1_CONTRACTION_H
 #define UNTITELED1_CONTRACTION_H
 
+#include "remove_ith_concat_tuple.h"
+#include "tensor_specification.h"
+#include "tensor.h"
+#include <tuple>
 
-template<std::size_t skipPos1, std::size_t skipPos2, typename T1, typename T2>
-constexpr auto contraction(T1&& tensor1, T2&& tensor2){
+template<t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, typename T1, typename T2>
+constexpr auto contraction(T1&& tensor1_vec, T2&& tensor2_vec){
 
-    //TODO: CONTRACTION ALGO
+    auto sris_tensor1 = save_recreated_index_sequence<t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, DIM3>(tensor1_vec);
+    auto sris_tensor2 = save_recreated_index_sequence<t2_offset, tensor2_N, t2_skipPos, t2_indice_amount, DIM3>(tensir2_vec);
 
-    std::vector<double> finalTensor = {};
-/*
-    auto sris_tensor1 = save_recreated_index_sequence<offset, N, skipPos1, length, times>(tensor1.calculate_indices());
-    auto sris_tensor2 = save_recreated_index_sequence<offset, N, skipPos2, length, times>(tensor2.calculate_indices());
-*/
     /*
     for(length of sris_t1){
 
@@ -37,7 +37,7 @@ constexpr auto contraction(T1&& tensor1, T2&& tensor2){
 
     }
 
-    */
+     */
 
 }
 

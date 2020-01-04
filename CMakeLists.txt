@@ -3,10 +3,20 @@ project(untiteled1 C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
+include_directories(./tensor-lib/tensor-builder-utilities)
+include_directories(./tensor-lib/tensor-definition)
+include_directories(./tensor-lib/tensor-operation)
+
 set(SOURCE_FILES main.cpp
+        tensor-lib/tensor-operations/contraction.h
+        tensor-lib/tensor-definition/tensor.h
         tensor-lib/tensor-definition/tensor_specification.h
         tensor-lib/tensor-builder-utilities/cartesian_product.h
         tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
+        tensor-lib/tensor-builder-utilities/compiletime_pow.h
+        tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
+        tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h
+        tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h
         tensor-lib/tensor-builder-utilities/tuple_show.h
         tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h
         tensor-lib/tensor-builder-utilities/enumerate_range.h
@@ -23,6 +33,8 @@ set_target_properties(range_v3 PROPERTIES
 
 add_compile_options(-fconcepts) #enables concepts(unstable). Stable versions will be released with gcc/g++ 10
 add_compile_options(-fpermissive)
+
+
 
 add_executable(untiteled1 ${SOURCE_FILES} ${SOURCE_FILES2})
 
