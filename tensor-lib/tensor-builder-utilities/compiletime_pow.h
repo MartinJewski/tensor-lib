@@ -6,7 +6,7 @@
 #define UNTITELED1_POW_H
 
 template<int base, int exponent>
-int constexpr pow(){
+int constexpr compiletime_pow(){
     if constexpr(exponent == 0){
         return 1;
     }else{

@@ -2259,6 +2259,8 @@ tensor-lib/tensor-definition/tensor.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
 tensor-lib/tensor-definition/tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
+tensor-lib/tensor-operations/contraction.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h
 range/v3/view/indices.hpp
@@ -2351,4 +2353,6 @@ tuple
 -
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
 

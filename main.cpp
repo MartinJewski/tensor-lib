@@ -35,6 +35,7 @@
 
 #include "tensor-lib/tensor-definition/tensor.h"
 #include "tensor-lib/tensor-definition/tensor_specification.h"
+#include "tensor-lib/tensor-operations/contraction.h"
 
 
 using std::cout;
