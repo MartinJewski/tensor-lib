@@ -114,7 +114,6 @@ int main() {
 
     tensor<double, up_t, low_t> tensorTest(1.0,2.0,3.0,4.0,5.0,6.0);
 
-    tensorTest.calculate_indices();
 
 
 

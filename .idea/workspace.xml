@@ -12,16 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/compiletime_pow.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bachelor_Thesis_Tensor_CPP20" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -105,6 +100,7 @@
       <workItem from="1578064973341" duration="4158000" />
       <workItem from="1578069321685" duration="208000" />
       <workItem from="1578142103598" duration="1259000" />
+      <workItem from="1578143670661" duration="684000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -153,22 +149,22 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1578142693688" />
-    <state width="1246" height="152" key="GridCell.Tab.0.bottom" timestamp="1578069136490">
+    <state width="1318" height="150" key="GridCell.Tab.0.bottom" timestamp="1578144299612">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1246" height="152" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1578069136490" />
-    <state width="1246" height="152" key="GridCell.Tab.0.center" timestamp="1578069136489">
+    <state width="1318" height="150" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1578144299612" />
+    <state width="1318" height="150" key="GridCell.Tab.0.center" timestamp="1578144299612">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1246" height="152" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1578069136489" />
-    <state width="1246" height="152" key="GridCell.Tab.0.left" timestamp="1578069136489">
+    <state width="1318" height="150" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1578144299612" />
+    <state width="1318" height="150" key="GridCell.Tab.0.left" timestamp="1578144299611">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1246" height="152" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1578069136489" />
-    <state width="1246" height="152" key="GridCell.Tab.0.right" timestamp="1578069136490">
+    <state width="1318" height="150" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1578144299611" />
+    <state width="1318" height="150" key="GridCell.Tab.0.right" timestamp="1578144299612">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1246" height="152" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1578069136490" />
+    <state width="1318" height="150" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1578144299612" />
     <state x="299" y="0" width="1007" height="732" key="SettingsEditor" timestamp="1575646728868">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -177,9 +173,9 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="394" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.732@0.0.1366.732" timestamp="1576670191396" />
-    <state x="290" y="53" width="672" height="678" key="search.everywhere.popup" timestamp="1578060055389">
+    <state x="290" y="53" width="672" height="678" key="search.everywhere.popup" timestamp="1578143972117">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="290" y="53" width="672" height="678" key="search.everywhere.popup/0.0.1366.732@0.0.1366.732" timestamp="1578060055389" />
+    <state x="290" y="53" width="672" height="678" key="search.everywhere.popup/0.0.1366.732@0.0.1366.732" timestamp="1578143972117" />
   </component>
 </project>

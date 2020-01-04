@@ -7,9 +7,10 @@
 
 #include <vector>
 #include <tuple>
+#include "tensor_specification.h"
 
 template<typename T, typename ... Args>
-class tensor{
+class tensorBase{
 
     private:
 
@@ -21,13 +22,16 @@ class tensor{
     std::size_t indices_amount = sizeof...(Args);
 
     template<typename ... Element>
-    constexpr tensor(Element&&... input) : elements{input...} {};
+    constexpr tensorBase(Element&&... input) : elements{input...} {};
 
     constexpr auto calculate_indices(){
-        return cartesian_product_to_vec<2,2>();
+        return cartesian_product_to_vec<DIM3, sizeof...(Args)>();
     };
 
 };
+
+template<typename T, typename ... Args>
+using tensor = tensorBase<T, std::tuple<Args...>>;
 
 
 #endif //UNTITELED1_TENSOR_H
