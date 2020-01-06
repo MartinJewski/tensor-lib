@@ -8,6 +8,12 @@
 
 ../tensor-lib/tensor-builder-utilities/compiletime_pow.h
 
+../tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
+tuple
+-
+tensor_specification.h
+../tensor-lib/tensor-builder-utilities/tensor_specification.h
+
 ../tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h
 remove_ith_tuple_element.h
 ../tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h
@@ -25,8 +31,8 @@ array
 -
 compiletime_pow.h
 ../tensor-lib/tensor-definition/compiletime_pow.h
-array
--
+
+../tensor-lib/tensor-definition/tensor_specification.h
 
 /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/concepts/concepts.hpp
 initializer_list
@@ -2277,6 +2283,8 @@ tensor-lib/tensor-builder-utilities/save_as_array.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_as_array.h
 tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h
+tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
 tensor-lib/tensor-definition/tensor.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
 tensor-lib/tensor-definition/tensor_specification.h
@@ -2309,6 +2317,12 @@ iostream
 -
 utility
 -
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
+tuple
+-
+tensor_specification.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tensor_specification.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h
 tuple_show.h
@@ -2379,16 +2393,18 @@ array
 -
 compiletime_pow.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/compiletime_pow.h
-array
--
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
+tuple_show.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
 remove_ith_concat_tuple.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/remove_ith_concat_tuple.h
 tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor_specification.h
+pos_nd_to_1d.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/pos_nd_to_1d.h
 tensor.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor.h
 tuple

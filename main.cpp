@@ -32,6 +32,7 @@
 #include "tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h"
 #include "tensor-lib/tensor-builder-utilities/save_as_array.h"
 #include "tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h"
+#include "tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h"
 
 #include "tensor-lib/tensor-definition/tensor.h"
 #include "tensor-lib/tensor-definition/tensor_specification.h"
@@ -112,18 +113,15 @@ int main() {
     //RIGHT NOW IT TAKES A CARTESIAN PRODUCT AND DOES A OPERATION FOR EVERY TUPLE
     auto elooo = save_recreated_index_sequence<0,1,1,2,5>(cart1);
 
-    constexpr tensor<double, up_t, low_t> tensorTest1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
-    constexpr tensor<double, up_t, low_t> tensorTest2(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    tensor<double, up_t, low_t> tensorTest1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
+    tensor<double, up_t, low_t> tensorTest2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
 
-    remove_ith_concat_tuple<0,0,  decltype(tensorTest1)::indices_tup , decltype(tensorTest1)::indices_tup >::type brob;
-
-    constexpr Dummy<double> dum(3);
-
-    myfunction<tensorTest1.indices_amount, tensorTest2.indices_amount>();
+    //myfunction<tensorTest1.indices_amount, tensorTest2.indices_amount>();
 
     //decltype(jop)::type;
-    //contraction<0,0>(tensorTest1, tensorTest2);
-
+    contraction<0,1,0,2,
+                0,1,1,2,
+                double>(tensorTest1.calculate_indices(), tensorTest1.data, tensorTest2.calculate_indices(), tensorTest2.data);
 
     return 0;
 }

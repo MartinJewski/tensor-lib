@@ -5,39 +5,52 @@
 #ifndef UNTITELED1_CONTRACTION_H
 #define UNTITELED1_CONTRACTION_H
 
+#include "tuple_show.h"
 #include "remove_ith_concat_tuple.h"
 #include "tensor_specification.h"
+#include "pos_nd_to_1d.h"
 #include "tensor.h"
 #include <tuple>
 
-template<t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, typename T1, typename T2>
-constexpr auto contraction(T1&& tensor1_vec, T2&& tensor2_vec){
+template<std::size_t t1_offset, std::size_t tensor1_N, std::size_t t1_skipPos, std::size_t t1_indice_amount,
+         std::size_t t2_offset, std::size_t tensor2_N, std::size_t t2_skipPos, std::size_t t2_indice_amount,
+         typename resultT, typename C1, typename T1, typename T2, typename C2>
+constexpr auto contraction(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartesian_vec, T2&& tensor2_vec){
 
-    auto sris_tensor1 = save_recreated_index_sequence<t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, DIM3>(tensor1_vec);
-    auto sris_tensor2 = save_recreated_index_sequence<t2_offset, tensor2_N, t2_skipPos, t2_indice_amount, DIM3>(tensir2_vec);
+    auto sris_tensor1 = save_recreated_index_sequence<t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, DIM3>(t1_cartesian_vec);
+    auto sris_tensor2 = save_recreated_index_sequence<t2_offset, tensor2_N, t2_skipPos, t2_indice_amount, DIM3>(t2_cartesian_vec);
 
-    /*
-    for(length of sris_t1){
+    std::vector<resultT> result_vector = {};
 
-        for(every tuple3){
+    for(int i = 0; i < sris_tensor1.size(); i++){
 
-            tempResult = 0;
+        if(sris_tensor1.size() == 0){
+            return result_vector;
+        }
+        if(sris_tensor1.size() == 1){
+            result_vector.push_back(tensor1_vec[0] * tensor2_vec[0]);
+        }
+        if(sris_tensor1.size() == 1){
 
-            for(every tuple){
+            auto i1 = tensor1_vec[pos_nd_to_1d<t1_indice_amount>(std::get<0>(sris_tensor1[i]))] *
+                    tensor2_vec[pos_nd_to_1d<t2_indice_amount>(std::get<0>(sris_tensor2[i]))];
 
-                val_t1 = take element form sris_tensor1 -> calc pos in tensor1 -> get element
-                val_t2 = take element from sris_tensor2 -> calc pos in tensor2 -> get element
+            auto i2 = tensor1_vec[pos_nd_to_1d<t1_indice_amount>(std::get<1>(sris_tensor1[i]))] *
+                      tensor2_vec[pos_nd_to_1d<t2_indice_amount>(std::get<1>(sris_tensor2[i]))];
 
-                tempResult += val_t1 * val_t2;
+            auto i3 = tensor1_vec[pos_nd_to_1d<t1_indice_amount>(std::get<2>(sris_tensor1[i]))] *
+                      tensor2_vec[pos_nd_to_1d<t2_indice_amount>(std::get<2>(sris_tensor2[i]))];
 
-                finalTensor.push_back(tempResult);
-
-            }
+            result_vector.push_back(i1 + i2 + i3);
         }
 
+        return result_vector;
     }
 
-     */
+
+
+
+
 
 }
 
