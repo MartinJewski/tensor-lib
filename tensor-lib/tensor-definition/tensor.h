@@ -37,7 +37,7 @@ class tensorBase{
     };
 
     constexpr auto calculate_indices(){
-        return cartesian_product_to_vec<DIM3, sizeof...(Args)>();
+        return cartesian_product_to_vec<DIM3, sizeof...(Args)+1>();
     };
 
     template<typename D>

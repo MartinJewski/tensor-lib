@@ -34,9 +34,13 @@
 #include "tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h"
 #include "tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h"
 
+
 #include "tensor-lib/tensor-definition/tensor.h"
 #include "tensor-lib/tensor-definition/tensor_specification.h"
+
 #include "tensor-lib/tensor-operations/contraction.h"
+#include "tensor-lib/tensor-operations/trace.h"
+#include "tensor-lib/tensor-operations/reorder.h"
 
 
 using std::cout;
@@ -122,6 +126,11 @@ int main() {
     contraction<0,1,0,2,
                 0,1,1,2,
                 double>(tensorTest1.calculate_indices(), tensorTest1.data, tensorTest2.calculate_indices(), tensorTest2.data);
+
+    trace<2>(tensorTest1.data);
+
+    reorder<1,0>(tensorTest1.calculate_indices(), tensorTest1.data);
+
 
     return 0;
 }

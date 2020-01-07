@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
+range/v3/view/indices.hpp
+-
+range/v3/view/cartesian_product.hpp
+-
+range/v3/range/conversion.hpp
+-
+
 ../tensor-lib/tensor-builder-utilities/compiletime_pow.h
 
 ../tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
@@ -2291,6 +2299,10 @@ tensor-lib/tensor-definition/tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 tensor-lib/tensor-operations/contraction.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
+tensor-lib/tensor-operations/trace.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
+tensor-lib/tensor-operations/reorder.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h
 range/v3/view/indices.hpp
@@ -2409,4 +2421,22 @@ tensor.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor.h
 tuple
 -
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
+cartesian_product_to_vec.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/cartesian_product_to_vec.h
+tuple_show.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
+pos_nd_to_1d.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/pos_nd_to_1d.h
+tuple
+-
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
+pos_nd_to_1d.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/pos_nd_to_1d.h
+tensor_specification.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor_specification.h
+tuple_show.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
 
