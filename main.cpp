@@ -18,6 +18,8 @@
 #include <range/v3/view/move.hpp>
 #include <range/v3/view/concat.hpp>
 
+
+
 #include <tuple>
 
 #include "tensor-lib/tensor-builder-utilities/cartesian_product.h"
@@ -41,6 +43,8 @@
 #include "tensor-lib/tensor-operations/contraction.h"
 #include "tensor-lib/tensor-operations/trace.h"
 #include "tensor-lib/tensor-operations/reorder.h"
+
+#include "tensor-lib/tensor-concepts/tensor-concepts.h"
 
 
 using std::cout;
@@ -130,6 +134,8 @@ int main() {
     trace<2>(tensorTest1.data);
 
     reorder<1,0>(tensorTest1.calculate_indices(), tensorTest1.data);
+
+   myFUNCTION<float>();
 
 
     return 0;

@@ -12,16 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-concepts/tensor-concepts.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/monoton_tuple.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BachelorThesis_TensorsV2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.splitter.proportion" value="0.24397591" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -111,6 +110,7 @@
       <workItem from="1578301687275" duration="16476000" />
       <workItem from="1578384191211" duration="1715000" />
       <workItem from="1578386323874" duration="5367000" />
+      <workItem from="1578838292465" duration="7079000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -163,22 +163,22 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1578158976605" />
-    <state width="1289" height="150" key="GridCell.Tab.0.bottom" timestamp="1578402103828">
+    <state width="1289" height="150" key="GridCell.Tab.0.bottom" timestamp="1578845762153">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1289" height="150" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1578402103828" />
-    <state width="1289" height="150" key="GridCell.Tab.0.center" timestamp="1578402103827">
+    <state width="1289" height="150" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1578845762153" />
+    <state width="1289" height="150" key="GridCell.Tab.0.center" timestamp="1578845762152">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1289" height="150" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1578402103827" />
-    <state width="1289" height="150" key="GridCell.Tab.0.left" timestamp="1578402103826">
+    <state width="1289" height="150" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1578845762152" />
+    <state width="1289" height="150" key="GridCell.Tab.0.left" timestamp="1578845762152">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1289" height="150" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1578402103826" />
-    <state width="1289" height="150" key="GridCell.Tab.0.right" timestamp="1578402103827">
+    <state width="1289" height="150" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1578845762152" />
+    <state width="1289" height="150" key="GridCell.Tab.0.right" timestamp="1578845762152">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1289" height="150" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1578402103827" />
+    <state width="1289" height="150" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1578845762152" />
     <state width="1318" height="214" key="GridCell.Tab.1.bottom" timestamp="1578160133263">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -195,10 +195,10 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state width="1318" height="214" key="GridCell.Tab.1.right/0.0.1366.732@0.0.1366.732" timestamp="1578160133263" />
-    <state x="299" y="0" width="1007" height="732" key="SettingsEditor" timestamp="1575646728868">
+    <state x="299" y="0" width="1007" height="732" key="SettingsEditor" timestamp="1578838823527">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="299" y="0" width="1007" height="732" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1575646728868" />
+    <state x="299" y="0" width="1007" height="732" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1578838823527" />
     <state x="427" y="48" width="525" height="658" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578384369031">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -207,6 +207,10 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="394" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.732@0.0.1366.732" timestamp="1578309875640" />
+    <state x="348" y="164" key="run.anything.popup" timestamp="1578845426344">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="348" y="164" key="run.anything.popup/0.0.1366.732@0.0.1366.732" timestamp="1578845426344" />
     <state x="290" y="53" width="672" height="678" key="search.everywhere.popup" timestamp="1578143972117">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
