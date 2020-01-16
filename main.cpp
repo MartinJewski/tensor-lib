@@ -53,6 +53,7 @@ int main() {
 
     auto cart1 = cartesian_product_to_vec<2,2>();
 
+    //constexpr auto cart42 = cartesian_product_new<4,2>();
     //--------------------------------------------------
     //a tuple will contain the position indices
     //E.g C lower, lower, upper, upper
@@ -120,6 +121,7 @@ int main() {
 
     //RIGHT NOW IT TAKES A CARTESIAN PRODUCT AND DOES A OPERATION FOR EVERY TUPLE
     auto elooo = save_recreated_index_sequence<0,1,1,2,5>(cart1);
+    //auto elooo2 = save_recreated_index_sequence(0,1,1,2,5, cart1);
 
     tensor<double, up_t, low_t> tensorTest1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
     tensor<double, up_t, low_t> tensorTest2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
@@ -127,7 +129,7 @@ int main() {
     //myfunction<tensorTest1.indices_amount, tensorTest2.indices_amount>();
 
     //decltype(jop)::type;
-    contraction<0,1,0,2,
+    auto t3 = contraction<0,1,0,2,
                 0,1,1,2,
                 double>(tensorTest1.calculate_indices(), tensorTest1.data, tensorTest2.calculate_indices(), tensorTest2.data);
 
@@ -135,7 +137,12 @@ int main() {
 
     reorder<1,0>(tensorTest1.calculate_indices(), tensorTest1.data);
 
-   myFUNCTION<float>();
+    //first var is from 0 to val, second var is the set cound
+    constexpr auto cartesii = ct<2,1>();
+
+
+    std::cout << cartesii << std::endl;
+
 
 
     return 0;

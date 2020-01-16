@@ -2313,6 +2313,10 @@ range/v3/view/cartesian_product.hpp
 -
 range/v3/range/conversion.hpp
 -
+tuple
+-
+tuple_show.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
 range/v3/view/indices.hpp

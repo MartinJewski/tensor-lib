@@ -20,6 +20,7 @@ constexpr auto contraction(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartes
     auto sris_tensor1 = save_recreated_index_sequence<t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, DIM3>(t1_cartesian_vec);
     auto sris_tensor2 = save_recreated_index_sequence<t2_offset, tensor2_N, t2_skipPos, t2_indice_amount, DIM3>(t2_cartesian_vec);
 
+
     std::vector<resultT> result_vector = {};
 
     for(int i = 0; i < sris_tensor1.size(); i++){
@@ -27,9 +28,11 @@ constexpr auto contraction(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartes
         if(sris_tensor1.size() == 0){
             return result_vector;
         }
+
         if(sris_tensor1.size() == 1){
             result_vector.push_back(tensor1_vec[0] * tensor2_vec[0]);
         }
+
         if(sris_tensor1.size() == 1){
 
             auto i1 = tensor1_vec[pos_nd_to_1d<t1_indice_amount>(std::get<0>(sris_tensor1[i]))] *
@@ -46,11 +49,6 @@ constexpr auto contraction(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartes
 
         return result_vector;
     }
-
-
-
-
-
 
 }
 

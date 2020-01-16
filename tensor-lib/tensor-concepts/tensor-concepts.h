@@ -17,7 +17,7 @@ concept constexpr bool Integral(){
 
 
 template <typename T>
-concept constexpr bool IntegerIntegal(){
+concept constexpr bool IntegerIntegral(){
 
     return std::is_integral<T>::value && std::numeric_limits<T>::is_integer && !(std::is_same<bool, T>::value);
 
@@ -30,8 +30,25 @@ concept constexpr bool Floatingpoint(){
 
 }
 
+template<auto val>
+concept constexpr bool Floatingpoint(){
+
+    return std::is_floating_point<decltype(val)>::value;
+
+}
+
+
 //function to test the concept
 template<typename T> requires Floatingpoint<T>()
+constexpr auto f(){
+
+    return 0;
+
+}
+
+
+//function to test the concept
+template<auto val> requires Floatingpoint<val>()
 constexpr auto myFUNCTION(){
 
     return 0;

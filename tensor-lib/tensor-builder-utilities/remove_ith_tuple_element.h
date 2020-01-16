@@ -5,7 +5,7 @@
 #ifndef UNTITELED1_REMOVE_ITH_TUPLE_ELEMENT_H
 #define UNTITELED1_REMOVE_ITH_TUPLE_ELEMENT_H
 
-
+/*
 template<std::size_t Count, typename T>
 struct remove_ith_tuple_element{};
 
@@ -24,4 +24,5 @@ struct remove_ith_tuple_element<Count, std::tuple<Head, Tail...>>{
                         )) type;
 };
 
+*/
 #endif //UNTITELED1_REMOVE_ITH_TUPLE_ELEMENT_H
