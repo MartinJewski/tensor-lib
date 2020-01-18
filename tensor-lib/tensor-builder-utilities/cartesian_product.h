@@ -9,6 +9,7 @@
 #include <range/v3/view/cartesian_product.hpp>
 #include <range/v3/range/conversion.hpp>
 
+#include "positive_natural_compiletime_pow.h"
 #include <tuple>
 
 #include "tuple_show.h"
@@ -56,39 +57,72 @@ constexpr auto cartesian_product_new(){
 
 //--------------------------------------------------
 
+template<typename T, std::size_t ...is>
+constexpr auto flatten_tuple_i(T tuple, std::index_sequence<is...>) {
+
+    return std::tuple_cat(std::get<is>(tuple)...);
+
+}
+
+template<typename T>
+constexpr auto flatten_tuple(T tuple) {
+    return flatten_tuple_i(tuple, std::make_index_sequence<std::tuple_size<T>::value>{});
+}
+
+template<std::size_t depth, typename T>
+constexpr auto recursive_flatten_tuple(T tuple){
+
+    if constexpr(depth <= 2){
+        return tuple;
+    }else{
+        return recursive_flatten_tuple<depth-1>(flatten_tuple(tuple));
+    }
+
+}
+
+
+
 template<std::size_t depth, typename T, std::size_t ...is>
 constexpr auto wdh(T&& tuple, std::index_sequence<is...>){
 
     if constexpr (depth == 0) {
         return tuple;
     }else{
-        return std::make_tuple(wdh<depth-1>(std::tuple_cat(tuple, std::make_tuple(is)),std::make_index_sequence<sizeof...(is)>{})...);
+        //return (wdh<depth-1>(std::tuple_cat(tuple, std::make_tuple(is)),std::make_index_sequence<sizeof...(is)>{})...);
+        return std::make_tuple(wdh<depth-1>(std::tuple_cat(tuple, std::make_tuple(is)), std::make_index_sequence<sizeof...(is)>{})...);
     }
-
 }
 
+template<typename T, std::size_t ...is>
+constexpr auto to_array(T tuple, std::index_sequence<is...>){
+
+    auto t = ((std::get<is>(tuple)),...);
+    std::array<decltype(t), sizeof...(is)> arr = {std::get<is>(tuple)...};
+    return arr;
+
+}
 
 template<std::size_t sets, std::size_t ...is>
 constexpr auto ct_i(std::index_sequence<is...>){
 
-    //0 -> 0 1 2
-    //1 -> 0 0  0 1  0 2   1 0  1 1  1 2   2 0  2 1  2 2
-    return std::make_tuple(wdh<sets>(std::make_tuple(is), std::make_index_sequence<sizeof...(is)>{})...);
+    auto u = std::tuple_cat(wdh<sets>(std::make_tuple(is), std::make_index_sequence<sizeof...(is)>{})...);
 
+    auto r = recursive_flatten_tuple<sets>(u);
+
+    auto d = to_array(r, std::make_index_sequence<std::tuple_size<decltype(r)>::value>{});
+
+    //decltype(d)::foo = 1;
+
+    return d;
+    //return std::make_tuple(wdh<sets>(std::make_tuple(is), std::make_index_sequence<sizeof...(is)>{})...);
 }
 
 template<std::size_t range, std::size_t sets>
 constexpr auto ct(){
 
-    return ct_i<sets>(std::make_index_sequence<range+1>{});
 
+    return ct_i<sets-1>(std::make_index_sequence<range>{});
 }
-
-
-
-
-
-
 
 
 

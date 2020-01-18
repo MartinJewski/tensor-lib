@@ -13,7 +13,7 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-definition/tensor_specification.h
         tensor-lib/tensor-builder-utilities/cartesian_product.h
         tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
-        tensor-lib/tensor-builder-utilities/compiletime_pow.h
+        tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
         tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
         tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h
         tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h

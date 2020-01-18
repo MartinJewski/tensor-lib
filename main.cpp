@@ -18,6 +18,8 @@
 #include <range/v3/view/move.hpp>
 #include <range/v3/view/concat.hpp>
 
+#include "positive_natural_compiletime_pow.h"
+
 
 
 #include <tuple>
@@ -137,11 +139,20 @@ int main() {
 
     reorder<1,0>(tensorTest1.calculate_indices(), tensorTest1.data);
 
-    //first var is from 0 to val, second var is the set cound
-    constexpr auto cartesii = ct<2,1>();
+    //first var is from 0 to val-1, second variable is the set cound from 0 to value
+    constexpr auto cartesii = ct<3,2>();
+
+    //decltype(cartesii)::foo = 1;
+
+    //std::cout << cartesii << std::endl;
 
 
-    std::cout << cartesii << std::endl;
+
+    for(int i = 0; i < cartesii.size(); i++){
+
+        std::cout << cartesii[i] << std::endl;
+
+    }
 
 
 

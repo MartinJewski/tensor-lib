@@ -9,13 +9,13 @@
 #include <tuple>
 #include "tensor_specification.h"
 #include <array>
-#include "compiletime_pow.h"
+#include "positive_natural_compiletime_pow.h"
 
 template<typename T, typename ... Args>
 class tensorBase{
 
     private:
-        //std::array<T, compiletime_pow<DIM3, sizeof...(Args)+1>()> data;
+        //std::array<T, positive_natural_compiletime_pow<DIM3, sizeof...(Args)+1>()> data;
 
     public:
         std::vector<T> data = {};

@@ -14,13 +14,13 @@ range/v3/view/cartesian_product.hpp
 range/v3/range/conversion.hpp
 -
 
-../tensor-lib/tensor-builder-utilities/compiletime_pow.h
-
 ../tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
 tuple
 -
 tensor_specification.h
 ../tensor-lib/tensor-builder-utilities/tensor_specification.h
+
+../tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
 
 ../tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h
 remove_ith_tuple_element.h
@@ -37,8 +37,8 @@ tensor_specification.h
 ../tensor-lib/tensor-definition/tensor_specification.h
 array
 -
-compiletime_pow.h
-../tensor-lib/tensor-definition/compiletime_pow.h
+positive_natural_compiletime_pow.h
+../tensor-lib/tensor-definition/positive_natural_compiletime_pow.h
 
 ../tensor-lib/tensor-definition/tensor_specification.h
 
@@ -2265,6 +2265,8 @@ range/v3/view/move.hpp
 -
 range/v3/view/concat.hpp
 -
+positive_natural_compiletime_pow.h
+/home/martin/CLionProjects/tensor-library-v1/positive_natural_compiletime_pow.h
 tuple
 -
 tensor-lib/tensor-builder-utilities/cartesian_product.h
@@ -2313,6 +2315,8 @@ range/v3/view/cartesian_product.hpp
 -
 range/v3/range/conversion.hpp
 -
+positive_natural_compiletime_pow.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
 tuple
 -
 tuple_show.h
@@ -2413,8 +2417,8 @@ tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 array
 -
-compiletime_pow.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/compiletime_pow.h
+positive_natural_compiletime_pow.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/positive_natural_compiletime_pow.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 

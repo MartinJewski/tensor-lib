@@ -13,16 +13,14 @@
   <component name="ChangeListManager">
     <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/cartesian_product.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/cartesian_product.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-concepts/tensor-concepts.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-concepts/tensor-concepts.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/compiletime_pow.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +118,10 @@
       <workItem from="1579175896577" duration="2652000" />
       <workItem from="1579178998455" duration="7753000" />
       <workItem from="1579187252376" duration="5231000" />
-      <workItem from="1579192783229" duration="1838000" />
+      <workItem from="1579192783229" duration="2558000" />
+      <workItem from="1579252035096" duration="8893000" />
+      <workItem from="1579272767277" duration="13803000" />
+      <workItem from="1579343567001" duration="3525000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -173,38 +174,38 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1578158976605" />
-    <state width="1243" height="142" key="GridCell.Tab.0.bottom" timestamp="1579194626569">
+    <state width="1243" height="141" key="GridCell.Tab.0.bottom" timestamp="1579346381174">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1243" height="142" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1579194626569" />
-    <state width="1243" height="142" key="GridCell.Tab.0.center" timestamp="1579194626569">
+    <state width="1243" height="141" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1579346381174" />
+    <state width="1243" height="141" key="GridCell.Tab.0.center" timestamp="1579346381174">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1243" height="142" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1579194626569" />
-    <state width="1243" height="142" key="GridCell.Tab.0.left" timestamp="1579194626568">
+    <state width="1243" height="141" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1579346381174" />
+    <state width="1243" height="141" key="GridCell.Tab.0.left" timestamp="1579346381173">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1243" height="142" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1579194626568" />
-    <state width="1243" height="142" key="GridCell.Tab.0.right" timestamp="1579194626569">
+    <state width="1243" height="141" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1579346381173" />
+    <state width="1243" height="141" key="GridCell.Tab.0.right" timestamp="1579346381174">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1243" height="142" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1579194626569" />
-    <state width="1243" height="203" key="GridCell.Tab.1.bottom" timestamp="1579185666274">
+    <state width="1243" height="141" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1579346381174" />
+    <state width="1243" height="197" key="GridCell.Tab.1.bottom" timestamp="1579341847948">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1243" height="203" key="GridCell.Tab.1.bottom/0.0.1366.732@0.0.1366.732" timestamp="1579185666274" />
-    <state width="1243" height="203" key="GridCell.Tab.1.center" timestamp="1579185666274">
+    <state width="1243" height="197" key="GridCell.Tab.1.bottom/0.0.1366.732@0.0.1366.732" timestamp="1579341847948" />
+    <state width="1243" height="197" key="GridCell.Tab.1.center" timestamp="1579341847946">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1243" height="203" key="GridCell.Tab.1.center/0.0.1366.732@0.0.1366.732" timestamp="1579185666274" />
-    <state width="1243" height="203" key="GridCell.Tab.1.left" timestamp="1579185666273">
+    <state width="1243" height="197" key="GridCell.Tab.1.center/0.0.1366.732@0.0.1366.732" timestamp="1579341847946" />
+    <state width="1243" height="197" key="GridCell.Tab.1.left" timestamp="1579341847946">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1243" height="203" key="GridCell.Tab.1.left/0.0.1366.732@0.0.1366.732" timestamp="1579185666273" />
-    <state width="1243" height="203" key="GridCell.Tab.1.right" timestamp="1579185666274">
+    <state width="1243" height="197" key="GridCell.Tab.1.left/0.0.1366.732@0.0.1366.732" timestamp="1579341847946" />
+    <state width="1243" height="197" key="GridCell.Tab.1.right" timestamp="1579341847947">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1243" height="203" key="GridCell.Tab.1.right/0.0.1366.732@0.0.1366.732" timestamp="1579185666274" />
+    <state width="1243" height="197" key="GridCell.Tab.1.right/0.0.1366.732@0.0.1366.732" timestamp="1579341847947" />
     <state x="299" y="0" width="1007" height="732" key="SettingsEditor" timestamp="1578838823527">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -213,10 +214,10 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="427" y="48" width="525" height="658" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.732@0.0.1366.732" timestamp="1579173779031" />
-    <state x="394" y="289" width="408" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579181570754">
+    <state x="394" y="289" width="408" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579264969948">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="394" y="289" width="408" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.732@0.0.1366.732" timestamp="1579181570754" />
+    <state x="394" y="289" width="408" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.732@0.0.1366.732" timestamp="1579264969948" />
     <state x="348" y="164" key="run.anything.popup" timestamp="1579020828577">
       <screen x="0" y="0" width="1366" height="732" />
     </state>

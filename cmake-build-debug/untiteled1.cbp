@@ -105,9 +105,6 @@
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/compiletime_pow.h">
-			<Option target="untiteled1"/>
-		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/enumerate_range.h">
 			<Option target="untiteled1"/>
 		</Unit>
@@ -115,6 +112,9 @@
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h">
+			<Option target="untiteled1"/>
+		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h">
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h">
