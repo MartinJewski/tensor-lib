@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+../tensor-lib/tensor-builder-utilities/cartesian_product.h
+range/v3/view/indices.hpp
+-
+range/v3/view/cartesian_product.hpp
+-
+range/v3/range/conversion.hpp
+-
+positive_natural_compiletime_pow.h
+../tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
+tuple
+-
+tuple_show.h
+../tensor-lib/tensor-builder-utilities/tuple_show.h
+
 ../tensor-lib/tensor-builder-utilities/cartesian_product_ranges_to_vec.h
 range/v3/view/indices.hpp
 -
@@ -33,6 +47,8 @@ array
 -
 positive_natural_compiletime_pow.h
 ../tensor-lib/tensor-definition/positive_natural_compiletime_pow.h
+cartesian_product.h
+../tensor-lib/tensor-definition/cartesian_product.h
 
 ../tensor-lib/tensor-definition/tensor_specification.h
 
@@ -2381,6 +2397,8 @@ array
 -
 positive_natural_compiletime_pow.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/positive_natural_compiletime_pow.h
+cartesian_product.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/cartesian_product.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 

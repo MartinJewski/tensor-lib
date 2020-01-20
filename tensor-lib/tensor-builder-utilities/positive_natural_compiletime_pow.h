@@ -8,7 +8,7 @@
 template<std::size_t base, std::size_t exponent>
 int constexpr positive_natural_compiletime_pow(){
 
-    static_assert(exponent > 0, "exponent must be at least 0");
+   // static_assert(exponent < 0, "exponent must be at least 0");
     if constexpr(exponent == 0){
         return 1;
     }

@@ -126,8 +126,8 @@ int main() {
     //decltype(eloo)::foo = 1;
     //auto elooo2 = save_recreated_index_sequence(0,1,1,2,5, cart1);
 
-    tensor<double, up_t, low_t> tensorTest1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
-    tensor<double, up_t, low_t> tensorTest2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
+    constexpr tensor<double, up_t, low_t> tensorTest1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
+    constexpr tensor<double, up_t, low_t> tensorTest2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
 
     //myfunction<tensorTest1.indices_amount, tensorTest2.indices_amount>();
 

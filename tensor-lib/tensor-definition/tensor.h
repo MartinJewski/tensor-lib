@@ -10,17 +10,16 @@
 #include "tensor_specification.h"
 #include <array>
 #include "positive_natural_compiletime_pow.h"
+#include "cartesian_product.h"
 
 template<typename T, typename ... Args>
 class tensorBase{
 
     private:
-        //std::array<T, positive_natural_compiletime_pow<DIM3, sizeof...(Args)+1>()> data;
+        std::array<T, positive_natural_compiletime_pow<DIM3, sizeof...(Args)+1>()> data;
 
     public:
-        std::vector<T> data = {};
-
-
+        //std::vector<T> data = {};
 
         std::tuple<Args...> myTypeTup;
 
@@ -31,13 +30,14 @@ class tensorBase{
     template<typename ... Element>
     constexpr tensorBase(Element&&... input) : data{input...} {};
 
-    template<typename Vec>
-    constexpr tensorBase(Vec&& vector) {
-        data = vector;
+    template<typename Arr>
+    constexpr tensorBase(Arr&& array) {
+        data = array;
     };
 
     constexpr auto calculate_indices(){
 
+        return cartesian_product<DIM3, sizeof...(Args)>();
         //return cartesian_product_to_vec<DIM3, sizeof...(Args)+1>();
     };
 
