@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
+../tensor-lib/tensor-builder-utilities/cartesian_product_ranges_to_vec.h
 range/v3/view/indices.hpp
 -
 range/v3/view/cartesian_product.hpp
@@ -21,12 +21,6 @@ tensor_specification.h
 ../tensor-lib/tensor-builder-utilities/tensor_specification.h
 
 ../tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
-
-../tensor-lib/tensor-builder-utilities/remove_ith_concat_tuple.h
-remove_ith_tuple_element.h
-../tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h
-
-../tensor-lib/tensor-builder-utilities/remove_ith_tuple_element.h
 
 ../tensor-lib/tensor-definition/tensor.h
 vector
@@ -2271,12 +2265,8 @@ tuple
 -
 tensor-lib/tensor-builder-utilities/cartesian_product.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h
-tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
-tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h
-tensor-lib/tensor-builder-utilities/enumerate_range.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/enumerate_range.h
+cartesian_product_ranges_to_vec.h
+/home/martin/CLionProjects/tensor-library-v1/cartesian_product_ranges_to_vec.h
 tensor-lib/tensor-builder-utilities/tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h
 tensor-lib/tensor-builder-utilities/tuple_split.h
@@ -2289,8 +2279,6 @@ tensor-lib/tensor-builder-utilities/recreate_index_tuple.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_index_tuple.h
 tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
-tensor-lib/tensor-builder-utilities/save_as_array.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_as_array.h
 tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h
 tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
@@ -2322,18 +2310,6 @@ tuple
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h
 
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h
-range/v3/view/indices.hpp
--
-range/v3/view/cartesian_product.hpp
--
-range/v3/range/conversion.hpp
--
-
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/enumerate_range.h
-range/v3/view/enumerate.hpp
--
-
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/make_index_sequence_from.h
 iostream
 -
@@ -2346,29 +2322,15 @@ tuple
 tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tensor_specification.h
 
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h
-tuple_show.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h
-iostream
--
-range/v3/algorithm/for_each.hpp
--
-
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
 recreate_index_tuple.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_index_tuple.h
-save_as_array.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_as_array.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_index_tuple.h
 tuple_split_from.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_split_from.h
 
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_as_array.h
-
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h
-save_as_array.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/save_as_array.h
 recreate_for_index_sequence.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
 range/v3/view/for_each.hpp
@@ -2425,8 +2387,6 @@ positive_natural_compiletime_pow.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
-remove_ith_concat_tuple.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/remove_ith_concat_tuple.h
 tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor_specification.h
 pos_nd_to_1d.h
@@ -2437,8 +2397,8 @@ tuple
 -
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
-cartesian_product_to_vec.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/cartesian_product_to_vec.h
+cartesian_product_ranges_to_vec.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/cartesian_product_ranges_to_vec.h
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
 pos_nd_to_1d.h

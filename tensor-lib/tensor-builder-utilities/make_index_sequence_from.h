@@ -20,6 +20,10 @@ constexpr auto make_index_sequence_from()
     return add_offset<O>(std::make_index_sequence<N>{});
 }
 
+/**
+ * debug function that prints all numbers in the paramter pack
+ * @tparam Is indices
+ */
 template <std::size_t ... Is>
 void print(std::index_sequence<Is...>)
 {

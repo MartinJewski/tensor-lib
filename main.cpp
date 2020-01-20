@@ -25,16 +25,14 @@
 #include <tuple>
 
 #include "tensor-lib/tensor-builder-utilities/cartesian_product.h"
-#include "tensor-lib/tensor-builder-utilities/cartesian_product_to_vec.h"
-#include "tensor-lib/tensor-builder-utilities/range_of_nonviewable_container_show.h"
-#include "tensor-lib/tensor-builder-utilities/enumerate_range.h"
+#include "cartesian_product_ranges_to_vec.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_show.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_split.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_split_from.h"
 #include "tensor-lib/tensor-builder-utilities/make_index_sequence_from.h"
 #include "tensor-lib/tensor-builder-utilities/recreate_index_tuple.h"
 #include "tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h"
-#include "tensor-lib/tensor-builder-utilities/save_as_array.h"
+
 #include "tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h"
 #include "tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h"
 
@@ -53,7 +51,7 @@ using std::cout;
 
 int main() {
 
-    auto cart1 = cartesian_product_to_vec<2,2>();
+
 
     //constexpr auto cart42 = cartesian_product_new<4,2>();
     //--------------------------------------------------
@@ -116,13 +114,16 @@ int main() {
     std::cout << look << std::endl;
     std::cout << look2 << std::endl;
 
-    auto myArr = save_as_array<decltype(look), 2>(look, look2);
     //decltype(look)::foo = 1;
 
     std::cout << "-----------" << std::endl;
 
+    auto temp_l = std::make_tuple(1,2,3);
+    std::array<decltype(temp_l), 3> cart1{temp_l,temp_l,temp_l};
     //RIGHT NOW IT TAKES A CARTESIAN PRODUCT AND DOES A OPERATION FOR EVERY TUPLE
-    auto elooo = save_recreated_index_sequence<0,1,1,2,5>(cart1);
+    //tuple(tuple 1,...,tuple times), ...,
+    auto eloo = save_recreated_index_sequence<0,3,0,4,2>(cart1);
+    //decltype(eloo)::foo = 1;
     //auto elooo2 = save_recreated_index_sequence(0,1,1,2,5, cart1);
 
     tensor<double, up_t, low_t> tensorTest1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
@@ -131,22 +132,16 @@ int main() {
     //myfunction<tensorTest1.indices_amount, tensorTest2.indices_amount>();
 
     //decltype(jop)::type;
-    auto t3 = contraction<0,1,0,2,
-                0,1,1,2,
-                double>(tensorTest1.calculate_indices(), tensorTest1.data, tensorTest2.calculate_indices(), tensorTest2.data);
+    //auto t3 = contraction<0,1,0,2,
+    //            0,1,1,2,
+    //            double>(tensorTest1.calculate_indices(), tensorTest1.data, tensorTest2.calculate_indices(), tensorTest2.data);
 
-    trace<2>(tensorTest1.data);
+    //trace<2>(tensorTest1.data);
 
-    reorder<1,0>(tensorTest1.calculate_indices(), tensorTest1.data);
+    //reorder<1,0>(tensorTest1.calculate_indices(), tensorTest1.data);
 
-    //first var is from 0 to val-1, second variable is the set cound from 0 to value
-    constexpr auto cartesii = ct<3,2>();
-
-    //decltype(cartesii)::foo = 1;
-
-    //std::cout << cartesii << std::endl;
-
-
+    //first var is from 0 to val-1, second variable is the set count
+    constexpr auto cartesii = cartesian_product<1,1>(); //<1,1> is a scalar
 
     for(int i = 0; i < cartesii.size(); i++){
 

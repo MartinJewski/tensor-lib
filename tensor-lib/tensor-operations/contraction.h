@@ -6,7 +6,6 @@
 #define UNTITELED1_CONTRACTION_H
 
 #include "tuple_show.h"
-#include "remove_ith_concat_tuple.h"
 #include "tensor_specification.h"
 #include "pos_nd_to_1d.h"
 #include "tensor.h"
