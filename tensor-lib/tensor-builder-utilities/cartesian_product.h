@@ -82,8 +82,6 @@ constexpr auto recursive_flatten_tuple(T tuple){
 
 }
 
-
-
 template<std::size_t depth, typename T, std::size_t ...is>
 constexpr auto wdh(T&& tuple, std::index_sequence<is...>){
 
@@ -139,10 +137,6 @@ constexpr auto cartesian_product(){
     static_assert( (sets > 0), "lowest input is be cartesian<1,1>" );
     return ct_i<sets-1>(std::make_index_sequence<range>{});
 }
-
-
-
-
 
 #endif //UNTITELED1_CARTESIAN_PRODUCT_H
 

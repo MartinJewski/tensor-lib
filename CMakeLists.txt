@@ -29,6 +29,7 @@ set_target_properties(range_v3 PROPERTIES
 
 add_compile_options(-fconcepts) #enables concepts(unstable). Stable versions will be released with gcc/g++ 10
 add_compile_options(-fpermissive)
+add_compile_options(-ftemplate-depth=2000)
 
 
 

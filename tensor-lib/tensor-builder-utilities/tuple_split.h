@@ -19,6 +19,4 @@ constexpr auto tuple_split(T& tuple){
 
 
 
-
-
 #endif //UNTITELED1_TUPLE_SPLIT_H

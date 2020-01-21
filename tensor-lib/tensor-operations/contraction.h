@@ -11,6 +11,7 @@
 #include "tensor.h"
 #include <tuple>
 
+/*
 template<std::size_t t1_offset, std::size_t tensor1_N, std::size_t t1_skipPos, std::size_t t1_indice_amount,
          std::size_t t2_offset, std::size_t tensor2_N, std::size_t t2_skipPos, std::size_t t2_indice_amount,
          typename resultT, typename C1, typename T1, typename T2, typename C2>
@@ -18,7 +19,6 @@ constexpr auto contraction(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartes
 
     auto sris_tensor1 = save_recreated_index_sequence<t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, DIM3>(t1_cartesian_vec);
     auto sris_tensor2 = save_recreated_index_sequence<t2_offset, tensor2_N, t2_skipPos, t2_indice_amount, DIM3>(t2_cartesian_vec);
-
 
     std::vector<resultT> result_vector = {};
 
@@ -48,7 +48,21 @@ constexpr auto contraction(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartes
 
         return result_vector;
     }
+}
+*/
+
+
+template<std::size_t t1_skipPos, std::size_t t2_skipPos, auto T1, auto T2>
+constexpr auto contraction(){
+
+    auto sris_tensor1 = save_recreated_index_sequence
+            <0, T1.indices_amount-1, t1_skipPos, T1.indices_amount, DIM3>(T1.calculate_indices());
+    auto sris_tensor2 = save_recreated_index_sequence
+            <0, T2.indices_amount-1, t2_skipPos, T2.indices_amount, DIM3>(T2.calculate_indices());
+
+    return sris_tensor1;
 
 }
+
 
 #endif //UNTITELED1_CONTRACTION_H

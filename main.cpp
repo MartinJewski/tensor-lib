@@ -52,7 +52,6 @@ using std::cout;
 int main() {
 
 
-
     //constexpr auto cart42 = cartesian_product_new<4,2>();
     //--------------------------------------------------
     //a tuple will contain the position indices
@@ -105,14 +104,14 @@ int main() {
     std::cout << rec_split3 << std::endl;
 
 
-    std::cout << " " << tup << std::endl;
+    std::cout << "----start------" << tup << std::endl;
     std::cout << "tup: " << tup << std::endl;
     //tuple of tuples
     constexpr auto look = recreate_for_index_sequence<0,3,2,4,3>(tup);
     constexpr auto look2 = recreate_for_index_sequence<4,7,2,4,3>(tup);
     //decltype(look)::foo = 1;
-    std::cout << look << std::endl;
-    std::cout << look2 << std::endl;
+    std::cout <<"split 1: "<< look << std::endl;
+    std::cout <<"split 2: "<< look2 << std::endl;
 
     //decltype(look)::foo = 1;
 
@@ -123,25 +122,12 @@ int main() {
     //RIGHT NOW IT TAKES A CARTESIAN PRODUCT AND DOES A OPERATION FOR EVERY TUPLE
     //tuple(tuple 1,...,tuple times), ...,
     auto eloo = save_recreated_index_sequence<0,3,0,4,2>(cart1);
-    //decltype(eloo)::foo = 1;
-    //auto elooo2 = save_recreated_index_sequence(0,1,1,2,5, cart1);
 
-    constexpr tensor<double, up_t, low_t> tensorTest1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
+
+    constexpr tensor<double, up_t, low_t, low_t> tensorTest1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
     constexpr tensor<double, up_t, low_t> tensorTest2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
 
-    //myfunction<tensorTest1.indices_amount, tensorTest2.indices_amount>();
-
-    //decltype(jop)::type;
-    //auto t3 = contraction<0,1,0,2,
-    //            0,1,1,2,
-    //            double>(tensorTest1.calculate_indices(), tensorTest1.data, tensorTest2.calculate_indices(), tensorTest2.data);
-
-    //trace<2>(tensorTest1.data);
-
-    //reorder<1,0>(tensorTest1.calculate_indices(), tensorTest1.data);
-
-    //first var is from 0 to val-1, second variable is the set count
-    constexpr auto cartesii = cartesian_product<1,1>(); //<1,1> is a scalar
+    auto cartesii = cartesian_product<1,4>(); //<1,1> is a scalar
 
     for(int i = 0; i < cartesii.size(); i++){
 
@@ -150,6 +136,15 @@ int main() {
     }
 
 
+    constexpr tensor<double, up_t, low_t, low_t> tensor1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
+    constexpr tensor<double, up_t, low_t> tensor2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
+    constexpr auto copyObj1 = tensor1;
+    constexpr auto indices = tensor1.indices_amount;
+    constexpr auto indices1 = tensor1.calculate_indices();
+
+    constexpr auto sris_outside = save_recreated_index_sequence
+            <0, tensor1.indices_amount-1,0,tensor1.indices_amount,2>(tensor1.calculate_indices());
+    constexpr auto contract = contraction<0,0, tensor1, tensor2>();
 
     return 0;
 }
