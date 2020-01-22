@@ -21,6 +21,7 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-builder-utilities/tuple_split_from.h
         tensor-lib/tensor-builder-utilities/recreate_index_tuple.h
         tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
+        tensor-lib/tensor-builder-utilities/tuple_helpers.h
         )
 
 add_library(range_v3 INTERFACE IMPORTED)

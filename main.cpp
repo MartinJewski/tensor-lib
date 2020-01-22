@@ -46,6 +46,7 @@
 
 #include "tensor-lib/tensor-concepts/tensor-concepts.h"
 
+#include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
 using std::cout;
 
@@ -104,11 +105,12 @@ int main() {
     std::cout << rec_split3 << std::endl;
 
 
+    constexpr auto tup_work = std::make_tuple(0,1,2,3,4,5);
     std::cout << "----start------" << tup << std::endl;
     std::cout << "tup: " << tup << std::endl;
     //tuple of tuples
-    constexpr auto look = recreate_for_index_sequence<0,3,2,4,3>(tup);
-    constexpr auto look2 = recreate_for_index_sequence<4,7,2,4,3>(tup);
+    constexpr auto look = recreate_for_index_sequence<0,3,2,4,3>(tup_work);
+    constexpr auto look2 = recreate_for_index_sequence<2,1,0,2,3>(tup_work);
     //decltype(look)::foo = 1;
     std::cout <<"split 1: "<< look << std::endl;
     std::cout <<"split 2: "<< look2 << std::endl;
@@ -136,7 +138,7 @@ int main() {
     }
 
 
-    constexpr tensor<double, up_t, low_t, low_t> tensor1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
+    constexpr tensor<double, up_t, low_t> tensor1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
     constexpr tensor<double, up_t, low_t> tensor2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
     constexpr auto copyObj1 = tensor1;
     constexpr auto indices = tensor1.indices_amount;
@@ -145,6 +147,20 @@ int main() {
     constexpr auto sris_outside = save_recreated_index_sequence
             <0, tensor1.indices_amount-1,0,tensor1.indices_amount,2>(tensor1.calculate_indices());
     constexpr auto contract = contraction<0,0, tensor1, tensor2>();
+/*
+    for(auto i : contract){
+        std::cout << i << std::endl;
+    }
+*/
+    //---------------------------------------------------------
+    auto l = std::make_tuple(1,2);
+    auto d = std::make_tuple(1,2);
+    remove_ith_concat_tuple<0,0,decltype(l),decltype(d)> bono;
+    decltype(bono)::type a;
+    //decltype(a)::foo = 1;
+    //---------------------------------------------------------
+
+    auto dd = a;
 
     return 0;
 }

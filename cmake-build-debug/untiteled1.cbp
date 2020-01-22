@@ -120,6 +120,9 @@
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_index_tuple.h">
 			<Option target="untiteled1"/>
 		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_helpers.h">
+			<Option target="untiteled1"/>
+		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h">
 			<Option target="untiteled1"/>
 		</Unit>

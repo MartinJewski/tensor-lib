@@ -19,7 +19,7 @@ class tensorBase{
         std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
         //std::vector<T> data = {};
 
-        std::tuple<Args> myTypeTup;
+        Args myTypeTup;
 
         std::size_t indices_amount =  std::tuple_size<Args>::value;
 

@@ -50,7 +50,7 @@ constexpr auto pos_calc(T tuple, std::index_sequence<is...>){
 
 
 template<std::size_t indice_amount, typename T>
-constexpr auto pos_nd_to_1d(T tuple){
+constexpr auto pos_nd_to_1d_tuple(T tuple){
     return pos_calc(tuple, std::make_index_sequence<indice_amount>{});
 }
 
