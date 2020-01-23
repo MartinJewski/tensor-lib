@@ -10,6 +10,7 @@
 #include "pos_nd_to_1d.h"
 #include "tensor.h"
 #include <tuple>
+#include <type_traits>
 
 #include "tuple_helpers.h"
 
@@ -52,21 +53,32 @@ constexpr auto contraction(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartes
     }
 }
 */
+template<typename T, typename U, typename Arr, std::size_t ...is>
+constexpr auto create_result_tensor(Arr array, std::index_sequence<is...>){
 
+    tensorBase<T, U> arr{array[is]...};
 
-template<typename T1, typename T2, std::size_t ...is>
-constexpr void calculate_value_i(T1 tuple1, T2 tuple2, std::index_sequence<is...>){
-
-    ((pos_nd_to_1d_tuple<std::tuple_size<T1>::value-1>(std::get<is>(tuple1))),...);
-    ((pos_nd_to_1d_tuple<std::tuple_size<T2>::value-1>(std::get<is>(tuple2))),...);
-
+    return arr;
 }
 
-template<typename SRIST1, typename SRIST2, std::size_t ...is>
-constexpr void calculate_value(SRIST1 sris1, SRIST2 sris2, std::index_sequence<is...>){
+template<auto T1, auto T2, typename Tuple1, typename Tuple2, std::size_t ...is>
+constexpr auto calculate_value_i(Tuple1 tup1, Tuple2 tup2, std::index_sequence<is...>){
 
-    (calculate_value_i(sris1[is], sris2[is], std::make_index_sequence<DIM3>{}),...);
+    auto add = 0;
+    ((add += (T1.data[(pos_nd_to_1d_tuple<std::tuple_size<Tuple1>::value-1>(std::get<is>(tup1)))]
+            * T2.data[(pos_nd_to_1d_tuple<std::tuple_size<Tuple2>::value-1>(std::get<is>(tup2)))])),...);
 
+    return add;
+}
+
+template<auto T1, auto T2, typename SRIST1, typename SRIST2, std::size_t ...is>
+constexpr auto calculate_value(SRIST1 sris1, SRIST2 sris2, std::index_sequence<is...>){
+
+    auto temp = (calculate_value_i<T1, T2>(sris1[is], sris2[is], std::make_index_sequence<DIM3>{}),...);
+    std::array<decltype(temp), sris1.size()>
+            arr{calculate_value_i<T1, T2>(sris1[is], sris2[is], std::make_index_sequence<DIM3>{})...};
+
+    return arr;
 }
 
 template<std::size_t t1_skipPos, std::size_t t2_skipPos, auto T1, auto T2>
@@ -84,10 +96,21 @@ constexpr auto contraction(){
     auto sris_tensor2 = save_recreated_index_sequence
             <T1.indices_amount-1, T2.indices_amount-1, t2_skipPos, T2.indices_amount, DIM3>(t3_indices);
 
-    calculate_value(sris_tensor1, sris_tensor2, std::make_index_sequence<sris_tensor1.size()>{});
+    auto result = calculate_value<T1, T2>(sris_tensor1, sris_tensor2, std::make_index_sequence<sris_tensor1.size()>{});
+
+    create_result_tensor
+            <std::common_type_t<typename decltype(T1.data)::value_type, typename decltype(T2.data)::value_type>,
+                    decltype(newType)>(result, std::make_index_sequence<result.size()>{});
+
+    return result;
+}
 
 
-    return sris_tensor1;
+template<std::size_t length, typename A1, typename A2>
+constexpr auto function(A1 array1, A2 array2){
+
+    std::array< typename std::common_type<A1, A2>::type, length> array3{};
+    return array3;
 }
 
 

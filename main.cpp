@@ -147,11 +147,11 @@ int main() {
     constexpr auto sris_outside = save_recreated_index_sequence
             <0, tensor1.indices_amount-1,0,tensor1.indices_amount,2>(tensor1.calculate_indices());
     constexpr auto contract = contraction<0,0, tensor1, tensor2>();
-/*
+
     for(auto i : contract){
         std::cout << i << std::endl;
     }
-*/
+
     //---------------------------------------------------------
     auto l = std::make_tuple(1,2);
     auto d = std::make_tuple(1,2);
