@@ -5,6 +5,7 @@
 #ifndef UNTITELED1_TENSOR_H
 #define UNTITELED1_TENSOR_H
 
+#include <cmath>
 #include <vector>
 #include <tuple>
 #include "tensor_specification.h"
@@ -14,6 +15,7 @@
 
 template<typename T, typename Args>
 class tensorBase{
+
 
     public:
         std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
@@ -25,7 +27,9 @@ class tensorBase{
 
 
     template<typename ... Element>
-    constexpr tensorBase(Element&&... input) : data{input...} {};
+    constexpr tensorBase(Element&&... input) : data{input...} {
+
+    };
 
     /* copy constructor */
     template<typename Tensor>

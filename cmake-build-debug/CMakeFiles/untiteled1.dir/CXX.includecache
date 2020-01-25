@@ -41,6 +41,8 @@ tuple
 -
 
 ../tensor-lib/tensor-definition/tensor.h
+cmath
+-
 vector
 -
 tuple
@@ -2281,6 +2283,8 @@ range/v3/view/concat.hpp
 -
 positive_natural_compiletime_pow.h
 /home/martin/CLionProjects/tensor-library-v1/positive_natural_compiletime_pow.h
+cmath
+-
 tuple
 -
 tensor-lib/tensor-builder-utilities/cartesian_product.h
@@ -2397,6 +2401,8 @@ type_traits
 -
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
+cmath
+-
 vector
 -
 tuple

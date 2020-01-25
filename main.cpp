@@ -20,7 +20,7 @@
 
 #include "positive_natural_compiletime_pow.h"
 
-
+#include <cmath>
 
 #include <tuple>
 
@@ -51,7 +51,6 @@
 using std::cout;
 
 int main() {
-
 
     //constexpr auto cart42 = cartesian_product_new<4,2>();
     //--------------------------------------------------
@@ -125,7 +124,6 @@ int main() {
     //tuple(tuple 1,...,tuple times), ...,
     auto eloo = save_recreated_index_sequence<0,3,0,4,2>(cart1);
 
-
     constexpr tensor<double, up_t, low_t, low_t> tensorTest1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
     constexpr tensor<double, up_t, low_t> tensorTest2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
 
@@ -137,27 +135,25 @@ int main() {
 
     }
 
+    constexpr tensor<double, up_t, up_t> tensor1(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0);
+    constexpr tensor<double, up_t> tensor2(0.1, 0.2, 0.3);
 
-    constexpr tensor<double, up_t, low_t> tensor1(11.0, 22.0, 33.0, 44.0, 55.0, 66.0, 77.0, 88.0, 99.0);
-    constexpr tensor<double, up_t, low_t> tensor2(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9);
     constexpr auto copyObj1 = tensor1;
     constexpr auto indices = tensor1.indices_amount;
     constexpr auto indices1 = tensor1.calculate_indices();
 
-    constexpr auto sris_outside = save_recreated_index_sequence
-            <0, tensor1.indices_amount-1,0,tensor1.indices_amount,2>(tensor1.calculate_indices());
-    constexpr auto contract = contraction<0,0, tensor1, tensor2>();
-
-    for(auto i : contract){
+    //constexpr auto contract = contraction<0,0, tensor1, tensor2>();
+    constexpr auto contract = contraction<10, tensor2>();
+    //decltype(contract)::foo = 1;
+    for(auto i : contract.data){
         std::cout << i << std::endl;
     }
 
     //---------------------------------------------------------
-    auto l = std::make_tuple(1,2);
-    auto d = std::make_tuple(1,2);
+    auto l = std::make_tuple(1);
+    auto d = std::make_tuple(1);
     remove_ith_concat_tuple<0,0,decltype(l),decltype(d)> bono;
     decltype(bono)::type a;
-    //decltype(a)::foo = 1;
     //---------------------------------------------------------
 
     auto dd = a;

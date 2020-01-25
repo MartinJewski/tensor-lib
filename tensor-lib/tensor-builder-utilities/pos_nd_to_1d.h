@@ -40,7 +40,6 @@ auto constexpr pos_nd_to_1d_calc (Args... values)
     return i;
 }
 
-
 template<typename T, std::size_t ... is>
 constexpr auto pos_calc(T tuple, std::index_sequence<is...>){
 
