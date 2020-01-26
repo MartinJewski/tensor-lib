@@ -15,11 +15,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/cartesian_product.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/cartesian_product.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +126,7 @@
       <workItem from="1579882935919" duration="485000" />
       <workItem from="1579884457692" duration="1731000" />
       <workItem from="1579947028712" duration="954000" />
-      <workItem from="1579948246757" duration="5976000" />
+      <workItem from="1579948246757" duration="8788000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -183,22 +179,22 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1579630846996" />
-    <state width="1284" height="93" key="GridCell.Tab.0.bottom" timestamp="1579953502420">
+    <state width="1284" height="93" key="GridCell.Tab.0.bottom" timestamp="1580064188542">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="93" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1579953502420" />
-    <state width="1284" height="93" key="GridCell.Tab.0.center" timestamp="1579953502419">
+    <state width="1284" height="93" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1580064188542" />
+    <state width="1284" height="93" key="GridCell.Tab.0.center" timestamp="1580064188541">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="93" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1579953502419" />
-    <state width="1284" height="93" key="GridCell.Tab.0.left" timestamp="1579953502419">
+    <state width="1284" height="93" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1580064188541" />
+    <state width="1284" height="93" key="GridCell.Tab.0.left" timestamp="1580064188541">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="93" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1579953502419" />
-    <state width="1284" height="93" key="GridCell.Tab.0.right" timestamp="1579953502420">
+    <state width="1284" height="93" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1580064188541" />
+    <state width="1284" height="93" key="GridCell.Tab.0.right" timestamp="1580064188542">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="93" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1579953502420" />
+    <state width="1284" height="93" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1580064188542" />
     <state width="1243" height="202" key="GridCell.Tab.1.bottom" timestamp="1579524843024">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -227,6 +223,10 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="394" y="289" width="408" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.732@0.0.1366.732" timestamp="1579599023239" />
+    <state x="243" y="107" width="886" height="525" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1580062737198">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="243" y="107" width="886" height="525" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.732@0.0.1366.732" timestamp="1580062737198" />
     <state x="348" y="164" key="run.anything.popup" timestamp="1579951739211">
       <screen x="0" y="0" width="1366" height="732" />
     </state>

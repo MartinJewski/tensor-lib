@@ -135,7 +135,7 @@ int main() {
 
     }
 
-    constexpr tensor<double, up_t, up_t> tensor1(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0);
+    constexpr tensor<double, up_t, up_t> tensor1(1.0, 0.0, 2222.0, 0.0, 99.0, 0.0, 0.0, 0.0, 1.0);
     constexpr tensor<double, up_t> tensor2(0.1, 0.2, 0.3);
 
     constexpr auto copyObj1 = tensor1;
@@ -158,6 +158,9 @@ int main() {
 
     auto dd = a;
 
+    auto trace_value = trace<tensor1>();
+
+    std::cout << trace_value << std::endl;
     return 0;
 }
 

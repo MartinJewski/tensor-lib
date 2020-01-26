@@ -9,31 +9,24 @@
 #include "tensor_specification.h"
 #include "tuple_show.h"
 
-template<std::size_t ...is, typename T>
-constexpr auto trace_i(T&& tensor_vec, std::index_sequence<is...>){
+template<auto T1, std::size_t value, std::size_t ...is>
+constexpr auto calc_position(std::index_sequence<is...>){
 
-    std::size_t temp = 0;
+    return T1.data[pos_nd_to_1d((is, value)...)];
+}
 
-    for(int i = 0; i < DIM3; i++){
+template<auto T1, std::size_t ...it>
+constexpr auto trace_i(std::index_sequence<it...>){
 
-        std::cout << "----------" << std::endl;
-        std::cout << "step: " << i << std::endl;
-        std::cout << "temp 1: " << temp << std::endl;
-        std::cout << "tuple: " << std::make_tuple((is, i)...) << std::endl;
-        std::cout << "posnd: "  << pos_nd_to_1d((is, i)...) << std::endl;
-        std::cout << "vector value: " << tensor_vec[pos_nd_to_1d((is, i)...)] << std::endl;
-        temp += tensor_vec[pos_nd_to_1d((is, i)...)];
-        std::cout << "temp 2: " << temp << std::endl;
-        std::cout << "---------" << std::endl;
-    }
-    std::cout << "result :" << temp << std::endl;
+    auto temp = 0.0;
+    ((it, temp += calc_position<T1, it>(std::make_index_sequence<T1.indices_amount>{})),...);
 
     return temp;
 }
 
-template<std::size_t indice_amount, typename T>
-constexpr auto trace(T&& tensor_vec){
-    return trace_i(tensor_vec, std::make_index_sequence<indice_amount>{});
+template<auto T1>
+constexpr auto trace(){
+    return trace_i<T1>(std::make_index_sequence<DIM3>{});
 }
 
 #endif //UNTITELED1_TRACE_H
