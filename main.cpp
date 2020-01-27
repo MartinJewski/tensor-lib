@@ -158,9 +158,12 @@ int main() {
 
     auto dd = a;
 
-    auto trace_value = trace<tensor1>();
+    constexpr auto trace_value = trace<tensor1>();
 
     std::cout << trace_value << std::endl;
+
+    constexpr auto reorder_tensor = reorder<tensor1,0,1>();
+
     return 0;
 }
 

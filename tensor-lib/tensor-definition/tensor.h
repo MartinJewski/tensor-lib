@@ -16,10 +16,8 @@
 template<typename T, typename Args>
 class tensorBase{
 
-
     public:
         std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
-        //std::vector<T> data = {};
 
         Args myTypeTup;
 
@@ -27,9 +25,7 @@ class tensorBase{
 
 
     template<typename ... Element>
-    constexpr tensorBase(Element&&... input) : data{input...} {
-
-    };
+    constexpr tensorBase(Element&&... input) : data{input...} {};
 
     /* copy constructor */
     template<typename Tensor>
@@ -46,9 +42,7 @@ class tensorBase{
     constexpr auto calculate_indices() const{
 
         static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
-        //auto l = std::tuple_size<Args...>::value;
         return cartesian_product<DIM3, std::tuple_size<Args>::value>();
-        //return cartesian_product_to_vec<DIM3, sizeof...(Args)+1>();
     };
 
 };
