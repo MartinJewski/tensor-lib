@@ -2311,12 +2311,12 @@ tensor-lib/tensor-definition/tensor.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
 tensor-lib/tensor-definition/tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
-tensor-lib/tensor-operations/contraction.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
-tensor-lib/tensor-operations/trace.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
-tensor-lib/tensor-operations/reorder.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
+tensor-lib/tensor-operations/contraction_ct.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction_ct.h
+tensor-lib/tensor-operations/trace_ct.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h
+tensor-lib/tensor-operations/reorder_ct.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h
 tensor-lib/tensor-concepts/tensor-concepts.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-concepts/tensor-concepts.h
 tensor-lib/tensor-builder-utilities/tuple_helpers.h
@@ -2418,7 +2418,7 @@ cartesian_product.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction_ct.h
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
 tensor_specification.h
@@ -2434,7 +2434,7 @@ type_traits
 tuple_helpers.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_helpers.h
 
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h
 cartesian_product_ranges_to_vec.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/cartesian_product_ranges_to_vec.h
 tuple_show.h
@@ -2443,8 +2443,10 @@ pos_nd_to_1d.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/pos_nd_to_1d.h
 tuple
 -
+tensor.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor.h
 
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h
 pos_nd_to_1d.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/pos_nd_to_1d.h
 tensor_specification.h

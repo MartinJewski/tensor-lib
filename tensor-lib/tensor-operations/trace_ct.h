@@ -2,8 +2,8 @@
 // Created by martin on 06.01.20.
 //
 
-#ifndef UNTITELED1_TRACE_H
-#define UNTITELED1_TRACE_H
+#ifndef UNTITELED1_TRACE_CT_H
+#define UNTITELED1_TRACE_CT_H
 
 #include "pos_nd_to_1d.h"
 #include "tensor_specification.h"
@@ -25,8 +25,8 @@ constexpr auto trace_i(std::index_sequence<it...>){
 }
 
 template<auto T1>
-constexpr auto trace(){
+constexpr auto trace_ct(){
     return trace_i<T1>(std::make_index_sequence<DIM3>{});
 }
 
-#endif //UNTITELED1_TRACE_H
+#endif //UNTITELED1_TRACE_CT_H

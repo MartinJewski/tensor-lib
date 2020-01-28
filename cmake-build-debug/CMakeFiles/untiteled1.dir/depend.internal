@@ -124,6 +124,6 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-concepts/tensor-concepts.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
- /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
- /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
- /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction_ct.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h

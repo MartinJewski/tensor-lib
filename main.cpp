@@ -40,9 +40,9 @@
 #include "tensor-lib/tensor-definition/tensor.h"
 #include "tensor-lib/tensor-definition/tensor_specification.h"
 
-#include "tensor-lib/tensor-operations/contraction.h"
-#include "tensor-lib/tensor-operations/trace.h"
-#include "tensor-lib/tensor-operations/reorder.h"
+#include "tensor-lib/tensor-operations/contraction_ct.h"
+#include "tensor-lib/tensor-operations/trace_ct.h"
+#include "tensor-lib/tensor-operations/reorder_ct.h"
 
 #include "tensor-lib/tensor-concepts/tensor-concepts.h"
 
@@ -70,7 +70,7 @@ int main() {
     constexpr std::tuple<int, int, int> A_3 = std::make_tuple(0, 0, 1);
     constexpr std::tuple<int, int, int> B_3 = std::make_tuple(1, 1, 1);
 
-    //since every contraction removes one indces for every tensor,
+    //since every contraction_ct removes one indces for every tensor,
     //the recreation of an index position from C could be as follows:
     //      -get amount of indices for the specific tensor
     //      -split tuple into two tuples:
@@ -135,15 +135,15 @@ int main() {
 
     }
 
-    constexpr tensor<double, up_t, up_t> tensor1(1.0, 0.0, 2222.0, 0.0, 99.0, 0.0, 0.0, 0.0, 1.0);
+    constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     constexpr tensor<double, up_t> tensor2(0.1, 0.2, 0.3);
 
     constexpr auto copyObj1 = tensor1;
     constexpr auto indices = tensor1.indices_amount;
     constexpr auto indices1 = tensor1.calculate_indices();
 
-    //constexpr auto contract = contraction<0,0, tensor1, tensor2>();
-    constexpr auto contract = contraction<10, tensor2>();
+    //constexpr auto contract = contraction_ct<0,0, tensor1, tensor2>();
+    constexpr auto contract = contraction_ct<10, tensor2>();
     //decltype(contract)::foo = 1;
     for(auto i : contract.data){
         std::cout << i << std::endl;
@@ -158,11 +158,14 @@ int main() {
 
     auto dd = a;
 
-    constexpr auto trace_value = trace<tensor1>();
+    constexpr auto trace_value = trace_ct<tensor1>();
 
     std::cout << trace_value << std::endl;
 
-    constexpr auto reorder_tensor = reorder<tensor1,0,1>();
+    constexpr auto reorder_tensor = reorder_ct<tensor1, 1, 0>();
+
+    decltype(reorder_tensor)::myType decl_tensor{};
+    decltype(decl_tensor)::foo = 1;
 
     return 0;
 }

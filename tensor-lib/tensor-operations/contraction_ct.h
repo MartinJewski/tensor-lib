@@ -2,8 +2,8 @@
 // Created by martin on 03.01.20.
 //
 
-#ifndef UNTITELED1_CONTRACTION_H
-#define UNTITELED1_CONTRACTION_H
+#ifndef UNTITELED1_CONTRACTION_CT_H
+#define UNTITELED1_CONTRACTION_CT_H
 
 #include "tuple_show.h"
 #include "tensor_specification.h"
@@ -18,7 +18,7 @@
 template<std::size_t t1_offset, std::size_t tensor1_N, std::size_t t1_skipPos, std::size_t t1_indice_amount,
          std::size_t t2_offset, std::size_t tensor2_N, std::size_t t2_skipPos, std::size_t t2_indice_amount,
          typename resultT, typename C1, typename T1, typename T2, typename C2>
-constexpr auto contraction(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartesian_vec, T2&& tensor2_vec){
+constexpr auto contraction_ct(C1&& t1_cartesian_vec, T1 tensor1_vec, C2&& t2_cartesian_vec, T2&& tensor2_vec){
 
     auto sris_tensor1 = save_recreated_index_sequence<t1_offset, tensor1_N, t1_skipPos, t1_indice_amount, DIM3>(t1_cartesian_vec);
     auto sris_tensor2 = save_recreated_index_sequence<t2_offset, tensor2_N, t2_skipPos, t2_indice_amount, DIM3>(t2_cartesian_vec);
@@ -96,7 +96,7 @@ constexpr auto contraction_1D(std::index_sequence<is...>){
 }
 
 template<std::size_t t1_skipPos, std::size_t t2_skipPos, auto T1, auto T2>
-constexpr auto contraction(){
+constexpr auto contraction_ct(){
 
     if constexpr ((T1.indices_amount == 1) && (T2.indices_amount == 1)){
 
@@ -146,7 +146,7 @@ constexpr auto add_scalar(std::index_sequence<is...>){
 }
 
 template<auto T1, auto T2>
-constexpr auto contraction(){
+constexpr auto contraction_ct(){
 
     if constexpr ((std::is_fundamental<decltype(T1)>::value) && (T2.indices_amount >= 1)){
 
@@ -158,7 +158,7 @@ constexpr auto contraction(){
 
 
 template<std::size_t T1, std::size_t T2>
-constexpr auto contraction(){
+constexpr auto contraction_ct(){
 
     return T1*T2;
 
@@ -170,4 +170,4 @@ constexpr auto contraction(){
 
 
 
-#endif //UNTITELED1_CONTRACTION_H
+#endif //UNTITELED1_CONTRACTION_CT_H

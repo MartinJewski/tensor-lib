@@ -8,7 +8,7 @@ include_directories(./tensor-lib/tensor-definition)
 include_directories(./tensor-lib/tensor-operation)
 
 set(SOURCE_FILES main.cpp
-        tensor-lib/tensor-operations/contraction.h
+        tensor-lib/tensor-operations/contraction_ct.h
         tensor-lib/tensor-definition/tensor.h
         tensor-lib/tensor-definition/tensor_specification.h
         tensor-lib/tensor-builder-utilities/cartesian_product.h

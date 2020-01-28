@@ -20,8 +20,9 @@ class tensorBase{
         std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
 
         Args myTypeTup;
+        using myType = Args;
 
-        std::size_t indices_amount =  std::tuple_size<Args>::value;
+        static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
 
 
     template<typename ... Element>
