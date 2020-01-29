@@ -12,6 +12,42 @@
 #include <array>
 #include "positive_natural_compiletime_pow.h"
 #include "cartesian_product.h"
+#include <type_traits>
+
+
+template<typename T, typename Args>
+class tensorBase_rt{
+
+public:
+    std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
+
+    using tuple_indices = Args;
+    using elem_type = T;
+
+    static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
+
+
+    template<typename ... Element>
+    constexpr tensorBase_rt(Element&&... input) : data{input...} {};
+
+    /* copy constructor */
+    template<typename Tensor>
+    constexpr tensorBase_rt(Tensor &oldObj){
+        data = oldObj.data;
+    };
+
+    constexpr auto calculate_indices() const{
+
+        static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
+        return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+    };
+};
+
+template<typename T, typename ... Args>
+using tensor_rt = tensorBase_rt<T, std::tuple<Args...>>;
+
+
+
 
 template<typename T, typename Args>
 class tensorBase{
@@ -20,10 +56,10 @@ class tensorBase{
         std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
 
         Args myTypeTup;
-        using myType = Args;
+        using tuple_indices = Args;
+        using elem_type = T;
 
         static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
-
 
     template<typename ... Element>
     constexpr tensorBase(Element&&... input) : data{input...} {};
@@ -31,20 +67,28 @@ class tensorBase{
     /* copy constructor */
     template<typename Tensor>
     constexpr tensorBase(const Tensor &oldObj){
-
         data = oldObj.data;
 
         myTypeTup = oldObj.myTypeTup;
 
         indices_amount = oldObj.indices_amount;
-
-    }
+    };
 
     constexpr auto calculate_indices() const{
 
         static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
         return cartesian_product<DIM3, std::tuple_size<Args>::value>();
     };
+
+
+    constexpr auto to_runtime_tensor() const{
+
+        tensorBase_rt<elem_type, tuple_indices> temp_tensor(static_cast<elem_type>(0));
+        temp_tensor.data = data;
+
+        return temp_tensor;
+    }
+
 
 };
 

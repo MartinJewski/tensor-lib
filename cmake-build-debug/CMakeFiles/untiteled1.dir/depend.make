@@ -123,7 +123,10 @@ CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-builder-utilities/tup
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-concepts/tensor-concepts.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-definition/tensor.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-definition/tensor_specification.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction_ct.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/reorder.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/reorder_ct.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace_ct.h
 

@@ -37,20 +37,20 @@ constexpr auto reorder_ct(){
 
 
 template<std::size_t cartesian_pos, std::size_t ... positions, typename C>
-constexpr auto calculate_new(C cartesian_arr){
+constexpr auto calculate_ct_new(C cartesian_arr){
 
     return pos_nd_to_1d_tuple<sizeof...(positions)>(std::make_tuple(std::get<positions>(cartesian_arr[cartesian_pos])...));
 
 }
 
 template<auto T1, std::size_t ... positions, std::size_t ...is>
-constexpr auto reorder_i(std::index_sequence<is...>){
+constexpr auto reorder_ct_i(std::index_sequence<is...>){
 
     auto cartesian_arr = T1.calculate_indices();
 
     std::array<typename decltype(T1.data)::value_type, T1.data.size()>
         reordered_positions{
-            (T1.data[static_cast<typename decltype(T1.data)::value_type>(calculate_new<is, positions...>(
+            (T1.data[static_cast<typename decltype(T1.data)::value_type>(calculate_ct_new<is, positions...>(
                     cartesian_arr))])...
     };
 
@@ -60,7 +60,7 @@ constexpr auto reorder_i(std::index_sequence<is...>){
 
 template<auto T1, std::size_t ... positions>
 constexpr auto reorder_ct(){
-    return reorder_i<T1, positions...>(std::make_index_sequence<T1.calculate_indices().size()>{});
+    return reorder_ct_i<T1, positions...>(std::make_index_sequence<T1.calculate_indices().size()>{});
 }
 
 

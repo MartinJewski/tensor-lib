@@ -43,12 +43,25 @@
 #include "tensor-lib/tensor-operations/contraction_ct.h"
 #include "tensor-lib/tensor-operations/trace_ct.h"
 #include "tensor-lib/tensor-operations/reorder_ct.h"
+#include "tensor-lib/tensor-operations/contraction.h"
+#include "tensor-lib/tensor-operations/trace.h"
+#include "tensor-lib/tensor-operations/reorder.h"
 
 #include "tensor-lib/tensor-concepts/tensor-concepts.h"
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
 using std::cout;
+
+
+
+template<typename T>
+constexpr auto sumf(T tensor){
+
+    typename T::tuple_indices a();
+
+    return 0;
+}
 
 int main() {
 
@@ -164,8 +177,11 @@ int main() {
 
     constexpr auto reorder_tensor = reorder_ct<tensor1, 1, 0>();
 
-    decltype(reorder_tensor)::myType decl_tensor{};
-    decltype(decl_tensor)::foo = 1;
+    reorder_tensor.to_runtime_tensor();
+
+    auto final_final = reorder<1,0>(tensor1.to_runtime_tensor());
+
+
 
     return 0;
 }
