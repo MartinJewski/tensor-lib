@@ -14,6 +14,10 @@
 #include "cartesian_product.h"
 #include <type_traits>
 
+#include <range/v3/view/all.hpp>
+#include <range/v3/view/enumerate.hpp>
+
+
 
 template<typename T, typename Args>
 class tensorBase_rt{
@@ -31,9 +35,10 @@ public:
     constexpr tensorBase_rt(Element&&... input) : data{input...} {};
 
     /* copy constructor */
+
     template<typename Tensor>
     constexpr tensorBase_rt(Tensor &oldObj){
-        data = oldObj.data;
+        this->data = oldObj.data;
     };
 
     constexpr auto calculate_indices() const{
@@ -41,6 +46,10 @@ public:
         static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
         return cartesian_product<DIM3, std::tuple_size<Args>::value>();
     };
+
+    constexpr auto data_to_range() const{
+        return ranges::views::all(this->data) | ranges::views::enumerate;
+    }
 };
 
 template<typename T, typename ... Args>
@@ -56,8 +65,6 @@ class tensorBase{
         std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
 
         Args myTypeTup;
-        using tuple_indices = Args;
-        using elem_type = T;
 
         static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
 
@@ -83,12 +90,11 @@ class tensorBase{
 
     constexpr auto to_runtime_tensor() const{
 
-        tensorBase_rt<elem_type, tuple_indices> temp_tensor(static_cast<elem_type>(0));
+        tensorBase_rt<T, Args> temp_tensor(static_cast<T>(0));
         temp_tensor.data = data;
 
         return temp_tensor;
     }
-
 
 };
 

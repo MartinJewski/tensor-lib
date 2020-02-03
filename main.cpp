@@ -25,7 +25,7 @@
 #include <tuple>
 
 #include "tensor-lib/tensor-builder-utilities/cartesian_product.h"
-#include "cartesian_product_ranges_to_vec.h"
+#include "tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_show.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_split.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_split_from.h"
@@ -47,21 +47,14 @@
 #include "tensor-lib/tensor-operations/trace.h"
 #include "tensor-lib/tensor-operations/reorder.h"
 
+
+#include "tensor-lib/tensor-operations-ranges/trace_ranges.h"
+
 #include "tensor-lib/tensor-concepts/tensor-concepts.h"
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
 using std::cout;
-
-
-
-template<typename T>
-constexpr auto sumf(T tensor){
-
-    typename T::tuple_indices a();
-
-    return 0;
-}
 
 int main() {
 
@@ -149,18 +142,15 @@ int main() {
     }
 
     constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
-    constexpr tensor<double, up_t> tensor2(0.1, 0.2, 0.3);
+    constexpr tensor<double, up_t> tensor2(5, 5, 5);
 
     constexpr auto copyObj1 = tensor1;
     constexpr auto indices = tensor1.indices_amount;
     constexpr auto indices1 = tensor1.calculate_indices();
 
-    //constexpr auto contract = contraction_ct<0,0, tensor1, tensor2>();
+
     constexpr auto contract = contraction_ct<10, tensor2>();
     //decltype(contract)::foo = 1;
-    for(auto i : contract.data){
-        std::cout << i << std::endl;
-    }
 
     //---------------------------------------------------------
     auto l = std::make_tuple(1);
@@ -173,15 +163,31 @@ int main() {
 
     constexpr auto trace_value = trace_ct<tensor1>();
 
-    std::cout << trace_value << std::endl;
-
     constexpr auto reorder_tensor = reorder_ct<tensor1, 1, 0>();
 
-    reorder_tensor.to_runtime_tensor();
+    auto asdas = reorder_tensor.to_runtime_tensor();
 
     auto final_final = reorder<1,0>(tensor1.to_runtime_tensor());
 
+    for(auto a : final_final.data){
+        std::cout << a << std::endl;
+    }
 
+    auto trace_try = trace(tensor1.to_runtime_tensor());
+
+    auto dodo_rt = contraction<0,0>(tensor2.to_runtime_tensor(), tensor1.to_runtime_tensor());
+    constexpr auto dodo_ct = contraction_ct<0,0, tensor2, tensor1>();
+
+    for (int i = 0; i < dodo_ct.data.size(); i++){
+        std::cout << "--------"<< i << "-----------" << std::endl;
+        std::cout << "tensor runtime value: " << dodo_rt.data[i] << std::endl;
+        std::cout << "tensor compile value: " << dodo_ct.data[i] << std::endl;
+        std::cout << "----------------------" << std::endl;
+    }
+
+
+    auto myresult = trace_ranges(tensor1);
+    std::cout << myresult << std::endl;
 
     return 0;
 }

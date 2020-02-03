@@ -11,8 +11,10 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   ".././tensor-lib/tensor-builder-utilities"
+  ".././tensor-lib/tensor-builder-utilities-ranges"
   ".././tensor-lib/tensor-definition"
   ".././tensor-lib/tensor-operation"
+  ".././tensor-lib/tensor-operation-ranges"
   "/home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include"
   )
 
