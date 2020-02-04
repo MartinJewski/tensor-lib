@@ -59,7 +59,7 @@ constexpr auto reorder_ct_i(std::index_sequence<is...>){
 }
 
 template<auto T1, std::size_t ... positions>
-constexpr auto reorder_ct(){
+constexpr auto reorder(){
     return reorder_ct_i<T1, positions...>(std::make_index_sequence<T1.calculate_indices().size()>{});
 }
 

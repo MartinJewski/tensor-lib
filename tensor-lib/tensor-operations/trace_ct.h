@@ -25,7 +25,7 @@ constexpr auto trace_ct_i(std::index_sequence<it...>){
 }
 
 template<auto T1>
-constexpr auto trace_ct(){
+constexpr auto trace(){
     return trace_ct_i<T1>(std::make_index_sequence<DIM3>{});
 }
 

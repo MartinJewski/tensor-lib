@@ -83,7 +83,8 @@ constexpr auto contraction(T1&& tensor1, T2&& tensor2){
     }
 
     if constexpr ((!std::is_fundamental<T1>::value) && (!std::is_fundamental<T2>::value)) {
-/*
+
+
         if constexpr ((T1::indices_amount == 1) && (T2::indices_amount == 1)) {
 
             using type = std::common_type_t<typename T1::elem_type, typename T2::elem_type>;
@@ -92,7 +93,7 @@ constexpr auto contraction(T1&& tensor1, T2&& tensor2){
 
             return l;
         }
-*/
+
         if constexpr (((T1::indices_amount == 1) && (T2::indices_amount > 1)) ||
                       ((T1::indices_amount > 1) && (T2::indices_amount == 1)) ||
                       ((T1::indices_amount > 1) && (T2::indices_amount > 1))) {
@@ -124,7 +125,15 @@ constexpr auto contraction(T1&& tensor1, T2&& tensor2){
 
 }
 
+template<typename T1, typename T2>
+constexpr auto contraction(T1 val1, T2 val2){
 
+    if constexpr ((std::is_fundamental<T1>::value) && (std::is_fundamental<T2>::value)) {
+
+        return val1*val2;
+
+    }
+}
 
 
 

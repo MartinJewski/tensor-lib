@@ -21,9 +21,9 @@ constexpr auto cartesian_product_ranges_inner(std::index_sequence<is...>) {
     return ranges::view::cartesian_product((is, cart_input1)...);
 }
 
-template<std::size_t length, std::size_t N>
+template<std::size_t length, std::size_t sets>
 constexpr auto cartesian_product_ranges(){
-    return cartesian_product_ranges_inner<length>(std::make_index_sequence<N>{});
+    return cartesian_product_ranges_inner<length>(std::make_index_sequence<sets>{});
 }
 
 

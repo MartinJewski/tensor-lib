@@ -64,11 +64,7 @@ constexpr auto create_result_tensor_ct(Arr array, std::index_sequence<is...>){
 
 template<std::size_t indices1, std::size_t indices2, typename F, auto T1, auto T2, typename Tuple1, typename Tuple2, std::size_t ...is>
 constexpr auto calculate_value_i_ct(Tuple1 tup1, Tuple2 tup2, std::index_sequence<is...>){
-    /*
-    F add = 0.0;
-    ((add += (T1.data[(pos_nd_to_1d_tuple<std::tuple_size<Tuple1>::value-1>(std::get<is>(tup1)))]
-            * T2.data[(pos_nd_to_1d_tuple<std::tuple_size<Tuple2>::value-1>(std::get<is>(tup2)))])),...);
-*/
+
     F add = 0.0;
     ((add += (T1.data[(pos_nd_to_1d_tuple<indices1>(std::get<is>(tup1)))]
               * T2.data[(pos_nd_to_1d_tuple<indices2>(std::get<is>(tup2)))])),...);
@@ -97,7 +93,7 @@ constexpr auto contraction_ct_1D(std::index_sequence<is...>){
 }
 
 template<std::size_t t1_skipPos, std::size_t t2_skipPos, auto T1, auto T2>
-constexpr auto contraction_ct(){
+constexpr auto contraction(){
 
     if constexpr ((T1.indices_amount == 1) && (T2.indices_amount == 1)){
 
@@ -108,6 +104,7 @@ constexpr auto contraction_ct(){
         return l;
 
     }
+
     if constexpr (((T1.indices_amount == 1) && (T2.indices_amount > 1)) ||
                    ((T1.indices_amount > 1) && (T2.indices_amount == 1))||
                    ((T1.indices_amount > 1) && (T2.indices_amount > 1)) ){
@@ -145,23 +142,24 @@ constexpr auto add_scalar_ct(std::index_sequence<is...>){
 }
 
 template<auto T1, auto T2>
-constexpr auto contraction_ct(){
+constexpr auto contraction(){
 
-    if constexpr ((std::is_fundamental<decltype(T1)>::value) && (T2.indices_amount >= 1)){
+    if constexpr ((std::is_fundamental<decltype(T1)>::value) && !(std::is_fundamental<decltype(T2)>::value)) {
 
-        return add_scalar_ct<T1, T2>(std::make_index_sequence<DIM3>{});
+        if constexpr ((std::is_fundamental<decltype(T1)>::value) && (T2.indices_amount >= 1)) {
 
+            return add_scalar_ct<T1, T2>(std::make_index_sequence<DIM3>{});
+
+        }
     }
 
+    if constexpr ((std::is_fundamental<decltype(T1)>::value) && (std::is_fundamental<decltype(T2)>::value)) {
+
+        return  T1*T2;
+
+    }
 }
 
-
-template<std::size_t T1, std::size_t T2>
-constexpr auto contraction_ct(){
-
-    return T1*T2;
-
-}
 
 
 

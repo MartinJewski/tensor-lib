@@ -29,6 +29,9 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-builder-utilities/recreate_index_tuple.h
         tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
         tensor-lib/tensor-builder-utilities/tuple_helpers.h
+
+        tensor-lib/tensor-ranges/tensor-definition-ranges/tensor_ranges.h
+        tensor-lib/tensor-ranges/tensor-operations-ranges/trace_ranges.h
         )
 
 add_library(range_v3 INTERFACE IMPORTED)

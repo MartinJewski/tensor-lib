@@ -36,8 +36,8 @@ public:
 
     /* copy constructor */
 
-    template<typename Tensor>
-    constexpr tensorBase_rt(Tensor &oldObj){
+    template<typename Element>
+    constexpr tensorBase_rt(Element &oldObj){
         this->data = oldObj.data;
     };
 

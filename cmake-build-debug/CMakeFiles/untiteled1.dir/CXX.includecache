@@ -2403,8 +2403,8 @@ tensor-lib/tensor-operations/trace.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
 tensor-lib/tensor-operations/reorder.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
-tensor-lib/tensor-operations-ranges/trace_ranges.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_ranges.h
+tensor-lib/tensor-ranges/tensor-operations-ranges/trace_ranges.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-ranges/tensor-operations-ranges/trace_ranges.h
 tensor-lib/tensor-concepts/tensor-concepts.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-concepts/tensor-concepts.h
 tensor-lib/tensor-builder-utilities/tuple_helpers.h
@@ -2520,22 +2520,6 @@ range/v3/view/enumerate.hpp
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_ranges.h
-range/v3/view/all.hpp
--
-range/v3/view/replace_if.hpp
--
-range/v3/view/zip.hpp
--
-range/v3/view/stride.hpp
--
-range/v3/view/enumerate.hpp
--
-cartesian_product_ranges.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/cartesian_product_ranges.h
-range/v3/range/conversion.hpp
--
-
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
@@ -2599,4 +2583,20 @@ tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor_specification.h
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-ranges/tensor-operations-ranges/trace_ranges.h
+range/v3/view/all.hpp
+-
+range/v3/view/replace_if.hpp
+-
+range/v3/view/zip.hpp
+-
+range/v3/view/stride.hpp
+-
+range/v3/view/enumerate.hpp
+-
+cartesian_product_ranges.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-ranges/tensor-operations-ranges/cartesian_product_ranges.h
+range/v3/range/conversion.hpp
+-
 
