@@ -12,22 +12,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-ranges/tensor-definition-ranges/tensor_ranges.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition-ranges/tensor_rang.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/trace_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-ranges/tensor-operations-ranges/trace_ranges.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction_ct.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction_ct.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder_ct.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder_ct.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace_ct.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace_ct.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-ranges/tensor-definition-ranges/tensor_ranges.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-ranges/tensor-operations-ranges/trace_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/trace_ranges.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,14 +63,15 @@
     <property name="settings.editor.splitter.proportion" value="0.24397591" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tensor-lib/tensor-ranges" />
-      <recent name="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities-ranges" />
-      <recent name="$PROJECT_DIR$/tensor-lib/tensor-definition" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tensor-lib/tensor-ranges/tensor-definition-ranges" />
       <recent name="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tensor-lib" />
+      <recent name="$PROJECT_DIR$/tensor-lib/tensor-ranges" />
+      <recent name="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities-ranges" />
+      <recent name="$PROJECT_DIR$/tensor-lib/tensor-definition" />
     </key>
   </component>
   <component name="RunManager">
@@ -142,7 +142,8 @@
       <workItem from="1579884457692" duration="1731000" />
       <workItem from="1579947028712" duration="954000" />
       <workItem from="1579948246757" duration="65621000" />
-      <workItem from="1580730332829" duration="14389000" />
+      <workItem from="1580730332829" duration="16912000" />
+      <workItem from="1580819828431" duration="4187000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -195,22 +196,22 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1580212608484" />
-    <state width="1284" height="84" key="GridCell.Tab.0.bottom" timestamp="1580817258076">
+    <state width="1284" height="87" key="GridCell.Tab.0.bottom" timestamp="1580823876095">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="84" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1580817258076" />
-    <state width="1284" height="84" key="GridCell.Tab.0.center" timestamp="1580817258076">
+    <state width="1284" height="87" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1580823876095" />
+    <state width="1284" height="87" key="GridCell.Tab.0.center" timestamp="1580823876095">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="84" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1580817258076" />
-    <state width="1284" height="84" key="GridCell.Tab.0.left" timestamp="1580817258075">
+    <state width="1284" height="87" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1580823876095" />
+    <state width="1284" height="87" key="GridCell.Tab.0.left" timestamp="1580823876094">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="84" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1580817258075" />
-    <state width="1284" height="84" key="GridCell.Tab.0.right" timestamp="1580817258076">
+    <state width="1284" height="87" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1580823876094" />
+    <state width="1284" height="87" key="GridCell.Tab.0.right" timestamp="1580823876095">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="84" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1580817258076" />
+    <state width="1284" height="87" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1580823876095" />
     <state width="1243" height="202" key="GridCell.Tab.1.bottom" timestamp="1579524843024">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -255,5 +256,16 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="290" y="53" width="672" height="678" key="search.everywhere.popup/0.0.1366.732@0.0.1366.732" timestamp="1579193110204" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

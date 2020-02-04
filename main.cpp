@@ -18,14 +18,13 @@
 #include <range/v3/view/move.hpp>
 #include <range/v3/view/concat.hpp>
 
-#include "positive_natural_compiletime_pow.h"
+#include "tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h"
 
 #include <cmath>
 
 #include <tuple>
 
 #include "tensor-lib/tensor-builder-utilities/cartesian_product.h"
-#include "tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_show.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_split.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_split_from.h"
@@ -48,7 +47,12 @@
 #include "tensor-lib/tensor-operations/reorder.h"
 
 
-#include "tensor-lib/tensor-ranges/tensor-operations-ranges/trace_ranges.h"
+#include "tensor-lib/tensor-operations-ranges/trace_ranges.h"
+
+#include "tensor-lib/tensor-definition-ranges/tensor_rang.h"
+
+
+#include "tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h"
 
 #include "tensor-lib/tensor-concepts/tensor-concepts.h"
 
@@ -57,6 +61,8 @@
 using std::cout;
 
 int main() {
+
+    //------------------------------C++17-------------------------------
 
     constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     constexpr tensor<double, up_t> tensor2(5, 5, 5);
@@ -75,6 +81,12 @@ int main() {
 
     constexpr auto trace_value_ct = trace<tensor1>();
     auto trace_value_rt = trace(tensor1.to_runtime_tensor());
+
+    //----------------------C++20 ranges-------------------------------------------
+
+    trace_ranges(tensor1.to_runtime_tensor());
+    tensorRange<double, up_t, up_t> a(0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+
 
     return 0;
 }

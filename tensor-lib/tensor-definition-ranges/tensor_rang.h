@@ -1,29 +1,21 @@
 //
-// Created by martin on 03.01.20.
+// Created by martin on 04.02.20.
 //
 
-#ifndef UNTITELED1_TENSOR_H
-#define UNTITELED1_TENSOR_H
+#ifndef UNTITELED1_TENSOR_RANGES_H
+#define UNTITELED1_TENSOR_RANGES_H
 
-#include <cmath>
 #include <vector>
 #include <tuple>
 #include "tensor_specification.h"
-#include <array>
 #include "positive_natural_compiletime_pow.h"
-#include "cartesian_product.h"
-#include <type_traits>
-
-#include <range/v3/view/all.hpp>
-#include <range/v3/view/enumerate.hpp>
-
 
 
 template<typename T, typename Args>
 class tensorBase_ranges{
 
 public:
-    std::vector<T>()> data;
+    std::vector<T> data;
 
     using tuple_indices = Args;
     using elem_type = T;
@@ -32,12 +24,15 @@ public:
 
 
     template<typename ... Element>
-    constexpr tensorBase_rt(Element&&... input) : data{input...} {};
+    constexpr tensorBase_ranges(Element&&... input) : data{input...} {
+
+        static_assert(sizeof...(Element) == positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>(), "LOL");
+    };
 
     /* copy constructor */
 
     template<typename Element>
-    constexpr tensorBase_rt(Element &oldObj){
+    constexpr tensorBase_ranges(Element &oldObj){
         this->data = oldObj.data;
     };
 
@@ -53,8 +48,8 @@ public:
 };
 
 template<typename T, typename ... Args>
-using tensorR = tensorBase_ranges<T, std::tuple<Args...>>;
+using tensorRange = tensorBase_ranges<T, std::tuple<Args...>>;
 
 
 
-#endif //UNTITELED1_TENSOR_H
+#endif //UNTITELED1_TENSOR_RANGES_H

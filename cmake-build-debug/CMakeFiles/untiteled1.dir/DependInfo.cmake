@@ -14,7 +14,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   ".././tensor-lib/tensor-builder-utilities-ranges"
   ".././tensor-lib/tensor-definition"
   ".././tensor-lib/tensor-operation"
-  ".././tensor-lib/tensor-operation-ranges"
+  ".././tensor-lib/tensor-operations-ranges"
+  ".././tensor-lib/tensor-definition-ranges"
   "/home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include"
   )
 

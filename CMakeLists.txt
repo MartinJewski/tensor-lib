@@ -7,19 +7,21 @@ include_directories(./tensor-lib/tensor-builder-utilities)
 include_directories(./tensor-lib/tensor-builder-utilities-ranges)
 include_directories(./tensor-lib/tensor-definition)
 include_directories(./tensor-lib/tensor-operation)
-include_directories(./tensor-lib/tensor-operation-ranges)
+include_directories(./tensor-lib/tensor-operations-ranges)
+include_directories(./tensor-lib/tensor-definition-ranges)
 
 set(SOURCE_FILES main.cpp
+
         tensor-lib/tensor-operations/reorder_ct.h
         tensor-lib/tensor-operations/reorder.h
         tensor-lib/tensor-operations/trace_ct.h
         tensor-lib/tensor-operations/trace.h
         tensor-lib/tensor-operations/contraction.h
         tensor-lib/tensor-operations/contraction_ct.h
-        tensor-lib/tensor-definition/tensor.h
-        tensor-lib/tensor-definition/tensor_specification.h
+
         tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h
         tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
+
         tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
         tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
         tensor-lib/tensor-builder-utilities/tuple_show.h
@@ -30,8 +32,12 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
         tensor-lib/tensor-builder-utilities/tuple_helpers.h
 
-        tensor-lib/tensor-ranges/tensor-definition-ranges/tensor_ranges.h
-        tensor-lib/tensor-ranges/tensor-operations-ranges/trace_ranges.h
+        tensor-lib/tensor-definition/tensor.h
+        tensor-lib/tensor-definition/tensor_specification.h
+
+        tensor-lib/tensor-operations-ranges/trace_ranges.h
+
+        tensor-lib/tensor-definition-ranges/tensor_rang.h
         )
 
 add_library(range_v3 INTERFACE IMPORTED)
