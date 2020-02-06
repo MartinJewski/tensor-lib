@@ -138,7 +138,7 @@
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_split_from.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition-ranges/tensor_rang.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition-ranges/tensor_range.h">
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h">

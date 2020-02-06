@@ -13,44 +13,49 @@
 #include <range/v3/view/transform.hpp>
 
 #include <range/v3/view/for_each.hpp>
-
+#include <range/v3/view/remove_if.hpp>
+#include <range/v3/numeric/accumulate.hpp>
 
 #include "cartesian_product_ranges.h"
+#include "tensor_range.h"
 
 #include <range/v3/range/conversion.hpp>
 
 #include <tuple>
 
-auto fun_rule = [](auto i) -> int {
-    return 3;
+template<std::size_t is, typename Val1, typename Val2>
+constexpr auto functiono(Val1 value1, Val2 value2){
+
+    if(value1 != value2){
+        return false;
+    }else{
+        return true;
+    }
 };
+
+template<typename T, std::size_t ...is>
+constexpr bool tuple_values_equal_i(T tuple, std::index_sequence<is...>){
+    auto compare_tuple = std::get<0>(tuple);
+
+    auto boolval = true;
+    ((boolval = functiono<is>(std::get<0>(compare_tuple), std::get<is>(compare_tuple))),...);
+
+    return boolval;
+}
+
+template<typename T>
+constexpr bool get_indices(T tuple){
+    return tuple_values_equal_i(tuple, std::make_index_sequence<std::tuple_size<T>::value>{});
+}
 
 template<typename T1>
 constexpr auto trace_ranges(T1 tensor1){
 
-    std::vector<int> myvector = {1,2,3,4,5,6,7,8};
-    auto myvec_range = ranges::views::all(myvector);
-
-    auto start = tensor1.data_to_range();
-    auto indices = tensor1.calculate_indices() | ranges::to<std::vector>();
-
-   for ( auto i : start
-            | ranges::views::transform([=](auto d){return std::make_tuple(indices[std::get<0>(d)], std::get<1>(d));})
-            | ranges::to<std::vector>())
-    { }
-
-   auto l = start
-           | ranges::views::transform([=](auto d){return std::make_tuple(indices[std::get<0>(d)], std::get<1>(d));})
-           | ranges::to<std::vector>();
-
-
-   auto e = ranges::views::all(tensor1.data)
-           | ranges::views::enumerate
-           | ranges::views::transform([=](auto d){return std::make_tuple(indices[std::get<0>(d)], std::get<1>(d));});
-
-   std::cout << e << std::endl;
-
-    return start;
+    return ranges::accumulate(
+            tensor1.data_to_range_positionsND()
+                | ranges::view::remove_if([=](auto i) {if (get_indices(i) == false){return true;}else{return false;}})
+                | ranges::view::transform([](auto i){return std::get<1>(i);})
+                ,0);
 }
 
 #endif //UNTITELED1_TRACE_RANGES_H

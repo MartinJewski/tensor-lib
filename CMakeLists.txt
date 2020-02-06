@@ -37,7 +37,7 @@ set(SOURCE_FILES main.cpp
 
         tensor-lib/tensor-operations-ranges/trace_ranges.h
 
-        tensor-lib/tensor-definition-ranges/tensor_rang.h
+        tensor-lib/tensor-definition-ranges/tensor_range.h
         )
 
 add_library(range_v3 INTERFACE IMPORTED)

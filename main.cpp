@@ -49,7 +49,7 @@
 
 #include "tensor-lib/tensor-operations-ranges/trace_ranges.h"
 
-#include "tensor-lib/tensor-definition-ranges/tensor_rang.h"
+#include "tensor_range.h"
 
 
 #include "tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h"
@@ -84,15 +84,15 @@ int main() {
 
     //----------------------C++20 ranges-------------------------------------------
 
-    auto l = trace_ranges(tensor1.to_runtime_tensor());
+    tensorRange<double, up_t, up_t> tensorR(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
-    tensorRange<double, up_t, up_t> a(0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-
-    auto calculateRange = a.calculate_indices();
+    auto calculateRange = tensorR.calculate_indices();
     auto cartesianRng = cartesian_product_ranges<3,3>();
 
     auto cartesianRng2 = cartesian_product_ranges_to_vec<3,3>();
 
+
+    auto e = trace_ranges(tensorR);
 
     return 0;
 }
