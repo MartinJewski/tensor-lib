@@ -84,8 +84,14 @@ int main() {
 
     //----------------------C++20 ranges-------------------------------------------
 
-    trace_ranges(tensor1.to_runtime_tensor());
+    auto l = trace_ranges(tensor1.to_runtime_tensor());
+
     tensorRange<double, up_t, up_t> a(0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+
+    auto calculateRange = a.calculate_indices();
+    auto cartesianRng = cartesian_product_ranges<3,3>();
+
+    auto cartesianRng2 = cartesian_product_ranges_to_vec<3,3>();
 
 
     return 0;

@@ -2507,6 +2507,8 @@ tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition-ranges/tensor_specification.h
 positive_natural_compiletime_pow.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition-ranges/positive_natural_compiletime_pow.h
+cartesian_product_ranges.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition-ranges/cartesian_product_ranges.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h
 cmath
@@ -2543,9 +2545,15 @@ range/v3/view/stride.hpp
 -
 range/v3/view/enumerate.hpp
 -
+range/v3/view/transform.hpp
+-
+range/v3/view/for_each.hpp
+-
 cartesian_product_ranges.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/cartesian_product_ranges.h
 range/v3/range/conversion.hpp
+-
+tuple
 -
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h

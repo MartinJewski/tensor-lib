@@ -11,8 +11,6 @@
 
 //pack expansion
 
-/*
- * cartesian product using the ranges library
 
 template<std::size_t length, std::size_t... is>
 constexpr auto cartesian_product_v(std::index_sequence<is...>) {
@@ -24,5 +22,5 @@ template<std::size_t length, std::size_t N>
 constexpr auto cartesian_product_ranges_to_vec(){
     return cartesian_product_v<length>(std::make_index_sequence<N>{});
 }
-*/
+
 #endif //UNTITELED1_CARTESIAN_PRODUCT_RANGES_TO_VEC_H
