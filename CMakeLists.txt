@@ -6,12 +6,11 @@ set(CMAKE_CXX_STANDARD 20)
 include_directories(./tensor-lib/tensor-builder-utilities)
 include_directories(./tensor-lib/tensor-builder-utilities-ranges)
 include_directories(./tensor-lib/tensor-definition)
-include_directories(./tensor-lib/tensor-operation)
+include_directories(./tensor-lib/tensor-operations)
 include_directories(./tensor-lib/tensor-operations-ranges)
 include_directories(./tensor-lib/tensor-definition-ranges)
 
 set(SOURCE_FILES main.cpp
-
         tensor-lib/tensor-operations/reorder_ct.h
         tensor-lib/tensor-operations/reorder.h
         tensor-lib/tensor-operations/trace_ct.h
@@ -36,7 +35,6 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-definition/tensor_specification.h
 
         tensor-lib/tensor-operations-ranges/trace_ranges.h
-
         tensor-lib/tensor-definition-ranges/tensor_range.h
         )
 

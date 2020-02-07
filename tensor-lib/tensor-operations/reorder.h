@@ -6,14 +6,14 @@
 #define UNTITELED1_REORDER_H
 
 #include "tensor.h"
-/*
-template<std::size_t cartesian_pos, std::size_t ... positions, typename C>
-constexpr auto calculate_new(C cartesian_arr){
 
-    return pos_nd_to_1d_tuple<sizeof...(positions)>(std::make_tuple(std::get<positions>(cartesian_arr[cartesian_pos])...));
+template<std::size_t ... positions, typename CartesianPos, typename T>
+constexpr auto calculate_new(CartesianPos value, T tuple){
+
+    return pos_nd_to_1d_tuple<sizeof...(positions)>(std::make_tuple(std::get<positions>(tuple)...));
 
 }
-*/
+
 template<std::size_t cartesian_pos, std::size_t ... positions, typename C>
 constexpr auto calculate_new(C cartesian_arr){
 

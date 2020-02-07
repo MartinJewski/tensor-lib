@@ -48,6 +48,7 @@
 
 
 #include "tensor-lib/tensor-operations-ranges/trace_ranges.h"
+#include "tensor-lib/tensor-operations-ranges/reorder_ranges.h"
 
 #include "tensor_range.h"
 
@@ -93,6 +94,8 @@ int main() {
 
 
     auto e = trace_ranges(tensorR);
+
+    auto ee = reorder_ranges<1,0>(tensorR);
 
     return 0;
 }

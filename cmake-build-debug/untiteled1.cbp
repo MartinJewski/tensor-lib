@@ -37,7 +37,7 @@
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities-ranges"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operation"/>
+					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations-ranges"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition-ranges"/>
 					<Add directory="/home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include"/>
@@ -69,7 +69,7 @@
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities-ranges"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operation"/>
+					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations-ranges"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition-ranges"/>
 					<Add directory="/home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include"/>

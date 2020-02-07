@@ -13,7 +13,18 @@
   <component name="ChangeListManager">
     <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition-ranges/tensor_range.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition-ranges/tensor_range.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/reorder_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/reorder_ranges.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +141,7 @@
       <workItem from="1579947028712" duration="954000" />
       <workItem from="1579948246757" duration="65621000" />
       <workItem from="1580730332829" duration="16912000" />
-      <workItem from="1580819828431" duration="22013000" />
+      <workItem from="1580819828431" duration="27126000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -183,22 +194,22 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1580212608484" />
-    <state width="1284" height="90" key="GridCell.Tab.0.bottom" timestamp="1581003585011">
+    <state width="1284" height="90" key="GridCell.Tab.0.bottom" timestamp="1581082117018">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="90" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1581003585011" />
-    <state width="1284" height="90" key="GridCell.Tab.0.center" timestamp="1581003585010">
+    <state width="1284" height="90" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1581082117018" />
+    <state width="1284" height="90" key="GridCell.Tab.0.center" timestamp="1581082117018">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="90" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1581003585010" />
-    <state width="1284" height="90" key="GridCell.Tab.0.left" timestamp="1581003585010">
+    <state width="1284" height="90" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1581082117018" />
+    <state width="1284" height="90" key="GridCell.Tab.0.left" timestamp="1581082117017">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="90" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1581003585010" />
-    <state width="1284" height="90" key="GridCell.Tab.0.right" timestamp="1581003585011">
+    <state width="1284" height="90" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1581082117017" />
+    <state width="1284" height="90" key="GridCell.Tab.0.right" timestamp="1581082117018">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1284" height="90" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1581003585011" />
+    <state width="1284" height="90" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1581082117018" />
     <state width="1243" height="202" key="GridCell.Tab.1.bottom" timestamp="1579524843024">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -249,7 +260,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>52</line>
+          <line>53</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
