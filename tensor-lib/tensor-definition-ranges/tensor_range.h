@@ -10,7 +10,9 @@
 #include "tensor_specification.h"
 #include "positive_natural_compiletime_pow.h"
 #include "cartesian_product_ranges.h"
+#include <type_traits>
 
+#include "reorder.h"
 
 
 template<typename T, typename Args>
@@ -24,18 +26,16 @@ public:
 
     static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
 
-
     template<typename ... Element>
-    constexpr tensorBase_ranges(Element&&... input) : data{input...} {
-
-        static_assert(sizeof...(Element) == positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>(),
-                      "check amount of elements passed. It should be #passed_elements == pow(3, #indice_count)");
-    };
+    constexpr tensorBase_ranges(Element&&... input) : data{input...} {};
 
     /* copy constructor */
+    constexpr tensorBase_ranges(std::vector<T> vec){
+        this->data = vec;
+    };
 
-    template<typename Element>
-    constexpr tensorBase_ranges(Element &oldObj){
+    template<typename oT,typename oArgs>
+    constexpr tensorBase_ranges(tensorBase_ranges<oT, oArgs> &oldObj){
         this->data = oldObj.data;
     };
 
@@ -59,6 +59,20 @@ public:
 template<typename T, typename ... Args>
 using tensorRange = tensorBase_ranges<T, std::tuple<Args...>>;
 
+
+template<typename A, typename B>
+class myClass{
+
+public:
+    A myval;
+    myClass(A i) : myval(i){};
+
+    template<typename Te, typename De>
+    constexpr myClass(myClass<Te, De> ele){
+        std::cout << "HALLO" << std::endl;
+    }
+
+};
 
 
 #endif //UNTITELED1_TENSOR_RANGES_H

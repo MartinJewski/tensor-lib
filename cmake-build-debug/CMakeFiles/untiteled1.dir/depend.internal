@@ -100,6 +100,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/iota.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/istream.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/join.hpp
+ /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/map.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/move.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/ref.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/range/v3/view/remove_if.hpp

@@ -97,6 +97,9 @@ int main() {
 
     auto ee = reorder_ranges<1,0>(tensorR);
 
+    myClass<int, int> cl(3);
+    myClass ddd(cl);
+
     return 0;
 }
 
