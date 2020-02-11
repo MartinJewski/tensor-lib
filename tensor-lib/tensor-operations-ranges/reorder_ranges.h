@@ -25,7 +25,7 @@ constexpr auto reorder_ranges(T tensor){
             | ranges::views::values
             | ranges::to<std::vector>();
 
-    tensorRange<T::elem_type, T::tuple_indices> tensor2(reordered);
+    tensorRange<typename T::elem_type, typename T::tuple_indices> tensor2(reordered);
 
     return tensor2;
 }

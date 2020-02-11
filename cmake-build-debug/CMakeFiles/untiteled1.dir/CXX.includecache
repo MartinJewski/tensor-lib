@@ -84,6 +84,22 @@ range/v3/view/enumerate.hpp
 
 ../tensor-lib/tensor-definition/tensor_specification.h
 
+../tensor-lib/tensor-operations/contraction.h
+tuple_show.h
+../tensor-lib/tensor-operations/tuple_show.h
+tensor_specification.h
+../tensor-lib/tensor-operations/tensor_specification.h
+pos_nd_to_1d.h
+../tensor-lib/tensor-operations/pos_nd_to_1d.h
+tensor.h
+../tensor-lib/tensor-operations/tensor.h
+tuple
+-
+type_traits
+-
+tuple_helpers.h
+../tensor-lib/tensor-operations/tuple_helpers.h
+
 ../tensor-lib/tensor-operations/reorder.h
 tensor.h
 ../tensor-lib/tensor-operations/tensor.h
@@ -2509,6 +2525,8 @@ tensor-lib/tensor-operations-ranges/trace_ranges.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_ranges.h
 tensor-lib/tensor-operations-ranges/reorder_ranges.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/reorder_ranges.h
+tensor-lib/tensor-operations-ranges/contraction_ranges.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/contraction_ranges.h
 tensor_range.h
 /home/martin/CLionProjects/tensor-library-v1/tensor_range.h
 tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
@@ -2629,6 +2647,24 @@ range/v3/view/enumerate.hpp
 -
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/contraction_ranges.h
+tensor_range.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/tensor_range.h
+tuple_helpers.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/tuple_helpers.h
+type_traits
+-
+tuple
+-
+range/v3/range/conversion.hpp
+-
+range/v3/view/transform.hpp
+-
+recreate_for_index_sequence.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/recreate_for_index_sequence.h
+contraction.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/contraction.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/reorder_ranges.h
 reorder.h

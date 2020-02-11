@@ -49,9 +49,9 @@
 
 #include "tensor-lib/tensor-operations-ranges/trace_ranges.h"
 #include "tensor-lib/tensor-operations-ranges/reorder_ranges.h"
+#include "tensor-lib/tensor-operations-ranges/contraction_ranges.h"
 
 #include "tensor_range.h"
-
 
 #include "tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h"
 
@@ -85,7 +85,8 @@ int main() {
 
     //----------------------C++20 ranges-------------------------------------------
 
-    tensorRange<double, up_t, up_t> tensorR(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    tensorRange<double, up_t, up_t> tensorR(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0);
+    tensorRange<double, up_t, up_t> tensorR2(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
     auto calculateRange = tensorR.calculate_indices();
     auto cartesianRng = cartesian_product_ranges<3,3>();
@@ -93,12 +94,11 @@ int main() {
     auto cartesianRng2 = cartesian_product_ranges_to_vec<3,3>();
 
 
-    auto e = trace_ranges(tensorR);
+    auto test_trace_ranges = trace_ranges(tensorR);
 
-    auto ee = reorder_ranges<1,0>(tensorR);
+    auto test_reorder_ranges = reorder_ranges<1,0>(tensorR);
 
-    myClass<int, int> cl(3);
-    myClass ddd(cl);
+    auto test_contraction_ranges = contraction_ranges<0,0>(tensorR2, tensorR2);
 
     return 0;
 }

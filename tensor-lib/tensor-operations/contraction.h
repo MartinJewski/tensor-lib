@@ -41,7 +41,6 @@ constexpr auto calculate_value(T1 tensor1, T2 tensor2, SRIST1 sris1, SRIST2 sris
             arr{calculate_value_i<indices1, indices2, F>(tensor1, tensor2, sris1[is], sris2[is], std::make_index_sequence<DIM3>{})...};
 
     return arr;
-
 }
 
 template<typename T, typename  T1, typename T2, std::size_t ...is>
@@ -102,7 +101,7 @@ constexpr auto contraction(T1&& tensor1, T2&& tensor2){
             typename decltype(types)::type newType;
 
 
-            tensorBase<double, decltype(newType)> tensor3{};
+            tensorBase<std::common_type_t<typename T1::elem_type, typename T2::elem_type>, decltype(newType)> tensor3{};
             auto t3_indices = tensor3.calculate_indices();
 
             auto sris_tensor1 = save_recreated_index_sequence

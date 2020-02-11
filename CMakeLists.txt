@@ -47,7 +47,6 @@ add_compile_options(-fpermissive)
 add_compile_options(-ftemplate-depth=2000)
 
 
-
 add_executable(untiteled1 ${SOURCE_FILES} ${SOURCE_FILES2})
 
 target_link_libraries(untiteled1 range_v3) #link libraries to exe

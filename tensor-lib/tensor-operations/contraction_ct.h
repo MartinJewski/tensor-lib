@@ -112,7 +112,8 @@ constexpr auto contraction(){
         remove_ith_concat_tuple<t1_skipPos, t2_skipPos, decltype(T1.myTypeTup), decltype(T2.myTypeTup)> types;
         typename decltype(types)::type newType;
 
-        tensorBase<double, decltype(newType)> tensor3{};
+        tensorBase<std::common_type_t<typename decltype(T1.data)::value_type, typename decltype(T2.data)::value_type>,
+            decltype(newType)> tensor3{};
         auto t3_indices = tensor3.calculate_indices();
 
         auto sris_tensor1 = save_recreated_index_sequence
