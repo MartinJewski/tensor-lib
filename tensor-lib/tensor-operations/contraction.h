@@ -43,8 +43,8 @@ constexpr auto calculate_value(T1 tensor1, T2 tensor2, SRIST1 sris1, SRIST2 sris
     return arr;
 }
 
-template<typename T, typename  T1, typename T2, std::size_t ...is>
-constexpr auto contraction_1D(T1 tensor1, T2 tensor2, std::index_sequence<is...>){
+template<typename T, typename  T1, typename ArgsT1, typename T2, typename ArgsT2, std::size_t ...is>
+constexpr auto contraction_1D(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, ArgsT2> tensor2, std::index_sequence<is...>){
 
     auto value = 0;
     ((value += tensor1.data[is] * tensor2.data[is]),...);
@@ -52,8 +52,8 @@ constexpr auto contraction_1D(T1 tensor1, T2 tensor2, std::index_sequence<is...>
     return value;
 }
 
-template<typename Scalar, typename T2, std::size_t ...is>
-constexpr auto add_scalar(Scalar scalar, T2 tensor, std::index_sequence<is...>){
+template<typename Scalar, typename T2, typename ArgsT2, std::size_t ...is>
+constexpr auto add_scalar(Scalar scalar, tensorBase_rt<T2, ArgsT2> tensor, std::index_sequence<is...>){
 
     auto copyTensor = tensor;
     ((copyTensor.data[is] = scalar *  copyTensor.data[is]),...);
@@ -62,66 +62,49 @@ constexpr auto add_scalar(Scalar scalar, T2 tensor, std::index_sequence<is...>){
 }
 
 
-template<std::size_t t1_skipPos, std::size_t t2_skipPos, typename T1, typename T2>
-constexpr auto contraction(T1&& tensor1, T2&& tensor2){
+template<std::size_t t1_skipPos, std::size_t t2_skipPos, typename T1, typename ArgsT1, typename T2, typename ArgsT2>
+constexpr auto contraction(tensorBase_rt<T1, ArgsT1>&& tensor1, tensorBase_rt<T2, ArgsT2>&& tensor2){
 
-    if constexpr ((std::is_fundamental<T1>::value) && (std::is_fundamental<T2>::value)){
-        return tensor1*tensor2;
-    }
+    if constexpr ((!std::is_fundamental<decltype(tensor1)>::value) && (!std::is_fundamental<decltype(tensor2)>::value)) {
 
-    if constexpr ((std::is_fundamental<T1>::value) && (!std::is_fundamental<T2>::value)) {
-        if constexpr ((T2::indices_amount >= 1)) {
-            return add_scalar(tensor1, tensor2, std::make_index_sequence<DIM3>{});
-        }
-    }
+        if constexpr ((tensorBase_rt<T1, ArgsT1>::indices_amount == 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount == 1)) {
 
-    if constexpr ((!std::is_fundamental<T1>::value) && (std::is_fundamental<T2>::value)) {
-        if constexpr ((T1::indices_amount >= 1)) {
-            return add_scalar(tensor2, tensor1, std::make_index_sequence<DIM3>{});
-        }
-    }
-
-    if constexpr ((!std::is_fundamental<T1>::value) && (!std::is_fundamental<T2>::value)) {
-
-
-        if constexpr ((T1::indices_amount == 1) && (T2::indices_amount == 1)) {
-
-            using type = std::common_type_t<typename T1::elem_type, typename T2::elem_type>;
+            using type = std::common_type_t<T1, T2>;
 
             auto l = contraction_1D<type>(tensor1, tensor2, std::make_index_sequence<DIM3>{});
 
             return l;
         }
 
-        if constexpr (((T1::indices_amount == 1) && (T2::indices_amount > 1)) ||
-                      ((T1::indices_amount > 1) && (T2::indices_amount == 1)) ||
-                      ((T1::indices_amount > 1) && (T2::indices_amount > 1))) {
+        if constexpr (((tensorBase_rt<T1, ArgsT1>::indices_amount == 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount > 1)) ||
+                      ((tensorBase_rt<T1, ArgsT1>::indices_amount > 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount == 1)) ||
+                      ((tensorBase_rt<T1, ArgsT1>::indices_amount > 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount > 1))) {
 
-            remove_ith_concat_tuple<t1_skipPos, t2_skipPos, typename T1::tuple_indices, typename T2::tuple_indices> types;
+            remove_ith_concat_tuple<t1_skipPos, t2_skipPos, ArgsT1, ArgsT2> types;
             typename decltype(types)::type newType;
 
 
-            tensorBase<std::common_type_t<typename T1::elem_type, typename T2::elem_type>, decltype(newType)> tensor3{};
+            tensorBase<std::common_type_t<T1, T2>, decltype(newType)> tensor3{};
             auto t3_indices = tensor3.calculate_indices();
 
             auto sris_tensor1 = save_recreated_index_sequence
-                    <0, T1::indices_amount - 1, t1_skipPos, T1::indices_amount, DIM3>(t3_indices);
+                    <0, tensorBase_rt<T1, ArgsT1>::indices_amount - 1, t1_skipPos, tensorBase_rt<T1, ArgsT1>::indices_amount, DIM3>(t3_indices);
             auto sris_tensor2 = save_recreated_index_sequence
-                    <T1::indices_amount - 1, T2::indices_amount - 1, t2_skipPos, T2::indices_amount, DIM3>(t3_indices);
+                    <tensorBase_rt<T1, ArgsT1>::indices_amount - 1, tensorBase_rt<T2, ArgsT2>::indices_amount - 1, t2_skipPos, tensorBase_rt<T2, ArgsT2>::indices_amount, DIM3>(t3_indices);
 
-            auto result = calculate_value<T1::indices_amount, T2::indices_amount,
-                    std::common_type_t<typename T1::elem_type, typename T2::elem_type>>
+            auto result = calculate_value<tensorBase_rt<T1, ArgsT1>::indices_amount, tensorBase_rt<T2, ArgsT2>::indices_amount,
+                    std::common_type_t<T1, T2>>
                     (tensor1, tensor2, sris_tensor1, sris_tensor2, std::make_index_sequence<sris_tensor1.size()>{});
 
             auto final_result = create_result_tensor
-                    <std::common_type_t<typename T1::elem_type, typename T2::elem_type>,
+                    <std::common_type_t<T1, T2>,
                             decltype(newType)>(result, std::make_index_sequence<result.size()>{});
 
             return final_result;
+
         }
 
     }
-
 }
 
 template<typename T1, typename T2>
@@ -134,6 +117,27 @@ constexpr auto contraction(T1 val1, T2 val2){
     }
 }
 
+template<typename T1, typename T2, typename ArgsT2>
+constexpr auto contraction(T1 value, tensorBase_rt<T2, ArgsT2> tensor){
+
+    if constexpr ((std::is_fundamental<T1>::value) && (!std::is_fundamental<decltype(tensor)>::value)) {
+        if constexpr ((T2::indices_amount >= 1)) {
+            return add_scalar(value, tensor, std::make_index_sequence<DIM3>{});
+        }
+    }
+}
+
+template<typename T1, typename ArgsT1, typename T2>
+constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor, T2 value){
+
+    if constexpr ((!std::is_fundamental<T1>::value) && (std::is_fundamental<decltype(tensor)>::value)) {
+        if constexpr ((T1::indices_amount >= 1)) {
+            return add_scalar(value, tensor, std::make_index_sequence<DIM3>{});
+        }
+    }
+
+
+}
 
 
 #endif //UNTITELED1_CONTRACTION_H

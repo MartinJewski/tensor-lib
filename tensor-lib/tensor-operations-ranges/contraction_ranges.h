@@ -21,9 +21,9 @@ constexpr auto contraction_ranges(tensorRange<T1, Args1...> tensor1, tensorRange
          typename decltype(tensor1)::tuple_indices, typename decltype(tensor2)::tuple_indices> tensor3_types;
 
     tensorBase_ranges<std::common_type_t<typename decltype(tensor1)::elem_type, typename decltype(tensor2)::elem_type>,
-          typename decltype(tensor3_types)::type> tr(0);
+          typename decltype(tensor3_types)::type> tensor3(0);
 
-    auto sris2 = tr.calculate_indices()
+    auto sris = tensor3.calculate_indices()
             | ranges::views::transform([tensor1, tensor2](auto tuple)
                 {return std::make_tuple(
                         recreate_for_index_sequence
@@ -37,13 +37,13 @@ constexpr auto contraction_ranges(tensorRange<T1, Args1...> tensor1, tensorRange
                                             decltype(tensor1)::indices_amount,
                                             decltype(tensor2)::indices_amount,
                                             std::common_type_t<typename decltype(tensor1)::elem_type, typename decltype(tensor2)::elem_type>>
-                                                    (tensor1, tensor2, std::get<0>(tuple), std::get<1>(tuple), std::make_index_sequence<DIM3>{});});
+                                                    (tensor1, tensor2, std::get<0>(tuple), std::get<1>(tuple), std::make_index_sequence<DIM3>{});})
+            | ranges::to<std::vector>();
+
+    tensor3.data = sris;
 
 
-    std::cout << sris2 << std::endl;
-
-
-    return 0;
+    return tensor3;
 }
 
 #endif //UNTITELED1_CONTRACTION_RANGES_H

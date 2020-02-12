@@ -9,13 +9,13 @@
 #include "tensor_specification.h"
 #include "tuple_show.h"
 
-template<auto T1, std::size_t value, std::size_t ...is>
+template<tensorBase T1, std::size_t value, std::size_t ...is>
 constexpr auto calc_ct_position(std::index_sequence<is...>){
 
     return T1.data[pos_nd_to_1d((is, value)...)];
 }
 
-template<auto T1, std::size_t ...it>
+template<tensorBase T1, std::size_t ...it>
 constexpr auto trace_ct_i(std::index_sequence<it...>){
 
     auto temp = 0.0;
@@ -24,7 +24,7 @@ constexpr auto trace_ct_i(std::index_sequence<it...>){
     return temp;
 }
 
-template<auto T1>
+template<tensorBase T1>
 constexpr auto trace(){
     return trace_ct_i<T1>(std::make_index_sequence<DIM3>{});
 }

@@ -35,10 +35,9 @@ public:
     constexpr tensorBase_rt(Element&&... input) : data{input...} {};
 
     /* copy constructor */
-
-    template<typename Element>
-    constexpr tensorBase_rt(Element &oldObj){
-        this->data = oldObj.data;
+    template<typename Ti, typename Argsi>
+    constexpr tensorBase_rt(tensorBase_rt<Ti, Argsi> &oldObj){
+        data = oldObj.data;
     };
 
     constexpr auto calculate_indices() const{
@@ -66,20 +65,34 @@ class tensorBase{
 
         Args myTypeTup;
 
+        using tuple_indices = Args;
+        using elem_type = T;
+
         static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
 
     template<typename ... Element>
     constexpr tensorBase(Element&&... input) : data{input...} {};
 
     /* copy constructor */
-    template<typename Tensor>
-    constexpr tensorBase(const Tensor &oldObj){
+    template<typename Ti, typename Argsi>
+    constexpr tensorBase(const tensorBase<Ti, Argsi> &oldObj){
         data = oldObj.data;
 
         myTypeTup = oldObj.myTypeTup;
 
         indices_amount = oldObj.indices_amount;
     };
+
+    /* copy constructor */
+    template<typename Ti, typename Argsi>
+    constexpr tensorBase(tensorBase<Ti, Argsi> &oldObj){
+        data = oldObj.data;
+
+        myTypeTup = oldObj.myTypeTup;
+
+        indices_amount = oldObj.indices_amount;
+    };
+
 
     constexpr auto calculate_indices() const{
 
