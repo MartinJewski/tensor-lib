@@ -135,8 +135,6 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor, T2 value){
             return add_scalar(value, tensor, std::make_index_sequence<DIM3>{});
         }
     }
-
-
 }
 
 
