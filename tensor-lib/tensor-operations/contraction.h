@@ -5,6 +5,8 @@
 #ifndef UNTITELED1_CONTRACTION_H
 #define UNTITELED1_CONTRACTION_H
 
+#include "tensor-concepts.h"
+
 #include "tuple_show.h"
 #include "tensor_specification.h"
 #include "pos_nd_to_1d.h"
@@ -65,8 +67,6 @@ constexpr auto add_scalar(Scalar scalar, tensorBase_rt<T2, ArgsT2> tensor, std::
 template<std::size_t t1_skipPos, std::size_t t2_skipPos, typename T1, typename ArgsT1, typename T2, typename ArgsT2>
 constexpr auto contraction(tensorBase_rt<T1, ArgsT1>&& tensor1, tensorBase_rt<T2, ArgsT2>&& tensor2){
 
-    if constexpr ((!std::is_fundamental<decltype(tensor1)>::value) && (!std::is_fundamental<decltype(tensor2)>::value)) {
-
         if constexpr ((tensorBase_rt<T1, ArgsT1>::indices_amount == 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount == 1)) {
 
             using type = std::common_type_t<T1, T2>;
@@ -103,39 +103,30 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1>&& tensor1, tensorBase_rt<T2
             return final_result;
 
         }
-
-    }
 }
 
-template<typename T1, typename T2>
-constexpr auto contraction(T1 val1, T2 val2){
-
-    if constexpr ((std::is_fundamental<T1>::value) && (std::is_fundamental<T2>::value)) {
-
-        return val1*val2;
-
-    }
-}
 
 template<typename T1, typename T2, typename ArgsT2>
 constexpr auto contraction(T1 value, tensorBase_rt<T2, ArgsT2> tensor){
 
-    if constexpr ((std::is_fundamental<T1>::value) && (!std::is_fundamental<decltype(tensor)>::value)) {
-        if constexpr ((T2::indices_amount >= 1)) {
+        if constexpr ((tensorBase_rt<T2, ArgsT2>::indices_amount >= 1)) {
             return add_scalar(value, tensor, std::make_index_sequence<DIM3>{});
         }
-    }
 }
 
 template<typename T1, typename ArgsT1, typename T2>
 constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor, T2 value){
 
-    if constexpr ((!std::is_fundamental<T1>::value) && (std::is_fundamental<decltype(tensor)>::value)) {
-        if constexpr ((T1::indices_amount >= 1)) {
+        if constexpr ((tensorBase_rt<T1, ArgsT1>::indices_amount >= 1)) {
             return add_scalar(value, tensor, std::make_index_sequence<DIM3>{});
         }
-    }
 }
 
+template<typename T1, typename T2>
+constexpr auto contraction(T1 val1, T2 val2){
+
+        return val1*val2;
+
+}
 
 #endif //UNTITELED1_CONTRACTION_H

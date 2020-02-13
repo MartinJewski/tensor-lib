@@ -11,29 +11,7 @@
 #include <tuple>
 #include "tensor.h"
 
-/*
-template<std::size_t ... positions, auto T1>
-constexpr auto reorder_ct(){
 
-    auto tensor_vec_reordered = cartesian_vec;
-
-    for(int i = 0; i < cartesian_vec.size(); i++){
-
-        auto oldPos = pos_nd_to_1d<sizeof...(positions)>(cartesian_vec[i]);
-        //auto newPos = pos_nd_to_1d<positions...>();
-
-        auto newPos = pos_nd_to_1d<sizeof...(positions)>(std::make_tuple((positions, std::get<positions>(tensor_vec_reordered[i]))...));
-
-        tensor_vec_reordered[newPos] = cartesian_vec[oldPos];
-
-        std::cout << "----------" << std::endl;
-        std::cout << "OLD POS : " << oldPos << std::endl;
-        std::cout << "NEW POS : " << newPos << std::endl;
-        std::cout << "----------" << std::endl;
-    }
-    return tensor_vec_reordered;
-}
-*/
 
 
 template<std::size_t cartesian_pos, std::size_t ... positions, typename C>

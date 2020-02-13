@@ -6,6 +6,7 @@
 #define UNTITELED1_TENSOR_CONCEPTS_H
 
 #include <type_traits>
+#include "tensor.h"
 
 // concept
 template <typename T>
@@ -25,35 +26,24 @@ concept constexpr bool IntegerIntegral(){
 
 template<typename T>
 concept constexpr bool Floatingpoint(){
-
     return std::is_floating_point<T>::value;
-
 }
 
 template<auto val>
 concept constexpr bool Floatingpoint(){
-
     return std::is_floating_point<decltype(val)>::value;
-
 }
 
-
-//function to test the concept
-template<typename T> requires Floatingpoint<T>()
-constexpr auto f(){
-
-    return 0;
-
-}
+template<typename B>
+concept isTensor =  std::is_base_of<tensorFundamental, B>::value;
 
 
-//function to test the concept
-template<auto val> requires Floatingpoint<val>()
-constexpr auto myFUNCTION(){
+template<typename T>
+concept isFundamental = std::is_fundamental<T>::value;
 
-    return 0;
 
-}
+template<typename T>
+concept notFundamental = !std::is_fundamental<T>::value;
 
 
 #endif //UNTITELED1_TENSOR_CONCEPTS_H

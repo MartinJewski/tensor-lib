@@ -7,6 +7,7 @@ include_directories(./tensor-lib/tensor-builder-utilities)
 include_directories(./tensor-lib/tensor-builder-utilities-ranges)
 include_directories(./tensor-lib/tensor-definition)
 include_directories(./tensor-lib/tensor-operations)
+include_directories(./tensor-lib/tensor-concepts)
 include_directories(./tensor-lib/tensor-operations-ranges)
 include_directories(./tensor-lib/tensor-definition-ranges)
 
@@ -36,6 +37,8 @@ set(SOURCE_FILES main.cpp
 
         tensor-lib/tensor-operations-ranges/trace_ranges.h
         tensor-lib/tensor-definition-ranges/tensor_range.h
+
+        tensor-lib/tensor-concepts/tensor-concepts.h
         )
 
 add_library(range_v3 INTERFACE IMPORTED)

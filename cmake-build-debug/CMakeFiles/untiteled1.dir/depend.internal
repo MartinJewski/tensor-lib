@@ -6,6 +6,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../tensor-lib/tensor-builder-utilities/cartesian_product.h
  ../tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
  ../tensor-lib/tensor-builder-utilities/tuple_helpers.h
+ ../tensor-lib/tensor-concepts/tensor-concepts.h
  ../tensor-lib/tensor-definition-ranges/tensor_range.h
  ../tensor-lib/tensor-definition/tensor.h
  ../tensor-lib/tensor-definition/tensor_specification.h

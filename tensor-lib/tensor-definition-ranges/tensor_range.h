@@ -11,12 +11,13 @@
 #include "positive_natural_compiletime_pow.h"
 #include "cartesian_product_ranges.h"
 #include <type_traits>
+#include "tensor.h"
 
 #include "reorder.h"
 
 
 template<typename T, typename Args>
-class tensorBase_ranges{
+class tensorBase_ranges : tensorFundamental{
 
 public:
     std::vector<T> data;

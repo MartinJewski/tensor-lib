@@ -17,10 +17,10 @@
 #include <range/v3/view/all.hpp>
 #include <range/v3/view/enumerate.hpp>
 
-
+class tensorFundamental{};
 
 template<typename T, typename Args>
-class tensorBase_rt{
+class tensorBase_rt : tensorFundamental{
 
 public:
     std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
@@ -58,7 +58,7 @@ using tensor_rt = tensorBase_rt<T, std::tuple<Args...>>;
 
 
 template<typename T, typename Args>
-class tensorBase{
+class tensorBase : tensorFundamental{
 
     public:
         std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;

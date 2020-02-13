@@ -67,6 +67,7 @@ int main() {
 
     constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     constexpr tensor<double, up_t> tensor2(5, 5, 5);
+    constexpr tensor<double> tensor23(1);
 
     constexpr auto contraction_value_ct = contraction<0,0, tensor1, tensor2>();
     auto contraction_value_rt = contraction<0,0>(tensor1.to_runtime_tensor(), tensor2.to_runtime_tensor());
@@ -76,6 +77,10 @@ int main() {
 
     constexpr auto contraction_value_ct3 = contraction<1,1>();
     auto contraction_value_rt3 = contraction(1,1);
+
+    constexpr auto contraction_value_ct4 = contraction<tensor1, 1>();
+
+    constexpr auto contraction_value_ct5 = contraction<1, tensor1>();
 
     constexpr auto reorder_value_ct = reorder<tensor1, 1,0>();
     auto reorder_value_rt = reorder<1,0>(tensor1.to_runtime_tensor());
@@ -93,12 +98,15 @@ int main() {
 
     auto cartesianRng2 = cartesian_product_ranges_to_vec<3,3>();
 
-
     auto test_trace_ranges = trace_ranges(tensorR);
 
     auto test_reorder_ranges = reorder_ranges<1,0>(tensorR);
 
-    auto test_contraction_ranges = contraction_ranges<0,0>(tensorR2, tensorR2);
+    auto test_contraction_ranges = contraction_ranges<0,1>(tensorR2, tensorR2);
+
+    for(auto i : test_contraction_ranges.data){
+        std::cout  << " " << i << " " ;
+    }
 
     return 0;
 }
