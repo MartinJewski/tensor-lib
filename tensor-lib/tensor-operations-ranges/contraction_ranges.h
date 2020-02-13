@@ -14,25 +14,6 @@
 #include "recreate_for_index_sequence.h"
 #include "contraction.h"
 
-template<typename Scalar, typename T2, typename ArgsT2, std::size_t ...is> requires isFundamental<Scalar>
-constexpr auto add_scalar(Scalar scalar, tensorBase_ranges<T2, ArgsT2> tensor, std::index_sequence<is...>){
-
-    auto copyTensor = tensor;
-    ((copyTensor.data[is] = scalar *  copyTensor.data[is]),...);
-
-    return copyTensor;
-}
-
-template<typename T, typename  T1, typename ArgsT1, typename T2, typename ArgsT2, std::size_t ...is>
-constexpr auto contraction_1D(tensorBase_ranges<T1, ArgsT1> tensor1, tensorBase_ranges<T2, ArgsT2> tensor2, std::index_sequence<is...>){
-
-    auto value = 0;
-    ((value += tensor1.data[is] * tensor2.data[is]),...);
-
-    return value;
-}
-
-
 template<std::size_t skipPos1, std::size_t skipPos2, typename T1, typename Args1, typename T2, typename Args2>
 constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBase_ranges<T2, Args2> tensor2){
 
@@ -44,10 +25,9 @@ constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBa
 
     if constexpr ((tensorBase_ranges<T1, Args1>::indices_amount == 1) && (tensorBase_ranges<T2, Args2>::indices_amount == 1)) {
 
-        using type = std::common_type_t<T1, T2>;
-
-        auto local_val = contraction_1D<type>(tensor1, tensor2, std::make_index_sequence<DIM3>{});
-
+        auto local_val = ranges::accumulate(tensor1.data_to_range_positions1D()
+                                | ranges::views::transform([=](auto tuple){ return std::get<1>(tuple) *
+                                                                                    tensor2.data[std::get<0>(tuple)];}), 0);
         return local_val;
     }
 
@@ -77,29 +57,28 @@ constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBa
     }
 }
 
-template<typename Scalar, typename T1, typename ArgsT1> requires isFundamental<Scalar>
+template<typename Scalar, typename T1, typename ArgsT1> requires isFundamental<Scalar> && isTensor<tensorBase_ranges<T1, ArgsT1>>
 constexpr auto contraction_ranges(Scalar val, tensorBase_ranges<T1, ArgsT1> tensor){
 
-    if constexpr (std::is_fundamental<Scalar>::value && !std::is_fundamental<tensorBase_ranges<T1, ArgsT1>>::value){
-
+    static_assert((tensorBase_ranges<T1, ArgsT1>::indices_amount >= 1), "1 OR MORE INDICES ARE NEEDED");
         if constexpr ((tensorBase_ranges<T1, ArgsT1>::indices_amount >= 1)) {
-             return add_scalar(val, tensor, std::make_index_sequence<DIM3>{});
+            auto copyTensor = tensor;
+            copyTensor.data = copyTensor.data | ranges::views::transform([=](auto i){return i * val;})| ranges::to<std::vector>();
+
+            return copyTensor;
         }
-    }
 }
 
-template<typename Scalar, typename T1, typename ArgsT1> requires isFundamental<Scalar>
+template<typename Scalar, typename T1, typename ArgsT1> requires isFundamental<Scalar> && isTensor<tensorBase_ranges<T1, ArgsT1>>
 constexpr auto contraction_ranges(tensorBase_ranges<T1, ArgsT1> tensor, Scalar val){
 
-    if constexpr (std::is_fundamental<Scalar>::value && !std::is_fundamental<tensorBase_ranges<T1, ArgsT1>>::value){
-
+    static_assert((tensorBase_ranges<T1, ArgsT1>::indices_amount >= 1), "1 OR MORE INDICES ARE NEEDED");
         if constexpr ((tensorBase_ranges<T1, ArgsT1>::indices_amount >= 1)) {
-            return add_scalar(val, tensor, std::make_index_sequence<DIM3>{});
-        }
-    }
-}
+            auto copyTensor = tensor;
+            copyTensor.data = copyTensor.data | ranges::views::transform([=](auto i){return i * val;})| ranges::to<std::vector>();
 
-//contracton scalar & tensor
-//contraction scalar
+            return copyTensor;
+        }
+}
 
 #endif //UNTITELED1_CONTRACTION_RANGES_H

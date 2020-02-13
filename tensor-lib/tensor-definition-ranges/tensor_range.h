@@ -61,19 +61,6 @@ template<typename T, typename ... Args>
 using tensorRange = tensorBase_ranges<T, std::tuple<Args...>>;
 
 
-template<typename A, typename B>
-class myClass{
-
-public:
-    A myval;
-    myClass(A i) : myval(i){};
-
-    template<typename Te, typename De>
-    constexpr myClass(myClass<Te, De> ele){
-        std::cout << "HALLO" << std::endl;
-    }
-
-};
 
 
 #endif //UNTITELED1_TENSOR_RANGES_H

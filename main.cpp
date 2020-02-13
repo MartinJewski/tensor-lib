@@ -72,8 +72,18 @@ int main() {
     constexpr auto contraction_value_ct = contraction<0,0, tensor1, tensor2>();
     auto contraction_value_rt = contraction<0,0>(tensor1.to_runtime_tensor(), tensor2.to_runtime_tensor());
 
-    constexpr auto contraction_value_ct2 = contraction<0,0, tensor2, tensor2>();
-    auto contraction_value_rt2 = contraction<0,0>(tensor2.to_runtime_tensor(), tensor2.to_runtime_tensor());
+    constexpr auto contraction_value_ct2 = contraction<1,0, tensor1, tensor1>();
+    auto contraction_value_rt2 = contraction<1,0>(tensor1.to_runtime_tensor(), tensor1.to_runtime_tensor());
+
+    std::cout << " " << std::endl;
+    for(auto i : contraction_value_ct2.data) {
+        std::cout << " " << i << " ";
+    }
+    std::cout << " " << std::endl;
+    for(auto i : contraction_value_rt2.data) {
+        std::cout << " " << i << " ";
+    }
+    std::cout << " " << std::endl;
 
     constexpr auto contraction_value_ct3 = contraction<1,1>();
     auto contraction_value_rt3 = contraction(1,1);
@@ -93,6 +103,9 @@ int main() {
     tensorRange<double, up_t, up_t> tensorR(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0);
     tensorRange<double, up_t, up_t> tensorR2(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
+    tensorRange<double, up_t> tensorR3(2.0, 2.0, 2.0);
+    tensorRange<double, up_t> tensorR4(1.0, 5.0, 1.0);
+
     auto calculateRange = tensorR.calculate_indices();
     auto cartesianRng = cartesian_product_ranges<3,3>();
 
@@ -102,12 +115,15 @@ int main() {
 
     auto test_reorder_ranges = reorder_ranges<1,0>(tensorR);
 
-    auto test_contraction_ranges = contraction_ranges<0,1>(tensorR2, tensorR2);
+    auto test_contraction_ranges = contraction_ranges<1,0>(tensorR2, tensorR2);
 
-    for(auto i : test_contraction_ranges.data){
-        std::cout  << " " << i << " " ;
-    }
+    auto test_contraction_ranges2 = contraction_ranges<0,0>(tensorR3, tensorR4);
+
+    auto test_contraction_ranges3 = contraction_ranges(tensorR3, 2);
+
+    auto test_contraction_ranges4 = contraction_ranges(2, tensorR3);
+
+    std::cout << test_contraction_ranges.data_to_range_positionsND() << std::endl;
 
     return 0;
 }
-
