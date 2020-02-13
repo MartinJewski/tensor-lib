@@ -66,8 +66,8 @@ int main() {
     //------------------------------C++17-------------------------------
 
     constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
-    constexpr tensor<double, up_t> tensor2(5, 5, 5);
-    constexpr tensor<double> tensor23(1);
+    constexpr tensor<double, up_t> tensor2(5.0, 5.0, 5.0);
+    constexpr tensor<double> tensor23(1.0);
 
     constexpr auto contraction_value_ct = contraction<0,0, tensor1, tensor2>();
     auto contraction_value_rt = contraction<0,0>(tensor1.to_runtime_tensor(), tensor2.to_runtime_tensor());

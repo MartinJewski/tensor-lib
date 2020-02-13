@@ -20,7 +20,7 @@
 template<typename T, typename U, typename Arr, std::size_t ...is>
 constexpr auto create_result_tensor(Arr array, std::index_sequence<is...>){
 
-    tensorBase<T, U> arr{array[is]...};
+    tensorBase_rt<T, U> arr(static_cast<T>(array[is])...);
 
     return arr;
 }
@@ -84,7 +84,7 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1>&& tensor1, tensorBase_rt<T2
             typename decltype(types)::type newType;
 
 
-            tensorBase<std::common_type_t<T1, T2>, decltype(newType)> tensor3{};
+            tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)> tensor3(static_cast<std::common_type_t<T1, T2>>(0));
             auto t3_indices = tensor3.calculate_indices();
 
             auto sris_tensor1 = save_recreated_index_sequence

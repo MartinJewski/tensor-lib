@@ -41,6 +41,7 @@
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-concepts"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations-ranges"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition-ranges"/>
+					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/unitTest"/>
 					<Add directory="/home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include"/>
 					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
 					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-linux-gnu"/>
@@ -74,6 +75,7 @@
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-concepts"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations-ranges"/>
 					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition-ranges"/>
+					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/unitTest"/>
 					<Add directory="/home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include"/>
 					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
 					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-linux-gnu"/>
@@ -171,6 +173,18 @@
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h">
+			<Option target="untiteled1"/>
+		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/unitTest/unitTest_compileTime.h">
+			<Option target="untiteled1"/>
+		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/unitTest/unitTest_ranges.h">
+			<Option target="untiteled1"/>
+		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/unitTest/unitTest_runtime.h">
+			<Option target="untiteled1"/>
+		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/unitTest/unitTest_tensors.h">
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/CMakeLists.txt">

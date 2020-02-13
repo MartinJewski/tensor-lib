@@ -16,6 +16,7 @@
 #include "reorder.h"
 
 
+
 template<typename T, typename Args>
 class tensorBase_ranges : tensorFundamental{
 
@@ -28,7 +29,9 @@ public:
     static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
 
     template<typename ... Element>
-    constexpr tensorBase_ranges(Element&&... input) : data{input...} {};
+    constexpr tensorBase_ranges(Element&&... input) : data{input...} {
+        static_assert(areT<T, Element...>::value , "VALUES INPUT TYPE DOESN'T MATCH TEMPLATE TYPE");
+    };
 
     /* copy constructor */
     constexpr tensorBase_ranges(std::vector<T> vec){

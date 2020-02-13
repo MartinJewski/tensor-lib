@@ -21,7 +21,8 @@ constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBa
          typename decltype(tensor1)::tuple_indices, typename decltype(tensor2)::tuple_indices> tensor3_types;
 
     tensorBase_ranges<std::common_type_t<typename decltype(tensor1)::elem_type, typename decltype(tensor2)::elem_type>,
-          typename decltype(tensor3_types)::type> tensor3(0);
+          typename decltype(tensor3_types)::type> tensor3(
+                  static_cast<std::common_type_t<typename decltype(tensor1)::elem_type, typename decltype(tensor2)::elem_type>>(0));
 
     if constexpr ((tensorBase_ranges<T1, Args1>::indices_amount == 1) && (tensorBase_ranges<T2, Args2>::indices_amount == 1)) {
 

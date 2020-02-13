@@ -17,6 +17,9 @@
 #include <range/v3/view/all.hpp>
 #include <range/v3/view/enumerate.hpp>
 
+template <typename T, typename ...Ts>
+using areT = std::conjunction<std::is_same<T,Ts>...>;
+
 class tensorFundamental{};
 
 template<typename T, typename Args>
@@ -32,7 +35,14 @@ public:
 
 
     template<typename ... Element>
-    constexpr tensorBase_rt(Element&&... input) : data{input...} {};
+    constexpr tensorBase_rt(Element&&... input) : data{input...} {
+        static_assert(areT<T, Element...>::value , "VALUES INPUT TYPE DOESN'T MATCH TEMPLATE TYPE");
+    };
+
+    template<typename Ti, std::size_t val>
+    constexpr tensorBase_rt(std::array<Ti, val> input) : data(input){
+        static_assert(areT<T, Ti>::value , "ARRAY TYPE DOESN'T MATCH TEMPLATE TYPE");
+    }
 
     /* copy constructor */
     template<typename Ti, typename Argsi>
@@ -71,7 +81,14 @@ class tensorBase : tensorFundamental{
         static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
 
     template<typename ... Element>
-    constexpr tensorBase(Element&&... input) : data{input...} {};
+    constexpr tensorBase(Element&&... input) : data{input...} {
+        static_assert(areT<T, Element...>::value , "VALUES INPUT TYPE DOESN'T MATCH TEMPLATE TYPE");
+    };
+
+    template<typename Ti, std::size_t val>
+    constexpr tensorBase(std::array<Ti, val> input) : data(input){
+        static_assert(areT<T, Ti>::value , "ARRAY TYPE DOESN'T MATCH TEMPLATE TYPE");
+    }
 
     /* copy constructor */
     template<typename Ti, typename Argsi>
