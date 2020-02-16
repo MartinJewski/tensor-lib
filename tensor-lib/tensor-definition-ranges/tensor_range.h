@@ -33,14 +33,18 @@ public:
         static_assert(areT<T, Element...>::value , "VALUES INPUT TYPE DOESN'T MATCH TEMPLATE TYPE");
     };
 
-    /* copy constructor */
-    constexpr tensorBase_ranges(std::vector<T> vec){
-        this->data = vec;
+    constexpr tensorBase_ranges(std::vector<T> &vec){
+        data = vec;
     };
 
-    template<typename oT,typename oArgs>
-    constexpr tensorBase_ranges(tensorBase_ranges<oT, oArgs> &oldObj){
-        this->data = oldObj.data;
+    template<typename Ti,typename Argsi>
+    constexpr tensorBase_ranges(const tensorBase_ranges<Ti, Argsi> &oldObj){
+        data = oldObj.data;
+    };
+
+    template<typename Ti,typename Argsi>
+    constexpr tensorBase_ranges(tensorBase_ranges<Ti, Argsi> &oldObj){
+        data = oldObj.data;
     };
 
     constexpr auto calculate_indices() const{
@@ -63,6 +67,18 @@ public:
 template<typename T, typename ... Args>
 using tensorRange = tensorBase_ranges<T, std::tuple<Args...>>;
 
+
+template<typename Ti, typename Argsi>
+std::ostream& operator<<(std::ostream& os, const tensorBase_ranges<Ti, Argsi>& tsr)
+{
+    for(int i = 0; i < tsr.data.size(); i++){
+
+        std::cout << " " << tsr.data[i] << " ";
+    }
+    std::cout << " " << std::endl;
+
+    return os;
+}
 
 
 

@@ -59,31 +59,32 @@
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
-using std::cout;
+#include "tensor-lib/unitTest/unitTest_runtime.h"
+#include "tensor-lib/unitTest/unitTest_ranges.h"
+
+
+
 
 int main() {
 
-    //------------------------------C++17-------------------------------
 
+    myStruct myStructObj;
+    auto myvalue = myfunction(myStructObj.aC);
+
+
+    //------------------------------C++17-------------------------------
     constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    constexpr tensor<double, up_t, up_t, up_t> tensor1_3D(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0,1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0,1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     constexpr tensor<double, up_t> tensor2(5.0, 5.0, 5.0);
     constexpr tensor<double> tensor23(1.0);
+
+    tensor_rt<double, up_t, up_t> ten(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
     constexpr auto contraction_value_ct = contraction<0,0, tensor1, tensor2>();
     auto contraction_value_rt = contraction<0,0>(tensor1.to_runtime_tensor(), tensor2.to_runtime_tensor());
 
     constexpr auto contraction_value_ct2 = contraction<1,0, tensor1, tensor1>();
     auto contraction_value_rt2 = contraction<1,0>(tensor1.to_runtime_tensor(), tensor1.to_runtime_tensor());
-
-    std::cout << " " << std::endl;
-    for(auto i : contraction_value_ct2.data) {
-        std::cout << " " << i << " ";
-    }
-    std::cout << " " << std::endl;
-    for(auto i : contraction_value_rt2.data) {
-        std::cout << " " << i << " ";
-    }
-    std::cout << " " << std::endl;
 
     constexpr auto contraction_value_ct3 = contraction<1,1>();
     auto contraction_value_rt3 = contraction(1,1);
@@ -123,7 +124,8 @@ int main() {
 
     auto test_contraction_ranges4 = contraction_ranges(2, tensorR3);
 
-    std::cout << test_contraction_ranges.data_to_range_positionsND() << std::endl;
+    unitTest_runtime();
+    unitTest_ranges();
 
     return 0;
 }

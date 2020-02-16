@@ -65,7 +65,7 @@ constexpr auto add_scalar(Scalar scalar, tensorBase_rt<T2, ArgsT2> tensor, std::
 
 
 template<std::size_t t1_skipPos, std::size_t t2_skipPos, typename T1, typename ArgsT1, typename T2, typename ArgsT2>
-constexpr auto contraction(tensorBase_rt<T1, ArgsT1>&& tensor1, tensorBase_rt<T2, ArgsT2>&& tensor2){
+constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, ArgsT2> tensor2){
 
         if constexpr ((tensorBase_rt<T1, ArgsT1>::indices_amount == 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount == 1)) {
 

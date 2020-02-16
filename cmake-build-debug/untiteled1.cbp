@@ -178,9 +178,6 @@
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/unitTest/unitTest_compileTime.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/unitTest/unitTest_ranges.h">
-			<Option target="untiteled1"/>
-		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/unitTest/unitTest_runtime.h">
 			<Option target="untiteled1"/>
 		</Unit>

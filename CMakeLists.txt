@@ -42,7 +42,6 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-concepts/tensor-concepts.h
 
         tensor-lib/unitTest/unitTest_compileTime.h
-        tensor-lib/unitTest/unitTest_ranges.h
         tensor-lib/unitTest/unitTest_runtime.h
         tensor-lib/unitTest/unitTest_tensors.h
         )

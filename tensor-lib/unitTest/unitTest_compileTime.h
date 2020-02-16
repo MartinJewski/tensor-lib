@@ -8,13 +8,13 @@
 
 void constexpr unitTest_compileTime(){
 
-    std::cout << "_________________START UNIT TEST:__COMPILE_TIME__________________"
-    std::cout << "...."
+    std::cout << "_________________START UNIT TEST:__COMPILE_TIME__________________";
+    std::cout << "....";
 
 
 
-    std::cout << "...."
-    std::cout << "_________________END UNIT TEST:__COMPILE_TIME__________________"
+    std::cout << "....";
+    std::cout << "_________________END UNIT TEST:__COMPILE_TIME__________________";
 }
 
 #endif //UNTITELED1_UNITTEST_COMPILETIME_H
