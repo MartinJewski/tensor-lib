@@ -76,7 +76,11 @@ public:
         return ranges::views::all(this->data) | ranges::views::enumerate;
     }
 
+
 };
+
+
+
 
 template<typename T, typename ... Args>
 using tensor_rt = tensorBase_rt<T, std::tuple<Args...>>;
