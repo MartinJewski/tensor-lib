@@ -19,6 +19,8 @@
 #include <range/v3/view/all.hpp>
 #include <range/v3/view/enumerate.hpp>
 
+#include "random_number.h"
+
 template <typename T, typename ...Ts>
 using areT = std::conjunction<std::is_same<T,Ts>...>;
 
@@ -26,6 +28,12 @@ class tensorFundamental{};
 
 template<typename T, typename Args>
 class tensorBase_rt : tensorFundamental{
+private:
+    template<std::size_t ...is>
+    static constexpr auto random_tensor_rt_i(int lowerBound, int upperBound, std::index_sequence<is...>){
+        tensorBase_rt<T, Args> temp((is, random_number::rand_IntRange(lowerBound, upperBound))...);
+        return temp;
+    }
 
 public:
     std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
@@ -77,15 +85,14 @@ public:
     }
 
 
+    static constexpr tensorBase_rt<T, Args> random_tensor_rt(int lowerBound, int upperBound){
+        return random_tensor_rt_i(lowerBound, upperBound,
+                std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
+    }
 };
-
-
-
 
 template<typename T, typename ... Args>
 using tensor_rt = tensorBase_rt<T, std::tuple<Args...>>;
-
-
 
 
 template<typename T, typename Args>

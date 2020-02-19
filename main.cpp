@@ -1,5 +1,9 @@
 #include <iostream>
 #include <string>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 #include <range/v3/view/empty.hpp>
 #include <range/v3/view/repeat_n.hpp>
 #include <range/v3/algorithm/for_each.hpp>
@@ -62,8 +66,7 @@
 #include "tensor-lib/unitTest/unitTest_runtime.h"
 #include "tensor-lib/unitTest/unitTest_ranges.h"
 
-
-
+#include "random_number.h"
 
 int main() {
 
@@ -123,9 +126,31 @@ int main() {
     auto test_contraction_ranges3 = contraction_ranges(tensorR3, 2);
 
     auto test_contraction_ranges4 = contraction_ranges(2, tensorR3);
-
+/*
     unitTest_runtime();
     unitTest_ranges();
+*/
+    srand(time(0));
+   auto randomTensor1 = tensor_rt<int, up_t, up_t>::random_tensor_rt(0, 10);
+    srand(time(0));
+   auto randomTensor2 = tensor_rt<int, up_t, up_t>::random_tensor_rt(0, 10);
+    srand(time(0));
+   auto randomTensor3 = tensor_rt<int, up_t, up_t>::random_tensor_rt(0, 10);
+   for(auto i : randomTensor1.data){
+       std::cout << " " << i << " ";
+   }
+   std::cout << std::endl;
+    for(auto i : randomTensor2.data){
+        std::cout << " " << i << " ";
+    }
+    std::cout << std::endl;
+    for(auto i : randomTensor3.data){
+        std::cout << " " << i << " ";
+    }
+
+
+
+
 
     return 0;
 }
