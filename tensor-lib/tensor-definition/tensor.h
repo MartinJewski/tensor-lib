@@ -78,12 +78,19 @@ public:
 
         static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
         return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+
+    };
+
+    static constexpr auto static_calculate_indices(){
+
+        static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
+        return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+
     };
 
     constexpr auto data_to_range() const{
         return ranges::views::all(this->data) | ranges::views::enumerate;
     }
-
 
     static constexpr tensorBase_rt<T, Args> random_tensor_rt(int lowerBound, int upperBound){
         return random_tensor_rt_i(lowerBound, upperBound,
@@ -93,6 +100,8 @@ public:
 
 template<typename T, typename ... Args>
 using tensor_rt = tensorBase_rt<T, std::tuple<Args...>>;
+
+
 
 
 template<typename T, typename Args>

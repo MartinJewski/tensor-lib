@@ -19,6 +19,12 @@
 
 template<typename T, typename Args>
 class tensorBase_ranges : tensorFundamental{
+private:
+    template<std::size_t ...is>
+    static constexpr auto random_tensor_range_i(int lowerBound, int upperBound, std::index_sequence<is...>){
+        tensorBase_ranges<T, Args> temp((is, random_number::rand_IntRange(lowerBound, upperBound))...);
+        return temp;
+    }
 
 public:
     std::vector<T> data;
@@ -61,6 +67,11 @@ public:
         return ranges::views::all(this->data)
             | ranges::views::enumerate
             | ranges::views::transform([=](auto d){return std::make_tuple(indices[std::get<0>(d)], std::get<1>(d));});
+    }
+
+    static constexpr tensorBase_ranges<T, Args> random_tensor_range(int lowerBound, int upperBound){
+        return random_tensor_range_i(lowerBound, upperBound,
+                                  std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
     }
 };
 

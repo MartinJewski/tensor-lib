@@ -74,27 +74,36 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, 
             auto l = contraction_1D<type>(tensor1, tensor2, std::make_index_sequence<DIM3>{});
 
             return l;
-        }
 
-        if constexpr (((tensorBase_rt<T1, ArgsT1>::indices_amount == 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount > 1)) ||
-                      ((tensorBase_rt<T1, ArgsT1>::indices_amount > 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount == 1)) ||
-                      ((tensorBase_rt<T1, ArgsT1>::indices_amount > 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount > 1))) {
+        }else{
 
             remove_ith_concat_tuple<t1_skipPos, t2_skipPos, ArgsT1, ArgsT2> types;
             typename decltype(types)::type newType;
 
-
             tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)> tensor3(static_cast<std::common_type_t<T1, T2>>(0));
-            auto t3_indices = tensor3.calculate_indices();
+            //auto t3_indices = tensor3.calculate_indices();
 
+            /*
             auto sris_tensor1 = save_recreated_index_sequence
                     <0, tensorBase_rt<T1, ArgsT1>::indices_amount - 1, t1_skipPos, tensorBase_rt<T1, ArgsT1>::indices_amount, DIM3>(t3_indices);
             auto sris_tensor2 = save_recreated_index_sequence
                     <tensorBase_rt<T1, ArgsT1>::indices_amount - 1, tensorBase_rt<T2, ArgsT2>::indices_amount - 1, t2_skipPos, tensorBase_rt<T2, ArgsT2>::indices_amount, DIM3>(t3_indices);
+             */
+
+            //compile time versions |static_calculate_indices
+            constexpr auto ct_sris_tensor1 = save_recreated_index_sequence
+                    <0, tensorBase_rt<T1, ArgsT1>::indices_amount - 1, t1_skipPos, tensorBase_rt<T1, ArgsT1>::indices_amount, DIM3>
+                    (decltype(tensor3)::static_calculate_indices());
+
+            constexpr auto ct_sris_tensor2 = save_recreated_index_sequence
+                    <tensorBase_rt<T1, ArgsT1>::indices_amount - 1, tensorBase_rt<T2, ArgsT2>::indices_amount - 1, t2_skipPos, tensorBase_rt<T2, ArgsT2>::indices_amount, DIM3>
+                    (decltype(tensor3)::static_calculate_indices());
+
+
 
             auto result = calculate_value<tensorBase_rt<T1, ArgsT1>::indices_amount, tensorBase_rt<T2, ArgsT2>::indices_amount,
                     std::common_type_t<T1, T2>>
-                    (tensor1, tensor2, sris_tensor1, sris_tensor2, std::make_index_sequence<sris_tensor1.size()>{});
+                    (tensor1, tensor2, ct_sris_tensor1, ct_sris_tensor2, std::make_index_sequence<ct_sris_tensor1.size()>{});
 
             auto final_result = create_result_tensor
                     <std::common_type_t<T1, T2>,

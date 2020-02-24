@@ -30,11 +30,8 @@ constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBa
                                 | ranges::views::transform([=](auto tuple){ return std::get<1>(tuple) *
                                                                                     tensor2.data[std::get<0>(tuple)];}), 0);
         return local_val;
-    }
 
-    if constexpr (((tensorBase_rt<T1, Args1>::indices_amount == 1) && (tensorBase_rt<T2, Args2>::indices_amount > 1)) ||
-                  ((tensorBase_rt<T1, Args1>::indices_amount > 1) && (tensorBase_rt<T2, Args2>::indices_amount == 1)) ||
-                  ((tensorBase_rt<T1, Args1>::indices_amount > 1) && (tensorBase_rt<T2, Args2>::indices_amount > 1))) {
+    }else{
 
         auto sris = tensor3.calculate_indices()
                     | ranges::views::transform([tensor1, tensor2](auto tuple)

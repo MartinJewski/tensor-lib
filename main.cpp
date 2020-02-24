@@ -68,12 +68,9 @@
 
 #include "random_number.h"
 
+#include <unordered_set>
+
 int main() {
-
-
-    myStruct myStructObj;
-    auto myvalue = myfunction(myStructObj.aC);
-
 
     //------------------------------C++17-------------------------------
     constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
@@ -126,31 +123,11 @@ int main() {
     auto test_contraction_ranges3 = contraction_ranges(tensorR3, 2);
 
     auto test_contraction_ranges4 = contraction_ranges(2, tensorR3);
-/*
-    unitTest_runtime();
-    unitTest_ranges();
-*/
-    srand(time(0));
-   auto randomTensor1 = tensor_rt<int, up_t, up_t>::random_tensor_rt(0, 10);
-    srand(time(0));
-   auto randomTensor2 = tensor_rt<int, up_t, up_t>::random_tensor_rt(0, 10);
-    srand(time(0));
-   auto randomTensor3 = tensor_rt<int, up_t, up_t>::random_tensor_rt(0, 10);
-   for(auto i : randomTensor1.data){
-       std::cout << " " << i << " ";
-   }
-   std::cout << std::endl;
-    for(auto i : randomTensor2.data){
-        std::cout << " " << i << " ";
-    }
-    std::cout << std::endl;
-    for(auto i : randomTensor3.data){
-        std::cout << " " << i << " ";
-    }
 
+//    unitTest_runtime();
+//    unitTest_ranges();
 
-
-
+    constexpr auto values = cartesian_product<3,3>();
 
     return 0;
 }

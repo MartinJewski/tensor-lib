@@ -5,12 +5,15 @@
 #ifndef UNTITELED1_UNITTEST_RANGES_H
 #define UNTITELED1_UNITTEST_RANGES_H
 
-#include "unitTest_tensors.h"
+//#include "unitTest_tensors.h"
 #include "contraction_ranges.h"
 #include "reorder_ranges.h"
 #include "trace_ranges.h"
+#include "tensor_range.h"
+
 #include <chrono>
 #include <tuple>
+#include <time.h>
 
 using nano_s = std::chrono::nanoseconds;
 using micro_s = std::chrono::microseconds;
@@ -26,19 +29,22 @@ void unitTest_ranges(){
     int accu = 0;
     unitTest_tensor_range tensors_range;
     int reps = 2000000;
+
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
-        unitTest_tensor_range tensors_range;
+        //unitTest_tensor_range tensors_range;
+
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        auto result = contraction_ranges<0,1>(tensors_range.tensor_sequence_2D_int, tensors_range.tensor_sequence_2D_int);
+        auto result = contraction_ranges<0,1>(tensorRange<int, up_t, up_t>::random_tensor_range(0,10), tensorRange<int, up_t, up_t>::random_tensor_range(0,10));
         auto t2 = std::chrono::high_resolution_clock::now();
-
         auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
         times.push_back(duration);
         accu += duration;
     }
-
+    //auto t2 = std::chrono::high_resolution_clock::now();
+    //time calculations
     accu = accu / reps;
     /*
     for(auto ele : times){

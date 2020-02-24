@@ -64,11 +64,7 @@ constexpr auto contraction(){
 
         return l;
 
-    }
-
-    if constexpr (((T1.indices_amount == 1) && (T2.indices_amount > 1)) ||
-                   ((T1.indices_amount > 1) && (T2.indices_amount == 1))||
-                   ((T1.indices_amount > 1) && (T2.indices_amount > 1)) ){
+    }else{
 
         remove_ith_concat_tuple<t1_skipPos, t2_skipPos, typename decltype(T1)::tuple_indices, typename decltype(T2)::tuple_indices> types;
         typename decltype(types)::type newType;
@@ -136,8 +132,10 @@ constexpr auto contraction(){
 
 
 
-
-
-
+/*
+(((T1.indices_amount == 1) && (T2.indices_amount > 1)) ||
+((T1.indices_amount > 1) && (T2.indices_amount == 1))||
+((T1.indices_amount > 1) && (T2.indices_amount > 1)) )
+*/
 
 #endif //UNTITELED1_CONTRACTION_CT_H
