@@ -13,16 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="added tensor class and more code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/cartesian_product.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/cartesian_product.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition-ranges/tensor_range.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition-ranges/tensor_range.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/contraction_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/contraction_ranges.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction_ct.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction_ct.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/unitTest/unitTest_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/unitTest/unitTest_ranges.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/unitTest/unitTest_runtime.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/unitTest/unitTest_runtime.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/unitTest/unitTest_tensors.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/unitTest/unitTest_tensors.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +140,7 @@
       <workItem from="1581242877195" duration="594000" />
       <workItem from="1581410785615" duration="47136000" />
       <workItem from="1581840976308" duration="27446000" />
-      <workItem from="1582560091415" duration="1846000" />
+      <workItem from="1582560091415" duration="3343000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -197,22 +193,22 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1581930659763" />
-    <state width="1320" height="90" key="GridCell.Tab.0.bottom" timestamp="1582561549617">
+    <state width="1320" height="90" key="GridCell.Tab.0.bottom" timestamp="1582562849674">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1320" height="90" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1582561549617" />
-    <state width="1320" height="90" key="GridCell.Tab.0.center" timestamp="1582561549617">
+    <state width="1320" height="90" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1582562849674" />
+    <state width="1320" height="90" key="GridCell.Tab.0.center" timestamp="1582562849673">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1320" height="90" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1582561549617" />
-    <state width="1320" height="90" key="GridCell.Tab.0.left" timestamp="1582561549616">
+    <state width="1320" height="90" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1582562849673" />
+    <state width="1320" height="90" key="GridCell.Tab.0.left" timestamp="1582562849672">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1320" height="90" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1582561549616" />
-    <state width="1320" height="90" key="GridCell.Tab.0.right" timestamp="1582561549617">
+    <state width="1320" height="90" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1582562849672" />
+    <state width="1320" height="90" key="GridCell.Tab.0.right" timestamp="1582562849674">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1320" height="90" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1582561549617" />
+    <state width="1320" height="90" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1582562849674" />
     <state width="1310" height="131" key="GridCell.Tab.1.bottom" timestamp="1581788955062">
       <screen x="0" y="0" width="1366" height="732" />
     </state>

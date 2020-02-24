@@ -26,33 +26,30 @@ void unitTest_ranges(){
     std::cout << "...." << std::endl;
 
     std::vector<int> times{};
-    int accu = 0;
+
+    int count = 0;
     unitTest_tensor_range tensors_range;
+
     int reps = 2000000;
 
-    //auto t1 = std::chrono::high_resolution_clock::now();
+    auto t1 = std::chrono::high_resolution_clock::now();
+
     for(int val = 0; val < reps; val++){
-        //unitTest_tensor_range tensors_range;
 
+        auto result = contraction_ranges<0,1>
+                (tensorRange<int, up_t, up_t>::random_tensor_range(0,10), tensorRange<int, up_t, up_t>::random_tensor_range(0,10));
 
-        auto t1 = std::chrono::high_resolution_clock::now();
-        auto result = contraction_ranges<0,1>(tensorRange<int, up_t, up_t>::random_tensor_range(0,10), tensorRange<int, up_t, up_t>::random_tensor_range(0,10));
-        auto t2 = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
-
-        times.push_back(duration);
-        accu += duration;
+        auto result2 = contraction_ranges<0,0>(tensorRange<int, up_t, up_t>::random_tensor_range(0,10), result);
     }
-    //auto t2 = std::chrono::high_resolution_clock::now();
+
+    auto t2 = std::chrono::high_resolution_clock::now();
+
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
     //time calculations
-    accu = accu / reps;
-    /*
-    for(auto ele : times){
-        std::cout << " " << ele << " ";
-    }
-     */
+    count = duration / reps;
+
     std::cout << " " << std::endl;
-    std::cout << "average time in nano sec :" << accu << std::endl;
+    std::cout << "average time in nano sec :" << count << std::endl;
 
 
     std::cout << "....";

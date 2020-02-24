@@ -81,14 +81,6 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, 
             typename decltype(types)::type newType;
 
             tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)> tensor3(static_cast<std::common_type_t<T1, T2>>(0));
-            //auto t3_indices = tensor3.calculate_indices();
-
-            /*
-            auto sris_tensor1 = save_recreated_index_sequence
-                    <0, tensorBase_rt<T1, ArgsT1>::indices_amount - 1, t1_skipPos, tensorBase_rt<T1, ArgsT1>::indices_amount, DIM3>(t3_indices);
-            auto sris_tensor2 = save_recreated_index_sequence
-                    <tensorBase_rt<T1, ArgsT1>::indices_amount - 1, tensorBase_rt<T2, ArgsT2>::indices_amount - 1, t2_skipPos, tensorBase_rt<T2, ArgsT2>::indices_amount, DIM3>(t3_indices);
-             */
 
             //compile time versions |static_calculate_indices
             constexpr auto ct_sris_tensor1 = save_recreated_index_sequence
