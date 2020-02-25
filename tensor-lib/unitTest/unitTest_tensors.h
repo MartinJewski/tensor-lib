@@ -348,41 +348,43 @@ struct unitTest_tensor_range {
 template<typename T, std::size_t size>
 class random_tensor_generator{
 
-    std::array<tensor_rt<T>, size> array_0D;
-    std::array<tensor_rt<T, up_t>, size> array_1D;
-    std::array<tensor_rt<T, up_t, up_t>, size> array_2D;
-    std::array<tensor_rt<T, up_t, up_t, up_t>, size> array_3D;
+    public:
 
-    template<std::size_t ...is>
-    void generate_tensor_array(int lowerBound, int upperBound, std::index_sequence<is...>){
+        std::array<tensor_rt<T>, size> array_0D;
+        std::array<tensor_rt<T, up_t>, size> array_1D;
+        std::array<tensor_rt<T, up_t, up_t>, size> array_2D;
+        std::array<tensor_rt<T, up_t, up_t, up_t>, size> array_3D;
 
-        array_0D = {(is, tensor_rt<int>::random_tensor_rt(lowerBound, upperBound))...};
-        array_1D = {(is, tensor_rt<int, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-        array_2D = {(is, tensor_rt<int, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-        array_3D = {(is, tensor_rt<int, up_t, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
+        template<std::size_t ...is>
+        void generate_tensor_array(int lowerBound, int upperBound, std::index_sequence<is...>){
 
-    }
+            array_0D = {(is, tensor_rt<int>::random_tensor_rt(lowerBound, upperBound))...};
+            array_1D = {(is, tensor_rt<int, up_t>::random_tensor_rt(lowerBound, upperBound))...};
+            array_2D = {(is, tensor_rt<int, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
+            array_3D = {(is, tensor_rt<int, up_t, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
 
-    template<std::size_t ...is>
-    void generate_tensor_array(float lowerBound, float upperBound, std::index_sequence<is...>){
-
-        array_0D = {(is, tensor_rt<float>::random_tensor_rt(lowerBound, upperBound))...};
-        array_1D = {(is, tensor_rt<float, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-        array_2D = {(is, tensor_rt<float, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-        array_3D = {(is, tensor_rt<float, up_t, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-
-    }
-
-    constexpr random_tensor_generator(T lowerBound, T upperBound){
-
-        static_assert(!(std::is_same<T, int>::value || std::is_same<T, float>::value), "only float or int allowed");
-
-        if constexpr(std::is_same<T, int>::value){
-            generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
         }
-        if constexpr (std::is_same<T, float>::value){
-            generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
+
+        template<std::size_t ...is>
+        void generate_tensor_array(float lowerBound, float upperBound, std::index_sequence<is...>){
+
+            array_0D = {(is, tensor_rt<float>::random_tensor_rt(lowerBound, upperBound))...};
+            array_1D = {(is, tensor_rt<float, up_t>::random_tensor_rt(lowerBound, upperBound))...};
+            array_2D = {(is, tensor_rt<float, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
+            array_3D = {(is, tensor_rt<float, up_t, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
+
         }
+
+        constexpr random_tensor_generator(T lowerBound, T upperBound){
+
+            static_assert((std::is_same<T, int>::value || std::is_same<T, float>::value), "only float or int allowed");
+
+            if constexpr(std::is_same<T, int>::value){
+                generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
+            }
+            if constexpr (std::is_same<T, float>::value){
+                generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
+            }
 
     };
 

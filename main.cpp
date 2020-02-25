@@ -65,6 +65,7 @@
 
 #include "tensor-lib/unitTest/unitTest_runtime.h"
 #include "tensor-lib/unitTest/unitTest_ranges.h"
+#include "tensor-lib/unitTest/unitTest_tensors.h"
 
 #include "random_number.h"
 
@@ -128,6 +129,12 @@ int main() {
 //   unitTest_ranges();
 
     constexpr auto values = cartesian_product<3,3>();
+
+
+    random_tensor_generator<int, 10> tensor_generator(0, 10);
+
+
+
 
 
 
