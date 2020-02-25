@@ -24,7 +24,7 @@ struct random_number{
 
     static int rand_IntRange(int a, int b)
     {
-        return std::rand() % (b + a);
+        return static_cast<int>(((b - a) * ((float)std::rand() / RAND_MAX)) + a);
     }
 
 };

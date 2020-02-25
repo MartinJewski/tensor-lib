@@ -35,6 +35,12 @@ private:
         return temp;
     }
 
+    template<std::size_t ...is>
+    static constexpr auto random_tensor_rt_i(float lowerBound, float upperBound, std::index_sequence<is...>){
+        tensorBase_rt<T, Args> temp((is, random_number::rand_FloatRange(lowerBound, upperBound))...);
+        return temp;
+    }
+
 public:
     std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
 
@@ -95,6 +101,11 @@ public:
     static constexpr tensorBase_rt<T, Args> random_tensor_rt(int lowerBound, int upperBound){
         return random_tensor_rt_i(lowerBound, upperBound,
                 std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
+    }
+
+    static constexpr tensorBase_rt<T, Args> random_tensor_rt(float lowerBound, float upperBound){
+        return random_tensor_rt_i(lowerBound, upperBound,
+                                  std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
     }
 };
 
@@ -181,43 +192,6 @@ std::ostream& operator<<(std::ostream& os, const tensorBase<Ti, Argsi>& tsr)
     return os;
 }
 
-
-
-
-
-template<typename I, std::size_t val>
-class myClass{
-
-    public:
-        std::array<I, val> data;
-
-    template<typename ...T>
-    constexpr myClass(T&& ... elem) : data{elem...}{};
-
-    constexpr myClass(const myClass &mObj) = default;
-    constexpr myClass(myClass &mObj) = default;
-    /*
-    template<typename T, std::size_t value>
-    constexpr myClass(const myClass<T, value> &mObj){
-        data = mObj.data;
-    }
-
-    template<typename T, std::size_t value>
-    constexpr myClass(myClass<T, value> &mObj){
-        data = mObj.data;
-    }
-*/
-};
-
-struct myStruct{
-    myClass<int, 5> aC{1,2,3,4,5};
-};
-
-template<typename I, std::size_t val>
-constexpr auto myfunction(myClass<I, val> obj){
-    int a = obj.data[0];
-    return a;
-}
 
 
 

@@ -125,9 +125,11 @@ int main() {
     auto test_contraction_ranges4 = contraction_ranges(2, tensorR3);
 
 //   unitTest_runtime();
-   unitTest_ranges();
+//   unitTest_ranges();
 
     constexpr auto values = cartesian_product<3,3>();
+
+
 
     return 0;
 }
