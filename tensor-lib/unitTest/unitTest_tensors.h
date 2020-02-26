@@ -7,6 +7,7 @@
 
 #include "tensor.h"
 #include "tensor_range.h"
+#include "pos_nd_to_1d.h"
 
 
 struct unitTest_tensor_ct {
@@ -355,6 +356,20 @@ class random_tensor_generator{
         std::array<tensor_rt<T, up_t, up_t>, size> array_2D;
         std::array<tensor_rt<T, up_t, up_t, up_t>, size> array_3D;
 
+
+        auto pick_random_tensor_0D(){
+            return array_0D[random() % size];
+        }
+        auto pick_random_tensor_1D(){
+            return array_1D[random() % size];
+        }
+        auto pick_random_tensor_2D(){
+            return array_2D[random() % size];
+        }
+        auto pick_random_tensor_3D(){
+            return array_3D[random() % size];
+        }
+
         template<std::size_t ...is>
         void generate_tensor_array(int lowerBound, int upperBound, std::index_sequence<is...>){
 
@@ -385,8 +400,56 @@ class random_tensor_generator{
             if constexpr (std::is_same<T, float>::value){
                 generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
             }
-
     };
+};
+
+class for_loop_contraction{
+
+    public:
+
+        constexpr for_loop_contraction() = default;
+
+        tensor_rt<int, up_t, up_t> for_loop_contraction_2D(tensor_rt<int, up_t, up_t> tensor1, tensor_rt<int, up_t, up_t> tensor2){
+
+            tensor_rt<int, up_t, up_t> tensor3;
+
+            for(int i = 0; i < DIM3; i++){ //rows
+
+                for(int j = 0; j < DIM3; j++){ //columns
+
+                    for(int k = 0; k < DIM3; k++){ //multiplication
+
+                        tensor3.data[pos_nd_to_1d(i,j)] += tensor1.data[pos_nd_to_1d(i, k)] * tensor2.data[pos_nd_to_1d(k, j)];
+
+                    }
+                }
+            }
+
+            return tensor3;
+        }
+
+        tensor_rt<int, up_t, up_t, up_t, up_t> for_loop_contraction_3D(tensor_rt<int, up_t, up_t, up_t> tensor1, tensor_rt<int, up_t, up_t, up_t> tensor2){
+
+            tensor_rt<int, up_t, up_t, up_t, up_t> tensor3;
+
+            for(int i = 0; i < DIM3; i++){ //rows
+
+                for(int j = 0; j < DIM3; j++){ //columns
+
+                    for(int l = 0; l < DIM3; l++){
+
+                        for(int k = 0; k < DIM3; k++){ //multiplication
+
+                            for(int d = 0; d < DIM3; d++){
+                                tensor3.data[pos_nd_to_1d(i,j,l,k)] += tensor1.data[pos_nd_to_1d(i,d,l)] * tensor2.data[pos_nd_to_1d(d,j,l)];
+                            }
+                        }
+                    }
+                }
+            }
+
+            return tensor3;
+        }
 
 };
 

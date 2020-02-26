@@ -130,13 +130,31 @@ int main() {
 
     constexpr auto values = cartesian_product<3,3>();
 
-
     random_tensor_generator<int, 10> tensor_generator(0, 10);
 
+    auto tensor_rnd_0D = tensor_generator.pick_random_tensor_0D();
+    auto tensor_rnd_1D = tensor_generator.pick_random_tensor_1D();
+    auto tensor_rnd_2D = tensor_generator.pick_random_tensor_2D();
+    auto tensor_rnd_3D = tensor_generator.pick_random_tensor_3D();
 
+    srand(time(0));
+    auto tensor_rnd_2D_1 = tensor_generator.pick_random_tensor_2D();
+    auto tensor_rnd_2D_2 = tensor_generator.pick_random_tensor_2D();
 
+    srand(time(0));
+    auto tensor_rnd_3D_1 = tensor_generator.pick_random_tensor_3D();
+    auto tensor_rnd_3D_2 = tensor_generator.pick_random_tensor_3D();
 
+    for_loop_contraction fl_contraction;
 
+    std::cout << "----------" << std::endl;
+    std::cout << contraction<1,0>(tensor_rnd_2D_1, tensor_rnd_2D_2);
+    std::cout << fl_contraction.for_loop_contraction_2D(tensor_rnd_2D_1, tensor_rnd_2D_2) << std::endl;
+    std::cout << "----------" << std::endl;
+
+    auto finfin = contraction<1,0>(tensor_rnd_3D_1, tensor_rnd_3D_2);
+
+    std::cout << finfin << std::endl;
 
     return 0;
 }
