@@ -21,8 +21,14 @@ template<typename T, typename Args>
 class tensorBase_ranges : tensorFundamental{
 private:
     template<std::size_t ...is>
-    static constexpr auto random_tensor_range_i(int lowerBound, int upperBound, std::index_sequence<is...>){
+    static constexpr auto random_tensor_range_int(int lowerBound, int upperBound, std::index_sequence<is...>){
         tensorBase_ranges<T, Args> temp((is, random_number::rand_IntRange(lowerBound, upperBound))...);
+        return temp;
+    }
+
+    template<std::size_t ...is>
+    static constexpr auto random_tensor_range_float(float lowerBound, float upperBound, std::index_sequence<is...>){
+        tensorBase_ranges<T, Args> temp((is, random_number::rand_FloatRange(lowerBound, upperBound))...);
         return temp;
     }
 
@@ -70,8 +76,13 @@ public:
     }
 
     static constexpr tensorBase_ranges<T, Args> random_tensor_range(int lowerBound, int upperBound){
-        return random_tensor_range_i(lowerBound, upperBound,
+        return random_tensor_range_int(lowerBound, upperBound,
                                   std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
+    }
+
+    static constexpr tensorBase_ranges<T, Args> random_tensor_range(float lowerBound, float upperBound){
+        return random_tensor_range_float(lowerBound, upperBound,
+                                     std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
     }
 };
 

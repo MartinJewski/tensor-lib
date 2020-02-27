@@ -125,9 +125,6 @@ int main() {
 
     auto test_contraction_ranges4 = contraction_ranges(2, tensorR3);
 
-//   unitTest_runtime();
-//   unitTest_ranges();
-
     constexpr auto values = cartesian_product<3,3>();
 
     random_tensor_generator<int, 10> tensor_generator(0, 10);
@@ -148,13 +145,18 @@ int main() {
     for_loop_contraction fl_contraction;
 
     std::cout << "----------" << std::endl;
-    std::cout << contraction<1,0>(tensor_rnd_2D_1, tensor_rnd_2D_2);
+    std::cout << contraction<0,1>(tensor_rnd_2D_1, tensor_rnd_2D_2);
     std::cout << fl_contraction.for_loop_contraction_2D(tensor_rnd_2D_1, tensor_rnd_2D_2) << std::endl;
     std::cout << "----------" << std::endl;
 
-    auto finfin = contraction<1,0>(tensor_rnd_3D_1, tensor_rnd_3D_2);
+    std::cout << contraction<0,1>(tensor_rnd_3D_1, tensor_rnd_3D_2) << std::endl;
+    std::cout << fl_contraction.for_loop_contraction_3D(tensor_rnd_3D_1, tensor_rnd_3D_2) << std::endl;
 
-    std::cout << finfin << std::endl;
+    //-----------------------------------------
+
+    unitTest_runtime();
+    unitTest_ranges();
+
 
     return 0;
 }

@@ -392,7 +392,7 @@ class random_tensor_generator{
 
         constexpr random_tensor_generator(T lowerBound, T upperBound){
 
-            static_assert((std::is_same<T, int>::value || std::is_same<T, float>::value), "only float or int allowed");
+            static_assert((std::is_same<T, int>::value || std::is_same<T, float>::value), "only float or int is allowed");
 
             if constexpr(std::is_same<T, int>::value){
                 generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
@@ -403,12 +403,77 @@ class random_tensor_generator{
     };
 };
 
+
+
+
+template<typename T, std::size_t size>
+class random_tensor_generator_ranges{
+
+public:
+
+    std::array<tensorRange<T>, size> array_0D;
+    std::array<tensorRange<T, up_t>, size> array_1D;
+    std::array<tensorRange<T, up_t, up_t>, size> array_2D;
+    std::array<tensorRange<T, up_t, up_t, up_t>, size> array_3D;
+
+
+    auto pick_random_tensor_0D(){
+        return array_0D[random() % size];
+    }
+    auto pick_random_tensor_1D(){
+        return array_1D[random() % size];
+    }
+    auto pick_random_tensor_2D(){
+        return array_2D[random() % size];
+    }
+    auto pick_random_tensor_3D(){
+        return array_3D[random() % size];
+    }
+
+    template<std::size_t ...is>
+    void generate_tensor_array(int lowerBound, int upperBound, std::index_sequence<is...>){
+
+        array_0D = {(is, tensorRange<int>::random_tensor_range(lowerBound, upperBound))...};
+        array_1D = {(is, tensorRange<int, up_t>::random_tensor_range(lowerBound, upperBound))...};
+        array_2D = {(is, tensorRange<int, up_t, up_t>::random_tensor_range(lowerBound, upperBound))...};
+        array_3D = {(is, tensorRange<int, up_t, up_t, up_t>::random_tensor_range(lowerBound, upperBound))...};
+
+    }
+
+    template<std::size_t ...is>
+    void generate_tensor_array(float lowerBound, float upperBound, std::index_sequence<is...>){
+
+        array_0D = {(is, tensorRange<float>::random_tensor_range(lowerBound, upperBound))...};
+        array_1D = {(is, tensorRange<float, up_t>::random_tensor_range(lowerBound, upperBound))...};
+        array_2D = {(is, tensorRange<float, up_t, up_t>::random_tensor_range(lowerBound, upperBound))...};
+        array_3D = {(is, tensorRange<float, up_t, up_t, up_t>::random_tensor_range(lowerBound, upperBound))...};
+
+    }
+
+    constexpr random_tensor_generator_ranges(T lowerBound, T upperBound){
+
+        static_assert((std::is_same<T, int>::value || std::is_same<T, float>::value), "only float or int is allowed");
+
+        if constexpr(std::is_same<T, int>::value){
+            generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
+        }
+        if constexpr (std::is_same<T, float>::value){
+            generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
+        }
+    };
+
+
+};
+
+
+
 class for_loop_contraction{
 
     public:
 
         constexpr for_loop_contraction() = default;
 
+        //compares to a contraction<0,1>
         tensor_rt<int, up_t, up_t> for_loop_contraction_2D(tensor_rt<int, up_t, up_t> tensor1, tensor_rt<int, up_t, up_t> tensor2){
 
             tensor_rt<int, up_t, up_t> tensor3;
@@ -419,7 +484,7 @@ class for_loop_contraction{
 
                     for(int k = 0; k < DIM3; k++){ //multiplication
 
-                        tensor3.data[pos_nd_to_1d(i,j)] += tensor1.data[pos_nd_to_1d(i, k)] * tensor2.data[pos_nd_to_1d(k, j)];
+                        tensor3.data[pos_nd_to_1d(i,j)] += tensor1.data[pos_nd_to_1d(k, i)] * tensor2.data[pos_nd_to_1d(j, k)];
 
                     }
                 }
@@ -428,6 +493,8 @@ class for_loop_contraction{
             return tensor3;
         }
 
+
+        //compares to a contraction<0,1>
         tensor_rt<int, up_t, up_t, up_t, up_t> for_loop_contraction_3D(tensor_rt<int, up_t, up_t, up_t> tensor1, tensor_rt<int, up_t, up_t, up_t> tensor2){
 
             tensor_rt<int, up_t, up_t, up_t, up_t> tensor3;
@@ -438,10 +505,11 @@ class for_loop_contraction{
 
                     for(int l = 0; l < DIM3; l++){
 
-                        for(int k = 0; k < DIM3; k++){ //multiplication
+                        for(int k = 0; k < DIM3; k++){
 
                             for(int d = 0; d < DIM3; d++){
-                                tensor3.data[pos_nd_to_1d(i,j,l,k)] += tensor1.data[pos_nd_to_1d(i,d,l)] * tensor2.data[pos_nd_to_1d(d,j,l)];
+                                tensor3.data[pos_nd_to_1d(i,j,l,k)] += tensor1.data[pos_nd_to_1d(d,i,j)] * tensor2.data[pos_nd_to_1d(l,d,k)];
+                            //WRONG CALCULATION
                             }
                         }
                     }
