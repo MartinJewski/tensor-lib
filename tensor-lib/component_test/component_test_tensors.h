@@ -515,7 +515,99 @@ class for_loop_contraction{
             }
 
             return tensor3;
+        };
+
+};
+
+class for_loop_reorder{
+
+    public:
+
+    constexpr for_loop_reorder() = default;
+
+    tensor_rt<int, up_t, up_t> for_loop_reordering_2D(tensor_rt<int, up_t, up_t> tensor1){
+
+        //0,1
+        tensor_rt<int, up_t, up_t> tensor3;
+
+        for(int i = 0; i < DIM3; i++){ //rows
+
+            for(int j = 0; j < DIM3; j++){ //columns
+
+                tensor3.data[pos_nd_to_1d(j,i)] = tensor1.data[pos_nd_to_1d(i, j)];
+
+            }
         }
+
+        return tensor3;
+
+    }
+
+    tensor_rt<int, up_t, up_t, up_t> for_loop_reordering_3D(tensor_rt<int, up_t, up_t, up_t> tensor1){
+
+        //0,1,2
+        tensor_rt<int, up_t, up_t, up_t> tensor3;
+
+        for(int i = 0; i < DIM3; i++){ //rows
+
+            for(int j = 0; j < DIM3; j++){ //columns
+
+                for(int k = 0; k < DIM3; k++){
+
+                    //2,1,0
+                    tensor3.data[pos_nd_to_1d(k, j, i)] = tensor1.data[pos_nd_to_1d(i, j, k)];
+
+                }
+            }
+        }
+
+        return tensor3;
+
+    }
+
+};
+
+class for_loop_trace{
+
+    public:
+    constexpr for_loop_trace() = default;
+
+    auto for_loop_trace_2D(tensor_rt<int, up_t, up_t> tensor1){
+
+        int value = 0;
+
+        for(int i = 0; i < DIM3; i++){
+
+            for(int j = 0; j < DIM3; j++){
+
+                if( i == j ){
+                    value += tensor1.data[pos_nd_to_1d(i,j)];
+                }
+            }
+        }
+
+        return value;
+    }
+
+    auto for_loop_trace_3D(tensor_rt<int, up_t, up_t, up_t> tensor1){
+
+        int value = 0;
+
+        for(int i = 0; i < DIM3; i++){
+
+            for(int j = 0; j < DIM3; j++){
+
+                for(int k = 0; k < DIM3; k++){
+
+                    if( (i == j) && (i == k) && (k == j) ){
+                        value += tensor1.data[pos_nd_to_1d(i,j)];
+                    }
+                }
+            }
+        }
+
+        return value;
+    }
 
 };
 

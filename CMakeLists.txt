@@ -42,10 +42,10 @@ set(SOURCE_FILES main.cpp
 
         tensor-lib/tensor-concepts/tensor-concepts.h
 
-        tensor-lib/component_test/component_test_compileTime.h
-        tensor-lib/component_test/component_test_runtime.h
+        tensor-lib/component_test/component_test_compileTime_contraction.h
+        tensor-lib/component_test/component_test_runtime_contraction.h
         tensor-lib/component_test/component_test_tensors.h
-        tensor-lib/component_test/component_test_ranges.h
+        tensor-lib/component_test/component_test_ranges_contraction.h
         )
 
 add_library(range_v3 INTERFACE IMPORTED)

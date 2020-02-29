@@ -109,13 +109,13 @@
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/main.cpp">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/component_test/component_test_compileTime.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/component_test/component_test_compileTime_contraction.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/component_test/component_test_ranges.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/component_test/component_test_ranges_contraction.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/component_test/component_test_runtime.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/component_test/component_test_runtime_contraction.h">
 			<Option target="untiteled1"/>
 		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/component_test/component_test_tensors.h">

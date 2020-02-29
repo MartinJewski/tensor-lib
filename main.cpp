@@ -63,9 +63,13 @@
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
-#include "component_test_runtime.h"
-#include "tensor-lib/component_test/component_test_ranges.h"
+#include "component_test_runtime_contraction.h"
+#include "component_test_ranges_contraction.h"
 #include "component_test_tensors.h"
+#include "component_test_ranges_reorder.h"
+#include "component_test_runtime_reorder.h"
+#include "component_test_ranges_trace.h"
+#include "component_test_runtime_trace.h"
 
 #include "random_number.h"
 
@@ -154,15 +158,24 @@ int main() {
 
     //-----------------------------------------
 
-    auto ut_rt_contraction = unitTest_runtime_contraction();
-    auto ut_rt_double_contraction = unitTest_runtime_double_contraction();
+    //auto ut_rt_contraction = unitTest_runtime_contraction();
+    //auto ut_rt_double_contraction = unitTest_runtime_double_contraction();
+    //auto ut_rt_triple_contraction = unitTest_runtime_triple_contraction();
     std::cout << std::endl;
-    auto ut_range_contraction = unitTest_ranges_contraction();
-    auto ut_range_double_contraction = unitTest_ranges_double_contraction();
+    //auto ut_range_contraction = unitTest_ranges_contraction();
+    //auto ut_range_double_contraction = unitTest_ranges_double_contraction();
+    //auto ut_range_triple_contraction = unitTest_ranges_triple_contraction();
+/*
+    auto ut_rt_reorder = component_test_runtime_reorder();
+    auto ut_range_reorder = component_test_ranges_reorder();
+*/
+    auto ut_rt_trace = component_test_runtime_trace();
+    auto ut_range_trace = component_test_ranges_reorder();
 
+    /*
     std::cout << std::endl;
     std::cout << "RUNTIME SPEED UP FACTOR COMPARED TO RANGES:" << std::endl;
     std::cout << (float)(ut_range_contraction[0] / ut_rt_contraction[0]) << std::endl;
-
+    */
     return 0;
 }
