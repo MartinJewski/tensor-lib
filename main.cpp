@@ -63,9 +63,9 @@
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
-#include "tensor-lib/unitTest/unitTest_runtime.h"
-#include "tensor-lib/unitTest/unitTest_ranges.h"
-#include "tensor-lib/unitTest/unitTest_tensors.h"
+#include "component_test_runtime.h"
+#include "tensor-lib/component_test/component_test_ranges.h"
+#include "component_test_tensors.h"
 
 #include "random_number.h"
 
@@ -154,9 +154,15 @@ int main() {
 
     //-----------------------------------------
 
-    unitTest_runtime();
-    unitTest_ranges();
+    auto ut_rt_contraction = unitTest_runtime_contraction();
+    auto ut_rt_double_contraction = unitTest_runtime_double_contraction();
+    std::cout << std::endl;
+    auto ut_range_contraction = unitTest_ranges_contraction();
+    auto ut_range_double_contraction = unitTest_ranges_double_contraction();
 
+    std::cout << std::endl;
+    std::cout << "RUNTIME SPEED UP FACTOR COMPARED TO RANGES:" << std::endl;
+    std::cout << (float)(ut_range_contraction[0] / ut_rt_contraction[0]) << std::endl;
 
     return 0;
 }
