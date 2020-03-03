@@ -10,7 +10,7 @@ include_directories(./tensor-lib/tensor-operations)
 include_directories(./tensor-lib/tensor-concepts)
 include_directories(./tensor-lib/tensor-operations-ranges)
 include_directories(./tensor-lib/tensor-definition-ranges)
-include_directories(tensor-lib/component_test)
+include_directories(tensor-lib/speed_test)
 
 set(SOURCE_FILES main.cpp
         tensor-lib/tensor-operations/reorder_ct.h
@@ -42,10 +42,10 @@ set(SOURCE_FILES main.cpp
 
         tensor-lib/tensor-concepts/tensor-concepts.h
 
-        tensor-lib/component_test/component_test_compileTime_contraction.h
-        tensor-lib/component_test/component_test_runtime_contraction.h
-        tensor-lib/component_test/component_test_tensors.h
-        tensor-lib/component_test/component_test_ranges_contraction.h
+        tensor-lib/speed_test/speed_test_compileTime_contraction.h
+        tensor-lib/speed_test/speed_test_runtime_contraction.h
+        tensor-lib/speed_test/speed_test_tensors.h
+        tensor-lib/speed_test/speed_test_ranges_contraction.h
         )
 
 add_library(range_v3 INTERFACE IMPORTED)

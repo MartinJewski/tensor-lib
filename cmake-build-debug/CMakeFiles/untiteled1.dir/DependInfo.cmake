@@ -17,7 +17,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   ".././tensor-lib/tensor-concepts"
   ".././tensor-lib/tensor-operations-ranges"
   ".././tensor-lib/tensor-definition-ranges"
-  "../tensor-lib/component_test"
+  "../tensor-lib/speed_test"
   "/home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include"
   )
 

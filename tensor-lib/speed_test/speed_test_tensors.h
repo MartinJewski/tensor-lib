@@ -2,8 +2,8 @@
 // Created by martin on 13.02.20.
 //
 
-#ifndef UNTITELED1_COMPONENT_TEST_TENSORS_H
-#define UNTITELED1_COMPONENT_TEST_TENSORS_H
+#ifndef UNTITELED1_SPEED_TEST_TENSORS_H
+#define UNTITELED1_SPEED_TEST_TENSORS_H
 
 #include "tensor.h"
 #include "tensor_range.h"
@@ -472,9 +472,10 @@ class for_loop_contraction{
         constexpr for_loop_contraction() = default;
 
         //compares to a contraction<0,1>
-        tensor_rt<int, up_t, up_t> for_loop_contraction_2D(tensor_rt<int, up_t, up_t> tensor1, tensor_rt<int, up_t, up_t> tensor2){
+        template<typename T>
+        tensor_rt<T, up_t, up_t> for_loop_contraction_2D(tensor_rt<T, up_t, up_t> tensor1, tensor_rt<T, up_t, up_t> tensor2){
 
-            tensor_rt<int, up_t, up_t> tensor3;
+            tensor_rt<T, up_t, up_t> tensor3;
 
             for(int i = 0; i < DIM3; i++){ //rows
 
@@ -493,9 +494,10 @@ class for_loop_contraction{
 
 
         //compares to a contraction<0,1>
-        tensor_rt<int, up_t, up_t, up_t, up_t> for_loop_contraction_3D(tensor_rt<int, up_t, up_t, up_t> tensor1, tensor_rt<int, up_t, up_t, up_t> tensor2){
+        template<typename T>
+        tensor_rt<T, up_t, up_t, up_t, up_t> for_loop_contraction_3D(tensor_rt<T, up_t, up_t, up_t> tensor1, tensor_rt<T, up_t, up_t, up_t> tensor2){
 
-            tensor_rt<int, up_t, up_t, up_t, up_t> tensor3;
+            tensor_rt<T, up_t, up_t, up_t, up_t> tensor3;
 
             for(int i = 0; i < DIM3; i++){ //rows
 
@@ -525,10 +527,11 @@ class for_loop_reorder{
 
     constexpr for_loop_reorder() = default;
 
-    tensor_rt<int, up_t, up_t> for_loop_reordering_2D(tensor_rt<int, up_t, up_t> tensor1){
+    template<typename T>
+    tensor_rt<T, up_t, up_t> for_loop_reordering_2D(tensor_rt<T, up_t, up_t> tensor1){
 
         //0,1
-        tensor_rt<int, up_t, up_t> tensor3;
+        tensor_rt<T, up_t, up_t> tensor3;
 
         for(int i = 0; i < DIM3; i++){ //rows
 
@@ -543,10 +546,11 @@ class for_loop_reorder{
 
     }
 
-    tensor_rt<int, up_t, up_t, up_t> for_loop_reordering_3D(tensor_rt<int, up_t, up_t, up_t> tensor1){
+    template<typename T>
+    tensor_rt<T, up_t, up_t, up_t> for_loop_reordering_3D(tensor_rt<T, up_t, up_t, up_t> tensor1){
 
         //0,1,2
-        tensor_rt<int, up_t, up_t, up_t> tensor3;
+        tensor_rt<T, up_t, up_t, up_t> tensor3;
 
         for(int i = 0; i < DIM3; i++){ //rows
 
@@ -572,7 +576,8 @@ class for_loop_trace{
     public:
     constexpr for_loop_trace() = default;
 
-    auto for_loop_trace_2D(tensor_rt<int, up_t, up_t> tensor1){
+    template<typename T>
+    auto for_loop_trace_2D(tensor_rt<T, up_t, up_t> tensor1){
 
         int value = 0;
 
@@ -589,7 +594,8 @@ class for_loop_trace{
         return value;
     }
 
-    auto for_loop_trace_3D(tensor_rt<int, up_t, up_t, up_t> tensor1){
+    template<typename T>
+    auto for_loop_trace_3D(tensor_rt<T, up_t, up_t, up_t> tensor1){
 
         int value = 0;
 
@@ -611,4 +617,4 @@ class for_loop_trace{
 
 };
 
-#endif //UNTITELED1_COMPONENT_TEST_TENSORS_H
+#endif //UNTITELED1_SPEED_TEST_TENSORS_H

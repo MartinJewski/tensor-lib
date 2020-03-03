@@ -1,3 +1,8 @@
+
+#include <fstream>
+#include <sstream>
+#include <iostream>
+
 #include <iostream>
 #include <string>
 #include <stdio.h>
@@ -63,13 +68,13 @@
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
-#include "component_test_runtime_contraction.h"
-#include "component_test_ranges_contraction.h"
-#include "component_test_tensors.h"
-#include "component_test_ranges_reorder.h"
-#include "component_test_runtime_reorder.h"
-#include "component_test_ranges_trace.h"
-#include "component_test_runtime_trace.h"
+#include "speed_test_runtime_contraction.h"
+#include "speed_test_ranges_contraction.h"
+#include "speed_test_tensors.h"
+#include "speed_test_ranges_reorder.h"
+#include "speed_test_runtime_reorder.h"
+#include "speed_test_ranges_trace.h"
+#include "speed_test_runtime_trace.h"
 
 #include "random_number.h"
 
@@ -158,24 +163,110 @@ int main() {
 
     //-----------------------------------------
 
-    //auto ut_rt_contraction = unitTest_runtime_contraction();
-    //auto ut_rt_double_contraction = unitTest_runtime_double_contraction();
-    //auto ut_rt_triple_contraction = unitTest_runtime_triple_contraction();
+    auto st_rt_contraction_int = speed_test_runtime_contraction<int>();
+    auto st_rt_double_contraction_int = speed_test_runtime_double_contraction<int>();
+    auto st_rt_triple_contraction_int = speed_test_runtime_triple_contraction<int>();
     std::cout << std::endl;
-    //auto ut_range_contraction = unitTest_ranges_contraction();
-    //auto ut_range_double_contraction = unitTest_ranges_double_contraction();
-    //auto ut_range_triple_contraction = unitTest_ranges_triple_contraction();
-/*
-    auto ut_rt_reorder = component_test_runtime_reorder();
-    auto ut_range_reorder = component_test_ranges_reorder();
-*/
-    auto ut_rt_trace = component_test_runtime_trace();
-    auto ut_range_trace = component_test_ranges_reorder();
+    auto st_range_contraction_int = speed_test_ranges_contraction<int>();
+    auto st_range_double_contraction_int = speed_test_ranges_double_contraction<int>();
+    auto st_range_triple_contraction_int = speed_test_ranges_triple_contraction<int>();
+
+    auto st_rt_reorder_int = speed_test_runtime_reorder<int>();
+    auto st_range_reorder_int = speed_test_ranges_reorder<int>();
+
+    auto st_rt_trace_int = speed_test_runtime_trace<int>();
+    auto st_range_trace_int = speed_test_ranges_reorder<int>();
+
+    /*********************************+
+     *
+     *
+     *
+     *
+     */
+    auto st_rt_contraction_float = speed_test_runtime_contraction<float>();
+    auto st_rt_double_contraction_float = speed_test_runtime_double_contraction<float>();
+    auto st_rt_triple_contraction_float = speed_test_runtime_triple_contraction<float>();
+    std::cout << std::endl;
+    auto st_range_contraction_float = speed_test_ranges_contraction<float>();
+    auto st_range_double_contraction_float = speed_test_ranges_double_contraction<float>();
+    auto st_range_triple_contraction_float = speed_test_ranges_triple_contraction<float>();
+
+    auto st_rt_reorder_float = speed_test_runtime_reorder<float>();
+    auto st_range_reorder_float = speed_test_ranges_reorder<float>();
+
+    auto st_rt_trace_float = speed_test_runtime_trace<float>();
+    auto st_range_trace_float = speed_test_ranges_reorder<float>();
+
 
     /*
     std::cout << std::endl;
     std::cout << "RUNTIME SPEED UP FACTOR COMPARED TO RANGES:" << std::endl;
     std::cout << (float)(ut_range_contraction[0] / ut_rt_contraction[0]) << std::endl;
     */
+
+
+    std::ofstream output_file;
+    output_file.open ("/home/martin/Schreibtisch/speedtest_output_int.txt");
+
+    output_file << "time in nano seconds" << std::endl;
+    output_file << "<ALGO> <FOR-LOOP>" << std::endl;
+    output_file << "contraction" << std::endl;
+    output_file << st_rt_contraction_int[0] << " " << st_rt_contraction_int[1] << std::endl;
+    output_file << "double contraction" << std::endl;
+    output_file << st_rt_double_contraction_int[0] << " " << st_rt_double_contraction_int[1] << std::endl;
+    output_file << "triple contraction" << std::endl;
+    output_file << st_rt_triple_contraction_int[0] << " " << st_rt_triple_contraction_int[1] << std::endl;
+
+    output_file << "contraction_ranges" << std::endl;
+    output_file << st_range_contraction_int[0] << " " << st_range_contraction_int[1] << std::endl;
+    output_file << "double contraction_ranges" << std::endl;
+    output_file << st_range_double_contraction_int[0] << " " << st_range_double_contraction_int[1] << std::endl;
+    output_file << "triple contraction_ranges" << std::endl;
+    output_file << st_range_triple_contraction_int[0] << " " << st_range_triple_contraction_int[1] << std::endl;
+
+    output_file << "reorder" << std::endl;
+    output_file << st_rt_reorder_int[0] << " " << st_rt_reorder_int[1] << std::endl;
+    output_file << "reorder_ranges" << std::endl;
+    output_file << st_range_reorder_int[0] << " " << st_range_reorder_int[1] << std::endl;
+
+    output_file << "trace" << std::endl;
+    output_file << st_rt_trace_int[0] << " " << st_rt_trace_int[1] << std::endl;
+    output_file << "trace_ranges" << std::endl;
+    output_file << st_range_trace_int[0] << " " << st_range_trace_int[1] << std::endl;
+
+    output_file.close();
+
+
+    std::ofstream output_file2;
+    output_file2.open ("/home/martin/Schreibtisch/speedtest_output_float.txt");
+
+    output_file2 << "time in nano seconds" << std::endl;
+    output_file2 << "<ALGO> <FOR-LOOP>" << std::endl;
+    output_file2 << "contraction" << std::endl;
+    output_file2 << st_rt_contraction_float[0] << " " << st_rt_contraction_float[1] << std::endl;
+    output_file2 << "double contraction" << std::endl;
+    output_file2 << st_rt_double_contraction_float[0] << " " << st_rt_double_contraction_float[1] << std::endl;
+    output_file2 << "triple contraction" << std::endl;
+    output_file2 << st_rt_triple_contraction_float[0] << " " << st_rt_triple_contraction_float[1] << std::endl;
+
+    output_file2 << "contraction_ranges" << std::endl;
+    output_file2 << st_range_contraction_float[0] << " " << st_range_contraction_float[1] << std::endl;
+    output_file2 << "double contraction_ranges" << std::endl;
+    output_file2 << st_range_double_contraction_float[0] << " " << st_range_double_contraction_float[1] << std::endl;
+    output_file2 << "triple contraction_ranges" << std::endl;
+    output_file2 << st_range_triple_contraction_float[0] << " " << st_range_triple_contraction_float[1] << std::endl;
+
+    output_file2 << "reorder" << std::endl;
+    output_file2 << st_rt_reorder_float[0] << " " << st_rt_reorder_float[1] << std::endl;
+    output_file2 << "reorder_ranges" << std::endl;
+    output_file2 << st_range_reorder_float[0] << " " << st_range_reorder_float[1] << std::endl;
+
+    output_file2 << "trace" << std::endl;
+    output_file2 << st_rt_trace_float[0] << " " << st_rt_trace_float[1] << std::endl;
+    output_file2 << "trace_ranges" << std::endl;
+    output_file2 << st_range_trace_float[0] << " " << st_range_trace_float[1] << std::endl;
+
+    output_file2.close();
+
     return 0;
 }

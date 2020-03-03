@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../tensor-lib/component_test/component_test_ranges_contraction.h
+../tensor-lib/speed_test/speed_test_ranges_contraction.h
 contraction_ranges.h
-../tensor-lib/component_test/contraction_ranges.h
+../tensor-lib/speed_test/contraction_ranges.h
 tensor_range.h
-../tensor-lib/component_test/tensor_range.h
+../tensor-lib/speed_test/tensor_range.h
 chrono
 -
 tuple
@@ -18,9 +18,9 @@ tuple
 time.h
 -
 
-../tensor-lib/component_test/component_test_ranges_reorder.h
+../tensor-lib/speed_test/speed_test_ranges_reorder.h
 reorder_ranges.h
-../tensor-lib/component_test/reorder_ranges.h
+../tensor-lib/speed_test/reorder_ranges.h
 chrono
 -
 tuple
@@ -28,11 +28,11 @@ tuple
 time.h
 -
 
-../tensor-lib/component_test/component_test_ranges_trace.h
-component_test_tensors.h
-../tensor-lib/component_test/component_test_tensors.h
+../tensor-lib/speed_test/speed_test_ranges_trace.h
+speed_test_tensors.h
+../tensor-lib/speed_test/speed_test_tensors.h
 reorder.h
-../tensor-lib/component_test/reorder.h
+../tensor-lib/speed_test/reorder.h
 chrono
 -
 tuple
@@ -40,15 +40,15 @@ tuple
 stdlib.h
 -
 
-../tensor-lib/component_test/component_test_runtime_contraction.h
-component_test_tensors.h
-../tensor-lib/component_test/component_test_tensors.h
+../tensor-lib/speed_test/speed_test_runtime_contraction.h
+speed_test_tensors.h
+../tensor-lib/speed_test/speed_test_tensors.h
 contraction.h
-../tensor-lib/component_test/contraction.h
+../tensor-lib/speed_test/contraction.h
 reorder.h
-../tensor-lib/component_test/reorder.h
+../tensor-lib/speed_test/reorder.h
 trace.h
-../tensor-lib/component_test/trace.h
+../tensor-lib/speed_test/trace.h
 chrono
 -
 tuple
@@ -56,11 +56,11 @@ tuple
 stdlib.h
 -
 
-../tensor-lib/component_test/component_test_runtime_reorder.h
-component_test_tensors.h
-../tensor-lib/component_test/component_test_tensors.h
+../tensor-lib/speed_test/speed_test_runtime_reorder.h
+speed_test_tensors.h
+../tensor-lib/speed_test/speed_test_tensors.h
 reorder.h
-../tensor-lib/component_test/reorder.h
+../tensor-lib/speed_test/reorder.h
 chrono
 -
 tuple
@@ -68,11 +68,11 @@ tuple
 stdlib.h
 -
 
-../tensor-lib/component_test/component_test_runtime_trace.h
-component_test_tensors.h
-../tensor-lib/component_test/component_test_tensors.h
+../tensor-lib/speed_test/speed_test_runtime_trace.h
+speed_test_tensors.h
+../tensor-lib/speed_test/speed_test_tensors.h
 trace.h
-../tensor-lib/component_test/trace.h
+../tensor-lib/speed_test/trace.h
 chrono
 -
 tuple
@@ -80,13 +80,13 @@ tuple
 stdlib.h
 -
 
-../tensor-lib/component_test/component_test_tensors.h
+../tensor-lib/speed_test/speed_test_tensors.h
 tensor.h
-../tensor-lib/component_test/tensor.h
+../tensor-lib/speed_test/tensor.h
 tensor_range.h
-../tensor-lib/component_test/tensor_range.h
+../tensor-lib/speed_test/tensor_range.h
 pos_nd_to_1d.h
-../tensor-lib/component_test/pos_nd_to_1d.h
+../tensor-lib/speed_test/pos_nd_to_1d.h
 
 ../tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h
 range/v3/view/indices.hpp
@@ -2589,6 +2589,12 @@ range/v3/detail/reenable_warnings.hpp
 -
 
 /home/martin/CLionProjects/tensor-library-v1/main.cpp
+fstream
+-
+sstream
+-
+iostream
+-
 iostream
 -
 string
@@ -2687,20 +2693,20 @@ tensor-lib/tensor-concepts/tensor-concepts.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-concepts/tensor-concepts.h
 tensor-lib/tensor-builder-utilities/tuple_helpers.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_helpers.h
-component_test_runtime_contraction.h
-/home/martin/CLionProjects/tensor-library-v1/component_test_runtime_contraction.h
-component_test_ranges_contraction.h
-/home/martin/CLionProjects/tensor-library-v1/component_test_ranges_contraction.h
-component_test_tensors.h
-/home/martin/CLionProjects/tensor-library-v1/component_test_tensors.h
-component_test_ranges_reorder.h
-/home/martin/CLionProjects/tensor-library-v1/component_test_ranges_reorder.h
-component_test_runtime_reorder.h
-/home/martin/CLionProjects/tensor-library-v1/component_test_runtime_reorder.h
-component_test_ranges_trace.h
-/home/martin/CLionProjects/tensor-library-v1/component_test_ranges_trace.h
-component_test_runtime_trace.h
-/home/martin/CLionProjects/tensor-library-v1/component_test_runtime_trace.h
+speed_test_runtime_contraction.h
+/home/martin/CLionProjects/tensor-library-v1/speed_test_runtime_contraction.h
+speed_test_ranges_contraction.h
+/home/martin/CLionProjects/tensor-library-v1/speed_test_ranges_contraction.h
+speed_test_tensors.h
+/home/martin/CLionProjects/tensor-library-v1/speed_test_tensors.h
+speed_test_ranges_reorder.h
+/home/martin/CLionProjects/tensor-library-v1/speed_test_ranges_reorder.h
+speed_test_runtime_reorder.h
+/home/martin/CLionProjects/tensor-library-v1/speed_test_runtime_reorder.h
+speed_test_ranges_trace.h
+/home/martin/CLionProjects/tensor-library-v1/speed_test_ranges_trace.h
+speed_test_runtime_trace.h
+/home/martin/CLionProjects/tensor-library-v1/speed_test_runtime_trace.h
 random_number.h
 /home/martin/CLionProjects/tensor-library-v1/random_number.h
 unordered_set
