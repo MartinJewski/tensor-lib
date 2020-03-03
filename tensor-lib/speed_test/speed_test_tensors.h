@@ -509,7 +509,6 @@ class for_loop_contraction{
 
                             for(int d = 0; d < DIM3; d++){
                                 tensor3.data[pos_nd_to_1d(i,j,l,k)] += tensor1.data[pos_nd_to_1d(d,i,j)] * tensor2.data[pos_nd_to_1d(l,d,k)];
-                            //WRONG CALCULATION
                             }
                         }
                     }
@@ -543,7 +542,6 @@ class for_loop_reorder{
         }
 
         return tensor3;
-
     }
 
     template<typename T>
@@ -614,7 +612,6 @@ class for_loop_trace{
 
         return value;
     }
-
 };
 
 #endif //UNTITELED1_SPEED_TEST_TENSORS_H

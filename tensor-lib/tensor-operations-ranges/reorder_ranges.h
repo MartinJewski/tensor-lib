@@ -13,9 +13,22 @@
 #include <utility>
 
 
-
-template<std::size_t ...positions, typename T>
-constexpr auto reorder_ranges(T tensor){
+/**
+ * Reorders the indices, thus it reorders the elements inside the tensor.
+ * The standart positioning of the indices is 0,1,2,3...,N
+ * E.g The indices of the tensor tensorBase_ranges<double, up_t, up_t, low_t> are ordered with 0,1,2
+ * And an reorderin would mean an switch of the indices order, like the following:
+ * up_t,up_t, low_t order 0,1,2
+ * do a reorder reorder
+ * 2,1,0  => low_t, up_t, up_t
+ * @tparam positions new positioning of the indices
+ * @tparam T1 type of the elements inside the tensor
+ * @tparam Args1 indices of the tensor
+ * @param tensor tensor object
+ * @return returns a new tensor of the same type with reordered indices
+ */
+template<std::size_t ...positions, typename T1, typename Args1>
+constexpr auto reorder_ranges(tensorBase_ranges<T1, Args1> tensor){
 
     auto reordered = tensor.data_to_range_positionsND()
             | ranges::views::transform([tensor](auto tuple){ return std::make_pair(std::get<0>(tuple), tensor.data[
@@ -25,7 +38,7 @@ constexpr auto reorder_ranges(T tensor){
             | ranges::views::values
             | ranges::to<std::vector>();
 
-    tensorRange<typename T::elem_type, typename T::tuple_indices> tensor2(reordered);
+    tensorRange<typename decltype(tensor)::elem_type, typename decltype(tensor)::tuple_indices> tensor2(reordered);
 
     return tensor2;
 }

@@ -23,8 +23,17 @@
 
 #include <tuple>
 
+/**
+ * Compares two values and determines if they are equal
+ * @tparam is a value if size_t, only used to run on parameter packs
+ * @tparam Val1 value type
+ * @tparam Val2 value type
+ * @param value1 value
+ * @param value2
+ * @return true if the values are equal, false if not
+ */
 template<std::size_t is, typename Val1, typename Val2>
-constexpr auto functiono(Val1 value1, Val2 value2){
+constexpr auto checker(Val1 value1, Val2 value2){
 
     if(value1 != value2){
         return false;
@@ -33,23 +42,43 @@ constexpr auto functiono(Val1 value1, Val2 value2){
     }
 };
 
+/**
+ *  Checks if all elements are equal
+ * @tparam T tuple type
+ * @tparam is index sequence from 0 to ... N, where N is tuple size
+ * @param tuple object
+ * @return true if all elements are equal, false if not
+ */
 template<typename T, std::size_t ...is>
 constexpr bool tuple_values_equal_i(T tuple, std::index_sequence<is...>){
     auto compare_tuple = std::get<0>(tuple);
 
     auto boolval = true;
-    ((boolval = functiono<is>(std::get<0>(compare_tuple), std::get<is>(compare_tuple))),...);
+    ((boolval = checker<is>(std::get<0>(compare_tuple), std::get<is>(compare_tuple))),...);
 
     return boolval;
 }
 
+/**
+ * Runs the check function to check if all elements inside the tuple are equal
+ * @tparam T tuple type
+ * @param tuple object
+ * @return if all elements are equal, it returns true, else fals
+ */
 template<typename T>
 constexpr bool get_indices(T tuple){
     return tuple_values_equal_i(tuple, std::make_index_sequence<std::tuple_size<T>::value>{});
 }
 
-template<typename T1>
-constexpr auto trace_ranges(T1 tensor1){
+/**
+ * Calculates the trace of a given range tensor
+ * @tparam T1 type of the data inside the tensor
+ * @tparam Args1 index positioning (e.g up_t, low_t)
+ * @param tensor1 tensor object
+ * @return trace
+ */
+template<typename T1, typename Args1>
+constexpr auto trace_ranges(tensorBase_ranges<T1, Args1> tensor1){
 
     return ranges::accumulate(
             tensor1.data_to_range_positionsND()
