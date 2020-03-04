@@ -40,7 +40,6 @@ auto speed_test_runtime_contraction(){
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
-        unitTest_tensor_rt tensors_rt;
 
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D());
         firstTest.push_back(result);
@@ -78,8 +77,6 @@ auto speed_test_runtime_double_contraction(){
 
     std::cout << "_____START UNIT TEST:__RUNTIME_DOUBLE_CONTRACTION___" << std::endl;
 
-
-    std::vector<int> times{};
     int count1 = 0;
     int count2 = 0;
     int reps = 2000000;
@@ -95,7 +92,6 @@ auto speed_test_runtime_double_contraction(){
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
-        unitTest_tensor_rt tensors_rt;
 
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
                 contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D()));
@@ -136,7 +132,6 @@ auto speed_test_runtime_triple_contraction(){
     std::cout << "_____START UNIT TEST:__RUNTIME_TRIPLE_CONTRACTION___" << std::endl;
 
 
-    std::vector<int> times{};
     int count1 = 0;
     int count2 = 0;
     int reps = 2000000;
@@ -151,7 +146,6 @@ auto speed_test_runtime_triple_contraction(){
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
-        unitTest_tensor_rt tensors_rt;
 
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
                 contraction<0,1>(tensor_generator.pick_random_tensor_2D(),

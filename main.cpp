@@ -71,6 +71,9 @@
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
+#include "speed_test_compileTime_reorder.h"
+#include "speed_test_compileTime_trace.h"
+#include "speed_test_compileTime_contraction.h"
 #include "speed_test_runtime_contraction.h"
 #include "speed_test_ranges_contraction.h"
 #include "speed_test_tensors.h"
@@ -302,11 +305,13 @@ int main() {
             uniform_distribution<int>(0,5));
 
 
-    constexpr random_tensor_generator_compiletime<int, 10, 0, 10> generator_ct;
-    for(int i = 0; i < 10000; i++){
+    speed_test_compileTime_contraction<int>();
+    speed_test_double_compileTime_contraction<int>();
+    speed_test_triple_compileTime_contraction<int>();
+    speed_test_quadruple_compileTime_contraction<int>();
 
-        constexpr auto contraction_value_ct222 = contraction<0,1, generator_ct.pick_random_tensor_3D(), generator_ct.pick_random_tensor_3D()>();
-    }
+    speed_test_compileTime_reorder<int>();
+    speed_test_compileTime_trace<int>();
 
     return 0;
 }

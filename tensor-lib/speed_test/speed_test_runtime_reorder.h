@@ -3,15 +3,16 @@
 //
 
 
+
+#ifndef UNTITELED1_COMPONENT_TEST_RUNTIME_REORDER_H
+#define UNTITELED1_COMPONENT_TEST_RUNTIME_REORDER_H
+
 #include "speed_test_tensors.h"
 #include "reorder.h"
 
 #include <chrono>
 #include <tuple>
 #include <stdlib.h>     /* srand, rand */
-
-#ifndef UNTITELED1_COMPONENT_TEST_RUNTIME_REORDER_H
-#define UNTITELED1_COMPONENT_TEST_RUNTIME_REORDER_H
 
 
 template<typename T>
@@ -35,8 +36,6 @@ auto speed_test_runtime_reorder(){
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
-        unitTest_tensor_rt tensors_rt;
-
         auto result = reorder<1,0>(tensor_generator.pick_random_tensor_2D());
         firstTest.push_back(result);
 

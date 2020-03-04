@@ -1,12 +1,11 @@
 //
-// Created by martin on 29.02.20.
+// Created by martin on 04.03.20.
 //
 
-#ifndef UNTITELED1_SPEED_TEST_RUNTIME_TRACE_H
-#define UNTITELED1_SPEED_TEST_RUNTIME_TRACE_H
+#ifndef UNTITELED1_SPEED_TEST_COMPILETIME_TRACE_H
+#define UNTITELED1_SPEED_TEST_COMPILETIME_TRACE_H
 
 #include "speed_test_tensors.h"
-#include "trace.h"
 #include "trace_ct.h"
 
 #include <chrono>
@@ -14,15 +13,15 @@
 #include <stdlib.h>     /* srand, rand */
 
 template<typename T>
-auto speed_test_runtime_trace(){
+auto speed_test_compileTime_trace(){
 
-    std::cout << "_________________START UNIT TEST:__RUNTIME_TRACE_____________" << std::endl;
+    std::cout << "_________________START UNIT TEST:__COMPILETIME_TRACE_____________" << std::endl;
 
-    std::vector<int> times{};
     int count1 = 0;
     int count2 = 0;
     int reps = 2000000;
 
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
     random_tensor_generator<T, 10> tensor_generator(0, 10);
     for_loop_trace fl_trace;
 
@@ -35,7 +34,7 @@ auto speed_test_runtime_trace(){
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = trace(tensor_generator.pick_random_tensor_2D());
+        constexpr auto result = trace<generator_ct.pick_random_tensor_2D()>();
         firstTest.push_back(result);
 
     }
@@ -58,10 +57,11 @@ auto speed_test_runtime_trace(){
     std::cout << "FOR_LOOP_SPEED_UP FACTOR:" << (float)count1/count2 << std::endl;
     std::cout << "TRACE SPEED UP FACTOR:" << (float)count2/count1 << std::endl;
 
-    std::cout << "_________________END UNIT TEST:__RUNTIME_TRACE_____________" << std::endl;
+    std::cout << "_________________END UNIT TEST:__COMPILETIME_TRACE_____________" << std::endl;
 
     return std::vector<float> {count1, count2};
 }
 
 
-#endif //UNTITELED1_SPEED_TEST_RUNTIME_TRACE_H
+
+#endif //UNTITELED1_SPEED_TEST_COMPILETIME_TRACE_H
