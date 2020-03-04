@@ -1,9 +1,12 @@
+#include <algorithm>
+#include <cstdlib>
+#include <iostream>
+#include <iterator>
+#include <random>
 
 #include <fstream>
 #include <sstream>
-#include <iostream>
 
-#include <iostream>
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
@@ -79,6 +82,16 @@
 #include "random_number.h"
 
 #include <unordered_set>
+
+
+
+constexpr int get_seed()
+{
+    int hour = std::atoi(__TIME__);
+    int min = std::atoi(__TIME__ + 3);
+    int sec = std::atoi(__TIME__ + 6);
+    return 10000 * hour + 100 * min + sec;
+}
 
 int main() {
 
@@ -163,6 +176,9 @@ int main() {
 
     //-----------------------------------------
 
+    auto st_rt_trace_int = speed_test_runtime_trace<int>();
+
+    /*
     auto st_rt_contraction_int = speed_test_runtime_contraction<int>();
     auto st_rt_double_contraction_int = speed_test_runtime_double_contraction<int>();
     auto st_rt_triple_contraction_int = speed_test_runtime_triple_contraction<int>();
@@ -176,13 +192,15 @@ int main() {
 
     auto st_rt_trace_int = speed_test_runtime_trace<int>();
     auto st_range_trace_int = speed_test_ranges_reorder<int>();
-
+*/
     /*********************************+
      *
      *
      *
      *
      */
+
+     /*
     auto st_rt_contraction_float = speed_test_runtime_contraction<float>();
     auto st_rt_double_contraction_float = speed_test_runtime_double_contraction<float>();
     auto st_rt_triple_contraction_float = speed_test_runtime_triple_contraction<float>();
@@ -196,7 +214,7 @@ int main() {
 
     auto st_rt_trace_float = speed_test_runtime_trace<float>();
     auto st_range_trace_float = speed_test_ranges_reorder<float>();
-
+*/
 
     /*
     std::cout << std::endl;
@@ -204,7 +222,7 @@ int main() {
     std::cout << (float)(ut_range_contraction[0] / ut_rt_contraction[0]) << std::endl;
     */
 
-
+/*
     std::ofstream output_file;
     output_file.open ("/home/martin/Schreibtisch/speedtest_output_int.txt");
 
@@ -267,6 +285,28 @@ int main() {
     output_file2 << st_range_trace_float[0] << " " << st_range_trace_float[1] << std::endl;
 
     output_file2.close();
+*/
+
+    constexpr auto distri = uniform_distribution<int, 100>(0,20);
+
+    //constexpr tensor<int, up_t, up_t> ctTensor(distri[0],distri[1],distri[2],distri[3],distri[4],distri[5],distri[6],distri[7],distri[8]);
+
+    auto random_ct_tensor = tensor<int, up_t, up_t>::random_tensor_ct(0, 20);
+
+    constexpr tensor<int, up_t, up_t> ctTensor(
+            uniform_distribution<int>(0,5),
+            uniform_distribution<int>(0,5),
+            uniform_distribution<int>(0,5),
+            uniform_distribution<int>(0,5),
+            uniform_distribution<int>(0,5),
+            uniform_distribution<int>(0,5));
+
+
+    constexpr random_tensor_generator_compiletime<int, 10, 0, 10> generator_ct;
+    for(int i = 0; i < 10000; i++){
+
+        constexpr auto contraction_value_ct222 = contraction<0,1, generator_ct.pick_random_tensor_3D(), generator_ct.pick_random_tensor_3D()>();
+    }
 
     return 0;
 }

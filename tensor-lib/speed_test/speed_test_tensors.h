@@ -8,6 +8,7 @@
 #include "tensor.h"
 #include "tensor_range.h"
 #include "pos_nd_to_1d.h"
+#include "random_number.h"
 
 
 struct unitTest_tensor_ct {
@@ -403,6 +404,42 @@ class random_tensor_generator{
     };
 };
 
+template<typename T, std::size_t U, std::size_t V, std::size_t W, typename X>
+struct random_tensor_generator_ct;
+
+template<typename T, std::size_t size, std::size_t lowerBound, std::size_t upperBound, std::size_t ...is>
+struct random_tensor_generator_ct<T, size, lowerBound, upperBound, std::index_sequence<is...>>{
+
+public:
+//https://mklimenko.github.io/english/2018/06/04/constexpr-random/
+    std::array<tensor<T>, size> array_0D = {(is, tensor<T>::random_tensor_ct(lowerBound, upperBound))...};
+    std::array<tensor<T, up_t>, size> array_1D = {(is, tensor<T, up_t>::random_tensor_ct(lowerBound, upperBound))...};
+    std::array<tensor<T, up_t, up_t>, size> array_2D = {(is, tensor<T, up_t, up_t>::random_tensor_ct(lowerBound, upperBound))...};
+    std::array<tensor<T, up_t, up_t, up_t>, size> array_3D = {(is, tensor<T, up_t, up_t, up_t>::random_tensor_ct(lowerBound, upperBound))...};
+
+
+    constexpr auto pick_random_tensor_0D() const{
+        return array_0D[uniform_distribution<int>(0, 100000+size) % size];
+    }
+    constexpr auto pick_random_tensor_1D() const{
+        return array_1D[uniform_distribution<int>(0, 100000+size) % size];
+    }
+    constexpr auto pick_random_tensor_2D() const{
+        return array_2D[uniform_distribution<int>(0, 100000+size) % size];
+    }
+    constexpr auto pick_random_tensor_3D() const{
+        return array_3D[uniform_distribution<int>(0, 100000+size) % size];
+    }
+
+    constexpr random_tensor_generator_ct(){
+
+        static_assert((std::is_same<T, int>::value || std::is_same<T, float>::value), "only float or int is allowed");
+
+    };
+};
+template<typename T, std::size_t size, std::size_t lowerBound, std::size_t upperBound>
+using random_tensor_generator_compiletime = random_tensor_generator_ct<T, size, lowerBound, upperBound, std::make_index_sequence<size>>;
+
 
 
 
@@ -612,6 +649,24 @@ class for_loop_trace{
 
         return value;
     }
+};
+
+
+
+template <typename T, typename U>
+struct selector;
+
+template <typename T, std::size_t... Is>
+struct selector<T, std::index_sequence<Is...>>
+{
+    using type = std::tuple<typename std::tuple_element<Is, T>::type...>;
+};
+
+template <std::size_t N, typename... Ts>
+struct remove_last_n
+{
+    using Indices = std::make_index_sequence<sizeof...(Ts)-N>;
+    using type = typename selector<std::tuple<Ts...>, Indices>::type;
 };
 
 #endif //UNTITELED1_SPEED_TEST_TENSORS_H

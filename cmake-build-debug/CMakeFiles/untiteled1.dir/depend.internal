@@ -23,6 +23,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../tensor-lib/tensor-operations/contraction.h
  ../tensor-lib/tensor-operations/reorder.h
  ../tensor-lib/tensor-operations/trace.h
+ ../tensor-lib/tensor-operations/trace_ct.h
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/concepts/concepts.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/concepts/swap.hpp
  /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/concepts/type_traits.hpp

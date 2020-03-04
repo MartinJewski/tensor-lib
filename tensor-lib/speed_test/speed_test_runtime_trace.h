@@ -7,6 +7,7 @@
 
 #include "speed_test_tensors.h"
 #include "trace.h"
+#include "trace_ct.h"
 
 #include <chrono>
 #include <tuple>
@@ -23,6 +24,8 @@ auto speed_test_runtime_trace(){
     int reps = 2000000;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr tensor<T,up_t,up_t> tensor_ct{0,1,2,3,4,5,6,8};
+
     for_loop_trace fl_trace;
 
     std::vector<int> firstTest;

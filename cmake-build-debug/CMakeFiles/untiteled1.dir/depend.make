@@ -22,6 +22,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/reo
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/reorder.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace_ct.h
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/concepts/concepts.hpp
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/concepts/swap.hpp
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include/concepts/type_traits.hpp

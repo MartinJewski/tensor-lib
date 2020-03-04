@@ -118,6 +118,15 @@ using tensor_rt = tensorBase_rt<T, std::tuple<Args...>>;
 template<typename T, typename Args>
 class tensorBase : tensorFundamental{
 
+    private:
+
+        template<std::size_t ...is>
+        static constexpr auto random_tensor_i(T lowerBound, T upperBound, std::index_sequence<is...>){
+
+            tensorBase<T, Args> temp{(is, uniform_distribution<T>(lowerBound, upperBound))...};
+            return temp;
+        }
+
     public:
         std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
 
@@ -160,6 +169,11 @@ class tensorBase : tensorFundamental{
         temp_tensor.data = data;
 
         return temp_tensor;
+    }
+
+    static constexpr tensorBase<T, Args> random_tensor_ct(T lowerBound, T upperBound){
+        return random_tensor_i(lowerBound, upperBound,
+                                  std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
     }
 
 };
