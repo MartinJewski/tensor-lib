@@ -4,6 +4,9 @@
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_compileTime_contraction.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_compileTime_reorder.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_compileTime_trace.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_forLoop_contraction.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_forLoop_reorder.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_forLoop_trace.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_ranges_contraction.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_ranges_reorder.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/speed_test/speed_test_ranges_trace.h

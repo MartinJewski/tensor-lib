@@ -42,6 +42,9 @@ set(SOURCE_FILES main.cpp
 
         tensor-lib/tensor-concepts/tensor-concepts.h
 
+        tensor-lib/speed_test/speed_test_forLoop_reorder.h
+        tensor-lib/speed_test/speed_test_forLoop_trace.h
+        tensor-lib/speed_test/speed_test_forLoop_contraction.h
         tensor-lib/speed_test/speed_test_compileTime_reorder.h
         tensor-lib/speed_test/speed_test_compileTime_trace.h
         tensor-lib/speed_test/speed_test_compileTime_contraction.h

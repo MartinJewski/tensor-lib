@@ -27,15 +27,10 @@ auto speed_test_ranges_contraction(){
     std::vector<int> times{};
 
     int count1 = 0;
-    int count2 = 0;
-    unitTest_tensor_range tensors_range;
 
     random_tensor_generator_ranges<T, 10> tensor_generator_ranges(0, 10);
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
-    for_loop_contraction fl_calculation;
 
     std::vector<tensorRange<T, up_t, up_t>> firstTest;
-    std::vector<tensor_rt<T, up_t, up_t>> secondTest;
 
     srand(time(0));
 
@@ -50,30 +45,17 @@ auto speed_test_ranges_contraction(){
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto t3 = std::chrono::high_resolution_clock::now();
-    for(int val = 0; val < reps; val++){
-
-        auto result = fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D());
-        secondTest.push_back(result);
-    }
-    auto t4 = std::chrono::high_resolution_clock::now();
-
     auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
-    auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
+
     //time calculations
     count1 = duration1 / reps;
-    count2 = duration2 / reps;
 
-    std::cout << " " << std::endl;
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
-    std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout << "FOR_LOOP_SPEED_UP FACTOR:" << (float)count1/count2 << std::endl;
-    std::cout << "CONTRACTION SPEED UP FACTOR:" << (float)count2/count1 << std::endl;
 
 
     std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
-    return std::vector<float> {count1, count2};
+    return count1;
 }
 
 
@@ -82,19 +64,13 @@ auto speed_test_ranges_double_contraction(){
 
     std::cout << "_________________START UNIT TEST:__RANGES__DOUBLE_CONTRACTION________" << std::endl;
 
-
-    std::vector<int> times{};
-
     int count1 = 0;
-    int count2 = 0;
+
     unitTest_tensor_range tensors_range;
 
     random_tensor_generator_ranges<T, 10> tensor_generator_ranges(0, 10);
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
-    for_loop_contraction fl_calculation;
 
     std::vector<tensorRange<T, up_t, up_t>> firstTest;
-    std::vector<tensor_rt<T, up_t, up_t>> secondTest;
 
     srand(time(0));
 
@@ -109,31 +85,17 @@ auto speed_test_ranges_double_contraction(){
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto t3 = std::chrono::high_resolution_clock::now();
-    for(int val = 0; val < reps; val++){
-
-        auto result = fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(),
-                fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D()));
-        secondTest.push_back(result);
-    }
-    auto t4 = std::chrono::high_resolution_clock::now();
 
     auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
-    auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
+
     //time calculations
     count1 = duration1 / reps;
-    count2 = duration2 / reps;
 
-    std::cout << " " << std::endl;
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
-    std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout << "FOR_LOOP_SPEED_UP FACTOR:" << (float)count1/count2 << std::endl;
-    std::cout << "CONTRACTION SPEED UP FACTOR:" << (float)count2/count1 << std::endl;
-
 
     std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
-    return std::vector<float> {count1, count2};
+    return count1;
 }
 
 
@@ -142,18 +104,11 @@ auto speed_test_ranges_triple_contraction(){
 
     std::cout << "_________________START UNIT TEST:__RANGES__TRIPLE_CONTRACTION________" << std::endl;
 
-    std::vector<int> times{};
-
     int count1 = 0;
-    int count2 = 0;
-    unitTest_tensor_range tensors_range;
 
     random_tensor_generator_ranges<T, 10> tensor_generator_ranges(0, 10);
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
-    for_loop_contraction fl_calculation;
 
     std::vector<tensorRange<T, up_t, up_t>> firstTest;
-    std::vector<tensor_rt<T, up_t, up_t>> secondTest;
 
     srand(time(0));
 
@@ -169,31 +124,16 @@ auto speed_test_ranges_triple_contraction(){
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto t3 = std::chrono::high_resolution_clock::now();
-    for(int val = 0; val < reps; val++){
-
-        auto result = fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(),
-                fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(),
-                        fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D())));
-        secondTest.push_back(result);
-    }
-    auto t4 = std::chrono::high_resolution_clock::now();
-
     auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
-    auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
+
     //time calculations
     count1 = duration1 / reps;
-    count2 = duration2 / reps;
 
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
-    std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout << "FOR_LOOP_SPEED_UP FACTOR:" << (float)count1/count2 << std::endl;
-    std::cout << "CONTRACTION SPEED UP FACTOR:" << (float)count2/count1 << std::endl;
-
 
     std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
-    return std::vector<float> {count1, count2};
+    return count1;
 }
 
 
