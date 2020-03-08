@@ -175,14 +175,6 @@ tuple_show.h
 ../tensor-lib/tensor-builder-utilities-ranges/tuple_show.h
 
 ../tensor-lib/tensor-builder-utilities/cartesian_product.h
-range/v3/view/indices.hpp
--
-range/v3/view/cartesian_product.hpp
--
-range/v3/range/conversion.hpp
--
-positive_natural_compiletime_pow.h
-../tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
 tuple
 -
 tuple_show.h
@@ -193,6 +185,8 @@ tuple
 -
 tensor_specification.h
 ../tensor-lib/tensor-builder-utilities/tensor_specification.h
+
+../tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
 
 ../tensor-lib/tensor-builder-utilities/random_number.h
 stdio.h
@@ -2749,6 +2743,8 @@ tuple
 -
 tensor-lib/tensor-builder-utilities/cartesian_product.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h
+tensor-lib/tensor-builder-utilities/cartesian_product_adv.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_adv.h
 tensor-lib/tensor-builder-utilities/tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h
 tensor-lib/tensor-builder-utilities/tuple_split.h
@@ -2835,18 +2831,12 @@ range/v3/range/conversion.hpp
 -
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h
-range/v3/view/indices.hpp
--
-range/v3/view/cartesian_product.hpp
--
-range/v3/range/conversion.hpp
--
-positive_natural_compiletime_pow.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
 tuple
 -
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_adv.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/make_index_sequence_from.h
 iostream

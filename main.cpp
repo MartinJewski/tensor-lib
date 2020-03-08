@@ -37,6 +37,7 @@
 #include <tuple>
 
 #include "tensor-lib/tensor-builder-utilities/cartesian_product.h"
+#include "tensor-lib/tensor-builder-utilities/cartesian_product_adv.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_show.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_split.h"
 #include "tensor-lib/tensor-builder-utilities/tuple_split_from.h"
@@ -85,6 +86,8 @@
 #include "speed_test_ranges_trace.h"
 #include "speed_test_runtime_trace.h"
 
+//#include "speed_test_run.h"
+
 #include "random_number.h"
 
 #include <unordered_set>
@@ -101,15 +104,17 @@ constexpr int get_seed()
 
 int main() {
 
+
     //------------------------------C++17-------------------------------
     constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
-    constexpr tensor<double, up_t, up_t, up_t> tensor1_3D(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0,1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0,1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    constexpr tensor<double, up_t, up_t, up_t> tensor1_3D(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     constexpr tensor<double, up_t> tensor2(5.0, 5.0, 5.0);
     constexpr tensor<double> tensor23(1.0);
 
     tensor_rt<double, up_t, up_t> ten(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
-    constexpr auto contraction_value_ct = contraction<0,0, tensor1, tensor2>();
+    constexpr auto contraction_value_ct = contraction<0,0,tensor1_3D, contraction<0,0, tensor1_3D,
+                  contraction<0,0, tensor1_3D, tensor1_3D>()>()>();
     auto contraction_value_rt = contraction<0,0>(tensor1.to_runtime_tensor(), tensor2.to_runtime_tensor());
 
     constexpr auto contraction_value_ct2 = contraction<1,0, tensor1, tensor1>();
@@ -128,6 +133,7 @@ int main() {
     constexpr auto trace_value_ct = trace<tensor1>();
     auto trace_value_rt = trace(tensor1.to_runtime_tensor());
 
+    /*
     //----------------------C++20 ranges-------------------------------------------
 
     tensorRange<double, up_t, up_t> tensorR(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0);
@@ -153,66 +159,39 @@ int main() {
 
     auto test_contraction_ranges4 = contraction_ranges(2, tensorR3);
 
+*/
 
-
-
-    auto st_ct_contraction_i = speed_test_compileTime_contraction<int>();
-    auto st_ct_double_contraction_i = speed_test_double_compileTime_contraction<int>();
-    auto st_ct_triple_contraction_i = speed_test_triple_compileTime_contraction<int>();
-    auto st_ct_quadruple_contraction_i = speed_test_quadruple_compileTime_contraction<int>();
-
-    auto st_ct_reorder_i = speed_test_compileTime_reorder<int>();
-    auto st_ct_trace_i = speed_test_compileTime_trace<int>();
-
+/*
     auto st_ct_contraction_f = speed_test_compileTime_contraction<float>();
     auto st_ct_double_contraction_f = speed_test_double_compileTime_contraction<float>();
     auto st_ct_triple_contraction_f = speed_test_triple_compileTime_contraction<float>();
     auto st_ct_quadruple_contraction_f = speed_test_quadruple_compileTime_contraction<float>();
-
     auto st_ct_reorder_f = speed_test_compileTime_reorder<float>();
     auto st_ct_trace_f = speed_test_compileTime_trace<float>();
-
-
-    auto st_rt_contraction_i = speed_test_runtime_contraction<int>();
-    auto st_rt_double_contraction_i = speed_test_runtime_double_contraction<int>();
-    auto st_rt_triple_contraction_i = speed_test_runtime_triple_contraction<int>();
-    std::cout << std::endl;
-    auto st_range_contraction_i = speed_test_ranges_contraction<int>();
-    auto st_range_double_contraction_i = speed_test_ranges_double_contraction<int>();
-    auto st_range_triple_contraction_i = speed_test_ranges_triple_contraction<int>();
-
-    auto st_rt_reorder_i = speed_test_runtime_reorder<int>();
-    auto st_range_reorder_i = speed_test_ranges_reorder<int>();
-
-    auto st_rt_trace_i = speed_test_runtime_trace<int>();
-
-    auto st_range_trace_i = speed_test_ranges_reorder<int>();
-
 
     auto st_rt_contraction_f = speed_test_runtime_contraction<float>();
     auto st_rt_double_contraction_f = speed_test_runtime_double_contraction<float>();
     auto st_rt_triple_contraction_f = speed_test_runtime_triple_contraction<float>();
-    std::cout << std::endl;
-    auto st_range_contraction_f = speed_test_ranges_contraction<float>();
-    auto st_range_double_contraction_f = speed_test_ranges_double_contraction<float>();
-    auto st_range_triple_contraction_f = speed_test_ranges_triple_contraction<float>();
-
     auto st_rt_reorder_f = speed_test_runtime_reorder<float>();
-    auto st_range_reorder_f = speed_test_ranges_reorder<float>();
-
     auto st_rt_trace_f = speed_test_runtime_trace<float>();
+
+    auto st_range_contraction_f = speed_test_ranges_contraction<float>();
+    auto st_range_double_contracdtion_f = speed_test_ranges_double_contraction<float>();
+    auto st_range_triple_contraction_f = speed_test_ranges_triple_contraction<float>();
+    auto st_range_reorder_f = speed_test_ranges_reorder<float>();
     auto st_range_trace_f = speed_test_ranges_reorder<float>();
 
+    auto st_forLoop_contracton_f = speed_test_forLoop_contraction<float>();
+    auto st_double_forLoop_contracton_f = speed_test_double_forLoop_contraction<float>();
+    auto st_triple_forLoop_contracton_f = speed_test_triple_forLoop_contraction<float>();
+*/
 
-    std::ofstream output_file;
-    output_file.open ("/home/martin/Schreibtisch/speedtest_output.txt");
-
-    output_file.close();
+    //speed_test_run_3D<0>("/home/martin/Schreibtisch/speedtest_output.txt");
 
 
-    auto st_forLoop_contracton_i = speed_test_forLoop_contraction<int>();
-    auto st_double_forLoop_contracton_i = speed_test_double_forLoop_contraction<int>();
-    auto st_triple_forLoop_contracton_i = speed_test_triple_forLoop_contraction<int>();
+    for(auto&& ele : crt){
+        std::cout << ele << " ";
+    }
 
 
     return 0;

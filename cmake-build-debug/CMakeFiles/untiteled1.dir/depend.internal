@@ -18,6 +18,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h
  ../tensor-lib/tensor-builder-utilities/cartesian_product.h
  ../tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
+ ../tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
  ../tensor-lib/tensor-builder-utilities/random_number.h
  ../tensor-lib/tensor-builder-utilities/tuple_helpers.h
  ../tensor-lib/tensor-concepts/tensor-concepts.h
@@ -140,6 +141,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  /home/martin/CLionProjects/tensor-library-v1/main.cpp
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_adv.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/make_index_sequence_from.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h

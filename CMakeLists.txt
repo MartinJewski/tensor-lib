@@ -33,6 +33,8 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
         tensor-lib/tensor-builder-utilities/tuple_helpers.h
         tensor-lib/tensor-builder-utilities/random_number.h
+        tensor-lib/tensor-builder-utilities/cartesian_product.h
+        tensor-lib/tensor-builder-utilities/cartesian_product_adv.h
 
         tensor-lib/tensor-definition/tensor.h
         tensor-lib/tensor-definition/tensor_specification.h

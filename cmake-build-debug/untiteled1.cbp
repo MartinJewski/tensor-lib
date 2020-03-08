@@ -142,6 +142,12 @@
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h">
 			<Option target="untiteled1"/>
 		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h">
+			<Option target="untiteled1"/>
+		</Unit>
+		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_adv.h">
+			<Option target="untiteled1"/>
+		</Unit>
 		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/make_index_sequence_from.h">
 			<Option target="untiteled1"/>
 		</Unit>

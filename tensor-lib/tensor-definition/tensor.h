@@ -82,15 +82,17 @@ public:
 
     constexpr auto calculate_indices() const{
 
-        static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
-        return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+        static_assert((std::tuple_size<Args>::value <= 8), "tensor has to many indices");
+        //return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_adv<DIM3, std::tuple_size<Args>::value>();
 
     };
 
     static constexpr auto static_calculate_indices(){
 
-        static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
-        return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+        static_assert((std::tuple_size<Args>::value <= 8), "tensor has to many indices");
+        //return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_adv<DIM3, std::tuple_size<Args>::value>();
 
     };
 
@@ -158,9 +160,18 @@ class tensorBase : tensorFundamental{
 
     constexpr auto calculate_indices() const{
 
-        static_assert((std::tuple_size<Args>::value <= 5), "tensor has to many indices");
-        return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+        static_assert((std::tuple_size<Args>::value <= 8), "tensor has to many indices");
+        //return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_adv<DIM3, std::tuple_size<Args>::value>();
     };
+
+    static constexpr auto static_calculate_indices(){
+
+        static_assert((std::tuple_size<Args>::value <= 8), "tensor has to many indices");
+        //return cartesian_product<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_adv<DIM3, std::tuple_size<Args>::value>();
+    };
+
 
 
     constexpr auto to_runtime_tensor() const{

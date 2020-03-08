@@ -71,12 +71,12 @@ constexpr auto contraction(){
 
         tensorBase<std::common_type_t<typename decltype(T1)::elem_type, typename decltype(T2)::elem_type>,
             decltype(newType)> tensor3(static_cast<std::common_type_t<typename decltype(T1)::elem_type, typename decltype(T2)::elem_type>>(0));
-        auto t3_indices = tensor3.calculate_indices();
+
 
         auto sris_tensor1 = save_recreated_index_sequence
-                <0, T1.indices_amount - 1, t1_skipPos, T1.indices_amount, DIM3>(t3_indices);
+                <0, T1.indices_amount - 1, t1_skipPos, T1.indices_amount, DIM3>(decltype(tensor3)::static_calculate_indices());
         auto sris_tensor2 = save_recreated_index_sequence
-                <T1.indices_amount - 1, T2.indices_amount - 1, t2_skipPos, T2.indices_amount, DIM3>(t3_indices);
+                <T1.indices_amount - 1, T2.indices_amount - 1, t2_skipPos, T2.indices_amount, DIM3>(decltype(tensor3)::static_calculate_indices());
 
         auto result = calculate_value_ct<T1.indices_amount, T2.indices_amount,
                 std::common_type_t<typename decltype(T1)::elem_type, typename decltype(T2)::elem_type>,

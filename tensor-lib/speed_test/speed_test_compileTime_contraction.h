@@ -19,7 +19,7 @@ using seconds = std::chrono::seconds;
 template<typename T>
 auto constexpr speed_test_compileTime_contraction(){
 
-    std::cout << "_________________START UNIT TEST:__COMPILE_TIME_CONTRACTION_____________" << std::endl;
+    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
 
@@ -44,10 +44,9 @@ auto constexpr speed_test_compileTime_contraction(){
 
     count1 = duration1 / reps;
 
-    std::cout << " " << std::endl;
     std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout << "_________________END UNIT TEST:__COMPILE_TIME__________________" << std::endl;
+    std::cout  << std::endl;
 
     return count1;
 }
@@ -56,7 +55,7 @@ auto constexpr speed_test_compileTime_contraction(){
 template<typename T>
 auto constexpr speed_test_double_compileTime_contraction(){
 
-    std::cout << "_________________START UNIT TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
+    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = 2000000;
@@ -82,7 +81,7 @@ auto constexpr speed_test_double_compileTime_contraction(){
     count1 = duration1 / reps;
 
     std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
-    std::cout << "_________________END UNIT TEST:__COMPILE_TIME__________________" << std::endl;
+    std::cout << std::endl;
 
     return count1;
 }
@@ -91,7 +90,7 @@ auto constexpr speed_test_double_compileTime_contraction(){
 template<typename T>
 auto constexpr speed_test_triple_compileTime_contraction(){
 
-    std::cout << "_________________START UNIT TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
+    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = 2000000;
@@ -120,7 +119,7 @@ auto constexpr speed_test_triple_compileTime_contraction(){
 
     std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout << "_________________END UNIT TEST:__COMPILE_TIME__________________" << std::endl;
+    std::cout  << std::endl;
 
     return count1;
 }
@@ -128,7 +127,7 @@ auto constexpr speed_test_triple_compileTime_contraction(){
 template<typename T>
 auto constexpr speed_test_quadruple_compileTime_contraction(){
 
-    std::cout << "_________________START UNIT TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
+    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = 2000000;
@@ -156,11 +155,163 @@ auto constexpr speed_test_quadruple_compileTime_contraction(){
 
     count1 = duration1 / reps;
 
-    std::cout << " " << std::endl;
     std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout << "_________________END UNIT TEST:__COMPILE_TIME__________________" << std::endl;
+    std::cout << std::endl;
 
     return count1;
 }
+
+/**
+ * 3d
+ *
+ */
+
+
+template<typename T>
+auto constexpr speed_test_compileTime_contraction3D(){
+
+    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_CONTRACTION_____________" << std::endl;
+
+    int count1 = 0;
+
+    int reps = 2000000;
+
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
+
+    std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
+
+    srand(time(0));
+
+    auto t1 = std::chrono::high_resolution_clock::now();
+    for(int val = 0; val < reps; val++){
+
+        constexpr auto result = contraction<0,1, generator_ct.pick_random_tensor_3D(), generator_ct.pick_random_tensor_3D()>();
+        firstTest.push_back(result);
+
+    }
+    auto t2 = std::chrono::high_resolution_clock::now();
+
+    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+
+    count1 = duration1 / reps;
+
+    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+
+    std::cout  << std::endl;
+
+    return count1;
+}
+
+
+template<typename T>
+auto constexpr speed_test_double_compileTime_contraction3D(){
+
+    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
+
+    int count1 = 0;
+    int reps = 2000000;
+
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
+
+    std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
+
+    srand(time(0));
+
+    auto t1 = std::chrono::high_resolution_clock::now();
+    for(int val = 0; val < reps; val++){
+
+        constexpr auto result = contraction<0, 1, generator_ct.pick_random_tensor_3D(), contraction<0,1, generator_ct.pick_random_tensor_3D(), generator_ct.pick_random_tensor_3D()>()>();
+        firstTest.push_back(result);
+
+    }
+    auto t2 = std::chrono::high_resolution_clock::now();
+
+
+    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+
+    count1 = duration1 / reps;
+
+    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    std::cout << std::endl;
+
+    return count1;
+}
+
+
+template<typename T>
+auto constexpr speed_test_triple_compileTime_contraction3D(){
+
+    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
+
+    int count1 = 0;
+    int reps = 2000000;
+
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
+
+    std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
+
+    srand(time(0));
+
+    auto t1 = std::chrono::high_resolution_clock::now();
+    for(int val = 0; val < reps; val++){
+
+        constexpr auto result = contraction<0,1, generator_ct.pick_random_tensor_3D(),
+                contraction<0,1, generator_ct.pick_random_tensor_3D(),
+                        contraction<0,1, generator_ct.pick_random_tensor_3D(), generator_ct.pick_random_tensor_3D()>()>()>();
+        firstTest.push_back(result);
+
+    }
+    auto t2 = std::chrono::high_resolution_clock::now();
+
+
+    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+
+    count1 = duration1 / reps;
+
+    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+
+    std::cout  << std::endl;
+
+    return count1;
+}
+
+template<typename T>
+auto constexpr speed_test_quadruple_compileTime_contraction3D(){
+
+    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
+
+    int count1 = 0;
+    int reps = 2000000;
+
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
+
+    std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
+
+    srand(time(0));
+
+    auto t1 = std::chrono::high_resolution_clock::now();
+    for(int val = 0; val < reps; val++){
+
+        constexpr auto result =
+                contraction<0,1, generator_ct.pick_random_tensor_3D(),
+                        contraction<0,1, generator_ct.pick_random_tensor_3D(),
+                                contraction<0,1, generator_ct.pick_random_tensor_3D(),
+                                        contraction<0,1, generator_ct.pick_random_tensor_3D(), generator_ct.pick_random_tensor_3D()>()>()>()>();
+        firstTest.push_back(result);
+
+    }
+    auto t2 = std::chrono::high_resolution_clock::now();
+
+    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+
+    count1 = duration1 / reps;
+
+    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+
+    std::cout << std::endl;
+
+    return count1;
+}
+
 #endif //UNTITELED1_SPEED_TEST_COMPILETIME_CONTRACTION_H

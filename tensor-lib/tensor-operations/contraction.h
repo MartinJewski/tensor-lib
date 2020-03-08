@@ -80,16 +80,16 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, 
             remove_ith_concat_tuple<t1_skipPos, t2_skipPos, ArgsT1, ArgsT2> types;
             typename decltype(types)::type newType;
 
-            tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)> tensor3(static_cast<std::common_type_t<T1, T2>>(0));
+            //tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)> tensor3(static_cast<std::common_type_t<T1, T2>>(0));
 
             //compile time versions |static_calculate_indices
             constexpr auto ct_sris_tensor1 = save_recreated_index_sequence
                     <0, tensorBase_rt<T1, ArgsT1>::indices_amount - 1, t1_skipPos, tensorBase_rt<T1, ArgsT1>::indices_amount, DIM3>
-                    (decltype(tensor3)::static_calculate_indices());
+                    (tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)>::static_calculate_indices());
 
             constexpr auto ct_sris_tensor2 = save_recreated_index_sequence
                     <tensorBase_rt<T1, ArgsT1>::indices_amount - 1, tensorBase_rt<T2, ArgsT2>::indices_amount - 1, t2_skipPos, tensorBase_rt<T2, ArgsT2>::indices_amount, DIM3>
-                    (decltype(tensor3)::static_calculate_indices());
+                    (tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)>::static_calculate_indices());
 
             auto result = calculate_value<tensorBase_rt<T1, ArgsT1>::indices_amount, tensorBase_rt<T2, ArgsT2>::indices_amount,
                     std::common_type_t<T1, T2>>
