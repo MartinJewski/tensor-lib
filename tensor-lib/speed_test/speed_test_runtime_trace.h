@@ -19,7 +19,7 @@ auto speed_test_runtime_trace(){
     std::cout << "_________________SPEED TEST:__RUNTIME_TRACE_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 
@@ -54,7 +54,7 @@ auto speed_test_runtime_trace3D(){
     std::cout << "_________________START SPEED TEST:__RUNTIME_TRACE_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 

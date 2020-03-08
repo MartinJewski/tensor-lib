@@ -55,7 +55,7 @@ constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBa
 
                                                        recreate_for_index_sequence
                                                                <decltype(tensor1)::indices_amount - 1, decltype(tensor2)::indices_amount - 1, skipPos2,
-                                                                       decltype(tensor1)::indices_amount, DIM3>(tuple));})
+                                                                       decltype(tensor2)::indices_amount, DIM3>(tuple));})
                     | ranges::views::transform([tensor1, tensor2](auto tuple){return
                     //calculates the final value with the given indice tuples before the contraction
                     calculate_value_i<

@@ -18,7 +18,7 @@ auto speed_test_compileTime_trace(){
     std::cout << "_________________START SPEED TEST:__COMPILETIME_TRACE_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
@@ -60,7 +60,7 @@ auto speed_test_compileTime_trace3D(){
     std::cout << "_________________START SPEED TEST:__COMPILETIME_TRACE_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 

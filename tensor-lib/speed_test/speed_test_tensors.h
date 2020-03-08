@@ -10,6 +10,9 @@
 #include "pos_nd_to_1d.h"
 #include "random_number.h"
 
+template<auto i> constexpr auto REPS = i;
+constexpr auto REP= REPS<100000>;
+
 
 template<typename T, std::size_t size>
 class random_tensor_generator{
@@ -216,11 +219,46 @@ class for_loop_contraction{
                     }
                 }
             }
-
             return tensor3;
         };
 
-};
+    //compares to a contraction<0,1>
+    template<typename T>
+    tensor_rt<T, up_t, up_t, up_t, up_t, up_t> for_loop_double_contraction_3D(tensor_rt<T, up_t, up_t, up_t, up_t> tensor1, tensor_rt<T, up_t, up_t, up_t> tensor2) {
+
+        tensor_rt<T, up_t, up_t, up_t, up_t, up_t> tensor3;
+
+        for (int i = 0; i < DIM3; i++) { //rows
+
+            for (int j = 0; j < DIM3; j++) { //columns
+
+                for (int l = 0; l < DIM3; l++) {
+
+                    for (int k = 0; k < DIM3; k++) {
+
+                        for (int m = 0; m < DIM3; m++) {
+
+                            for (int n = 0; n < DIM3; n++) {
+
+                                for (int o = 0; o < DIM3; o++) {
+
+                                    for (int d = 0; d < DIM3; d++) {
+                                        tensor3.data[pos_nd_to_1d(j, l, k, m, o)] +=
+                                                tensor1.data[pos_nd_to_1d(i, j, l, k)] *
+                                                tensor2.data[pos_nd_to_1d(m, n, o)];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return tensor3;
+    }
+
+    };
 
 class for_loop_reorder{
 

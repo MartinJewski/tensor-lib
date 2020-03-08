@@ -18,7 +18,7 @@ auto speed_test_forLoop_reorder(){
     std::cout << "_________________START SPEED TEST:__FOR_LOOP_REORDER___________" << std::endl;
 
     int count2 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
     for_loop_reorder fl_reorder;
@@ -50,7 +50,7 @@ auto speed_test_forLoop_reorder3D(){
     std::cout << "_________________START SPEED TEST:__FOR_LOOP_REORDER___________" << std::endl;
 
     int count2 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
     for_loop_reorder fl_reorder;

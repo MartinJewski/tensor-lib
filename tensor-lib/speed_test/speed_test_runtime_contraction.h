@@ -24,7 +24,7 @@ auto speed_test_runtime_contraction(){
     std::cout << "_________________START SPEED TEST:__RUNTIME_CONTRACTION2D____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 
@@ -62,7 +62,7 @@ auto speed_test_runtime_double_contraction(){
     std::cout << "_____START SPEED TEST:__RUNTIME_DOUBLE_CONTRACTION2D__" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 
@@ -102,7 +102,7 @@ auto speed_test_runtime_triple_contraction(){
     std::cout << "_____START SPEED TEST:__RUNTIME_TRIPLE_CONTRACTION_2D__" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 
@@ -145,11 +145,11 @@ auto speed_test_runtime_contraction3D(){
     std::cout << "_________________START SPEED TEST:__RUNTIME_CONTRACTION3D____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 
-    std::vector<tensor_rt<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensor_rt<T, up_t, up_t, up_t, up_t>> firstTest;
 
     srand(time(0));
 
@@ -183,11 +183,11 @@ auto speed_test_runtime_double_contraction3D(){
     std::cout << "_____START SPEED TEST:__RUNTIME_DOUBLE_CONTRACTION3D__" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 
-    std::vector<tensor_rt<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensor_rt<T, up_t, up_t, up_t, up_t, up_t>> firstTest;
 
     srand(time(0));
 
@@ -197,6 +197,7 @@ auto speed_test_runtime_double_contraction3D(){
 
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_3D(),
                                        contraction<0,1>(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D()));
+
         firstTest.push_back(result);
 
     }
@@ -223,11 +224,11 @@ auto speed_test_runtime_triple_contraction3D(){
     std::cout << "_____START SPEED TEST:__RUNTIME_TRIPLE_CONTRACTION_3D__" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 
-    std::vector<tensor_rt<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensor_rt<T, up_t, up_t, up_t, up_t, up_t, up_t>> firstTest;
 
     srand(time(0));
 

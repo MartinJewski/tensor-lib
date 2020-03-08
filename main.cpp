@@ -86,7 +86,7 @@
 #include "speed_test_ranges_trace.h"
 #include "speed_test_runtime_trace.h"
 
-//#include "speed_test_run.h"
+#include "speed_test_run.h"
 
 #include "random_number.h"
 
@@ -103,7 +103,7 @@ constexpr int get_seed()
 }
 
 int main() {
-
+/*
 
     //------------------------------C++17-------------------------------
     constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
@@ -132,7 +132,7 @@ int main() {
 
     constexpr auto trace_value_ct = trace<tensor1>();
     auto trace_value_rt = trace(tensor1.to_runtime_tensor());
-
+*/
     /*
     //----------------------C++20 ranges-------------------------------------------
 
@@ -186,12 +186,7 @@ int main() {
     auto st_triple_forLoop_contracton_f = speed_test_triple_forLoop_contraction<float>();
 */
 
-    //speed_test_run_3D<0>("/home/martin/Schreibtisch/speedtest_output.txt");
-
-
-    for(auto&& ele : crt){
-        std::cout << ele << " ";
-    }
+    speed_test_run_3D<0>("Schreibtisch/output.txt");
 
 
     return 0;

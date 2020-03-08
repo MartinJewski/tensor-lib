@@ -18,7 +18,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   ".././tensor-lib/tensor-operations-ranges"
   ".././tensor-lib/tensor-definition-ranges"
   "../tensor-lib/speed_test"
-  "/home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include"
+  "../ranges-lib/range-v3/range-v3-master/include"
   )
 
 # Targets to which this target links.

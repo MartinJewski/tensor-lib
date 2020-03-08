@@ -31,7 +31,7 @@ auto speed_test_ranges_contraction(){
 
     srand(time(0));
 
-    int reps = 2000000;
+    int reps = REP;
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
@@ -69,7 +69,7 @@ auto speed_test_ranges_double_contraction(){
 
     srand(time(0));
 
-    int reps = 2000000;
+    int reps = REP;
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
@@ -107,7 +107,7 @@ auto speed_test_ranges_triple_contraction(){
 
     srand(time(0));
 
-    int reps = 2000000;
+    int reps = REP;
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
@@ -148,11 +148,11 @@ auto speed_test_ranges_contraction3D(){
 
     random_tensor_generator_ranges<T, 10> tensor_generator_ranges(0, 10);
 
-    std::vector<tensorRange<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensorRange<T, up_t, up_t, up_t, up_t>> firstTest;
 
     srand(time(0));
 
-    int reps = 2000000;
+    int reps = REP;
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
@@ -186,17 +186,20 @@ auto speed_test_ranges_double_contraction3D(){
 
     random_tensor_generator_ranges<T, 10> tensor_generator_ranges(0, 10);
 
-    std::vector<tensorRange<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensorRange<T, up_t, up_t, up_t, up_t, up_t>> firstTest;
 
     srand(time(0));
 
-    int reps = 2000000;
+    int reps = REP;
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
         auto result = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), contraction_ranges<0,1>
                 (tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D()));
+    //    auto r1 =  contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D());
+    //    auto r2 =  contraction_ranges<0,1>(r1, tensor_generator_ranges.pick_random_tensor_3D());
+
         firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
@@ -224,19 +227,23 @@ auto speed_test_ranges_triple_contraction3D(){
 
     random_tensor_generator_ranges<T, 10> tensor_generator_ranges(0, 10);
 
-    std::vector<tensorRange<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensorBase_ranges<T, std::tuple<up_t, up_t, up_t, up_t, up_t, up_t>>> firstTest;
 
     srand(time(0));
 
-    int reps = 2000000;
+    int reps = REP;
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(),
-                                              contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), contraction_ranges<0,1>
-                                                      (tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D())));
-        firstTest.push_back(result);
+        //auto result = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(),
+        //                                      contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), contraction_ranges<0,1>
+        //                                              (tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D())));
+
+        auto r1 = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D());
+        auto r2 = contraction_ranges<0,1>(r1, tensor_generator_ranges.pick_random_tensor_3D());
+        auto r3 = contraction_ranges<0,1>(r2, tensor_generator_ranges.pick_random_tensor_3D());
+
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 

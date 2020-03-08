@@ -23,7 +23,7 @@ auto constexpr speed_test_compileTime_contraction(){
 
     int count1 = 0;
 
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
@@ -58,7 +58,7 @@ auto constexpr speed_test_double_compileTime_contraction(){
     std::cout << "_________________START SPEED TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
@@ -93,7 +93,7 @@ auto constexpr speed_test_triple_compileTime_contraction(){
     std::cout << "_________________START SPEED TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
@@ -130,7 +130,7 @@ auto constexpr speed_test_quadruple_compileTime_contraction(){
     std::cout << "_________________START SPEED TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
@@ -175,11 +175,11 @@ auto constexpr speed_test_compileTime_contraction3D(){
 
     int count1 = 0;
 
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
-    std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensor<T, up_t, up_t, up_t, up_t>> firstTest;
 
     srand(time(0));
 
@@ -187,6 +187,7 @@ auto constexpr speed_test_compileTime_contraction3D(){
     for(int val = 0; val < reps; val++){
 
         constexpr auto result = contraction<0,1, generator_ct.pick_random_tensor_3D(), generator_ct.pick_random_tensor_3D()>();
+
         firstTest.push_back(result);
 
     }
@@ -210,11 +211,11 @@ auto constexpr speed_test_double_compileTime_contraction3D(){
     std::cout << "_________________START SPEED TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
-    std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensor<T, up_t, up_t, up_t, up_t, up_t>> firstTest;
 
     srand(time(0));
 
@@ -245,7 +246,7 @@ auto constexpr speed_test_triple_compileTime_contraction3D(){
     std::cout << "_________________START SPEED TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
@@ -282,7 +283,7 @@ auto constexpr speed_test_quadruple_compileTime_contraction3D(){
     std::cout << "_________________START SPEED TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 

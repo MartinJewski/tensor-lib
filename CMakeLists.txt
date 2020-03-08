@@ -56,8 +56,10 @@ set(SOURCE_FILES main.cpp
         )
 
 add_library(range_v3 INTERFACE IMPORTED)
+#set_target_properties(range_v3 PROPERTIES
+#        INTERFACE_INCLUDE_DIRECTORIES /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include)
 set_target_properties(range_v3 PROPERTIES
-        INTERFACE_INCLUDE_DIRECTORIES /home/martin/CLionProjects/Libraries/range-v3/range-v3-master/include)
+        INTERFACE_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/ranges-lib/range-v3/range-v3-master/include)
 
 add_compile_options(-fconcepts) #enables concepts(unstable). Stable versions will be released with gcc/g++ 10
 add_compile_options(-fpermissive)

@@ -29,8 +29,10 @@ template<std::size_t indices1, std::size_t indices2, typename F, typename T1, ty
 constexpr auto calculate_value_i(T1 tensor1, T2 tensor2, Tuple1 tup1, Tuple2 tup2, std::index_sequence<is...>){
 
     F add = 0.0;
+
     ((add += (tensor1.data[(pos_nd_to_1d_tuple<indices1>(std::get<is>(tup1)))]
               * tensor2.data[(pos_nd_to_1d_tuple<indices2>(std::get<is>(tup2)))])),...);
+
     return add;
 }
 

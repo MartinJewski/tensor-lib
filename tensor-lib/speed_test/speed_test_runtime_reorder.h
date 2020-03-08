@@ -21,7 +21,7 @@ auto speed_test_runtime_reorder(){
     std::cout << "_____SPEED TEST:__RUNTIME_REORDER2D__" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 
@@ -56,7 +56,7 @@ auto speed_test_runtime_reorder3D(){
     std::cout << "_____START SPEED TEST:__RUNTIME_REORDER3D__" << std::endl;
 
     int count1 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
 

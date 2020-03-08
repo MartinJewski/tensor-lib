@@ -20,7 +20,7 @@ auto speed_test_compileTime_reorder(){
 
     int count1 = 0;
 
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 
@@ -59,7 +59,7 @@ auto speed_test_compileTime_reorder3D(){
 
     int count1 = 0;
 
-    int reps = 2000000;
+    int reps = REP;
 
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> generator_ct;
 

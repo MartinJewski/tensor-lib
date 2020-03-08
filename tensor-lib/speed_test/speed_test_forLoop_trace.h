@@ -12,13 +12,20 @@
 #include <tuple>
 #include <stdlib.h>     /* srand, rand */
 
+
+using nano_s = std::chrono::nanoseconds;
+using micro_s = std::chrono::microseconds;
+using milli_s = std::chrono::milliseconds;
+using seconds = std::chrono::seconds;
+
+
 template<typename T>
 auto speed_test_forLoop_trace(){
 
     std::cout << "_________________START SPEED TEST:__FOR_LOOP_TRACE_____________" << std::endl;
 
     int count2 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
     for_loop_trace fl_trace;
@@ -52,7 +59,7 @@ auto speed_test_forLoop_trace3D(){
     std::cout << "_________________START SPEED TEST:__FOR_LOOP_TRACE_____________" << std::endl;
 
     int count2 = 0;
-    int reps = 2000000;
+    int reps = REP;
 
     random_tensor_generator<T, 10> tensor_generator(0, 10);
     for_loop_trace fl_trace;
