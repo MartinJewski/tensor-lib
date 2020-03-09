@@ -34,7 +34,7 @@ auto speed_test_compileTime_trace(){
     for(int val = 0; val < reps; val++){
 
         constexpr auto result = trace<generator_ct.pick_random_tensor_2D()>();
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();
@@ -76,7 +76,7 @@ auto speed_test_compileTime_trace3D(){
     for(int val = 0; val < reps; val++){
 
         constexpr auto result = trace<generator_ct.pick_random_tensor_3D()>();
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();

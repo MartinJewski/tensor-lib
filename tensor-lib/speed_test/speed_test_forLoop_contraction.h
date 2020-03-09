@@ -32,7 +32,7 @@ int constexpr speed_test_forLoop_contraction(){
     auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){
         auto result = fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D());
-        secondTest.push_back(result);
+        //secondTest.push_back(result);
     }
     auto t4 = std::chrono::high_resolution_clock::now();
 
@@ -62,7 +62,7 @@ int constexpr speed_test_double_forLoop_contraction(){
     for(int i = 0; i < reps; i++){
         auto result = fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(),
                 fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D()));
-        secondTest.push_back(result);
+        //secondTest.push_back(result);
     }
     auto t4 = std::chrono::high_resolution_clock::now();
 
@@ -95,7 +95,7 @@ int constexpr speed_test_triple_forLoop_contraction(){
         auto result = fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(),
                 fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(),
                                                              fl_calculation.for_loop_contraction_2D(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D())));
-        secondTest.push_back(result);
+        //secondTest.push_back(result);
     }
     auto t4 = std::chrono::high_resolution_clock::now();
 
@@ -131,7 +131,7 @@ int constexpr speed_test_forLoop_contraction3D(){
     auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){
         auto result = fl_calculation.for_loop_contraction_3D(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D());
-        secondTest.push_back(result);
+        //secondTest.push_back(result);
     }
     auto t4 = std::chrono::high_resolution_clock::now();
 
@@ -163,7 +163,7 @@ int constexpr speed_test_double_forLoop_contraction3D(){
         auto result = fl_calculation.for_loop_double_contraction_3D(
                 fl_calculation.for_loop_contraction_3D(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D()),
                         tensor_generator.pick_random_tensor_3D());
-        secondTest.push_back(result);
+        //secondTest.push_back(result);
     }
     auto t4 = std::chrono::high_resolution_clock::now();
 

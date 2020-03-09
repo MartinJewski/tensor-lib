@@ -37,7 +37,7 @@ auto speed_test_forLoop_trace(){
     auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){
         auto result = fl_trace.for_loop_trace_2D(tensor_generator.pick_random_tensor_2D());
-        secondTest.push_back(result);
+        //secondTest.push_back(result);
     }
     auto t4 = std::chrono::high_resolution_clock::now();
 
@@ -71,7 +71,7 @@ auto speed_test_forLoop_trace3D(){
     auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){
         auto result = fl_trace.for_loop_trace_3D(tensor_generator.pick_random_tensor_3D());
-        secondTest.push_back(result);
+        //secondTest.push_back(result);
     }
     auto t4 = std::chrono::high_resolution_clock::now();
 

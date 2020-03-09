@@ -32,7 +32,7 @@ auto speed_test_ranges_trace(){
 
         auto result = trace_ranges(tensor_generator_ranges.pick_random_tensor_2D());
 
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -71,7 +71,7 @@ auto speed_test_ranges_trace3D(){
 
         auto result = trace_ranges(tensor_generator_ranges.pick_random_tensor_3D());
 
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 

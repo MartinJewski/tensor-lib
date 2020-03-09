@@ -9,6 +9,10 @@
 #include <fstream>
 #include <sstream>
 
+#include "speed_test_expressionTemp_reorder.h"
+#include "speed_test_expressionTemp_trace.h"
+#include "speed_test_expressionTemp_contraction.h"
+
 #include "speed_test_forLoop_reorder.h"
 #include "speed_test_forLoop_trace.h"
 #include "speed_test_forLoop_contraction.h"
@@ -29,34 +33,35 @@ void speed_test_run_2D(std::string input_path){
     std::ofstream output_file;
     output_file.open (input_path);
 
+    output_file << "ct_1x_contraction" << "\t";
+    output_file << "ct_2x_contraction" << "\t";
+    output_file << "ct_3x_contraction" << "\t";
+    output_file << "ct_4x_contraction" << "\t";
+    output_file << "ct_reorder" << "\t";
+    output_file << "ct_trace" << "\t";
+
+    output_file << "rt_1x_contraction" << "\t";
+    output_file << "rt_2x_contraction" << "\t";
+    output_file << "rt_3x_contraction" << "\t";
+    output_file << "rt_reorder" << "\t";
+    output_file << "rt_trace" << "\t";
+
+    output_file << "range_1x_contraction" << "\t";
+    output_file << "range_2x_contraction" << "\t";
+    output_file << "range_3x_contraction" << "\t";
+    output_file << "range_reorder" << "\t";
+    output_file << "range_trace" << "\t";
+
+    output_file << "ET_1x_contraction" << "\t";
+    output_file << "ET_2x_contraction" << "\t";
+    output_file << "ET_3x_contraction" << "\t";
+    output_file << "ET_reorder" << "\t";
+    output_file << "ET_trace" << "\t";
+
+
+    output_file << std::endl;
+
     for(int i = 0; i <= amount; i++){
-
-        output_file << "ct_1x_contraction" << "\t";
-        output_file << "ct_2x_contraction" << "\t";
-        output_file << "ct_3x_contraction" << "\t";
-        output_file << "ct_4x_contraction" << "\t";
-        output_file << "ct_reorder" << "\t";
-        output_file << "ct_trace" << "\t";
-
-        output_file << "rt_1x_contraction" << "\t";
-        output_file << "rt_2x_contraction" << "\t";
-        output_file << "rt_3x_contraction" << "\t";
-        output_file << "rt_reorder" << "\t";
-        output_file << "rt_trace" << "\t";
-
-        output_file << "range_1x_contraction" << "\t";
-        output_file << "range_2x_contraction" << "\t";
-        output_file << "range_3x_contraction" << "\t";
-        output_file << "range_reorder" << "\t";
-        output_file << "range_trace" << "\t";
-
-        output_file << "forLoop_1x_contraction" << "\t";
-        output_file << "forLoop_2x_contraction" << "\t";
-        output_file << "forLoop_3x_contraction" << "\t";
-        output_file << "forLoop_reorder" << "\t";
-        output_file << "forLoop_trace" << "\t";
-        output_file << std::endl;
-
 
         output_file << speed_test_compileTime_contraction<int>() << "\t";
         output_file << speed_test_double_compileTime_contraction<int>() << "\t";
@@ -83,6 +88,12 @@ void speed_test_run_2D(std::string input_path){
         output_file << speed_test_forLoop_reorder<int>() << "\t";
         output_file << speed_test_forLoop_trace<int>() << "\t";
 
+        output_file << speed_test_expressionTemp_contraction2D<int>() << "\t";
+        output_file << speed_test_double_expressionTemp_contraction2D<int>() << "\t";
+        output_file << speed_test_triple_expressionTemp_contraction2D<int>() << "\t";
+        output_file << speed_test_expressionTemp_reorder2D<int>() << "\t";
+        output_file << speed_test_expressionTemp_trace2D<int>() << "\t";
+
         output_file << std::endl;
     }
 
@@ -96,28 +107,34 @@ void speed_test_run_3D(std::string input_path){
     std::ofstream output_file;
     output_file.open (input_path);
 
+
+    output_file << "ct_1x_contraction_3D" << "\t";
+    output_file << "ct_2x_contraction_3D" << "\t";
+    output_file << "ct_reorder_3D" << "\t";
+    output_file << "ct_trace_3D" << "\t";
+
+    output_file << "rt_1x_contraction_3D" << "\t";
+    output_file << "rt_2x_contraction_3D" << "\t";
+    output_file << "rt_reorder_3D" << "\t";
+    output_file << "rt_trace_3D" << "\t";
+
+    output_file << "range_1x_contraction_3D" << "\t";
+    output_file << "range_2x_contraction_3D" << "\t";
+    output_file << "range_reorder_3D" << "\t";
+    output_file << "range_trace_3D" << "\t";
+
+    output_file << "forLoop_1x_contraction_3D" << "\t";
+    output_file << "forLoop_2x_contraction_3D" << "\t";
+    output_file << "forLoop_reorder_3D" << "\t";
+    output_file << "forLoop_trace_3D" << "\t";
+
+    output_file << "ET_1x_contraction_3D" << "\t";
+    output_file << "ET_2x_contraction_3D" << "\t";
+    output_file << "ET_reorder_3D" << "\t";
+    output_file << "ET_trace_3D" << "\t";
+    output_file << std::endl;
+
     for(int i = 0; i <= amount; i++){
-
-        output_file << "ct_1x_contraction_3D" << "\t";
-        output_file << "ct_2x_contraction_3D" << "\t";
-        output_file << "ct_reorder_3D" << "\t";
-        output_file << "ct_trace_3D" << "\t";
-
-        output_file << "rt_1x_contraction_3D" << "\t";
-        output_file << "rt_2x_contraction_3D" << "\t";
-        output_file << "rt_reorder_3D" << "\t";
-        output_file << "rt_trace_3D" << "\t";
-
-        output_file << "range_1x_contraction_3D" << "\t";
-        output_file << "range_2x_contraction_3D" << "\t";
-        output_file << "range_reorder_3D" << "\t";
-        output_file << "range_trace_3D" << "\t";
-
-        output_file << "forLoop_1x_contraction_3D" << "\t";
-        output_file << "forLoop_2x_contraction_3D" << "\t";
-        output_file << "forLoop_reorder_3D" << "\t";
-        output_file << "forLoop_trace_3D" << "\t";
-        output_file << std::endl;
 
         output_file << speed_test_compileTime_contraction3D<int>() << "\t";
         output_file << speed_test_double_compileTime_contraction3D<int>() << "\t";
@@ -138,6 +155,12 @@ void speed_test_run_3D(std::string input_path){
         output_file << speed_test_double_forLoop_contraction3D<int>() << "\t";
         output_file << speed_test_forLoop_reorder3D<int>() << "\t";
         output_file << speed_test_forLoop_trace3D<int>() << "\t";
+
+        output_file << speed_test_expressionTemp_contraction3D<int>() << "\t";
+        output_file << speed_test_double_expressionTemp_contraction3D<int>() << "\t";
+        output_file << speed_test_expressionTemp_reorder3D<int>() << "\t";
+        output_file << speed_test_expressionTemp_trace3D<int>() << "\t";
+
 
         output_file << std::endl;
     }

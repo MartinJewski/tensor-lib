@@ -38,7 +38,7 @@ auto speed_test_ranges_contraction(){
 
         auto result = contraction_ranges<0,1>
                 (tensor_generator_ranges.pick_random_tensor_2D(), tensor_generator_ranges.pick_random_tensor_2D());
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -49,8 +49,6 @@ auto speed_test_ranges_contraction(){
 
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
-
-    std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
     return count1;
 }
@@ -76,7 +74,7 @@ auto speed_test_ranges_double_contraction(){
 
         auto result = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_2D(), contraction_ranges<0,1>
                 (tensor_generator_ranges.pick_random_tensor_2D(), tensor_generator_ranges.pick_random_tensor_2D()));
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -88,7 +86,6 @@ auto speed_test_ranges_double_contraction(){
 
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
-    std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
     return count1;
 }
@@ -115,7 +112,7 @@ auto speed_test_ranges_triple_contraction(){
         auto result = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_2D(),
                 contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_2D(), contraction_ranges<0,1>
                 (tensor_generator_ranges.pick_random_tensor_2D(), tensor_generator_ranges.pick_random_tensor_2D())));
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -125,8 +122,6 @@ auto speed_test_ranges_triple_contraction(){
     count1 = duration1 / reps;
 
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
-
-    std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
     return count1;
 }
@@ -159,7 +154,7 @@ auto speed_test_ranges_contraction3D(){
 
         auto result = contraction_ranges<0,1>
                 (tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D());
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -169,9 +164,6 @@ auto speed_test_ranges_contraction3D(){
     count1 = duration1 / reps;
 
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
-
-
-    std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
     return count1;
 }
@@ -197,10 +189,8 @@ auto speed_test_ranges_double_contraction3D(){
 
         auto result = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), contraction_ranges<0,1>
                 (tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D()));
-    //    auto r1 =  contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D());
-    //    auto r2 =  contraction_ranges<0,1>(r1, tensor_generator_ranges.pick_random_tensor_3D());
 
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -211,8 +201,6 @@ auto speed_test_ranges_double_contraction3D(){
     count1 = duration1 / reps;
 
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
-
-    std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
     return count1;
 }
@@ -236,13 +224,10 @@ auto speed_test_ranges_triple_contraction3D(){
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        //auto result = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(),
-        //                                      contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), contraction_ranges<0,1>
-        //                                              (tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D())));
-
-        auto r1 = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D());
-        auto r2 = contraction_ranges<0,1>(r1, tensor_generator_ranges.pick_random_tensor_3D());
-        auto r3 = contraction_ranges<0,1>(r2, tensor_generator_ranges.pick_random_tensor_3D());
+        auto result = contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(),
+                                              contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D(), contraction_ranges<0,1>
+                                                      (tensor_generator_ranges.pick_random_tensor_3D(), tensor_generator_ranges.pick_random_tensor_3D())));
+        //firstTest.push_back(result);
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();
@@ -254,7 +239,6 @@ auto speed_test_ranges_triple_contraction3D(){
 
     std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
-    std::cout << "_________________END UNIT TEST:__RANGES__________________" << std::endl;
 
     return count1;
 }

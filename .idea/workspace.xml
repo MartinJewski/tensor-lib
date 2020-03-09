@@ -12,6 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="added tensor class and more code">
+      <change afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_contraction.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_reorder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_trace.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
@@ -36,8 +39,6 @@
       <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_reorder.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_reorder.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_trace.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_tensors.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_tensors.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/contraction_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/contraction_ranges.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../towerWars" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ET_Tensor_Library" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
     <property name="settings.editor.splitter.proportion" value="0.24397591" />
   </component>
@@ -165,7 +166,8 @@
       <workItem from="1583154575859" duration="50784000" />
       <workItem from="1583591549902" duration="15721000" />
       <workItem from="1583689514572" duration="4447000" />
-      <workItem from="1583694462883" duration="6065000" />
+      <workItem from="1583694462883" duration="17923000" />
+      <workItem from="1583758187372" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -218,26 +220,26 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="206" y="0" key="CommitChangelistDialog2/0.0.1366.732@0.0.1366.732" timestamp="1581602551085" />
-    <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl" timestamp="1583155711807">
+    <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl" timestamp="1583747898060">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1583155711807" />
-    <state width="1268" height="116" key="GridCell.Tab.0.bottom" timestamp="1583702224752">
+    <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1583747898060" />
+    <state width="1268" height="135" key="GridCell.Tab.0.bottom" timestamp="1583758124272">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1268" height="116" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1583702224752" />
-    <state width="1268" height="116" key="GridCell.Tab.0.center" timestamp="1583702224751">
+    <state width="1268" height="135" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1583758124272" />
+    <state width="1268" height="135" key="GridCell.Tab.0.center" timestamp="1583758124271">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1268" height="116" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1583702224751" />
-    <state width="1268" height="116" key="GridCell.Tab.0.left" timestamp="1583702224751">
+    <state width="1268" height="135" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1583758124271" />
+    <state width="1268" height="135" key="GridCell.Tab.0.left" timestamp="1583758124270">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1268" height="116" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1583702224751" />
-    <state width="1268" height="116" key="GridCell.Tab.0.right" timestamp="1583702224752">
+    <state width="1268" height="135" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1583758124270" />
+    <state width="1268" height="135" key="GridCell.Tab.0.right" timestamp="1583758124271">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1268" height="116" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1583702224752" />
+    <state width="1268" height="135" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1583758124271" />
     <state width="1320" height="132" key="GridCell.Tab.1.bottom" timestamp="1583068851333">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -274,13 +276,24 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="430" y="11" key="refactoring.ChangeSignatureDialog/0.0.1366.732@0.0.1366.732" timestamp="1580217611250" />
-    <state x="348" y="164" key="run.anything.popup" timestamp="1583701737560">
+    <state x="348" y="164" key="run.anything.popup" timestamp="1583746414902">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="348" y="164" key="run.anything.popup/0.0.1366.732@0.0.1366.732" timestamp="1583701737560" />
+    <state x="348" y="164" key="run.anything.popup/0.0.1366.732@0.0.1366.732" timestamp="1583746414902" />
     <state x="290" y="53" width="672" height="678" key="search.everywhere.popup" timestamp="1583431484674">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="290" y="53" width="672" height="678" key="search.everywhere.popup/0.0.1366.732@0.0.1366.732" timestamp="1583431484674" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_trace.h</url>
+          <line>79</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

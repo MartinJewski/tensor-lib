@@ -72,6 +72,10 @@
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
+#include "speed_test_expressionTemp_contraction.h"
+#include "speed_test_expressionTemp_reorder.h"
+#include "speed_test_expressionTemp_trace.h"
+
 #include "speed_test_forLoop_reorder.h"
 #include "speed_test_forLoop_trace.h"
 #include "speed_test_forLoop_contraction.h"
@@ -94,13 +98,6 @@
 
 
 
-constexpr int get_seed()
-{
-    int hour = std::atoi(__TIME__);
-    int min = std::atoi(__TIME__ + 3);
-    int sec = std::atoi(__TIME__ + 6);
-    return 10000 * hour + 100 * min + sec;
-}
 
 int main() {
 /*
@@ -186,7 +183,9 @@ int main() {
     auto st_triple_forLoop_contracton_f = speed_test_triple_forLoop_contraction<float>();
 */
 
-    speed_test_run_3D<0>("Schreibtisch/output.txt");
+
+    speed_test_run_2D<1>("/home/martin/Schreibtisch/output2D.txt");
+    //speed_test_run_3D<0>("/home/martin/Schreibtisch/output3D.txt");
 
 
     return 0;

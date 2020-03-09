@@ -36,7 +36,7 @@ auto speed_test_runtime_contraction(){
     for(int val = 0; val < reps; val++){
 
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D());
-        firstTest.push_back(result);
+
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();
@@ -70,13 +70,13 @@ auto speed_test_runtime_double_contraction(){
 
     srand(time(0));
 
-
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
                 contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D()));
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
+
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();
@@ -110,13 +110,14 @@ auto speed_test_runtime_triple_contraction(){
 
     srand(time(0));
 
+
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
                 contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
                                        contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D())));
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();
@@ -157,7 +158,7 @@ auto speed_test_runtime_contraction3D(){
     for(int val = 0; val < reps; val++){
 
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D());
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();
@@ -198,7 +199,7 @@ auto speed_test_runtime_double_contraction3D(){
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_3D(),
                                        contraction<0,1>(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D()));
 
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();
@@ -238,7 +239,7 @@ auto speed_test_runtime_triple_contraction3D(){
         auto result = contraction<0,1>(tensor_generator.pick_random_tensor_3D(),
                                        contraction<0,1>(tensor_generator.pick_random_tensor_3D(),
                                                         contraction<0,1>(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D())));
-        firstTest.push_back(result);
+        //firstTest.push_back(result);
 
     }
     auto t2 = std::chrono::high_resolution_clock::now();

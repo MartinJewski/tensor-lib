@@ -111,6 +111,9 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../tensor-lib/speed_test/speed_test_compileTime_contraction.h
  ../tensor-lib/speed_test/speed_test_compileTime_reorder.h
  ../tensor-lib/speed_test/speed_test_compileTime_trace.h
+ ../tensor-lib/speed_test/speed_test_expressionTemp_contraction.h
+ ../tensor-lib/speed_test/speed_test_expressionTemp_reorder.h
+ ../tensor-lib/speed_test/speed_test_expressionTemp_trace.h
  ../tensor-lib/speed_test/speed_test_forLoop_contraction.h
  ../tensor-lib/speed_test/speed_test_forLoop_reorder.h
  ../tensor-lib/speed_test/speed_test_forLoop_trace.h
@@ -139,6 +142,32 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../tensor-lib/tensor-operations/reorder.h
  ../tensor-lib/tensor-operations/trace.h
  ../tensor-lib/tensor-operations/trace_ct.h
+ /home/martin/CLionProjects/ET_Tensor_Library/src/cactus_types.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/finite_differences.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/metric.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/scalar_derivative.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/scalar_field.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/special.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_concat.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_contraction.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_core_types.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_derivative.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_expressions.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_field.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_helpers.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_index.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_index_reduction.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_index_reordering.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_product.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_property.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_slice.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_symmetry.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_symmetry_expressions.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_templates.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_trace.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/tensor_types.hh
+ /home/martin/CLionProjects/ET_Tensor_Library/src/utilities.hh
  /home/martin/CLionProjects/tensor-library-v1/main.cpp
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h

@@ -11,7 +11,7 @@
 #include "random_number.h"
 
 template<auto i> constexpr auto REPS = i;
-constexpr auto REP= REPS<100000>;
+constexpr auto REP= REPS<500000>;
 
 
 template<typename T, std::size_t size>
