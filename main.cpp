@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/*
 #include <range/v3/view/empty.hpp>
 #include <range/v3/view/repeat_n.hpp>
 #include <range/v3/algorithm/for_each.hpp>
@@ -29,7 +29,7 @@
 #include <range/v3/view/counted.hpp>
 #include <range/v3/view/move.hpp>
 #include <range/v3/view/concat.hpp>
-
+*/
 #include "tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h"
 
 #include <cmath>
@@ -96,19 +96,21 @@
 
 #include <unordered_set>
 
+#include "math_utilities.h"
+
 
 
 
 int main() {
-/*
 
+/*
     //------------------------------C++17-------------------------------
-    constexpr tensor<double, up_t, up_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
-    constexpr tensor<double, up_t, up_t, up_t> tensor1_3D(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    constexpr tensor<double, up_t, low_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    constexpr tensor<double, low_t, up_t, up_t> tensor1_3D(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     constexpr tensor<double, up_t> tensor2(5.0, 5.0, 5.0);
     constexpr tensor<double> tensor23(1.0);
 
-    tensor_rt<double, up_t, up_t> ten(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    tensor_rt<double, up_t, low_t> ten(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
     constexpr auto contraction_value_ct = contraction<0,0,tensor1_3D, contraction<0,0, tensor1_3D,
                   contraction<0,0, tensor1_3D, tensor1_3D>()>()>();
@@ -124,12 +126,12 @@ int main() {
 
     constexpr auto contraction_value_ct5 = contraction<1, tensor1>();
 
-    constexpr auto reorder_value_ct = reorder<tensor1, 1,0>();
-    auto reorder_value_rt = reorder<1,0>(tensor1.to_runtime_tensor());
-
     constexpr auto trace_value_ct = trace<tensor1>();
     auto trace_value_rt = trace(tensor1.to_runtime_tensor());
-*/
+
+    constexpr auto reorder_value_ct = reorder<tensor1, 1,0>();
+    auto reorder_value_rt = reorder<1,0>(tensor1.to_runtime_tensor());
+    */
     /*
     //----------------------C++20 ranges-------------------------------------------
 
@@ -184,8 +186,19 @@ int main() {
 */
 
 
-    speed_test_run_2D<1>("/home/martin/Schreibtisch/output2D.txt");
-    //speed_test_run_3D<0>("/home/martin/Schreibtisch/output3D.txt");
+    speed_test_run_2D<30>("/home/martin/Schreibtisch/output2D.txt");
+    speed_test_run_3D<30>("/home/martin/Schreibtisch/output3D.txt");
+
+    std::vector<double> samples;
+    samples.push_back(1.0);
+    samples.push_back(4.0);
+    samples.push_back(5.0);
+    samples.push_back(9.0);
+
+    double std_d = StandardDeviation(samples);
+    double var = Variance(samples);
+
+    std::cout << "std_d: " << std_d << " variance: " << var << std::endl;
 
 
     return 0;

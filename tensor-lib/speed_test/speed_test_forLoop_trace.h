@@ -22,7 +22,7 @@ using seconds = std::chrono::seconds;
 template<typename T>
 auto speed_test_forLoop_trace(){
 
-    std::cout << "_________________START SPEED TEST:__FOR_LOOP_TRACE_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__FOR_LOOP_TRACE_____________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -45,9 +45,9 @@ auto speed_test_forLoop_trace(){
 
     count2 = duration2 / reps;
 
-    std::cout << "TRACE_FOR_LOOP(nano sec) :" << count2 << std::endl;
+    //std::cout << "TRACE_FOR_LOOP(nano sec) :" << count2 << std::endl;
 
-    std::cout  << std::endl;
+    //std::cout  << std::endl;
 
     return count2;
 }
@@ -56,7 +56,7 @@ auto speed_test_forLoop_trace(){
 template<typename T>
 auto speed_test_forLoop_trace3D(){
 
-    std::cout << "_________________START SPEED TEST:__FOR_LOOP_TRACE_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__FOR_LOOP_TRACE_____________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -79,9 +79,9 @@ auto speed_test_forLoop_trace3D(){
 
     count2 = duration2 / reps;
 
-    std::cout << "TRACE_FOR_LOOP(nano sec) :" << count2 << std::endl;
+    //std::cout << "TRACE_FOR_LOOP(nano sec) :" << count2 << std::endl;
 
-    std::cout  << std::endl;
+    //std::cout  << std::endl;
 
     return count2;
 }

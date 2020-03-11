@@ -19,7 +19,7 @@ using seconds = std::chrono::seconds;
 template<typename T>
 auto constexpr speed_test_compileTime_contraction(){
 
-    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__COMPILE_TIME_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
 
@@ -44,9 +44,9 @@ auto constexpr speed_test_compileTime_contraction(){
 
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout  << std::endl;
+    //std::cout  << std::endl;
 
     return count1;
 }
@@ -55,7 +55,7 @@ auto constexpr speed_test_compileTime_contraction(){
 template<typename T>
 auto constexpr speed_test_double_compileTime_contraction(){
 
-    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -80,8 +80,8 @@ auto constexpr speed_test_double_compileTime_contraction(){
 
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
-    std::cout << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -90,7 +90,7 @@ auto constexpr speed_test_double_compileTime_contraction(){
 template<typename T>
 auto constexpr speed_test_triple_compileTime_contraction(){
 
-    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -117,9 +117,9 @@ auto constexpr speed_test_triple_compileTime_contraction(){
 
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout  << std::endl;
+    //std::cout  << std::endl;
 
     return count1;
 }
@@ -127,7 +127,7 @@ auto constexpr speed_test_triple_compileTime_contraction(){
 template<typename T>
 auto constexpr speed_test_quadruple_compileTime_contraction(){
 
-    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -155,9 +155,9 @@ auto constexpr speed_test_quadruple_compileTime_contraction(){
 
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -171,7 +171,7 @@ auto constexpr speed_test_quadruple_compileTime_contraction(){
 template<typename T>
 auto constexpr speed_test_compileTime_contraction3D(){
 
-    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__COMPILE_TIME_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
 
@@ -197,9 +197,9 @@ auto constexpr speed_test_compileTime_contraction3D(){
 
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout  << std::endl;
+    //std::cout  << std::endl;
 
     return count1;
 }
@@ -208,7 +208,7 @@ auto constexpr speed_test_compileTime_contraction3D(){
 template<typename T>
 auto constexpr speed_test_double_compileTime_contraction3D(){
 
-    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__COMPILE_TIME_DOUBLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -233,8 +233,8 @@ auto constexpr speed_test_double_compileTime_contraction3D(){
 
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
-    std::cout << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -243,7 +243,7 @@ auto constexpr speed_test_double_compileTime_contraction3D(){
 template<typename T>
 auto constexpr speed_test_triple_compileTime_contraction3D(){
 
-    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__COMPILE_TIME_TRIPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -270,9 +270,9 @@ auto constexpr speed_test_triple_compileTime_contraction3D(){
 
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout  << std::endl;
+    //std::cout  << std::endl;
 
     return count1;
 }
@@ -280,7 +280,7 @@ auto constexpr speed_test_triple_compileTime_contraction3D(){
 template<typename T>
 auto constexpr speed_test_quadruple_compileTime_contraction3D(){
 
-    std::cout << "_________________START SPEED TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__COMPILE_TIME_QUADRUPLE_CONTRACTION_____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -308,9 +308,9 @@ auto constexpr speed_test_quadruple_compileTime_contraction3D(){
 
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }

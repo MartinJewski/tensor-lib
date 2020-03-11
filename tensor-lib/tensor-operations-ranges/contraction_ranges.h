@@ -29,6 +29,12 @@
 template<std::size_t skipPos1, std::size_t skipPos2, typename T1, typename Args1, typename T2, typename Args2>
 constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBase_ranges<T2, Args2> tensor2){
 
+    /*
+    using skip_type_t1 = tuple_type_list<Args1>::template type<skipPos1>;
+    using skip_type_t2 = tuple_type_list<Args2>::template type<skipPos2>;
+    static_assert((std::is_same<skip_type_t1, skip_type_t2>::value == false), "Cannot contract over the same index level. "
+                                                                             "E.g contraction over two up_t indices is not possible!");
+    */
     remove_ith_concat_tuple<skipPos1, skipPos2,
          typename decltype(tensor1)::tuple_indices, typename decltype(tensor2)::tuple_indices> tensor3_types;
 

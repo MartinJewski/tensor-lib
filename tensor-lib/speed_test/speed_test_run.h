@@ -5,6 +5,7 @@
 #ifndef UNTITELED1_SPEED_TEST_RUN_H
 #define UNTITELED1_SPEED_TEST_RUN_H
 
+#include <iostream>
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -29,6 +30,9 @@
 
 template<std::size_t amount>
 void speed_test_run_2D(std::string input_path){
+
+    std::cout << "start speed test 2D tensors" << std::endl;
+
     static_assert(!(amount < 0));
     std::ofstream output_file;
     output_file.open (input_path);
@@ -62,6 +66,10 @@ void speed_test_run_2D(std::string input_path){
     output_file << std::endl;
 
     for(int i = 0; i <= amount; i++){
+
+        if((i % 2) == 0){
+            std::cout << "iteration: " <<  i << "/" << amount << std::endl;
+        }
 
         output_file << speed_test_compileTime_contraction<int>() << "\t";
         output_file << speed_test_double_compileTime_contraction<int>() << "\t";
@@ -103,6 +111,9 @@ void speed_test_run_2D(std::string input_path){
 
 template<std::size_t amount>
 void speed_test_run_3D(std::string input_path){
+
+    std::cout << "start speed test 3D tensors" << std::endl;
+
     static_assert(!(amount < 0));
     std::ofstream output_file;
     output_file.open (input_path);
@@ -136,6 +147,11 @@ void speed_test_run_3D(std::string input_path){
 
     for(int i = 0; i <= amount; i++){
 
+        if((i % 2) == 0){
+            std::cout << "iteration: " <<  i << "/" << amount << std::endl;
+        }
+
+
         output_file << speed_test_compileTime_contraction3D<int>() << "\t";
         output_file << speed_test_double_compileTime_contraction3D<int>() << "\t";
         output_file << speed_test_compileTime_reorder3D<int>() << "\t";
@@ -160,7 +176,6 @@ void speed_test_run_3D(std::string input_path){
         output_file << speed_test_double_expressionTemp_contraction3D<int>() << "\t";
         output_file << speed_test_expressionTemp_reorder3D<int>() << "\t";
         output_file << speed_test_expressionTemp_trace3D<int>() << "\t";
-
 
         output_file << std::endl;
     }

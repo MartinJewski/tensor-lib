@@ -2344,6 +2344,12 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
+../tensor-lib/math/math_utilities.h
+math.h
+-
+vector
+-
+
 ../tensor-lib/speed_test/speed_test_compileTime_contraction.h
 speed_test_tensors.h
 ../tensor-lib/speed_test/speed_test_tensors.h
@@ -2489,6 +2495,8 @@ stdlib.h
 -
 
 ../tensor-lib/speed_test/speed_test_run.h
+iostream
+-
 string
 -
 fstream
@@ -2622,6 +2630,10 @@ random
 tuple
 -
 
+../tensor-lib/tensor-builder-utilities/tuple_type_list.h
+tuple
+-
+
 ../tensor-lib/tensor-concepts/tensor-concepts.h
 type_traits
 -
@@ -2695,6 +2707,8 @@ contraction.h
 ../tensor-lib/tensor-operations-ranges/reorder_ranges.h
 reorder.h
 ../tensor-lib/tensor-operations-ranges/reorder.h
+tuple_type_list.h
+../tensor-lib/tensor-operations-ranges/tuple_type_list.h
 range/v3/view/transform.hpp
 -
 range/v3/view/map.hpp
@@ -2721,6 +2735,8 @@ tuple
 -
 type_traits
 -
+tuple_type_list.h
+../tensor-lib/tensor-operations/tuple_type_list.h
 tuple_helpers.h
 ../tensor-lib/tensor-operations/tuple_helpers.h
 
@@ -2737,12 +2753,18 @@ tuple
 -
 type_traits
 -
+tuple_type_list.h
+../tensor-lib/tensor-operations/tuple_type_list.h
 tuple_helpers.h
 ../tensor-lib/tensor-operations/tuple_helpers.h
 
 ../tensor-lib/tensor-operations/reorder.h
 tensor.h
 ../tensor-lib/tensor-operations/tensor.h
+reorder_ct.h
+../tensor-lib/tensor-operations/reorder_ct.h
+tuple_type_list.h
+../tensor-lib/tensor-operations/tuple_type_list.h
 
 ../tensor-lib/tensor-operations/trace.h
 pos_nd_to_1d.h
@@ -3055,6 +3077,8 @@ random_number.h
 /home/martin/CLionProjects/tensor-library-v1/random_number.h
 unordered_set
 -
+math_utilities.h
+/home/martin/CLionProjects/tensor-library-v1/math_utilities.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
 range/v3/view/indices.hpp
@@ -3189,6 +3213,8 @@ contraction.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/reorder_ranges.h
 reorder.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/reorder.h
+tuple_type_list.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/tuple_type_list.h
 range/v3/view/transform.hpp
 -
 range/v3/view/map.hpp
@@ -3243,6 +3269,8 @@ tuple
 -
 type_traits
 -
+tuple_type_list.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_type_list.h
 tuple_helpers.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_helpers.h
 
@@ -3259,16 +3287,20 @@ tuple
 -
 type_traits
 -
+tuple_type_list.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_type_list.h
 tuple_helpers.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_helpers.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
 tensor.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor.h
+reorder_ct.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h
+tuple_type_list.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_type_list.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h
-../tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
 pos_nd_to_1d.h
@@ -3277,6 +3309,8 @@ tuple
 -
 tensor.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor.h
+tuple_type_list.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_type_list.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
 pos_nd_to_1d.h

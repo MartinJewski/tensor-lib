@@ -15,7 +15,7 @@
 template<typename T>
 auto speed_test_ranges_trace(){
 
-    std::cout << "________________START SPEED TEST:__RANGES_TRACE________" << std::endl;
+    //std::cout << "________________START SPEED TEST:__RANGES_TRACE________" << std::endl;
 
     int count1 = 0;
 
@@ -42,9 +42,9 @@ auto speed_test_ranges_trace(){
     //time calculations
     count1 = duration1 / reps;
 
-    std::cout << "TRACE_ALGO_RANGES(nano sec) :" << count1 << std::endl;
+    //std::cout << "TRACE_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
-    std::cout  << std::endl;
+    //std::cout  << std::endl;
 
     return count1;
 }
@@ -54,7 +54,7 @@ auto speed_test_ranges_trace(){
 template<typename T>
 auto speed_test_ranges_trace3D(){
 
-    std::cout << "_________________START SPEED TEST:__RANGES_TRACE_3D______" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__RANGES_TRACE_3D______" << std::endl;
 
     int count1 = 0;
 
@@ -81,9 +81,9 @@ auto speed_test_ranges_trace3D(){
     //time calculations
     count1 = duration1 / reps;
 
-    std::cout << "TRACE_ALGO_RANGES(nano sec) :" << count1 << std::endl;
+   // std::cout << "TRACE_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
-    std::cout  << std::endl;
+   // std::cout  << std::endl;
 
     return count1;
 }

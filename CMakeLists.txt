@@ -11,6 +11,7 @@ include_directories(./tensor-lib/tensor-concepts)
 include_directories(./tensor-lib/tensor-operations-ranges)
 include_directories(./tensor-lib/tensor-definition-ranges)
 include_directories(tensor-lib/speed_test)
+include_directories(tensor-lib/math)
 
 set(SOURCE_FILES main.cpp
         tensor-lib/tensor-operations/reorder_ct.h
@@ -35,6 +36,7 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-builder-utilities/random_number.h
         tensor-lib/tensor-builder-utilities/cartesian_product.h
         tensor-lib/tensor-builder-utilities/cartesian_product_adv.h
+        tensor-lib/tensor-builder-utilities/tuple_type_list.h
 
         tensor-lib/tensor-definition/tensor.h
         tensor-lib/tensor-definition/tensor_specification.h
@@ -57,6 +59,8 @@ set(SOURCE_FILES main.cpp
         tensor-lib/speed_test/speed_test_runtime_contraction.h
         tensor-lib/speed_test/speed_test_tensors.h
         tensor-lib/speed_test/speed_test_ranges_contraction.h
+
+        tensor-lib/math/math_utilities.h
         )
 
 add_library(range_v3 INTERFACE IMPORTED)

@@ -25,7 +25,7 @@ using namespace tensors;
 template<typename T>
 auto speed_test_expressionTemp_trace2D(){
 
-    std::cout << "_________________START SPEED TEST:__expressionTemp_trace2D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__expressionTemp_trace2D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -53,10 +53,10 @@ auto speed_test_expressionTemp_trace2D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -65,7 +65,7 @@ auto speed_test_expressionTemp_trace2D(){
 template<typename T>
 auto speed_test_expressionTemp_trace3D(){
 
-    std::cout << "_________________START SPEED TEST:__expressionTemp_trace3D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__expressionTemp_trace3D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -93,10 +93,10 @@ auto speed_test_expressionTemp_trace3D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }

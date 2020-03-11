@@ -7,6 +7,17 @@
 
 #include "tuple_split_from.h"
 
+/**
+ * Creates a new tuple and inserts a value at the skip pos
+ * @tparam offset where to start the tuple split
+ * @tparam N how many elements to split (offset+N)
+ * @tparam skipPos position where the old index was
+ * @tparam Number that is placed at the skipPos
+ * @tparam T tuple type
+ * @tparam is the number inserted inside the new tuple
+ * @param tuple obj
+ * @return
+ */
 template<std::size_t offset, std::size_t N, std::size_t skipPos, std::size_t Number, typename T, std::size_t ... is>
 constexpr auto recreate_index_tuple_i(T& tuple, std::index_sequence<is...>){
 
@@ -21,6 +32,18 @@ constexpr auto recreate_index_tuple_i(T& tuple, std::index_sequence<is...>){
                 ...);
 }
 
+
+/**
+ * Function that runs the creation of a new tuple and inserts a value at the skip pos
+ * @tparam offset where to start the tuple split
+ * @tparam N how many elements to split (offset+N)
+ * @tparam skipPos position where the old index was
+ * @tparam Number that is placed at the skipPos
+ * @tparam length length of the index (usually DIM3. E.g (00)(01)(02) skipPos 1 and times 3)
+ * @tparam T tuple type
+ * @param tuple obj
+ * @return
+ */
 template<std::size_t offset, std::size_t N, std::size_t skipPos, std::size_t Number, std::size_t length, typename T>
 constexpr auto recreate_index_tuple(T& tuple){
 

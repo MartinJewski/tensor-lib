@@ -26,7 +26,7 @@ constexpr auto calc_position(tensorBase_rt<T,Args> tensor, std::index_sequence<i
 }
 
 /**
- * Calculates the trace at compile time
+ * Calculates the trace at runtime
  * @tparam T type of the elements inside the tensor
  * @tparam Args indices of the tensor
  * @tparam it an index sequence value

@@ -21,7 +21,7 @@ using seconds = std::chrono::seconds;
 template<typename T>
 auto speed_test_ranges_contraction(){
 
-    std::cout << "_____________START SPEED TEST:__RANGES__CONTRACTION___________" << std::endl;
+    //std::cout << "_____________START SPEED TEST:__RANGES__CONTRACTION___________" << std::endl;
 
     int count1 = 0;
 
@@ -47,7 +47,7 @@ auto speed_test_ranges_contraction(){
     //time calculations
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
 
     return count1;
@@ -57,7 +57,7 @@ auto speed_test_ranges_contraction(){
 template<typename T>
 auto speed_test_ranges_double_contraction(){
 
-    std::cout << "_________________START SPEED TEST:__RANGES__DOUBLE_CONTRACTION________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__RANGES__DOUBLE_CONTRACTION________" << std::endl;
 
     int count1 = 0;
 
@@ -84,7 +84,7 @@ auto speed_test_ranges_double_contraction(){
     //time calculations
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
 
     return count1;
@@ -94,7 +94,7 @@ auto speed_test_ranges_double_contraction(){
 template<typename T>
 auto speed_test_ranges_triple_contraction(){
 
-    std::cout << "_________________START SPEED TEST:__RANGES__TRIPLE_CONTRACTION________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__RANGES__TRIPLE_CONTRACTION________" << std::endl;
 
     int count1 = 0;
 
@@ -121,7 +121,7 @@ auto speed_test_ranges_triple_contraction(){
     //time calculations
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
     return count1;
 }
@@ -137,7 +137,7 @@ auto speed_test_ranges_triple_contraction(){
 template<typename T>
 auto speed_test_ranges_contraction3D(){
 
-    std::cout << "_____________START SPEED TEST:__RANGES__CONTRACTION___________" << std::endl;
+    //std::cout << "_____________START SPEED TEST:__RANGES__CONTRACTION___________" << std::endl;
 
     int count1 = 0;
 
@@ -163,7 +163,7 @@ auto speed_test_ranges_contraction3D(){
     //time calculations
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
     return count1;
 }
@@ -172,7 +172,7 @@ auto speed_test_ranges_contraction3D(){
 template<typename T>
 auto speed_test_ranges_double_contraction3D(){
 
-    std::cout << "_________________START SPEED TEST:__RANGES__DOUBLE_CONTRACTION________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__RANGES__DOUBLE_CONTRACTION________" << std::endl;
 
     int count1 = 0;
 
@@ -200,7 +200,7 @@ auto speed_test_ranges_double_contraction3D(){
     //time calculations
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
     return count1;
 }
@@ -209,7 +209,7 @@ auto speed_test_ranges_double_contraction3D(){
 template<typename T>
 auto speed_test_ranges_triple_contraction3D(){
 
-    std::cout << "_________________START UNIT TEST:__RANGES__TRIPLE_CONTRACTION________" << std::endl;
+    //std::cout << "_________________START UNIT TEST:__RANGES__TRIPLE_CONTRACTION________" << std::endl;
 
     int count1 = 0;
 
@@ -237,7 +237,7 @@ auto speed_test_ranges_triple_contraction3D(){
     //time calculations
     count1 = duration1 / reps;
 
-    std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO_RANGES(nano sec) :" << count1 << std::endl;
 
 
     return count1;

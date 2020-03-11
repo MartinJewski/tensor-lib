@@ -24,7 +24,7 @@ using namespace tensors;
 template<typename T>
 auto speed_test_expressionTemp_reorder2D(){
 
-    std::cout << "_________________START SPEED TEST:__expressionTemp_reorder2D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__expressionTemp_reorder2D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -52,10 +52,10 @@ auto speed_test_expressionTemp_reorder2D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -64,7 +64,7 @@ auto speed_test_expressionTemp_reorder2D(){
 template<typename T>
 auto speed_test_expressionTemp_reorder3D(){
 
-    std::cout << "_________________START SPEED TEST:__expressionTemp_reorder3D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__expressionTemp_reorder3D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -92,10 +92,10 @@ auto speed_test_expressionTemp_reorder3D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }

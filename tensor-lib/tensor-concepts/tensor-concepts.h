@@ -8,7 +8,8 @@
 #include <type_traits>
 #include "tensor.h"
 
-// concept
+//concept tests
+
 template <typename T>
 concept constexpr bool Integral(){
 

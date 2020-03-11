@@ -23,7 +23,7 @@ using namespace tensors;
 template<typename T>
 auto speed_test_expressionTemp_contraction2D(){
 
-    std::cout << "_________________START SPEED TEST:__expressionTemp_CONTRACTION2D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__expressionTemp_CONTRACTION2D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -51,10 +51,10 @@ auto speed_test_expressionTemp_contraction2D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -63,7 +63,7 @@ auto speed_test_expressionTemp_contraction2D(){
 template<typename T>
 auto speed_test_double_expressionTemp_contraction2D(){
 
-    std::cout << "_________________START SPEED TEST:__double_expressionTemp_CONTRACTION2D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__double_expressionTemp_CONTRACTION2D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -92,10 +92,10 @@ auto speed_test_double_expressionTemp_contraction2D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -103,7 +103,7 @@ auto speed_test_double_expressionTemp_contraction2D(){
 template<typename T>
 auto speed_test_triple_expressionTemp_contraction2D(){
 
-    std::cout << "_________________START SPEED TEST:__triple_expressionTemp_CONTRACTION2D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__triple_expressionTemp_CONTRACTION2D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -132,10 +132,10 @@ auto speed_test_triple_expressionTemp_contraction2D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -145,7 +145,7 @@ auto speed_test_triple_expressionTemp_contraction2D(){
 template<typename T>
 auto speed_test_expressionTemp_contraction3D(){
 
-    std::cout << "_________________START SPEED TEST:__expressionTemp_CONTRACTION3D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__expressionTemp_CONTRACTION3D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -173,10 +173,10 @@ auto speed_test_expressionTemp_contraction3D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -184,7 +184,7 @@ auto speed_test_expressionTemp_contraction3D(){
 template<typename T>
 auto speed_test_double_expressionTemp_contraction3D(){
 
-    std::cout << "_________________START SPEED TEST:__double_expressionTemp_CONTRACTION3D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__double_expressionTemp_CONTRACTION3D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -214,10 +214,10 @@ auto speed_test_double_expressionTemp_contraction3D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -225,7 +225,7 @@ auto speed_test_double_expressionTemp_contraction3D(){
 template<typename T>
 auto speed_test_triple_expressionTemp_contraction3D(){
 
-    std::cout << "_________________START SPEED TEST:__triple_expressionTemp_CONTRACTION3D____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__triple_expressionTemp_CONTRACTION3D____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -255,10 +255,10 @@ auto speed_test_triple_expressionTemp_contraction3D(){
     count1 = duration1 / reps;
 
 
-    std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
 
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }

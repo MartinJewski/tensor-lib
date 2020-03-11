@@ -15,7 +15,7 @@
 template<typename T>
 auto speed_test_forLoop_reorder(){
 
-    std::cout << "_________________START SPEED TEST:__FOR_LOOP_REORDER___________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__FOR_LOOP_REORDER___________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -37,8 +37,8 @@ auto speed_test_forLoop_reorder(){
     auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
     count2 = duration2 / reps;
 
-    std::cout << "REORDER_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout << std::endl;
+    //std::cout << "REORDER_FOR_LOOP(nano sec) :" << count2 << std::endl;
+    //std::cout << std::endl;
 
     return count2;
 }
@@ -47,7 +47,7 @@ auto speed_test_forLoop_reorder(){
 template<typename T>
 auto speed_test_forLoop_reorder3D(){
 
-    std::cout << "_________________START SPEED TEST:__FOR_LOOP_REORDER___________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__FOR_LOOP_REORDER___________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -69,8 +69,8 @@ auto speed_test_forLoop_reorder3D(){
     auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
     count2 = duration2 / reps;
 
-    std::cout << "REORDER_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout << std::endl;
+   // std::cout << "REORDER_FOR_LOOP(nano sec) :" << count2 << std::endl;
+   // std::cout << std::endl;
 
     return count2;
 }

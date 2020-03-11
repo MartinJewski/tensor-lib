@@ -16,7 +16,7 @@
 template<typename T>
 auto speed_test_runtime_trace(){
 
-    std::cout << "_________________SPEED TEST:__RUNTIME_TRACE_____________" << std::endl;
+    //std::cout << "_________________SPEED TEST:__RUNTIME_TRACE_____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -41,8 +41,8 @@ auto speed_test_runtime_trace(){
 
     count1 = duration1 / reps;
 
-    std::cout << "TRACE_ALGO(nano sec) :" << count1 << std::endl;
-    std::cout << std::endl;
+    //std::cout << "TRACE_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }
@@ -51,7 +51,7 @@ auto speed_test_runtime_trace(){
 template<typename T>
 auto speed_test_runtime_trace3D(){
 
-    std::cout << "_________________START SPEED TEST:__RUNTIME_TRACE_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__RUNTIME_TRACE_____________" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -76,8 +76,8 @@ auto speed_test_runtime_trace3D(){
 
     count1 = duration1 / reps;
 
-    std::cout << "TRACE_ALGO(nano sec) :" << count1 << std::endl;
-    std::cout << std::endl;
+    //std::cout << "TRACE_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout << std::endl;
 
     return count1;
 }

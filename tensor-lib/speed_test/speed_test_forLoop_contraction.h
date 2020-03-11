@@ -18,7 +18,7 @@ using seconds = std::chrono::seconds;
 
 template<typename T>
 int constexpr speed_test_forLoop_contraction(){
-    std::cout << "_________________START SPEED TEST:__FOR_LOOP_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__FOR_LOOP_CONTRACTION_____________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -39,15 +39,15 @@ int constexpr speed_test_forLoop_contraction(){
     auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
     count2 = duration2 / reps;
 
-    std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout << std::endl;
+    //std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
+    //std::cout << std::endl;
 
     return count2;
 }
 
 template<typename T>
 int constexpr speed_test_double_forLoop_contraction(){
-    std::cout << "_________________START SPEED TEST:__DOUBLE_FOR_LOOP_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__DOUBLE_FOR_LOOP_CONTRACTION_____________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -70,8 +70,8 @@ int constexpr speed_test_double_forLoop_contraction(){
     count2 = duration2 / reps;
 
 
-    std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout  << std::endl;
+    //std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
+    //std::cout  << std::endl;
 
     return count2;
 }
@@ -79,7 +79,7 @@ int constexpr speed_test_double_forLoop_contraction(){
 
 template<typename T>
 int constexpr speed_test_triple_forLoop_contraction(){
-    std::cout << "_________________START SPEED TEST:__TRIPLE_FOR_LOOP_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__TRIPLE_FOR_LOOP_CONTRACTION_____________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -103,8 +103,8 @@ int constexpr speed_test_triple_forLoop_contraction(){
     count2 = duration2 / reps;
 
 
-    std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout  << std::endl;
+    //std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
+    //std::cout  << std::endl;
 
     return count2;
 }
@@ -117,7 +117,7 @@ int constexpr speed_test_triple_forLoop_contraction(){
 
 template<typename T>
 int constexpr speed_test_forLoop_contraction3D(){
-    std::cout << "_________________START SPEED TEST:__FOR_LOOP_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__FOR_LOOP_CONTRACTION_____________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -138,8 +138,8 @@ int constexpr speed_test_forLoop_contraction3D(){
     auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
     count2 = duration2 / reps;
 
-    std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout << std::endl;
+    //std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
+    //std::cout << std::endl;
 
     return count2;
 }
@@ -147,7 +147,7 @@ int constexpr speed_test_forLoop_contraction3D(){
 
 template<typename T>
 int constexpr speed_test_double_forLoop_contraction3D(){
-    std::cout << "_________________START SPEED TEST:__FOR_LOOP_DOUBLE_CONTRACTION_____________" << std::endl;
+    //std::cout << "_________________START SPEED TEST:__FOR_LOOP_DOUBLE_CONTRACTION_____________" << std::endl;
 
     int count2 = 0;
     int reps = REP;
@@ -170,8 +170,8 @@ int constexpr speed_test_double_forLoop_contraction3D(){
     auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
     count2 = duration2 / reps;
 
-    std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
-    std::cout << std::endl;
+    //std::cout << "CONTRACTION_FOR_LOOP(nano sec) :" << count2 << std::endl;
+    //std::cout << std::endl;
 
     return count2;
 }

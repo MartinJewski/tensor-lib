@@ -9,6 +9,7 @@ template<auto i> constexpr auto DIM = i;
 constexpr auto DIM2 = DIM<2>;
 constexpr auto DIM3 = DIM<3>;
 
+
 class index_t  {};
 class up_t : index_t  {};
 class low_t : index_t {};

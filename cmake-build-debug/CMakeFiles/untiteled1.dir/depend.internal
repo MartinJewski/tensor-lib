@@ -108,6 +108,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../ranges-lib/range-v3/range-v3-master/include/range/v3/view/zip.hpp
  ../ranges-lib/range-v3/range-v3-master/include/range/v3/view/zip_with.hpp
  ../ranges-lib/range-v3/range-v3-master/include/std/detail/associated_types.hpp
+ ../tensor-lib/math/math_utilities.h
  ../tensor-lib/speed_test/speed_test_compileTime_contraction.h
  ../tensor-lib/speed_test/speed_test_compileTime_reorder.h
  ../tensor-lib/speed_test/speed_test_compileTime_trace.h
@@ -131,6 +132,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
  ../tensor-lib/tensor-builder-utilities/random_number.h
  ../tensor-lib/tensor-builder-utilities/tuple_helpers.h
+ ../tensor-lib/tensor-builder-utilities/tuple_type_list.h
  ../tensor-lib/tensor-concepts/tensor-concepts.h
  ../tensor-lib/tensor-definition-ranges/tensor_range.h
  ../tensor-lib/tensor-definition/tensor.h

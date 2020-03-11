@@ -6,6 +6,7 @@
 #define UNTITELED1_REORDER_RANGES_H
 
 #include "reorder.h"
+#include "tuple_type_list.h"
 #include <range/v3/view/transform.hpp>
 #include <range/v3/view/map.hpp>
 #include "pos_nd_to_1d.h"
@@ -38,7 +39,10 @@ constexpr auto reorder_ranges(tensorBase_ranges<T1, Args1> tensor){
             | ranges::views::values
             | ranges::to<std::vector>();
 
-    tensorRange<typename decltype(tensor)::elem_type, typename decltype(tensor)::tuple_indices> tensor2(reordered);
+    using reorder_indices = std::tuple<typename
+            tuple_type_list<typename decltype(tensor)::tuple_indices>::template type<positions>...>;
+
+    tensorRange<typename decltype(tensor)::elem_type, reorder_indices> tensor2(reordered);
 
     return tensor2;
 }

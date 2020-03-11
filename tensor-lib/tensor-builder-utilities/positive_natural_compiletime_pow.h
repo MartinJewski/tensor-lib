@@ -5,6 +5,12 @@
 #ifndef UNTITELED1_POW_H
 #define UNTITELED1_POW_H
 
+/**
+ * Calculates the pow at compile time for exponents > 0
+ * @tparam base value
+ * @tparam exponent value must be a natural number
+ * @return value
+ */
 template<std::size_t base, std::size_t exponent>
 int constexpr positive_natural_compiletime_pow(){
     

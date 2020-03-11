@@ -18,7 +18,7 @@
 template<typename T>
 auto speed_test_runtime_reorder(){
 
-    std::cout << "_____SPEED TEST:__RUNTIME_REORDER2D__" << std::endl;
+    //std::cout << "_____SPEED TEST:__RUNTIME_REORDER2D__" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -43,8 +43,8 @@ auto speed_test_runtime_reorder(){
 
     count1 = duration1 / reps;
 
-    std::cout << "REORDER_ALGO(nano sec) :" << count1 << std::endl;
-    std::cout  << std::endl;
+    //std::cout << "REORDER_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout  << std::endl;
 
     return count1;
 }
@@ -53,7 +53,7 @@ auto speed_test_runtime_reorder(){
 template<typename T>
 auto speed_test_runtime_reorder3D(){
 
-    std::cout << "_____START SPEED TEST:__RUNTIME_REORDER3D__" << std::endl;
+    //std::cout << "_____START SPEED TEST:__RUNTIME_REORDER3D__" << std::endl;
 
     int count1 = 0;
     int reps = REP;
@@ -67,7 +67,7 @@ auto speed_test_runtime_reorder3D(){
 
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
-        auto result = reorder<1,0>(tensor_generator.pick_random_tensor_3D());
+        auto result = reorder<2,1,0>(tensor_generator.pick_random_tensor_3D());
         //firstTest.push_back(result);
 
     }
@@ -77,8 +77,8 @@ auto speed_test_runtime_reorder3D(){
 
     count1 = duration1 / reps;
 
-    std::cout << "REORDER_ALGO(nano sec) :" << count1 << std::endl;
-    std::cout  << std::endl;
+    //std::cout << "REORDER_ALGO(nano sec) :" << count1 << std::endl;
+    //std::cout  << std::endl;
 
     return count1;
 }
