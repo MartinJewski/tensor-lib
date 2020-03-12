@@ -72,6 +72,14 @@
 
 #include "tensor-lib/tensor-builder-utilities/tuple_helpers.h"
 
+#include "random_number.h"
+
+#include <unordered_set>
+
+#include "math_utilities.h"
+
+
+/*
 #include "speed_test_expressionTemp_contraction.h"
 #include "speed_test_expressionTemp_reorder.h"
 #include "speed_test_expressionTemp_trace.h"
@@ -91,14 +99,7 @@
 #include "speed_test_runtime_trace.h"
 
 #include "speed_test_run.h"
-
-#include "random_number.h"
-
-#include <unordered_set>
-
-#include "math_utilities.h"
-
-
+*/
 
 
 int main() {
@@ -189,6 +190,12 @@ int main() {
     speed_test_run_2D<30>("/home/martin/Schreibtisch/output2D.txt");
     speed_test_run_3D<30>("/home/martin/Schreibtisch/output3D.txt");
 */
+
+    tensor_rt<int, up_t, low_t> example;
+    example.data = tensor_rt<int, up_t, low_t>::random_tensor_rt(0, 10).data;
+
+    auto contractions = contraction<0,1>(example, example);
+
     std::vector<double> samples;
     samples.push_back(1.0);
     samples.push_back(4.0);

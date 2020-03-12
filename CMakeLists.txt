@@ -67,9 +67,10 @@ add_library(range_v3 INTERFACE IMPORTED)
 set_target_properties(range_v3 PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/ranges-lib/range-v3/range-v3-master/include)
 
-add_library(ep_tensor_lib INTERFACE IMPORTED)
-set_target_properties(ep_tensor_lib PROPERTIES
-        INTERFACE_INCLUDE_DIRECTORIES /home/martin/CLionProjects/ET_Tensor_Library)
+
+#add_library(ep_tensor_lib INTERFACE IMPORTED)
+#set_target_properties(ep_tensor_lib PROPERTIES
+#        INTERFACE_INCLUDE_DIRECTORIES /home/martin/CLionProjects/ET_Tensor_Library)
 
 add_compile_options(-fconcepts) #enables concepts(unstable). Stable versions will be released with gcc/g++ 10
 add_compile_options(-fpermissive)
@@ -79,4 +80,4 @@ add_compile_options(-ftemplate-depth=2000)
 add_executable(untiteled1 ${SOURCE_FILES} ${SOURCE_FILES2})
 
 target_link_libraries(untiteled1 range_v3) #link libraries to exe
-target_link_libraries(untiteled1 ep_tensor_lib) #link libraries to exe
+#target_link_libraries(untiteled1 ep_tensor_lib) #link libraries to exe
