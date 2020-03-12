@@ -182,11 +182,11 @@ class for_loop_contraction{
 
             tensor_rt<T, up_t, up_t> tensor3;
 
-            for(int i = 0; i < DIM3; i++){ //rows
+            for(int i = 0; i < dim_length_n; i++){ //rows
 
-                for(int j = 0; j < DIM3; j++){ //columns
+                for(int j = 0; j < dim_length_n; j++){ //columns
 
-                    for(int k = 0; k < DIM3; k++){ //multiplication
+                    for(int k = 0; k < dim_length_n; k++){ //multiplication
 
                         tensor3.data[pos_nd_to_1d(i,j)] += tensor1.data[pos_nd_to_1d(k, i)] * tensor2.data[pos_nd_to_1d(j, k)];
 
@@ -204,15 +204,15 @@ class for_loop_contraction{
 
             tensor_rt<T, up_t, up_t, up_t, up_t> tensor3;
 
-            for(int i = 0; i < DIM3; i++){ //rows
+            for(int i = 0; i < dim_length_n; i++){ //rows
 
-                for(int j = 0; j < DIM3; j++){ //columns
+                for(int j = 0; j < dim_length_n; j++){ //columns
 
-                    for(int l = 0; l < DIM3; l++){
+                    for(int l = 0; l < dim_length_n; l++){
 
-                        for(int k = 0; k < DIM3; k++){
+                        for(int k = 0; k < dim_length_n; k++){
 
-                            for(int d = 0; d < DIM3; d++){
+                            for(int d = 0; d < dim_length_n; d++){
                                 tensor3.data[pos_nd_to_1d(i,j,l,k)] += tensor1.data[pos_nd_to_1d(d,i,j)] * tensor2.data[pos_nd_to_1d(l,d,k)];
                             }
                         }
@@ -228,21 +228,21 @@ class for_loop_contraction{
 
         tensor_rt<T, up_t, up_t, up_t, up_t, up_t> tensor3;
 
-        for (int i = 0; i < DIM3; i++) { //rows
+        for (int i = 0; i < dim_length_n; i++) { //rows
 
-            for (int j = 0; j < DIM3; j++) { //columns
+            for (int j = 0; j < dim_length_n; j++) { //columns
 
-                for (int l = 0; l < DIM3; l++) {
+                for (int l = 0; l < dim_length_n; l++) {
 
-                    for (int k = 0; k < DIM3; k++) {
+                    for (int k = 0; k < dim_length_n; k++) {
 
-                        for (int m = 0; m < DIM3; m++) {
+                        for (int m = 0; m < dim_length_n; m++) {
 
-                            for (int n = 0; n < DIM3; n++) {
+                            for (int n = 0; n < dim_length_n; n++) {
 
-                                for (int o = 0; o < DIM3; o++) {
+                                for (int o = 0; o < dim_length_n; o++) {
 
-                                    for (int d = 0; d < DIM3; d++) {
+                                    for (int d = 0; d < dim_length_n; d++) {
                                         tensor3.data[pos_nd_to_1d(j, l, k, m, o)] +=
                                                 tensor1.data[pos_nd_to_1d(i, j, l, k)] *
                                                 tensor2.data[pos_nd_to_1d(m, n, o)];
@@ -272,9 +272,9 @@ class for_loop_reorder{
         //0,1
         tensor_rt<T, up_t, up_t> tensor3;
 
-        for(int i = 0; i < DIM3; i++){ //rows
+        for(int i = 0; i < dim_length_n; i++){ //rows
 
-            for(int j = 0; j < DIM3; j++){ //columns
+            for(int j = 0; j < dim_length_n; j++){ //columns
 
                 tensor3.data[pos_nd_to_1d(j,i)] = tensor1.data[pos_nd_to_1d(i, j)];
 
@@ -290,11 +290,11 @@ class for_loop_reorder{
         //0,1,2
         tensor_rt<T, up_t, up_t, up_t> tensor3;
 
-        for(int i = 0; i < DIM3; i++){ //rows
+        for(int i = 0; i < dim_length_n; i++){ //rows
 
-            for(int j = 0; j < DIM3; j++){ //columns
+            for(int j = 0; j < dim_length_n; j++){ //columns
 
-                for(int k = 0; k < DIM3; k++){
+                for(int k = 0; k < dim_length_n; k++){
 
                     //2,1,0
                     tensor3.data[pos_nd_to_1d(k, j, i)] = tensor1.data[pos_nd_to_1d(i, j, k)];
@@ -319,9 +319,9 @@ class for_loop_trace{
 
         int value = 0;
 
-        for(int i = 0; i < DIM3; i++){
+        for(int i = 0; i < dim_length_n; i++){
 
-            for(int j = 0; j < DIM3; j++){
+            for(int j = 0; j < dim_length_n; j++){
 
                 if( i == j ){
                     value += tensor1.data[pos_nd_to_1d(i,j)];
@@ -337,11 +337,11 @@ class for_loop_trace{
 
         int value = 0;
 
-        for(int i = 0; i < DIM3; i++){
+        for(int i = 0; i < dim_length_n; i++){
 
-            for(int j = 0; j < DIM3; j++){
+            for(int j = 0; j < dim_length_n; j++){
 
-                for(int k = 0; k < DIM3; k++){
+                for(int k = 0; k < dim_length_n; k++){
 
                     if( (i == j) && (i == k) && (k == j) ){
                         value += tensor1.data[pos_nd_to_1d(i,j)];

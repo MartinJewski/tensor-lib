@@ -12,54 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adb664cc-e466-4946-9ac0-70caaecebfdb" name="Default Changelist" comment="added tensor class and more code">
-      <change afterPath="$PROJECT_DIR$/tensor-lib/math/math_utilities.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_type_list.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untiteled1.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untiteled1.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_compileTime_contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_compileTime_contraction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_compileTime_reorder.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_compileTime_reorder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_compileTime_trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_compileTime_trace.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_contraction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_reorder.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_reorder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_expressionTemp_trace.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_forLoop_contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_forLoop_contraction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_forLoop_reorder.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_forLoop_reorder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_forLoop_trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_forLoop_trace.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_ranges_contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_ranges_contraction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_ranges_reorder.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_ranges_reorder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_ranges_trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_ranges_trace.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_run.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_run.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_contraction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_reorder.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_reorder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_runtime_trace.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/recreate_index_tuple.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/recreate_index_tuple.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_helpers.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_helpers.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_show.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_show.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_split.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_split.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_split_from.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/tuple_split_from.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-concepts/tensor-concepts.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-concepts/tensor-concepts.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_tensors.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/speed_test/speed_test_tensors.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition-ranges/tensor_range.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition-ranges/tensor_range.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor_specification.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-definition/tensor_specification.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/reorder_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/reorder_ranges.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/contraction_ranges.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations-ranges/contraction_ranges.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction_ct.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/contraction_ct.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder_ct.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/reorder_ct.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace_ct.h" beforeDir="false" afterPath="$PROJECT_DIR$/tensor-lib/tensor-operations/trace_ct.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +154,8 @@
       <workItem from="1583591549902" duration="15721000" />
       <workItem from="1583689514572" duration="4447000" />
       <workItem from="1583694462883" duration="17923000" />
-      <workItem from="1583758187372" duration="29914000" />
+      <workItem from="1583758187372" duration="36792000" />
+      <workItem from="1584019010846" duration="1370000" />
     </task>
     <task id="LOCAL-00001" summary="changed a few variables">
       <created>1576670106390</created>
@@ -246,22 +212,22 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="628" y="132" width="434" height="487" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1583747898060" />
-    <state width="1320" height="142" key="GridCell.Tab.0.bottom" timestamp="1583921224872">
+    <state width="1320" height="142" key="GridCell.Tab.0.bottom" timestamp="1584020411258">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1320" height="142" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1583921224872" />
-    <state width="1320" height="142" key="GridCell.Tab.0.center" timestamp="1583921224871">
+    <state width="1320" height="142" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1584020411258" />
+    <state width="1320" height="142" key="GridCell.Tab.0.center" timestamp="1584020411257">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1320" height="142" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1583921224871" />
-    <state width="1320" height="142" key="GridCell.Tab.0.left" timestamp="1583921224870">
+    <state width="1320" height="142" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1584020411257" />
+    <state width="1320" height="142" key="GridCell.Tab.0.left" timestamp="1584020411256">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1320" height="142" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1583921224870" />
-    <state width="1320" height="142" key="GridCell.Tab.0.right" timestamp="1583921224871">
+    <state width="1320" height="142" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1584020411256" />
+    <state width="1320" height="142" key="GridCell.Tab.0.right" timestamp="1584020411257">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1320" height="142" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1583921224871" />
+    <state width="1320" height="142" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1584020411257" />
     <state width="1320" height="132" key="GridCell.Tab.1.bottom" timestamp="1583068851333">
       <screen x="0" y="0" width="1366" height="732" />
     </state>

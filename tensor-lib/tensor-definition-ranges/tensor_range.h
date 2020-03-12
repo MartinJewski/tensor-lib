@@ -89,7 +89,7 @@ public:
      */
     constexpr auto calculate_indices() const{
 
-        return cartesian_product_ranges<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_ranges<dim_length_n, std::tuple_size<Args>::value>();
     };
 
     /**
@@ -120,7 +120,7 @@ public:
      */
     static constexpr tensorBase_ranges<T, Args> random_tensor_range(int lowerBound, int upperBound){
         return random_tensor_range_int(lowerBound, upperBound,
-                                  std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
+                                  std::make_index_sequence<positive_natural_compiletime_pow<dim_length_n, std::tuple_size<Args>::value>()>{});
     }
 
     /**
@@ -131,7 +131,7 @@ public:
      */
     static constexpr tensorBase_ranges<T, Args> random_tensor_range(float lowerBound, float upperBound){
         return random_tensor_range_float(lowerBound, upperBound,
-                                     std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
+                                     std::make_index_sequence<positive_natural_compiletime_pow<dim_length_n, std::tuple_size<Args>::value>()>{});
     }
 };
 

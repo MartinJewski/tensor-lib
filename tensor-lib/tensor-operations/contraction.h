@@ -90,10 +90,12 @@ constexpr auto calculate_value_i(T1 tensor1, T2 tensor2, Tuple1 tup1, Tuple2 tup
 template<std::size_t indices1, std::size_t indices2, typename F, typename T1, typename T2, typename SRIST1, typename SRIST2, std::size_t ...is>
 constexpr auto calculate_value(T1 tensor1, T2 tensor2, SRIST1 sris1, SRIST2 sris2, std::index_sequence<is...>){
 
-    auto temp = (calculate_value_i<indices1, indices2, F>(tensor1, tensor2, sris1[is], sris2[is], std::make_index_sequence<DIM3>{}),...);
+    auto temp = (calculate_value_i<indices1, indices2, F>(tensor1, tensor2, sris1[is], sris2[is],
+            std::make_index_sequence<dim_length_n>{}),...);
 
     std::array<decltype(temp), sris1.size()>
-            arr{calculate_value_i<indices1, indices2, F>(tensor1, tensor2, sris1[is], sris2[is], std::make_index_sequence<DIM3>{})...};
+            arr{calculate_value_i<indices1, indices2, F>(tensor1, tensor2, sris1[is], sris2[is],
+                    std::make_index_sequence<dim_length_n>{})...};
 
     return arr;
 }
@@ -161,7 +163,7 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, 
 
             using type = std::common_type_t<T1, T2>;
 
-            auto l = contraction_1D(tensor1, tensor2, std::make_index_sequence<DIM3>{});
+            auto l = contraction_1D(tensor1, tensor2, std::make_index_sequence<dim_length_n>{});
 
             return l;
 
@@ -174,11 +176,12 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, 
 
             //compile time versions |static_calculate_indices
             constexpr auto ct_sris_tensor1 = save_recreated_index_sequence
-                    <0, tensorBase_rt<T1, ArgsT1>::indices_amount - 1, t1_skipPos, tensorBase_rt<T1, ArgsT1>::indices_amount, DIM3>
+                    <0, tensorBase_rt<T1, ArgsT1>::indices_amount - 1, t1_skipPos, tensorBase_rt<T1, ArgsT1>::indices_amount, dim_length_n>
                     (tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)>::static_calculate_indices());
 
             constexpr auto ct_sris_tensor2 = save_recreated_index_sequence
-                    <tensorBase_rt<T1, ArgsT1>::indices_amount - 1, tensorBase_rt<T2, ArgsT2>::indices_amount - 1, t2_skipPos, tensorBase_rt<T2, ArgsT2>::indices_amount, DIM3>
+                    <tensorBase_rt<T1, ArgsT1>::indices_amount - 1, tensorBase_rt<T2, ArgsT2>::indices_amount - 1, t2_skipPos,
+                    tensorBase_rt<T2, ArgsT2>::indices_amount, dim_length_n>
                     (tensorBase_rt<std::common_type_t<T1, T2>, decltype(newType)>::static_calculate_indices());
 
             auto result = calculate_value<tensorBase_rt<T1, ArgsT1>::indices_amount, tensorBase_rt<T2, ArgsT2>::indices_amount,

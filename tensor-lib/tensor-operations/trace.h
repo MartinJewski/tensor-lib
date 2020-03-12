@@ -52,7 +52,7 @@ constexpr auto trace_i(tensorBase_rt<T, Args> tensor, std::index_sequence<it...>
  */
 template<typename T, typename Args>
 constexpr auto trace(tensorBase_rt<T, Args> tensor){
-    return trace_i(tensor, std::make_index_sequence<DIM3>{});
+    return trace_i(tensor, std::make_index_sequence<dim_length_n>{});
 }
 
 

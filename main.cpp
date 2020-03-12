@@ -131,7 +131,7 @@ int main() {
 
     constexpr auto reorder_value_ct = reorder<tensor1, 1,0>();
     auto reorder_value_rt = reorder<1,0>(tensor1.to_runtime_tensor());
-    */
+*/
     /*
     //----------------------C++20 ranges-------------------------------------------
 
@@ -185,10 +185,10 @@ int main() {
     auto st_triple_forLoop_contracton_f = speed_test_triple_forLoop_contraction<float>();
 */
 
-
+/*
     speed_test_run_2D<30>("/home/martin/Schreibtisch/output2D.txt");
     speed_test_run_3D<30>("/home/martin/Schreibtisch/output3D.txt");
-
+*/
     std::vector<double> samples;
     samples.push_back(1.0);
     samples.push_back(4.0);

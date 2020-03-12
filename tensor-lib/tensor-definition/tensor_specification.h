@@ -5,9 +5,9 @@
 #ifndef UNTITELED1_TENSOR_SPECIFICATION_H
 #define UNTITELED1_TENSOR_SPECIFICATION_H
 
-template<auto i> constexpr auto DIM = i;
-constexpr auto DIM2 = DIM<2>;
-constexpr auto DIM3 = DIM<3>;
+template<auto i> constexpr auto dim_length = i;
+constexpr auto dim_length2 = dim_length<2>;
+constexpr auto dim_length_n = dim_length<3>;
 
 
 class index_t  {};

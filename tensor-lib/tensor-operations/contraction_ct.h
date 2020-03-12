@@ -75,10 +75,10 @@ constexpr auto calculate_value_i_ct(Tuple1 tup1, Tuple2 tup2, std::index_sequenc
 template<std::size_t indices1, std::size_t indices2, typename F, tensorBase T1, tensorBase T2, typename SRIST1, typename SRIST2, std::size_t ...is>
 constexpr auto calculate_value_ct(SRIST1 sris1, SRIST2 sris2, std::index_sequence<is...>){
 
-    auto temp = (calculate_value_i_ct<indices1, indices2, F, T1, T2>(sris1[is], sris2[is], std::make_index_sequence<DIM3>{}),...);
+    auto temp = (calculate_value_i_ct<indices1, indices2, F, T1, T2>(sris1[is], sris2[is], std::make_index_sequence<dim_length_n>{}),...);
 
     std::array<decltype(temp), sris1.size()>
-            arr{calculate_value_i_ct<indices1, indices2, F, T1, T2>(sris1[is], sris2[is], std::make_index_sequence<DIM3>{})...};
+            arr{calculate_value_i_ct<indices1, indices2, F, T1, T2>(sris1[is], sris2[is], std::make_index_sequence<dim_length_n>{})...};
 
     return arr;
 
@@ -122,7 +122,7 @@ constexpr auto contraction(){
         //1D contraction results in a value
         using type = std::common_type_t<typename decltype(T1)::elem_type, typename decltype(T2)::elem_type>;
 
-        auto value = contraction_ct_1D<T1, T2>(std::make_index_sequence<DIM3>{});
+        auto value = contraction_ct_1D<T1, T2>(std::make_index_sequence<dim_length_n>{});
 
         return value;
 
@@ -139,11 +139,11 @@ constexpr auto contraction(){
 
         //a tuple that holds all the indices of the first tensor that must be used for a successful contraction
         auto sris_tensor1 = save_recreated_index_sequence
-                <0, T1.indices_amount - 1, t1_skipPos, T1.indices_amount, DIM3>(decltype(tensor3)::static_calculate_indices());
+                <0, T1.indices_amount - 1, t1_skipPos, T1.indices_amount, dim_length_n>(decltype(tensor3)::static_calculate_indices());
 
         //a tuple that holds all the indices of the second tensor that must be used for a successful contraction
         auto sris_tensor2 = save_recreated_index_sequence
-                <T1.indices_amount - 1, T2.indices_amount - 1, t2_skipPos, T2.indices_amount, DIM3>(decltype(tensor3)::static_calculate_indices());
+                <T1.indices_amount - 1, T2.indices_amount - 1, t2_skipPos, T2.indices_amount, dim_length_n>(decltype(tensor3)::static_calculate_indices());
 
         //does the multiplication over the indices
         auto result = calculate_value_ct<T1.indices_amount, T2.indices_amount,

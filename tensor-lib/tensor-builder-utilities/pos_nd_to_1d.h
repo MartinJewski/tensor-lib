@@ -13,7 +13,7 @@ auto constexpr pos_nd_to_1d ()
 {
     std::size_t  i { 0u };
 
-    (((i *= DIM3, i += as), ...));
+    (((i *= dim_length_n, i += as), ...));
 
     return i;
 }
@@ -23,7 +23,7 @@ auto constexpr pos_nd_to_1d (Values&& ... is)
 {
     std::size_t  i { 0u };
 
-    (((i *= DIM3, i += is), ...));
+    (((i *= dim_length_n, i += is), ...));
 
     return i;
 }
@@ -35,7 +35,7 @@ auto constexpr pos_nd_to_1d_calc (Args... values)
 {
     std::size_t  i { 0u };
 
-    (((i *= DIM3, i += values), ...));
+    (((i *= dim_length_n, i += values), ...));
 
     return i;
 }

@@ -44,7 +44,7 @@ constexpr auto trace_ct_i(std::index_sequence<it...>){
  */
 template<tensorBase T1>
 constexpr auto trace(){
-    return trace_ct_i<T1>(std::make_index_sequence<DIM3>{});
+    return trace_ct_i<T1>(std::make_index_sequence<dim_length_n>{});
 }
 
 #endif //UNTITELED1_TRACE_CT_H

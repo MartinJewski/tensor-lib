@@ -67,14 +67,14 @@ private:
     }
 
 public:
-    std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
+    std::array<T, positive_natural_compiletime_pow<dim_length_n, std::tuple_size<Args>::value>()> data;
 
     using tuple_indices = Args;
     using elem_type = T;
 
     static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
     static constexpr std::size_t data_count =
-            positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>();
+            positive_natural_compiletime_pow<dim_length_n, std::tuple_size<Args>::value>();
 
 
     /**
@@ -120,7 +120,7 @@ public:
 
         static_assert((std::tuple_size<Args>::value <= 8), "tensor has to many indices");
         //return cartesian_product<DIM3, std::tuple_size<Args>::value>();
-        return cartesian_product_adv<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_adv<dim_length_n, std::tuple_size<Args>::value>();
 
     };
 
@@ -132,7 +132,7 @@ public:
 
         static_assert((std::tuple_size<Args>::value <= 8), "tensor has to many indices");
         //return cartesian_product<DIM3, std::tuple_size<Args>::value>();
-        return cartesian_product_adv<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_adv<dim_length_n, std::tuple_size<Args>::value>();
 
     };
 
@@ -152,7 +152,7 @@ public:
      */
     static constexpr tensorBase_rt<T, Args> random_tensor_rt(int lowerBound, int upperBound){
         return random_tensor_rt_i(lowerBound, upperBound,
-                std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
+                std::make_index_sequence<positive_natural_compiletime_pow<dim_length_n, std::tuple_size<Args>::value>()>{});
     }
 
     /**
@@ -163,7 +163,8 @@ public:
      */
     static constexpr tensorBase_rt<T, Args> random_tensor_rt(float lowerBound, float upperBound){
         return random_tensor_rt_i(lowerBound, upperBound,
-                                  std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
+                                  std::make_index_sequence<positive_natural_compiletime_pow<dim_length_n
+                                  , std::tuple_size<Args>::value>()>{});
     }
 };
 
@@ -197,14 +198,14 @@ class tensorBase : tensorFundamental{
         }
 
     public:
-        std::array<T, positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()> data;
+        std::array<T, positive_natural_compiletime_pow<dim_length_n, std::tuple_size<Args>::value>()> data;
 
         using tuple_indices = Args;
         using elem_type = T;
 
         static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
         static constexpr std::size_t data_count =
-                positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>();
+                positive_natural_compiletime_pow<dim_length_n, std::tuple_size<Args>::value>();
 
     /**
      * Constructor that initializes the data array
@@ -240,7 +241,7 @@ class tensorBase : tensorFundamental{
 
         static_assert((std::tuple_size<Args>::value <= 8), "tensor has to many indices");
         //return cartesian_product<DIM3, std::tuple_size<Args>::value>();
-        return cartesian_product_adv<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_adv<dim_length_n, std::tuple_size<Args>::value>();
     };
 
     /**
@@ -251,7 +252,7 @@ class tensorBase : tensorFundamental{
 
         static_assert((std::tuple_size<Args>::value <= 8), "tensor has to many indices");
         //return cartesian_product<DIM3, std::tuple_size<Args>::value>();
-        return cartesian_product_adv<DIM3, std::tuple_size<Args>::value>();
+        return cartesian_product_adv<dim_length_n, std::tuple_size<Args>::value>();
     };
 
     /**
@@ -274,7 +275,8 @@ class tensorBase : tensorFundamental{
      */
     static constexpr tensorBase<T, Args> random_tensor_ct(T lowerBound, T upperBound){
         return random_tensor_i(lowerBound, upperBound,
-                                  std::make_index_sequence<positive_natural_compiletime_pow<DIM3, std::tuple_size<Args>::value>()>{});
+                                  std::make_index_sequence<positive_natural_compiletime_pow<dim_length_n,
+                                  std::tuple_size<Args>::value>()>{});
     }
 
 };
