@@ -23,10 +23,10 @@ auto speed_test_runtime_reorder(){
     int count1 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
 
-    std::vector<tensor_rt<T, up_t, up_t>> firstTest;
+    std::vector<tensor<T, up_t, up_t>> firstTest;
 
     srand(time(0));
 
@@ -58,9 +58,9 @@ auto speed_test_runtime_reorder3D(){
     int count1 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
-    std::vector<tensor_rt<T, up_t, up_t, up_t>> firstTest;
+    std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
 
     srand(time(0));
 

@@ -5,7 +5,6 @@
 #ifndef UNTITELED1_CONTRACTION_H
 #define UNTITELED1_CONTRACTION_H
 
-#include "tensor-concepts.h"
 
 #include "tuple_show.h"
 #include "tensor_specification.h"
@@ -15,6 +14,8 @@
 #include <type_traits>
 #include "tuple_type_list.h"
 #include "tuple_helpers.h"
+
+
 
 
 /**
@@ -30,14 +31,10 @@
 template<typename T, typename U, typename Arr, std::size_t ...is>
 constexpr auto create_result_tensor(Arr array, std::index_sequence<is...>){
 
-    tensorBase_rt<T, U> arr(static_cast<T>(array[is])...);
+    tensorBase<T, U> arr(static_cast<T>(array[is])...);
 
     return arr;
 }
-
-
-
-
 
 
 /**
@@ -91,14 +88,16 @@ template<std::size_t indices1, std::size_t indices2, typename F, typename T1, ty
 constexpr auto calculate_value(T1 tensor1, T2 tensor2, SRIST1 sris1, SRIST2 sris2, std::index_sequence<is...>){
 
     auto temp = (calculate_value_i<indices1, indices2, F>(tensor1, tensor2, sris1[is], sris2[is],
-            std::make_index_sequence<dim_length_n>{}),...);
+                                                          std::make_index_sequence<dim_length_n>{}),...);
 
     std::array<decltype(temp), sris1.size()>
             arr{calculate_value_i<indices1, indices2, F>(tensor1, tensor2, sris1[is], sris2[is],
-                    std::make_index_sequence<dim_length_n>{})...};
+                                                         std::make_index_sequence<dim_length_n>{})...};
 
     return arr;
 }
+
+
 
 /**
  * Contraction of two 1D tensors(runtime)
@@ -112,7 +111,7 @@ constexpr auto calculate_value(T1 tensor1, T2 tensor2, SRIST1 sris1, SRIST2 sris
  * @return value
  */
 template<typename  T1, typename ArgsT1, typename T2, typename ArgsT2, std::size_t ...is>
-constexpr auto contraction_1D(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, ArgsT2> tensor2, std::index_sequence<is...>){
+constexpr auto contraction_1D(tensorBase<T1, ArgsT1> tensor1, tensorBase<T2, ArgsT2> tensor2, std::index_sequence<is...>){
 
     auto value = 0;
     ((value += tensor1.data[is] * tensor2.data[is]),...);
@@ -131,7 +130,7 @@ constexpr auto contraction_1D(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T
  * @return same tensor with new values
  */
 template<typename Scalar, typename T2, typename ArgsT2, std::size_t ...is>
-constexpr auto add_scalar(Scalar scalar, tensorBase_rt<T2, ArgsT2> tensor, std::index_sequence<is...>){
+constexpr auto add_scalar(Scalar scalar, tensorBase<T2, ArgsT2> tensor, std::index_sequence<is...>){
 
     auto copyTensor = tensor;
     ((copyTensor.data[is] = scalar *  copyTensor.data[is]),...);
@@ -152,13 +151,142 @@ constexpr auto add_scalar(Scalar scalar, tensorBase_rt<T2, ArgsT2> tensor, std::
  * @return new tensor
  */
 template<std::size_t t1_skipPos, std::size_t t2_skipPos, typename T1, typename ArgsT1, typename T2, typename ArgsT2>
-constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, ArgsT2> tensor2){
+constexpr auto contraction(tensorBase<T1, ArgsT1> tensor1, tensorBase<T2, ArgsT2> tensor2){
 /*
     using skip_type_t1 = tuple_type_list<ArgsT1>::template type<t1_skipPos>;
     using skip_type_t2 = tuple_type_list<ArgsT2>::template type<t2_skipPos>;
     static_assert((std::is_same<skip_type_t1, skip_type_t2>::value == false), "Cannot contract over the same index level."
                                                                              "E.g contraction over two up_t indices is not possible!");
 */
+    if constexpr ((tensorBase<T1, ArgsT1>::indices_amount == 1) && (tensorBase<T2, ArgsT2>::indices_amount == 1)) {
+
+        using type = std::common_type_t<T1, T2>;
+
+        auto l = contraction_1D(tensor1, tensor2, std::make_index_sequence<dim_length_n>{});
+
+        return l;
+
+    }else{
+
+        remove_ith_concat_tuple<t1_skipPos, t2_skipPos, ArgsT1, ArgsT2> types;
+        typename decltype(types)::type newType;
+
+        //compile time versions |static_calculate_indices
+        constexpr auto ct_sris_tensor1 = save_recreated_index_sequence
+                <0, tensorBase<T1, ArgsT1>::indices_amount - 1, t1_skipPos, tensorBase<T1, ArgsT1>::indices_amount, dim_length_n>
+                (tensorBase<std::common_type_t<T1, T2>, decltype(newType)>::static_calculate_indices());
+
+        constexpr auto ct_sris_tensor2 = save_recreated_index_sequence
+                <tensorBase<T1, ArgsT1>::indices_amount - 1, tensorBase<T2, ArgsT2>::indices_amount - 1, t2_skipPos,
+                        tensorBase<T2, ArgsT2>::indices_amount, dim_length_n>
+                (tensorBase<std::common_type_t<T1, T2>, decltype(newType)>::static_calculate_indices());
+
+        auto result = calculate_value<tensorBase<T1, ArgsT1>::indices_amount, tensorBase<T2, ArgsT2>::indices_amount,
+                std::common_type_t<T1, T2>>
+                (tensor1, tensor2, ct_sris_tensor1, ct_sris_tensor2, std::make_index_sequence<ct_sris_tensor1.size()>{});
+
+        auto final_result = create_result_tensor
+                <std::common_type_t<T1, T2>,
+                        decltype(newType)>(result, std::make_index_sequence<result.size()>{});
+
+        return final_result;
+    }
+}
+
+/**
+ * Contraction of a scalar and a tensor(runtime)
+ * @tparam T1 values type
+ * @tparam ArgsT2 deducted indices type
+ * @tparam T2 deducted data type of the tensor
+ * @param tensor object
+ * @param value a value
+ * @return
+ */
+template<typename T1, typename T2, typename ArgsT2>
+constexpr auto contraction(T1 value, tensorBase<T2, ArgsT2> tensor){
+
+    if constexpr ((tensorBase<T2, ArgsT2>::indices_amount >= 1)) {
+        return add_scalar(value, tensor, std::make_index_sequence<decltype(tensor)::data_count>{});
+    }
+}
+
+/**
+ * Contraction of a scalar and a tensor(runtime)
+ * @tparam T1 deducted data type of the tensor
+ * @tparam ArgsT1 deducted indices type
+ * @tparam T2 deducted value type
+ * @param tensor object
+ * @param value a value
+ * @return
+ */
+template<typename T1, typename ArgsT1, typename T2>
+constexpr auto contraction(tensorBase<T1, ArgsT1> tensor, T2 value){
+
+    if constexpr ((tensorBase<T1, ArgsT1>::indices_amount >= 1)) {
+        return add_scalar(value, tensor, std::make_index_sequence<decltype(tensor)::data_count>{});
+    }
+}
+
+template<typename T1, typename T2>
+constexpr auto contraction(T1 val1, T2 val2){
+
+    return val1*val2;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//LEGACY CODE
+
+
+
+
+/*
+
+template<typename  T1, typename ArgsT1, typename T2, typename ArgsT2, std::size_t ...is>
+constexpr auto contraction_1D(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, ArgsT2> tensor2, std::index_sequence<is...>){
+
+    auto value = 0;
+    ((value += tensor1.data[is] * tensor2.data[is]),...);
+
+    return value;
+}
+
+
+template<typename Scalar, typename T2, typename ArgsT2, std::size_t ...is>
+constexpr auto add_scalar(Scalar scalar, tensorBase_rt<T2, ArgsT2> tensor, std::index_sequence<is...>){
+
+    auto copyTensor = tensor;
+    ((copyTensor.data[is] = scalar *  copyTensor.data[is]),...);
+
+    return copyTensor;
+}
+
+
+template<std::size_t t1_skipPos, std::size_t t2_skipPos, typename T1, typename ArgsT1, typename T2, typename ArgsT2>
+constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, ArgsT2> tensor2){
+
+    using skip_type_t1 = tuple_type_list<ArgsT1>::template type<t1_skipPos>;
+    using skip_type_t2 = tuple_type_list<ArgsT2>::template type<t2_skipPos>;
+    static_assert((std::is_same<skip_type_t1, skip_type_t2>::value == false), "Cannot contract over the same index level."
+                                                                             "E.g contraction over two up_t indices is not possible!");
+
         if constexpr ((tensorBase_rt<T1, ArgsT1>::indices_amount == 1) && (tensorBase_rt<T2, ArgsT2>::indices_amount == 1)) {
 
             using type = std::common_type_t<T1, T2>;
@@ -196,15 +324,7 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor1, tensorBase_rt<T2, 
         }
 }
 
-/**
- * Contraction of a scalar and a tensor(runtime)
- * @tparam T1 values type
- * @tparam ArgsT2 deducted indices type
- * @tparam T2 deducted data type of the tensor
- * @param tensor object
- * @param value a value
- * @return
- */
+
 template<typename T1, typename T2, typename ArgsT2>
 constexpr auto contraction(T1 value, tensorBase_rt<T2, ArgsT2> tensor){
 
@@ -213,15 +333,7 @@ constexpr auto contraction(T1 value, tensorBase_rt<T2, ArgsT2> tensor){
         }
 }
 
-/**
- * Contraction of a scalar and a tensor(runtime)
- * @tparam T1 deducted data type of the tensor
- * @tparam ArgsT1 deducted indices type
- * @tparam T2 deducted value type
- * @param tensor object
- * @param value a value
- * @return
- */
+
 template<typename T1, typename ArgsT1, typename T2>
 constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor, T2 value){
 
@@ -230,19 +342,13 @@ constexpr auto contraction(tensorBase_rt<T1, ArgsT1> tensor, T2 value){
         }
 }
 
-/**
- * Contraction over two values(runtime)
- * @tparam T1 type
- * @tparam T2 type
- * @param val1 a value
- * @param val2 a value
- * @return both values multiplicated
- */
+
 template<typename T1, typename T2>
 constexpr auto contraction(T1 val1, T2 val2){
 
         return val1*val2;
 
 }
+*/
 
 #endif //UNTITELED1_CONTRACTION_H

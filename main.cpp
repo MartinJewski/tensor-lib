@@ -79,7 +79,7 @@
 #include "math_utilities.h"
 
 
-/*
+
 #include "speed_test_expressionTemp_contraction.h"
 #include "speed_test_expressionTemp_reorder.h"
 #include "speed_test_expressionTemp_trace.h"
@@ -99,26 +99,28 @@
 #include "speed_test_runtime_trace.h"
 
 #include "speed_test_run.h"
-*/
+
 
 
 int main() {
 
-/*
     //------------------------------C++17-------------------------------
     constexpr tensor<double, up_t, low_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    tensor<double, up_t, low_t> tensor1_1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     constexpr tensor<double, low_t, up_t, up_t> tensor1_3D(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     constexpr tensor<double, up_t> tensor2(5.0, 5.0, 5.0);
     constexpr tensor<double> tensor23(1.0);
 
-    tensor_rt<double, up_t, low_t> ten(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
+    tensor<double, up_t, low_t> ten(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
     constexpr auto contraction_value_ct = contraction<0,0,tensor1_3D, contraction<0,0, tensor1_3D,
                   contraction<0,0, tensor1_3D, tensor1_3D>()>()>();
-    auto contraction_value_rt = contraction<0,0>(tensor1.to_runtime_tensor(), tensor2.to_runtime_tensor());
+
+
+    auto contraction_value_CTRT = contraction<0,0>(tensor1, tensor1_1);
+    auto contraction_value_CTRT1 = contraction<0,0>(tensor1_1, tensor1_1);
 
     constexpr auto contraction_value_ct2 = contraction<1,0, tensor1, tensor1>();
-    auto contraction_value_rt2 = contraction<1,0>(tensor1.to_runtime_tensor(), tensor1.to_runtime_tensor());
 
     constexpr auto contraction_value_ct3 = contraction<1,1>();
     auto contraction_value_rt3 = contraction(1,1);
@@ -128,14 +130,17 @@ int main() {
     constexpr auto contraction_value_ct5 = contraction<1, tensor1>();
 
     constexpr auto trace_value_ct = trace<tensor1>();
-    auto trace_value_rt = trace(tensor1.to_runtime_tensor());
+
+    auto trace_value_CTRT = trace(tensor1_1);
+    auto trace_value_CTRT1 = trace(tensor1);
 
     constexpr auto reorder_value_ct = reorder<tensor1, 1,0>();
-    auto reorder_value_rt = reorder<1,0>(tensor1.to_runtime_tensor());
-*/
-    /*
-    //----------------------C++20 ranges-------------------------------------------
 
+    auto reorder_value_CTRT = reorder<1,0>(tensor1_1);
+    auto reorder_value_CTRT1 = reorder<1,0>(tensor1);
+
+
+    //----------------------C++20 ranges-------------------------------------------
     tensorRange<double, up_t, up_t> tensorR(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0);
     tensorRange<double, up_t, up_t> tensorR2(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
 
@@ -159,9 +164,7 @@ int main() {
 
     auto test_contraction_ranges4 = contraction_ranges(2, tensorR3);
 
-*/
 
-/*
     auto st_ct_contraction_f = speed_test_compileTime_contraction<float>();
     auto st_ct_double_contraction_f = speed_test_double_compileTime_contraction<float>();
     auto st_ct_triple_contraction_f = speed_test_triple_compileTime_contraction<float>();
@@ -184,29 +187,9 @@ int main() {
     auto st_forLoop_contracton_f = speed_test_forLoop_contraction<float>();
     auto st_double_forLoop_contracton_f = speed_test_double_forLoop_contraction<float>();
     auto st_triple_forLoop_contracton_f = speed_test_triple_forLoop_contraction<float>();
-*/
 
-/*
-    speed_test_run_2D<30>("/home/martin/Schreibtisch/output2D.txt");
-    speed_test_run_3D<30>("/home/martin/Schreibtisch/output3D.txt");
-*/
-
-    tensor_rt<int, up_t, low_t> example;
-    example.data = tensor_rt<int, up_t, low_t>::random_tensor_rt(0, 10).data;
-
-    auto contractions = contraction<0,1>(example, example);
-
-    std::vector<double> samples;
-    samples.push_back(1.0);
-    samples.push_back(4.0);
-    samples.push_back(5.0);
-    samples.push_back(9.0);
-
-    double std_d = StandardDeviation(samples);
-    double var = Variance(samples);
-
-    std::cout << "std_d: " << std_d << " variance: " << var << std::endl;
-
+    //speed_test_run_2D<30>("/home/martin/Schreibtisch/output2D.txt");
+    //speed_test_run_3D<30>("/home/martin/Schreibtisch/output3D.txt");
 
     return 0;
 }

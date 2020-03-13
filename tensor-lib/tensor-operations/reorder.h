@@ -17,7 +17,6 @@ constexpr auto calculate_new(CartesianPos value, T tuple){
 
 }
 
-
 /**
  * Calculates the new position at runtime
  * @tparam cartesian_pos
@@ -33,7 +32,6 @@ constexpr auto calculate_new(C cartesian_arr){
 
 }
 
-
 /**
  * Function that does the reordering(runtime)
  * @tparam positions new positioning of the indices
@@ -44,9 +42,9 @@ constexpr auto calculate_new(C cartesian_arr){
  * @return returns a new tensor of the same type with reordered indices
  */
 template<std::size_t ... positions, std::size_t ...is, typename T, typename Args>
-constexpr auto reorder_i(tensorBase_rt<T,Args> tensor, std::index_sequence<is...>){
+constexpr auto reorder_i(tensorBase<T,Args> tensor, std::index_sequence<is...>){
 
-    auto cartesian_arr = tensor.calculate_indices();
+    auto cartesian_arr = tensorBase<T,Args>::static_calculate_indices();
 
     std::array<typename decltype(tensor)::elem_type, tensor.data.size()>
             reordered_positions{
@@ -56,9 +54,9 @@ constexpr auto reorder_i(tensorBase_rt<T,Args> tensor, std::index_sequence<is...
 
 
     using reorder_indices = std::tuple<typename
-            tuple_type_list<typename decltype(tensor)::tuple_indices>::template type<positions>...>;
+    tuple_type_list<typename decltype(tensor)::tuple_indices>::template type<positions>...>;
 
-    tensorBase_rt<typename decltype(tensor)::elem_type, reorder_indices>
+    tensorBase<typename decltype(tensor)::elem_type, reorder_indices>
             reordered_tensor(static_cast<decltype(tensor)::elem_type>(0));
     reordered_tensor.data = reordered_positions;
 
@@ -80,9 +78,10 @@ constexpr auto reorder_i(tensorBase_rt<T,Args> tensor, std::index_sequence<is...
  * @return returns a new tensor of the same type with reordered indices
  */
 template<std::size_t ... positions, typename T, typename Args>
-constexpr auto reorder(tensorBase_rt<T, Args> tensor){
+constexpr auto reorder(tensorBase<T, Args> tensor){
 
-    return reorder_i<positions...>(tensor, std::make_index_sequence<tensor.calculate_indices().size()>{});
+    return reorder_i<positions...>(tensor, std::make_index_sequence<
+            tensorBase<T, Args>::static_calculate_indices().size()>{});
 
 }
 
@@ -91,6 +90,59 @@ constexpr auto reorder(tensorBase_rt<T, Args> tensor){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//LEGACY CODE
+
+
+
+/*
+template<std::size_t ... positions, std::size_t ...is, typename T, typename Args>
+constexpr auto reorder_i(tensorBase_rt<T,Args> tensor, std::index_sequence<is...>){
+
+    auto cartesian_arr = tensorBase_rt<T,Args>::static_calculate_indices();
+
+    std::array<typename decltype(tensor)::elem_type, tensor.data.size()>
+            reordered_positions{
+            (tensor.data[static_cast<typename decltype(tensor)::elem_type>(calculate_new<is, positions...>(
+                    cartesian_arr))])...
+    };
+
+
+    using reorder_indices = std::tuple<typename
+    tuple_type_list<typename decltype(tensor)::tuple_indices>::template type<positions>...>;
+
+    tensorBase_rt<typename decltype(tensor)::elem_type, reorder_indices>
+            reordered_tensor(static_cast<decltype(tensor)::elem_type>(0));
+    reordered_tensor.data = reordered_positions;
+
+    return reordered_tensor;
+}
+
+template<std::size_t ... positions, typename T, typename Args>
+constexpr auto reorder(tensorBase_rt<T, Args> tensor){
+
+    return reorder_i<positions...>(tensor, std::make_index_sequence<
+            tensorBase_rt<T, Args>::static_calculate_indices().size()>{});
+
+}
+*/
 
 
 #endif //UNTITELED1_REORDER_H

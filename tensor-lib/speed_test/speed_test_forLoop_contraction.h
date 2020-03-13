@@ -23,10 +23,10 @@ int constexpr speed_test_forLoop_contraction(){
     int count2 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_contraction fl_calculation;
 
-    std::vector<tensor_rt<T, up_t, up_t>> secondTest;
+    std::vector<tensor<T, up_t, up_t>> secondTest;
 
     srand(time(0));
     auto t3 = std::chrono::high_resolution_clock::now();
@@ -52,10 +52,10 @@ int constexpr speed_test_double_forLoop_contraction(){
     int count2 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_contraction fl_calculation;
 
-    std::vector<tensor_rt<T, up_t, up_t>> secondTest;
+    std::vector<tensor<T, up_t, up_t>> secondTest;
 
     srand(time(0));
     auto t3 = std::chrono::high_resolution_clock::now();
@@ -84,10 +84,10 @@ int constexpr speed_test_triple_forLoop_contraction(){
     int count2 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_contraction fl_calculation;
 
-    std::vector<tensor_rt<T, up_t, up_t>> secondTest;
+    std::vector<tensor<T, up_t, up_t>> secondTest;
 
     srand(time(0));
     auto t3 = std::chrono::high_resolution_clock::now();
@@ -122,10 +122,10 @@ int constexpr speed_test_forLoop_contraction3D(){
     int count2 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_contraction fl_calculation;
 
-    std::vector<tensor_rt<T, up_t, up_t, up_t, up_t>> secondTest;
+    std::vector<tensor<T, up_t, up_t, up_t, up_t>> secondTest;
 
     srand(time(0));
     auto t3 = std::chrono::high_resolution_clock::now();
@@ -152,10 +152,10 @@ int constexpr speed_test_double_forLoop_contraction3D(){
     int count2 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_contraction fl_calculation;
 
-    std::vector<tensor_rt<T, up_t, up_t, up_t, up_t, up_t>> secondTest;
+    std::vector<tensor<T, up_t, up_t, up_t, up_t, up_t>> secondTest;
 
     srand(time(0));
     auto t3 = std::chrono::high_resolution_clock::now();

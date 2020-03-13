@@ -14,63 +14,6 @@ template<auto i> constexpr auto REPS = i;
 constexpr auto REP= REPS<500000>;
 
 
-template<typename T, std::size_t size>
-class random_tensor_generator{
-
-    public:
-
-        std::array<tensor_rt<T>, size> array_0D;
-        std::array<tensor_rt<T, up_t>, size> array_1D;
-        std::array<tensor_rt<T, up_t, up_t>, size> array_2D;
-        std::array<tensor_rt<T, up_t, up_t, up_t>, size> array_3D;
-
-
-        auto pick_random_tensor_0D(){
-            return array_0D[random() % size];
-        }
-        auto pick_random_tensor_1D(){
-            return array_1D[random() % size];
-        }
-        auto pick_random_tensor_2D(){
-            return array_2D[random() % size];
-        }
-        auto pick_random_tensor_3D(){
-            return array_3D[random() % size];
-        }
-
-        template<std::size_t ...is>
-        void generate_tensor_array(int lowerBound, int upperBound, std::index_sequence<is...>){
-
-            array_0D = {(is, tensor_rt<int>::random_tensor_rt(lowerBound, upperBound))...};
-            array_1D = {(is, tensor_rt<int, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-            array_2D = {(is, tensor_rt<int, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-            array_3D = {(is, tensor_rt<int, up_t, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-
-        }
-
-        template<std::size_t ...is>
-        void generate_tensor_array(float lowerBound, float upperBound, std::index_sequence<is...>){
-
-            array_0D = {(is, tensor_rt<float>::random_tensor_rt(lowerBound, upperBound))...};
-            array_1D = {(is, tensor_rt<float, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-            array_2D = {(is, tensor_rt<float, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-            array_3D = {(is, tensor_rt<float, up_t, up_t, up_t>::random_tensor_rt(lowerBound, upperBound))...};
-
-        }
-
-        constexpr random_tensor_generator(T lowerBound, T upperBound){
-
-            static_assert((std::is_same<T, int>::value || std::is_same<T, float>::value), "only float or int is allowed");
-
-            if constexpr(std::is_same<T, int>::value){
-                generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
-            }
-            if constexpr (std::is_same<T, float>::value){
-                generate_tensor_array(lowerBound, upperBound, std::make_index_sequence<size>{});
-            }
-    };
-};
-
 template<typename T, std::size_t U, std::size_t V, std::size_t W, typename X>
 struct random_tensor_generator_ct;
 
@@ -178,9 +121,9 @@ class for_loop_contraction{
 
         //compares to a contraction<0,1>
         template<typename T>
-        tensor_rt<T, up_t, up_t> for_loop_contraction_2D(tensor_rt<T, up_t, up_t> tensor1, tensor_rt<T, up_t, up_t> tensor2){
+        tensor<T, up_t, up_t> for_loop_contraction_2D(tensor<T, up_t, up_t> tensor1, tensor<T, up_t, up_t> tensor2){
 
-            tensor_rt<T, up_t, up_t> tensor3;
+            tensor<T, up_t, up_t> tensor3;
 
             for(int i = 0; i < dim_length_n; i++){ //rows
 
@@ -200,9 +143,9 @@ class for_loop_contraction{
 
         //compares to a contraction<0,1>
         template<typename T>
-        tensor_rt<T, up_t, up_t, up_t, up_t> for_loop_contraction_3D(tensor_rt<T, up_t, up_t, up_t> tensor1, tensor_rt<T, up_t, up_t, up_t> tensor2){
+        tensor<T, up_t, up_t, up_t, up_t> for_loop_contraction_3D(tensor<T, up_t, up_t, up_t> tensor1, tensor<T, up_t, up_t, up_t> tensor2){
 
-            tensor_rt<T, up_t, up_t, up_t, up_t> tensor3;
+            tensor<T, up_t, up_t, up_t, up_t> tensor3;
 
             for(int i = 0; i < dim_length_n; i++){ //rows
 
@@ -224,9 +167,9 @@ class for_loop_contraction{
 
     //compares to a contraction<0,1>
     template<typename T>
-    tensor_rt<T, up_t, up_t, up_t, up_t, up_t> for_loop_double_contraction_3D(tensor_rt<T, up_t, up_t, up_t, up_t> tensor1, tensor_rt<T, up_t, up_t, up_t> tensor2) {
+    tensor<T, up_t, up_t, up_t, up_t, up_t> for_loop_double_contraction_3D(tensor<T, up_t, up_t, up_t, up_t> tensor1, tensor<T, up_t, up_t, up_t> tensor2) {
 
-        tensor_rt<T, up_t, up_t, up_t, up_t, up_t> tensor3;
+        tensor<T, up_t, up_t, up_t, up_t, up_t> tensor3;
 
         for (int i = 0; i < dim_length_n; i++) { //rows
 
@@ -267,10 +210,10 @@ class for_loop_reorder{
     constexpr for_loop_reorder() = default;
 
     template<typename T>
-    tensor_rt<T, up_t, up_t> for_loop_reordering_2D(tensor_rt<T, up_t, up_t> tensor1){
+    tensor<T, up_t, up_t> for_loop_reordering_2D(tensor<T, up_t, up_t> tensor1){
 
         //0,1
-        tensor_rt<T, up_t, up_t> tensor3;
+        tensor<T, up_t, up_t> tensor3;
 
         for(int i = 0; i < dim_length_n; i++){ //rows
 
@@ -285,10 +228,10 @@ class for_loop_reorder{
     }
 
     template<typename T>
-    tensor_rt<T, up_t, up_t, up_t> for_loop_reordering_3D(tensor_rt<T, up_t, up_t, up_t> tensor1){
+    tensor<T, up_t, up_t, up_t> for_loop_reordering_3D(tensor<T, up_t, up_t, up_t> tensor1){
 
         //0,1,2
-        tensor_rt<T, up_t, up_t, up_t> tensor3;
+        tensor<T, up_t, up_t, up_t> tensor3;
 
         for(int i = 0; i < dim_length_n; i++){ //rows
 
@@ -315,7 +258,7 @@ class for_loop_trace{
     constexpr for_loop_trace() = default;
 
     template<typename T>
-    auto for_loop_trace_2D(tensor_rt<T, up_t, up_t> tensor1){
+    auto for_loop_trace_2D(tensor<T, up_t, up_t> tensor1){
 
         int value = 0;
 
@@ -333,7 +276,7 @@ class for_loop_trace{
     }
 
     template<typename T>
-    auto for_loop_trace_3D(tensor_rt<T, up_t, up_t, up_t> tensor1){
+    auto for_loop_trace_3D(tensor<T, up_t, up_t, up_t> tensor1){
 
         int value = 0;
 

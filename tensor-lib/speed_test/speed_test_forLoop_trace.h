@@ -27,7 +27,7 @@ auto speed_test_forLoop_trace(){
     int count2 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_trace fl_trace;
 
     std::vector<T> secondTest;
@@ -61,7 +61,7 @@ auto speed_test_forLoop_trace3D(){
     int count2 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_trace fl_trace;
 
     std::vector<T> secondTest;

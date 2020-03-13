@@ -5,6 +5,8 @@
 #ifndef UNTITELED1_CONTRACTION_RANGES_H
 #define UNTITELED1_CONTRACTION_RANGES_H
 
+#include "tensor-concepts.h"
+
 #include "tensor_range.h"
 #include "tuple_helpers.h"
 #include <type_traits>

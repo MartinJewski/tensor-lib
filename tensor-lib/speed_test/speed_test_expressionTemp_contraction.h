@@ -28,7 +28,7 @@ auto speed_test_expressionTemp_contraction2D(){
     int count1 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::array<tensor3_t<T, upper_t, lower_t>, 10> et_tensors2D;
 
@@ -68,7 +68,7 @@ auto speed_test_double_expressionTemp_contraction2D(){
     int count1 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::array<tensor3_t<T, upper_t, lower_t>, 10> et_tensors2D;
     std::array<tensor3_t<T, upper_t, lower_t>, 10> et_tensors22D;
@@ -108,7 +108,7 @@ auto speed_test_triple_expressionTemp_contraction2D(){
     int count1 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::array<tensor3_t<T, upper_t, lower_t>, 10> et_tensors2D;
 
@@ -150,7 +150,7 @@ auto speed_test_expressionTemp_contraction3D(){
     int count1 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::array<tensor3_t<T, upper_t, lower_t, lower_t>, 10> et_tensors3D;
 
@@ -189,7 +189,7 @@ auto speed_test_double_expressionTemp_contraction3D(){
     int count1 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::array<tensor3_t<T, upper_t, lower_t, lower_t>, 10> et_tensors3D;
 
@@ -230,7 +230,7 @@ auto speed_test_triple_expressionTemp_contraction3D(){
     int count1 = 0;
     int reps = REP;
 
-    random_tensor_generator<T, 10> tensor_generator(0, 10);
+    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::array<tensor3_t<T, upper_t, lower_t, lower_t>, 10> et_tensors3D;
 
