@@ -31,10 +31,11 @@ constexpr auto calc_ct_position(std::index_sequence<is...>){
 template<tensorBase T1, std::size_t ...it>
 constexpr auto trace_ct_i(std::index_sequence<it...>){
 
-    auto temp = 0.0;
-    ((it, temp += calc_ct_position<T1, it>(std::make_index_sequence<T1.indices_amount>{})),...);
+    //auto temp = 0.0;
+    //((it, temp += calc_ct_position<T1, it>(std::make_index_sequence<T1.indices_amount>{})),...);
+    auto trace_sum = ((calc_ct_position<T1, it>(std::make_index_sequence<T1.indices_amount>{})) + ...);
 
-    return temp;
+    return trace_sum;
 }
 
 /**

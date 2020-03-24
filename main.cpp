@@ -3,7 +3,7 @@
 #include <iostream>
 #include <iterator>
 #include <random>
-
+#include <vector>
 #include <fstream>
 #include <sstream>
 
@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*
+
 #include <range/v3/view/empty.hpp>
 #include <range/v3/view/repeat_n.hpp>
 #include <range/v3/algorithm/for_each.hpp>
@@ -29,7 +29,20 @@
 #include <range/v3/view/counted.hpp>
 #include <range/v3/view/move.hpp>
 #include <range/v3/view/concat.hpp>
-*/
+
+#include <range/v3/action/unique.hpp>
+#include <range/v3/action/sort.hpp>
+#include <range/v3/action/drop.hpp>
+#include <range/v3/action/remove_if.hpp>
+#include <range/v3/action/transform.hpp>
+
+#include <range/v3/range/conversion.hpp>
+#include <range/v3/algorithm/remove_if.hpp>
+#include <range/v3/algorithm/for_each.hpp>
+#include <range/v3/algorithm/min.hpp>
+#include <range/v3/algorithm/max.hpp>
+
+
 #include "tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h"
 
 #include <cmath>
@@ -91,6 +104,7 @@
 #include "speed_test_compileTime_trace.h"
 #include "speed_test_compileTime_contraction.h"
 #include "speed_test_runtime_contraction.h"
+
 #include "speed_test_ranges_contraction.h"
 #include "speed_test_tensors.h"
 #include "speed_test_ranges_reorder.h"
@@ -99,7 +113,6 @@
 #include "speed_test_runtime_trace.h"
 
 #include "speed_test_run.h"
-
 
 
 int main() {
@@ -190,6 +203,15 @@ int main() {
 
     //speed_test_run_2D<30>("/home/martin/Schreibtisch/output2D.txt");
     //speed_test_run_3D<30>("/home/martin/Schreibtisch/output3D.txt");
+
+
+    std::vector<int> ff_mycontainer{1,1,5,99,6,6,7,8,8,9};
+    //auto a = f_mycontainer | ranges::actions::unique | ranges::actions::sort | ranges::actions::drop(5); //**
+    auto b = ranges::actions::unique(ranges::actions::sort(ff_mycontainer)); //{1,5,6,7,8,9,99}
+    auto c = ranges::to<std::vector>(ranges::actions::drop(b, 3)); // {7,8,9,99}
+    auto min_c = ranges::min(c); //7
+    auto max_c = ranges::max(c); //99
+
 
     return 0;
 }

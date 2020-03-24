@@ -46,7 +46,6 @@ constexpr auto reorder_ct_i(std::index_sequence<is...>){
                     cartesian_arr))])...
     };
 
-
     using reorder_indices = std::tuple<typename
             tuple_type_list<typename decltype(T1)::tuple_indices>::template type<positions>...>;
 

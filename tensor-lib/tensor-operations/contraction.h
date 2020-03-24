@@ -160,8 +160,6 @@ constexpr auto contraction(tensorBase<T1, ArgsT1> tensor1, tensorBase<T2, ArgsT2
 */
     if constexpr ((tensorBase<T1, ArgsT1>::indices_amount == 1) && (tensorBase<T2, ArgsT2>::indices_amount == 1)) {
 
-        using type = std::common_type_t<T1, T2>;
-
         auto l = contraction_1D(tensor1, tensor2, std::make_index_sequence<dim_length_n>{});
 
         return l;

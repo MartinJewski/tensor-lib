@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../ranges-lib/range-v3/range-v3-master/include/concepts/concepts.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/concepts/concepts.hpp
 initializer_list
 -
 utility
@@ -18,7 +18,7 @@ concepts/swap.hpp
 concepts/type_traits.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/concepts/swap.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/concepts/swap.hpp
 tuple
 -
 utility
@@ -28,7 +28,7 @@ type_traits
 meta/meta.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/concepts/type_traits.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/concepts/type_traits.hpp
 tuple
 -
 utility
@@ -38,7 +38,7 @@ type_traits
 meta/meta.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/meta/meta.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/meta/meta.hpp
 cstddef
 -
 initializer_list
@@ -50,13 +50,43 @@ type_traits
 utility
 -
 
-../ranges-lib/range-v3/range-v3-master/include/meta/meta_fwd.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/meta/meta_fwd.hpp
 type_traits
 -
 utility
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/action/concepts.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/action.hpp
+type_traits
+-
+meta/meta.hpp
+-
+range/v3/range_fwd.hpp
+-
+range/v3/action/concepts.hpp
+-
+range/v3/functional/compose.hpp
+-
+range/v3/functional/concepts.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/functional/reference_wrapper.hpp
+-
+range/v3/functional/pipeable.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/utility/move.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/concepts.hpp
 utility
 -
 meta/meta.hpp
@@ -72,7 +102,187 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/algorithm/copy.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/drop.hpp
+range/v3/range_fwd.hpp
+-
+range/v3/action/action.hpp
+-
+range/v3/action/erase.hpp
+-
+range/v3/functional/bind_back.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/operations.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/erase.hpp
+utility
+-
+range/v3/range_fwd.hpp
+-
+range/v3/action/insert.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/insert.hpp
+initializer_list
+-
+utility
+-
+range/v3/range_fwd.hpp
+-
+range/v3/action/concepts.hpp
+-
+range/v3/algorithm/max.hpp
+-
+range/v3/iterator/common_iterator.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/remove_if.hpp
+utility
+-
+range/v3/range_fwd.hpp
+-
+range/v3/action/action.hpp
+-
+range/v3/action/erase.hpp
+-
+range/v3/algorithm/remove_if.hpp
+-
+range/v3/functional/bind_back.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/sort.hpp
+range/v3/range_fwd.hpp
+-
+range/v3/action/action.hpp
+-
+range/v3/algorithm/sort.hpp
+-
+range/v3/functional/bind_back.hpp
+-
+range/v3/functional/comparisons.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/transform.hpp
+range/v3/range_fwd.hpp
+-
+range/v3/action/action.hpp
+-
+range/v3/algorithm/transform.hpp
+-
+range/v3/functional/bind_back.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/action/unique.hpp
+range/v3/range_fwd.hpp
+-
+range/v3/action/action.hpp
+-
+range/v3/action/erase.hpp
+-
+range/v3/algorithm/unique.hpp
+-
+range/v3/functional/bind_back.hpp
+-
+range/v3/functional/comparisons.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/adjacent_find.hpp
+range/v3/range_fwd.hpp
+-
+range/v3/functional/comparisons.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/copy.hpp
 functional
 -
 utility
@@ -102,7 +312,35 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/algorithm/for_each.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/find_if.hpp
+utility
+-
+range/v3/range_fwd.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/for_each.hpp
 functional
 -
 range/v3/range_fwd.hpp
@@ -132,7 +370,41 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/algorithm/max.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/heap_algorithm.hpp
+functional
+-
+meta/meta.hpp
+-
+range/v3/range_fwd.hpp
+-
+range/v3/functional/comparisons.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/operations.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/max.hpp
 initializer_list
 -
 range/v3/range_fwd.hpp
@@ -160,7 +432,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/algorithm/min.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/min.hpp
 initializer_list
 -
 range/v3/range_fwd.hpp
@@ -188,7 +460,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/algorithm/move.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/move.hpp
 utility
 -
 range/v3/range_fwd.hpp
@@ -216,7 +488,99 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/algorithm/result_types.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/move_backward.hpp
+utility
+-
+range/v3/range_fwd.hpp
+-
+range/v3/algorithm/result_types.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/operations.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/partial_sort.hpp
+functional
+-
+range/v3/range_fwd.hpp
+-
+range/v3/algorithm/heap_algorithm.hpp
+-
+range/v3/functional/comparisons.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/remove_if.hpp
+meta/meta.hpp
+-
+range/v3/range_fwd.hpp
+-
+range/v3/algorithm/find_if.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/operations.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/result_types.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -226,7 +590,105 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/core.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/sort.hpp
+range/v3/range_fwd.hpp
+-
+range/v3/algorithm/heap_algorithm.hpp
+-
+range/v3/algorithm/move_backward.hpp
+-
+range/v3/algorithm/partial_sort.hpp
+-
+range/v3/functional/comparisons.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/operations.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/transform.hpp
+utility
+-
+meta/meta.hpp
+-
+range/v3/range_fwd.hpp
+-
+range/v3/algorithm/result_types.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/iterator/concepts.hpp
+-
+range/v3/iterator/traits.hpp
+-
+range/v3/iterator/unreachable_sentinel.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/algorithm/unique.hpp
+range/v3/range_fwd.hpp
+-
+range/v3/algorithm/adjacent_find.hpp
+-
+range/v3/functional/comparisons.hpp
+-
+range/v3/functional/identity.hpp
+-
+range/v3/functional/invoke.hpp
+-
+range/v3/iterator/operations.hpp
+-
+range/v3/range/access.hpp
+-
+range/v3/range/concepts.hpp
+-
+range/v3/range/dangling.hpp
+-
+range/v3/range/traits.hpp
+-
+range/v3/utility/static_const.hpp
+-
+range/v3/detail/disable_warnings.hpp
+-
+range/v3/detail/reenable_warnings.hpp
+-
+
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/core.hpp
 range/v3/iterator/common_iterator.hpp
 -
 range/v3/iterator/operations.hpp
@@ -258,7 +720,7 @@ range/v3/view/istream.hpp
 range/v3/view/subrange.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/detail/adl_get.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/detail/adl_get.hpp
 cstddef
 -
 concepts/concepts.hpp
@@ -270,7 +732,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/detail/config.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/detail/config.hpp
 iosfwd
 -
 version
@@ -288,11 +750,11 @@ meta/meta_fwd.hpp
 type_traits
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/detail/disable_warnings.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/detail/disable_warnings.hpp
 range/v3/detail/config.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/detail/range_access.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/detail/range_access.hpp
 cstddef
 -
 utility
@@ -310,9 +772,9 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/detail/reenable_warnings.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/detail/reenable_warnings.hpp
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/detail/satisfy_boost_range.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/detail/satisfy_boost_range.hpp
 meta/meta.hpp
 -
 range/v3/range_fwd.hpp
@@ -322,7 +784,7 @@ range/v3/range/concepts.hpp
 range/v3/range/traits.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/detail/variant.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/detail/variant.hpp
 iterator
 -
 memory
@@ -360,7 +822,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/arithmetic.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/arithmetic.hpp
 concepts/concepts.hpp
 -
 range/v3/detail/disable_warnings.hpp
@@ -368,7 +830,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/bind.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/bind.hpp
 functional
 -
 type_traits
@@ -386,7 +848,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/bind_back.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/bind_back.hpp
 tuple
 -
 meta/meta.hpp
@@ -402,7 +864,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/comparisons.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/comparisons.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -412,7 +874,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/compose.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/compose.hpp
 type_traits
 -
 utility
@@ -430,7 +892,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/concepts.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/concepts.hpp
 concepts/concepts.hpp
 -
 range/v3/functional/invoke.hpp
@@ -440,7 +902,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/identity.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/identity.hpp
 range/v3/detail/config.hpp
 -
 range/v3/detail/disable_warnings.hpp
@@ -448,7 +910,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/indirect.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/indirect.hpp
 utility
 -
 concepts/concepts.hpp
@@ -466,7 +928,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/invoke.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/invoke.hpp
 functional
 -
 type_traits
@@ -484,7 +946,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/pipeable.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/pipeable.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -500,7 +962,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/functional/reference_wrapper.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/functional/reference_wrapper.hpp
 type_traits
 -
 utility
@@ -520,7 +982,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/access.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/access.hpp
 iterator
 -
 type_traits
@@ -546,7 +1008,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/basic_iterator.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/basic_iterator.hpp
 type_traits
 -
 utility
@@ -578,7 +1040,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/common_iterator.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/common_iterator.hpp
 cstdint
 -
 iterator
@@ -604,7 +1066,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/concepts.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/concepts.hpp
 iterator
 -
 type_traits
@@ -634,7 +1096,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/counted_iterator.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/counted_iterator.hpp
 utility
 -
 meta/meta.hpp
@@ -654,7 +1116,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/default_sentinel.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/default_sentinel.hpp
 range/v3/detail/config.hpp
 -
 range/v3/utility/static_const.hpp
@@ -664,7 +1126,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/diffmax_t.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/diffmax_t.hpp
 cstdint
 -
 iosfwd
@@ -682,7 +1144,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/move_iterators.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/move_iterators.hpp
 cstddef
 -
 utility
@@ -700,7 +1162,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/operations.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/operations.hpp
 type_traits
 -
 utility
@@ -718,7 +1180,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/reverse_iterator.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/reverse_iterator.hpp
 utility
 -
 range/v3/range_fwd.hpp
@@ -732,7 +1194,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/traits.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/traits.hpp
 iterator
 -
 type_traits
@@ -752,7 +1214,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/iterator/unreachable_sentinel.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/iterator/unreachable_sentinel.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/iterator/concepts.hpp
@@ -762,7 +1224,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/numeric/accumulate.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/numeric/accumulate.hpp
 meta/meta.hpp
 -
 range/v3/functional/arithmetic.hpp
@@ -788,7 +1250,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range/access.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range/access.hpp
 functional
 -
 initializer_list
@@ -796,8 +1258,6 @@ initializer_list
 iterator
 -
 limits
--
-string_view
 -
 utility
 -
@@ -811,12 +1271,16 @@ range/v3/iterator/traits.hpp
 -
 range/v3/utility/static_const.hpp
 -
+span
+-
+string_view
+-
 range/v3/detail/disable_warnings.hpp
 -
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range/concepts.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range/concepts.hpp
 initializer_list
 -
 type_traits
@@ -841,16 +1305,16 @@ range/v3/range/primitives.hpp
 -
 range/v3/range/traits.hpp
 -
-set
+span
 -
-unordered_set
+string_view
 -
 range/v3/detail/disable_warnings.hpp
 -
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range/conversion.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range/conversion.hpp
 meta/meta.hpp
 -
 range/v3/range_fwd.hpp
@@ -874,12 +1338,14 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range/dangling.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range/dangling.hpp
 utility
 -
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
+-
+range/v3/range/access.hpp
 -
 range/v3/range/concepts.hpp
 -
@@ -890,7 +1356,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range/operations.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range/operations.hpp
 stdexcept
 -
 range/v3/range_fwd.hpp
@@ -910,7 +1376,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range/primitives.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range/primitives.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -928,7 +1394,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range/traits.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range/traits.hpp
 array
 -
 iterator
@@ -950,13 +1416,13 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range_for.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range_for.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/range/access.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/range_fwd.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/range_fwd.hpp
 type_traits
 -
 utility
@@ -976,7 +1442,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/addressof.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/addressof.hpp
 memory
 -
 type_traits
@@ -992,7 +1458,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/box.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/box.hpp
 cstdlib
 -
 type_traits
@@ -1012,7 +1478,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/common_tuple.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/common_tuple.hpp
 utility
 -
 meta/meta.hpp
@@ -1036,7 +1502,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/common_type.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/common_type.hpp
 utility
 -
 meta/meta.hpp
@@ -1052,7 +1518,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/compressed_pair.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/compressed_pair.hpp
 type_traits
 -
 utility
@@ -1072,7 +1538,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/copy.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/copy.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -1084,7 +1550,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/get.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/get.hpp
 meta/meta.hpp
 -
 concepts/concepts.hpp
@@ -1096,7 +1562,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/in_place.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/in_place.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/utility/static_const.hpp
@@ -1106,7 +1572,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/move.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/move.hpp
 type_traits
 -
 meta/meta.hpp
@@ -1120,7 +1586,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/optional.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/optional.hpp
 exception
 -
 initializer_list
@@ -1146,7 +1612,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/semiregular_box.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/semiregular_box.hpp
 type_traits
 -
 utility
@@ -1170,9 +1636,9 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/static_const.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/static_const.hpp
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/swap.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/swap.hpp
 concepts/swap.hpp
 -
 range/v3/range_fwd.hpp
@@ -1184,7 +1650,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/tuple_algorithm.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/tuple_algorithm.hpp
 initializer_list
 -
 tuple
@@ -1208,7 +1674,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/utility/variant.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/utility/variant.hpp
 range/v3/algorithm/copy.hpp
 -
 range/v3/algorithm/move.hpp
@@ -1230,9 +1696,9 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/version.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/version.hpp
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/adaptor.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/adaptor.hpp
 meta/meta.hpp
 -
 concepts/concepts.hpp
@@ -1260,7 +1726,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/all.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/all.hpp
 type_traits
 -
 meta/meta.hpp
@@ -1286,7 +1752,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/cartesian_product.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/cartesian_product.hpp
 cstdint
 -
 concepts/concepts.hpp
@@ -1322,7 +1788,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/chunk.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/chunk.hpp
 limits
 -
 utility
@@ -1366,7 +1832,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/common.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/common.hpp
 type_traits
 -
 range/v3/range_fwd.hpp
@@ -1398,7 +1864,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/concat.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/concat.hpp
 tuple
 -
 type_traits
@@ -1442,7 +1908,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/counted.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/counted.hpp
 utility
 -
 range/v3/range_fwd.hpp
@@ -1468,7 +1934,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/cycle.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/cycle.hpp
 type_traits
 -
 utility
@@ -1510,7 +1976,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/delimit.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/delimit.hpp
 meta/meta.hpp
 -
 range/v3/range_fwd.hpp
@@ -1540,7 +2006,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/empty.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/empty.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/view/interface.hpp
@@ -1552,7 +2018,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/enumerate.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/enumerate.hpp
 range/v3/core.hpp
 -
 range/v3/iterator/unreachable_sentinel.hpp
@@ -1568,7 +2034,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/facade.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/facade.hpp
 type_traits
 -
 utility
@@ -1592,7 +2058,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/for_each.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/for_each.hpp
 utility
 -
 meta/meta.hpp
@@ -1624,7 +2090,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/generate.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/generate.hpp
 type_traits
 -
 utility
@@ -1658,7 +2124,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/generate_n.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/generate_n.hpp
 type_traits
 -
 utility
@@ -1690,7 +2156,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/getlines.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/getlines.hpp
 istream
 -
 string
@@ -1708,7 +2174,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/indices.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/indices.hpp
 meta/meta.hpp
 -
 range/v3/range_fwd.hpp
@@ -1719,14 +2185,12 @@ range/v3/utility/static_const.hpp
 -
 range/v3/view/iota.hpp
 -
-range/v3/view/take_exactly.hpp
--
 range/v3/detail/disable_warnings.hpp
 -
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/interface.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/interface.hpp
 iosfwd
 -
 meta/meta.hpp
@@ -1743,8 +2207,6 @@ range/v3/range/access.hpp
 -
 range/v3/range/concepts.hpp
 -
-range/v3/range/conversion.hpp
--
 range/v3/range/primitives.hpp
 -
 range/v3/range/traits.hpp
@@ -1754,7 +2216,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/iota.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/iota.hpp
 climits
 -
 cstdint
@@ -1779,8 +2241,6 @@ range/v3/view/delimit.hpp
 -
 range/v3/view/facade.hpp
 -
-range/v3/view/take_exactly.hpp
--
 range/v3/detail/disable_warnings.hpp
 -
 range/v3/detail/satisfy_boost_range.hpp
@@ -1788,7 +2248,7 @@ range/v3/detail/satisfy_boost_range.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/istream.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/istream.hpp
 istream
 -
 range/v3/range_fwd.hpp
@@ -1806,7 +2266,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/join.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/join.hpp
 type_traits
 -
 utility
@@ -1846,7 +2306,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/map.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/map.hpp
 utility
 -
 meta/meta.hpp
@@ -1866,7 +2326,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/move.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/move.hpp
 type_traits
 -
 utility
@@ -1896,7 +2356,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/ref.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/ref.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -1911,8 +2371,6 @@ range/v3/utility/addressof.hpp
 -
 range/v3/view/interface.hpp
 -
-range/v3/view/view.hpp
--
 range/v3/detail/disable_warnings.hpp
 -
 range/v3/detail/satisfy_boost_range.hpp
@@ -1920,7 +2378,7 @@ range/v3/detail/satisfy_boost_range.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/remove_if.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/remove_if.hpp
 type_traits
 -
 utility
@@ -1960,7 +2418,7 @@ range/v3/detail/satisfy_boost_range.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/repeat_n.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/repeat_n.hpp
 utility
 -
 range/v3/range_fwd.hpp
@@ -1982,7 +2440,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/replace_if.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/replace_if.hpp
 type_traits
 -
 utility
@@ -2014,7 +2472,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/single.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/single.hpp
 type_traits
 -
 utility
@@ -2048,7 +2506,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/stride.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/stride.hpp
 type_traits
 -
 utility
@@ -2084,7 +2542,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/subrange.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/subrange.hpp
 tuple
 -
 type_traits
@@ -2114,7 +2572,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/take.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/take.hpp
 type_traits
 -
 range/v3/range_fwd.hpp
@@ -2144,45 +2602,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/take_exactly.hpp
-type_traits
--
-range/v3/range_fwd.hpp
--
-range/v3/functional/bind_back.hpp
--
-range/v3/iterator/counted_iterator.hpp
--
-range/v3/iterator/default_sentinel.hpp
--
-range/v3/iterator/operations.hpp
--
-range/v3/iterator/traits.hpp
--
-range/v3/range/concepts.hpp
--
-range/v3/range/traits.hpp
--
-range/v3/utility/static_const.hpp
--
-range/v3/view/all.hpp
--
-range/v3/view/counted.hpp
--
-range/v3/view/interface.hpp
--
-range/v3/view/subrange.hpp
--
-range/v3/view/view.hpp
--
-range/v3/detail/disable_warnings.hpp
--
-range/v3/detail/reenable_warnings.hpp
--
-range/v3/detail/satisfy_boost_range.hpp
--
-
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/transform.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/transform.hpp
 iterator
 -
 type_traits
@@ -2230,7 +2650,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/view.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/view.hpp
 type_traits
 -
 utility
@@ -2245,6 +2665,8 @@ range/v3/functional/concepts.hpp
 -
 range/v3/functional/pipeable.hpp
 -
+range/v3/functional/reference_wrapper.hpp
+-
 range/v3/range/concepts.hpp
 -
 range/v3/range/traits.hpp
@@ -2256,7 +2678,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/zip.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/zip.hpp
 tuple
 -
 utility
@@ -2284,7 +2706,7 @@ range/v3/detail/satisfy_boost_range.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/range/v3/view/zip_with.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/range/v3/view/zip_with.hpp
 limits
 -
 tuple
@@ -2332,7 +2754,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../ranges-lib/range-v3/range-v3-master/include/std/detail/associated_types.hpp
+../ranges-lib-update/range-v3/range-v3-master/include/std/detail/associated_types.hpp
 climits
 -
 cstdint
@@ -2937,6 +3359,8 @@ iterator
 -
 random
 -
+vector
+-
 fstream
 -
 sstream
@@ -2982,6 +3406,26 @@ range/v3/view/counted.hpp
 range/v3/view/move.hpp
 -
 range/v3/view/concat.hpp
+-
+range/v3/action/unique.hpp
+-
+range/v3/action/sort.hpp
+-
+range/v3/action/drop.hpp
+-
+range/v3/action/remove_if.hpp
+-
+range/v3/action/transform.hpp
+-
+range/v3/range/conversion.hpp
+-
+range/v3/algorithm/remove_if.hpp
+-
+range/v3/algorithm/for_each.hpp
+-
+range/v3/algorithm/min.hpp
+-
+range/v3/algorithm/max.hpp
 -
 tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h

@@ -59,17 +59,28 @@ public:
 
     static constexpr std::size_t indices_amount =  std::tuple_size<Args>::value;
 
+    template<typename ... Element, std::enable_if_t<(std::is_same_v<std::decay_t<Element>, T> && ...), bool> = true>
+    constexpr tensorBase_ranges(Element&&... input) : data{input...} {
+        static_assert(areT<T, Element...>::value , "VALUES INPUT TYPE DOESN'T MATCH TEMPLATE TYPE");
+    };
+
+    template<typename Ti>
+    constexpr tensorBase_ranges(std::vector<Ti> input) : data(input){
+            static_assert(areT<T, Ti>::value , "VECTOR TYPE DOESN'T MATCH TEMPLATE TYPE");
+    };
+
     /**
      * Constructor that initialized the data contrainer
      * @tparam Element type of the element
      * @param input values
      */
+     /*
     template<typename ... Element>
     constexpr tensorBase_ranges(Element&&... input) : data{input...} {
         static_assert(areT<T, Element...>::value , "VALUES INPUT TYPE DOESN'T MATCH TEMPLATE TYPE");
     };
 
-    constexpr tensorBase_ranges(std::vector<T> &vec){
+    constexpr tensorBase_ranges(std::vector<T>& vec){
         data = vec;
     };
 
@@ -82,7 +93,7 @@ public:
     constexpr tensorBase_ranges(tensorBase_ranges<Ti, Argsi> &oldObj){
         data = oldObj.data;
     };
-
+*/
     /**
      * calculates array of index tuples at runtime
      * @return array of tuples that contain indices
@@ -109,7 +120,7 @@ public:
         auto indices = this->calculate_indices() | ranges::to<std::vector>();
         return ranges::views::all(this->data)
             | ranges::views::enumerate
-            | ranges::views::transform([=](auto d){return std::make_tuple(indices[std::get<0>(d)], std::get<1>(d));});
+            | ranges::views::transform([=](auto pair){return std::make_tuple(indices[std::get<0>(pair)], std::get<1>(pair));});
     }
 
     /**

@@ -63,9 +63,14 @@ set(SOURCE_FILES main.cpp
         tensor-lib/math/math_utilities.h
         )
 
+#original
+#add_library(range_v3 INTERFACE IMPORTED)
+#set_target_properties(range_v3 PROPERTIES
+#        INTERFACE_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/ranges-lib/range-v3/range-v3-master/include)
+
 add_library(range_v3 INTERFACE IMPORTED)
 set_target_properties(range_v3 PROPERTIES
-        INTERFACE_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/ranges-lib/range-v3/range-v3-master/include)
+        INTERFACE_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/ranges-lib-update/range-v3/range-v3-master/include)
 
 
 add_library(ep_tensor_lib INTERFACE IMPORTED)

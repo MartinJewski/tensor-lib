@@ -55,15 +55,15 @@ constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBa
         //if both tensors have more than 1 index
     }else{
         //recreate the indices from the contracted index tuple
-        auto sris = result_tensor3.calculate_indices()
+        auto tensor_data = result_tensor3.calculate_indices()
                     | ranges::views::transform([tensor1, tensor2](auto tuple)
-                                               {return std::make_tuple(
-                                                       recreate_for_index_sequence
-                                                               <0, decltype(tensor1)::indices_amount - 1, skipPos1, decltype(tensor1)::indices_amount, dim_length_n>(tuple),
+                       {return std::make_tuple(
+                               recreate_for_index_sequence
+                                       <0, decltype(tensor1)::indices_amount - 1, skipPos1, decltype(tensor1)::indices_amount, dim_length_n>(tuple),
 
-                                                       recreate_for_index_sequence
-                                                               <decltype(tensor1)::indices_amount - 1, decltype(tensor2)::indices_amount - 1, skipPos2,
-                                                                       decltype(tensor2)::indices_amount, dim_length_n>(tuple));})
+                               recreate_for_index_sequence
+                                       <decltype(tensor1)::indices_amount - 1, decltype(tensor2)::indices_amount - 1, skipPos2,
+                                               decltype(tensor2)::indices_amount, dim_length_n>(tuple));})
                     | ranges::views::transform([tensor1, tensor2](auto tuple){return
                     //calculates the final value with the given indice tuples before the contraction
                     calculate_value_i<
@@ -73,7 +73,7 @@ constexpr auto contraction_ranges(tensorBase_ranges<T1, Args1> tensor1, tensorBa
                         (tensor1, tensor2, std::get<0>(tuple), std::get<1>(tuple), std::make_index_sequence<dim_length_n>{});})
                     | ranges::to<std::vector>();
 
-        result_tensor3.data = sris;
+        result_tensor3.data = tensor_data;
         return result_tensor3;
     }
 }

@@ -19,7 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   ".././tensor-lib/tensor-definition-ranges"
   "../tensor-lib/speed_test"
   "../tensor-lib/math"
-  "../ranges-lib/range-v3/range-v3-master/include"
+  "../ranges-lib-update/range-v3/range-v3-master/include"
   "/home/martin/CLionProjects/ET_Tensor_Library"
   )
 

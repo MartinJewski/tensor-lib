@@ -117,11 +117,8 @@ constexpr auto contraction(){
                                                                              "E.g contraction over two up_t indices is not possible!");
      */
 
-
     if constexpr ((T1.indices_amount == 1) && (T2.indices_amount == 1)){
         //1D contraction results in a value
-        using type = std::common_type_t<typename decltype(T1)::elem_type, typename decltype(T2)::elem_type>;
-
         auto value = contraction_ct_1D<T1, T2>(std::make_index_sequence<dim_length_n>{});
 
         return value;
