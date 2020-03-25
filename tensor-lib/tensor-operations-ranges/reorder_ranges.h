@@ -32,11 +32,10 @@ template<std::size_t ...positions, typename T1, typename Args1>
 constexpr auto reorder_ranges(tensorBase_ranges<T1, Args1> tensor){
 
     auto reordered = tensor.data_to_range_positionsND()
-            | ranges::views::transform([tensor](auto tuple){ return std::make_pair(std::get<0>(tuple), tensor.data[
-                    static_cast<typename decltype(tensor)::elem_type>(calculate_new<positions...>
-                            (pos_nd_to_1d_tuple<sizeof...(positions)>(std::get<0>(tuple)), std::get<0>(tuple)))]);
-            })
-            | ranges::views::values
+            | ranges::views::transform([tensor](auto tuple){
+                return tensor.data[static_cast<typename decltype(tensor)::elem_type>(
+                calculate_new<positions...>
+                (pos_nd_to_1d_tuple<sizeof...(positions)>(std::get<0>(tuple)), std::get<0>(tuple)))]; })
             | ranges::to<std::vector>();
 
     using reorder_indices = std::tuple<typename

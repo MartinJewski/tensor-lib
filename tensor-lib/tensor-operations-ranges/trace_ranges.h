@@ -41,7 +41,6 @@ constexpr auto checker(Val1 value1, Val2 value2){
         return true;
     }
 };
-
 /**
  *  Checks if all elements are equal
  * @tparam T tuple type

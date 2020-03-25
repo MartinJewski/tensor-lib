@@ -116,7 +116,7 @@
 
 
 int main() {
-
+/*
     //------------------------------C++17-------------------------------
     constexpr tensor<double, up_t, low_t> tensor1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
     tensor<double, up_t, low_t> tensor1_1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0);
@@ -200,7 +200,7 @@ int main() {
     auto st_forLoop_contracton_f = speed_test_forLoop_contraction<float>();
     auto st_double_forLoop_contracton_f = speed_test_double_forLoop_contraction<float>();
     auto st_triple_forLoop_contracton_f = speed_test_triple_forLoop_contraction<float>();
-
+*/
     //speed_test_run_2D<30>("/home/martin/Schreibtisch/output2D.txt");
     //speed_test_run_3D<30>("/home/martin/Schreibtisch/output3D.txt");
 
@@ -212,6 +212,9 @@ int main() {
     auto min_c = ranges::min(c); //7
     auto max_c = ranges::max(c); //99
 
+    tensorRange<double, up_t, up_t> tensorR(1.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 2.0, 1.0);
+    auto test_reorder_ranges = reorder_ranges<1,0>(tensorR);
+    std::cout << test_reorder_ranges << std::endl;
 
     return 0;
 }

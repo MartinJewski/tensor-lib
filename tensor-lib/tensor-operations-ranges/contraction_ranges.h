@@ -93,7 +93,9 @@ constexpr auto contraction_ranges(Scalar val, tensorBase_ranges<T1, ArgsT1> tens
     static_assert((tensorBase_ranges<T1, ArgsT1>::indices_amount >= 1), "1 OR MORE INDICES ARE NEEDED");
         if constexpr ((tensorBase_ranges<T1, ArgsT1>::indices_amount >= 1)) {
             auto copyTensor = tensor;
-            copyTensor.data = copyTensor.data | ranges::views::transform([=](auto i){return i * val;})| ranges::to<std::vector>();
+            copyTensor.data = copyTensor.data
+                    | ranges::views::transform([=](auto i){return i * val;})
+                    | ranges::to<std::vector>();
 
             return copyTensor;
         }
