@@ -20,6 +20,9 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-operations/trace.h
         tensor-lib/tensor-operations/contraction.h
         tensor-lib/tensor-operations/contraction_ct.h
+        tensor-lib/tensor-operations/trace_contraction_ct.h
+        tensor-lib/tensor-operations/trace_contraction.h
+
 
         tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h
         tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
@@ -41,6 +44,7 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-definition/tensor.h
         tensor-lib/tensor-definition/tensor_specification.h
 
+        tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
         tensor-lib/tensor-operations-ranges/trace_ranges.h
         tensor-lib/tensor-definition-ranges/tensor_range.h
 

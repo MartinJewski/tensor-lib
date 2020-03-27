@@ -3188,22 +3188,6 @@ reorder_ct.h
 tuple_type_list.h
 ../tensor-lib/tensor-operations/tuple_type_list.h
 
-../tensor-lib/tensor-operations/trace.h
-pos_nd_to_1d.h
-../tensor-lib/tensor-operations/pos_nd_to_1d.h
-tensor_specification.h
-../tensor-lib/tensor-operations/tensor_specification.h
-tuple_show.h
-../tensor-lib/tensor-operations/tuple_show.h
-
-../tensor-lib/tensor-operations/trace_ct.h
-pos_nd_to_1d.h
-../tensor-lib/tensor-operations/pos_nd_to_1d.h
-tensor_specification.h
-../tensor-lib/tensor-operations/tensor_specification.h
-tuple_show.h
-../tensor-lib/tensor-operations/tuple_show.h
-
 /home/martin/CLionProjects/ET_Tensor_Library/src/cactus_types.hh
 
 /home/martin/CLionProjects/ET_Tensor_Library/src/finite_differences.hh
@@ -3461,6 +3445,10 @@ tensor-lib/tensor-operations/contraction_ct.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction_ct.h
 tensor-lib/tensor-operations/trace_ct.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h
+tensor-lib/tensor-operations/trace_contraction_ct.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction_ct.h
+tensor-lib/tensor-operations/trace_contraction.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction.h
 tensor-lib/tensor-operations/reorder_ct.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h
 tensor-lib/tensor-operations/contraction.h
@@ -3763,6 +3751,28 @@ tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor_specification.h
 tuple_show.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_show.h
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction.h
+array
+-
+pos_nd_to_1d.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/pos_nd_to_1d.h
+tensor.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor.h
+trace_ct.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h
+trace.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction_ct.h
+array
+-
+pos_nd_to_1d.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/pos_nd_to_1d.h
+tensor.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tensor.h
+trace_ct.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h
 pos_nd_to_1d.h

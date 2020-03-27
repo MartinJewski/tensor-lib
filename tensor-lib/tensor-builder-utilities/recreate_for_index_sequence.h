@@ -45,4 +45,23 @@ constexpr auto recreate_for_index_sequence(T& tuple){
 
 
 
+
+template<std::size_t pos1, std::size_t pos2, std::size_t length, std::size_t ...times, typename T>
+constexpr auto recreate_for_index_sequence_i(T& tuple, std::index_sequence<times...>){
+
+    //tuple of tuples that hold the indices with the skip position being increased a given amount of "times".
+    return std::make_tuple((times, recreate_index_tuple<pos1, pos2, times, length>(tuple))...);
+}
+
+
+template<std::size_t pos1, std::size_t pos2, std::size_t length, std::size_t times, typename T>
+constexpr auto recreate_for_index_sequence(T& tuple){
+
+    static_assert((pos1 != pos2), "Pos1 and Pos2 must be different!");
+    return recreate_for_index_sequence_i<pos1, pos2, length>(tuple,std::make_index_sequence<times>{});
+
+}
+
+
+
 #endif //UNTITELED1_RECREATE_FOR_INDEX_SEQUENCE_H

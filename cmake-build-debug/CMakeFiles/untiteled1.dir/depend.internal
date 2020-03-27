@@ -158,8 +158,6 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../tensor-lib/tensor-operations/contraction.h
  ../tensor-lib/tensor-operations/contraction_ct.h
  ../tensor-lib/tensor-operations/reorder.h
- ../tensor-lib/tensor-operations/trace.h
- ../tensor-lib/tensor-operations/trace_ct.h
  /home/martin/CLionProjects/ET_Tensor_Library/src/cactus_types.hh
  /home/martin/CLionProjects/ET_Tensor_Library/src/finite_differences.hh
  /home/martin/CLionProjects/ET_Tensor_Library/src/metric.hh
@@ -211,4 +209,6 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction_ct.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h

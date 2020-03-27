@@ -71,4 +71,24 @@ constexpr auto save_recreated_index_sequence(Arr&& arr){
     return save_recreated_index_sequence_i<offset, N, skipPos, length, times>(arr, std::make_index_sequence<arr.size()>{});
 }
 
+
+
+template<std::size_t pos1, std::size_t pos2, std::size_t length, std::size_t times,
+        typename Arr, std::size_t ...is>
+constexpr auto save_recreated_index_sequence_i(Arr&& arr, std::index_sequence<is...>){
+
+    //fills an array at compile time with tuples
+    std::array<decltype(recreate_for_index_sequence
+            <pos1, pos2, length, times>(arr[0])), arr.size()>
+            hold{(is, recreate_for_index_sequence<pos1, pos2, length, times>(arr[is]))...};
+    return hold;
+}
+
+//für tensorverjungüng
+template<std::size_t pos1, std::size_t pos2, std::size_t length, std::size_t times, typename Arr>
+constexpr auto save_recreated_index_sequence(Arr&& arr){
+
+    return save_recreated_index_sequence_i<pos1, pos2, length, times>(arr, std::make_index_sequence<arr.size()>{});
+}
+
 #endif //UNTITELED1_SAVE_RECREATED_INDEX_SEQUENCE_H

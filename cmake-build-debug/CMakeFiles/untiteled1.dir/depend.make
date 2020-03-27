@@ -157,8 +157,6 @@ CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/reo
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction_ct.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/reorder.h
-CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace.h
-CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace_ct.h
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/ET_Tensor_Library/src/cactus_types.hh
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/ET_Tensor_Library/src/finite_differences.hh
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/ET_Tensor_Library/src/metric.hh
@@ -210,5 +208,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contractio
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/reorder.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/reorder_ct.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace_contraction.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace_contraction_ct.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace_ct.h
 

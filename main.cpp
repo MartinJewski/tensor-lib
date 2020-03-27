@@ -67,6 +67,8 @@
 
 #include "tensor-lib/tensor-operations/contraction_ct.h"
 #include "tensor-lib/tensor-operations/trace_ct.h"
+#include "tensor-lib/tensor-operations/trace_contraction_ct.h"
+#include "tensor-lib/tensor-operations/trace_contraction.h"
 #include "tensor-lib/tensor-operations/reorder_ct.h"
 #include "tensor-lib/tensor-operations/contraction.h"
 #include "tensor-lib/tensor-operations/trace.h"
@@ -113,7 +115,6 @@
 #include "speed_test_runtime_trace.h"
 
 #include "speed_test_run.h"
-
 
 int main() {
 /*
@@ -209,12 +210,20 @@ int main() {
     //auto a = f_mycontainer | ranges::actions::unique | ranges::actions::sort | ranges::actions::drop(5); //**
     auto b = ranges::actions::unique(ranges::actions::sort(ff_mycontainer)); //{1,5,6,7,8,9,99}
     auto c = ranges::to<std::vector>(ranges::actions::drop(b, 3)); // {7,8,9,99}
-    auto min_c = ranges::min(c); //7
-    auto max_c = ranges::max(c); //99
 
-    tensorRange<double, up_t, up_t> tensorR(1.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 2.0, 1.0);
-    auto test_reorder_ranges = reorder_ranges<1,0>(tensorR);
-    std::cout << test_reorder_ranges << std::endl;
+    constexpr tensor<double, up_t, up_t, low_t> tensoro(1.0, 2.0, 0.0,
+            0.0, 1.0, 0.0,
+            0.0, 2.0, 1.0,
+
+            1.0, 2.0, 0.0,
+            0.0, 1.0, 0.0,
+            0.0, 2.0, 1.0,
+                                                        1.0, 2.0, 0.0,
+                                                        0.0, 1.0, 0.0,
+                                                        0.0, 2.0, 1.0);
+    constexpr auto e6 = trace_contraction_ct<tensoro, 0, 1>();
+    auto e7 = trace_contraction<0, 1>(tensoro);
+
 
     return 0;
 }

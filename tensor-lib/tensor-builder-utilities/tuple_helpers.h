@@ -41,7 +41,6 @@ struct remove_ith_element<Count, std::tuple<Head, Tail...>>{
                         std::declval<typename remove_ith_element<Count-1, std::tuple<Tail...>>::type>()
                         )
             ) type;
-
 };
 //-----------------------------------------------------------------------------------------------------
 
@@ -63,6 +62,20 @@ struct remove_ith_concat_tuple<pos1, pos2 ,std::tuple<T1...>, std::tuple<T2...>>
     typedef decltype(
             std::tuple_cat(rem_t1(), rem_t2())
             ) type;
+};
+
+
+
+template<std::size_t pos1, std::size_t pos2, typename>
+struct remove_ith_jth_concat_tuple{};
+
+template<std::size_t pos1, std::size_t pos2, typename... T1>
+struct remove_ith_jth_concat_tuple<pos1, pos2 ,std::tuple<T1...>>{
+    static_assert((pos1 <= pos2), "pos1 must be smaller than pos2!");
+    using rem_t1 = typename remove_ith_element<pos1, std::tuple<T1...>>::type;
+    using rem_t2 = typename remove_ith_element<pos2-1, rem_t1>::type;
+
+    typedef rem_t2 type;
 };
 
 //------------------------------------------------------------------------------------------------------

@@ -81,7 +81,6 @@ constexpr auto calculate_value_ct(SRIST1 sris1, SRIST2 sris2, std::index_sequenc
             arr{calculate_value_i_ct<indices1, indices2, F, T1, T2>(sris1[is], sris2[is], std::make_index_sequence<dim_length_n>{})...};
 
     return arr;
-
 }
 
 /**
