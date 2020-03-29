@@ -3463,6 +3463,8 @@ tensor-lib/tensor-operations-ranges/reorder_ranges.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/reorder_ranges.h
 tensor-lib/tensor-operations-ranges/contraction_ranges.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/contraction_ranges.h
+tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
 tensor_range.h
 /home/martin/CLionProjects/tensor-library-v1/tensor_range.h
 tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
@@ -3658,6 +3660,18 @@ pos_nd_to_1d.h
 tensor_range.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/tensor_range.h
 utility
+-
+
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
+tensor.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/tensor.h
+trace_ranges.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_ranges.h
+recreate_for_index_sequence.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/recreate_for_index_sequence.h
+tuple
+-
+range/v3/view/transform.hpp
 -
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_ranges.h

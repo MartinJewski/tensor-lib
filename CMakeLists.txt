@@ -44,9 +44,9 @@ set(SOURCE_FILES main.cpp
         tensor-lib/tensor-definition/tensor.h
         tensor-lib/tensor-definition/tensor_specification.h
 
-        tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
         tensor-lib/tensor-operations-ranges/trace_ranges.h
         tensor-lib/tensor-definition-ranges/tensor_range.h
+        tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
 
         tensor-lib/tensor-concepts/tensor-concepts.h
 

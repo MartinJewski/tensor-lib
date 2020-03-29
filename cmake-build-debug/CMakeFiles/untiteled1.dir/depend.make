@@ -202,6 +202,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-definition/tensor.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-definition/tensor_specification.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/contraction_ranges.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/reorder_ranges.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/trace_ranges.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction_ct.h

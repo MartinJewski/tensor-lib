@@ -203,6 +203,7 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/contraction_ranges.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/reorder_ranges.h
+ /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_ranges.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
  /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction_ct.h

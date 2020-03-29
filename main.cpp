@@ -78,6 +78,7 @@
 #include "tensor-lib/tensor-operations-ranges/trace_ranges.h"
 #include "tensor-lib/tensor-operations-ranges/reorder_ranges.h"
 #include "tensor-lib/tensor-operations-ranges/contraction_ranges.h"
+#include "tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h"
 
 #include "tensor_range.h"
 
@@ -221,8 +222,21 @@ int main() {
                                                         1.0, 2.0, 0.0,
                                                         0.0, 1.0, 0.0,
                                                         0.0, 2.0, 1.0);
+
+    tensorRange<double, up_t, up_t, low_t> tensoro_range(1.0, 2.0, 0.0,
+                                                        0.0, 1.0, 0.0,
+                                                        0.0, 2.0, 1.0,
+
+                                                        1.0, 2.0, 0.0,
+                                                        0.0, 1.0, 0.0,
+                                                        0.0, 2.0, 1.0,
+                                                        1.0, 2.0, 0.0,
+                                                        0.0, 1.0, 0.0,
+                                                        0.0, 2.0, 1.0);
     constexpr auto e6 = trace_contraction_ct<tensoro, 0, 1>();
     auto e7 = trace_contraction<0, 1>(tensoro);
+
+    auto e8 = trace_contraction_ranges<0,1>(tensoro_range);
 
 
     return 0;
