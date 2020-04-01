@@ -2799,8 +2799,10 @@ stdlib.h
 ../tensor-lib/speed_test/speed_test_compileTime_trace.h
 speed_test_tensors.h
 ../tensor-lib/speed_test/speed_test_tensors.h
-trace_ct.h
-../tensor-lib/speed_test/trace_ct.h
+trace_contraction_ct.h
+../tensor-lib/speed_test/trace_contraction_ct.h
+tensor.h
+../tensor-lib/speed_test/tensor.h
 chrono
 -
 tuple
@@ -2907,8 +2909,8 @@ time.h
 ../tensor-lib/speed_test/speed_test_ranges_trace.h
 speed_test_tensors.h
 ../tensor-lib/speed_test/speed_test_tensors.h
-reorder.h
-../tensor-lib/speed_test/reorder.h
+trace_contraction_ranges.h
+../tensor-lib/speed_test/trace_contraction_ranges.h
 chrono
 -
 tuple
@@ -2989,10 +2991,8 @@ stdlib.h
 ../tensor-lib/speed_test/speed_test_runtime_trace.h
 speed_test_tensors.h
 ../tensor-lib/speed_test/speed_test_tensors.h
-trace.h
-../tensor-lib/speed_test/trace.h
-trace_ct.h
-../tensor-lib/speed_test/trace_ct.h
+trace_contraction.h
+../tensor-lib/speed_test/trace_contraction.h
 chrono
 -
 tuple
@@ -3144,6 +3144,18 @@ tensor_range.h
 utility
 -
 
+../tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
+tensor.h
+../tensor-lib/tensor-operations-ranges/tensor.h
+trace_ranges.h
+../tensor-lib/tensor-operations-ranges/trace_ranges.h
+recreate_for_index_sequence.h
+../tensor-lib/tensor-operations-ranges/recreate_for_index_sequence.h
+tuple
+-
+range/v3/view/transform.hpp
+-
+
 ../tensor-lib/tensor-operations/contraction.h
 tuple_show.h
 ../tensor-lib/tensor-operations/tuple_show.h
@@ -3187,6 +3199,28 @@ reorder_ct.h
 ../tensor-lib/tensor-operations/reorder_ct.h
 tuple_type_list.h
 ../tensor-lib/tensor-operations/tuple_type_list.h
+
+../tensor-lib/tensor-operations/trace_contraction.h
+array
+-
+pos_nd_to_1d.h
+../tensor-lib/tensor-operations/pos_nd_to_1d.h
+tensor.h
+../tensor-lib/tensor-operations/tensor.h
+trace_ct.h
+../tensor-lib/tensor-operations/trace_ct.h
+trace.h
+../tensor-lib/tensor-operations/trace.h
+
+../tensor-lib/tensor-operations/trace_contraction_ct.h
+array
+-
+pos_nd_to_1d.h
+../tensor-lib/tensor-operations/pos_nd_to_1d.h
+tensor.h
+../tensor-lib/tensor-operations/tensor.h
+trace_ct.h
+../tensor-lib/tensor-operations/trace_ct.h
 
 /home/martin/CLionProjects/ET_Tensor_Library/src/cactus_types.hh
 

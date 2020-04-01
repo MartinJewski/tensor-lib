@@ -154,9 +154,12 @@ CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-definition/tensor.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-definition/tensor_specification.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/contraction_ranges.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/reorder_ranges.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/contraction_ct.h
 CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/reorder.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace_contraction.h
+CMakeFiles/untiteled1.dir/main.cpp.o: ../tensor-lib/tensor-operations/trace_contraction_ct.h
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/ET_Tensor_Library/src/cactus_types.hh
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/ET_Tensor_Library/src/finite_differences.hh
 CMakeFiles/untiteled1.dir/main.cpp.o: /home/martin/CLionProjects/ET_Tensor_Library/src/metric.hh

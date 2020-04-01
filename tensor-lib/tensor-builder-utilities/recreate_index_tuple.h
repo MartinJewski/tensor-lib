@@ -57,20 +57,16 @@ constexpr auto recreate_index_tuple(T& tuple){
 
 // for two indices
 template<std::size_t pos1, std::size_t pos2, std::size_t Number, typename T, std::size_t ... is>
-constexpr auto recreate_double_index_tuple_i(T& tuple, std::index_sequence<is...>){
+constexpr auto recreate_double_index_tuple_i(T& tuple_pos, std::index_sequence<is...>){
 
     static_assert((pos1 != pos2), "Pos1 and Pos2 must be different!");
-    auto working_tuple = tuple;
 
     auto tup = std::make_tuple((is,
-
-            [working_tuple](auto&& elem){ if constexpr ((is == pos1) || (is == pos2)) { return Number; }
-                if constexpr ((is < pos1) && (is < pos2) ) { return std::get<is>(working_tuple);}
-                if constexpr ((is > pos1) && (is > pos2) ) { return std::get<is-2>(working_tuple);}
-                if constexpr ((is > pos1) && (is < pos2) ) { return std::get<is-1>(working_tuple);}
-    }(is))
-
-                                   ...);
+            [tuple_pos](auto&& elem){ if constexpr ((is == pos1) || (is == pos2)) { return Number; }
+                if constexpr ((is < pos1) && (is < pos2) ) { return std::get<is>(tuple_pos);}
+                if constexpr ((is > pos1) && (is > pos2) ) { return std::get<is-2>(tuple_pos);}
+                if constexpr ((is > pos1) && (is < pos2) ) { return std::get<is-1>(tuple_pos);}
+    }(is)) ...);
     return tup;
 }
 

@@ -6,8 +6,7 @@
 #define UNTITELED1_SPEED_TEST_RUNTIME_TRACE_H
 
 #include "speed_test_tensors.h"
-#include "trace.h"
-#include "trace_ct.h"
+#include "trace_contraction.h"
 
 #include <chrono>
 #include <tuple>
@@ -31,7 +30,7 @@ auto speed_test_runtime_trace(){
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = trace(tensor_generator.pick_random_tensor_2D());
+        auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_2D());
         //firstTest.push_back(result);
 
     }
@@ -66,7 +65,7 @@ auto speed_test_runtime_trace3D(){
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = trace(tensor_generator.pick_random_tensor_3D());
+        auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_3D());
         //firstTest.push_back(result);
 
     }

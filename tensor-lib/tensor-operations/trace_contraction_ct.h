@@ -42,9 +42,15 @@ constexpr auto calculate_value_trace_ct(SRIST1 sris1, std::index_sequence<is...>
 }
 
 
-template<tensorBase T1, std::size_t pos1, std::size_t pos2, std::size_t ...is>
-constexpr auto trace_contraction_i_ct(std::index_sequence<is...>){
+template<tensorBase T1, std::size_t pos1, std::size_t pos2>
+constexpr auto trace_contraction_i_ct(){
 
+    /*
+    using skip_type_t1 = tuple_type_list<typename decltype(T1)::tuple_indices>::template type<t1_skipPos>;
+    using skip_type_t2 = tuple_type_list<typename decltype(T2)::tuple_indices>::template type<t2_skipPos>;
+    static_assert((std::is_same<skip_type_t1, skip_type_t2>::value == false), "Cannot contract over the same index level."
+                                                                             "E.g contraction over two up_t indices is not possible!");
+     */
     static_assert((T1.indices_amount > 1), "You need at least 2 indices!");
     if constexpr (T1.indices_amount == 2){
         return trace<T1>();
@@ -52,6 +58,7 @@ constexpr auto trace_contraction_i_ct(std::index_sequence<is...>){
         using contracted_types = remove_ith_jth_concat_tuple<pos1, pos2, typename decltype(T1)::tuple_indices>::type;
 
         constexpr tensor<typename decltype(T1)::elem_type, contracted_types> tensor3;
+
         auto sris_tensor1 = save_recreated_index_sequence<pos1, pos2, T1.indices_amount, dim_length_n>
                 (tensor3.static_calculate_indices());
 
@@ -69,9 +76,9 @@ constexpr auto trace_contraction_i_ct(std::index_sequence<is...>){
 }
 
 template<tensorBase T1, std::size_t pos1, std::size_t pos2>
-constexpr auto trace_contraction_ct(){
+constexpr auto trace_contraction(){
 
-    return trace_contraction_i_ct<T1, pos1, pos2>(std::make_index_sequence<T1.indices_amount>{});
+    return trace_contraction_i_ct<T1, pos1, pos2>();
 
 }
 

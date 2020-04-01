@@ -155,9 +155,12 @@ CMakeFiles/untiteled1.dir/main.cpp.o
  ../tensor-lib/tensor-definition/tensor_specification.h
  ../tensor-lib/tensor-operations-ranges/contraction_ranges.h
  ../tensor-lib/tensor-operations-ranges/reorder_ranges.h
+ ../tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h
  ../tensor-lib/tensor-operations/contraction.h
  ../tensor-lib/tensor-operations/contraction_ct.h
  ../tensor-lib/tensor-operations/reorder.h
+ ../tensor-lib/tensor-operations/trace_contraction.h
+ ../tensor-lib/tensor-operations/trace_contraction_ct.h
  /home/martin/CLionProjects/ET_Tensor_Library/src/cactus_types.hh
  /home/martin/CLionProjects/ET_Tensor_Library/src/finite_differences.hh
  /home/martin/CLionProjects/ET_Tensor_Library/src/metric.hh

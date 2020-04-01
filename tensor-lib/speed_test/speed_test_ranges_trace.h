@@ -6,7 +6,7 @@
 #define UNTITELED1_SPEED_TEST_RANGES_TRACE_H
 
 #include "speed_test_tensors.h"
-#include "reorder.h"
+#include "trace_contraction_ranges.h"
 
 #include <chrono>
 #include <tuple>
@@ -30,7 +30,7 @@ auto speed_test_ranges_trace(){
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = trace_ranges(tensor_generator_ranges.pick_random_tensor_2D());
+        auto result = trace_contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_2D());
 
         //firstTest.push_back(result);
     }
@@ -60,7 +60,7 @@ auto speed_test_ranges_trace3D(){
 
     random_tensor_generator_ranges<T, 10> tensor_generator_ranges(0, 10);
 
-    std::vector<int> firstTest;
+    std::vector<tensorBase_ranges<int, std::tuple<up_t>> > firstTest;
 
     srand(time(0));
 
@@ -69,12 +69,10 @@ auto speed_test_ranges_trace3D(){
     auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = trace_ranges(tensor_generator_ranges.pick_random_tensor_3D());
-
+        auto result = trace_contraction_ranges<0,1>(tensor_generator_ranges.pick_random_tensor_3D());
         //firstTest.push_back(result);
     }
     auto t2 = std::chrono::high_resolution_clock::now();
-
 
     auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 

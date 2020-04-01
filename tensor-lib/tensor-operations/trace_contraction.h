@@ -49,7 +49,7 @@ constexpr auto trace_contraction_i(tensorBase<T, Args> T1, std::index_sequence<i
 
     static_assert((T1.indices_amount > 1), "You need at least 2 indices!");
     if constexpr (T1.indices_amount == 2){
-        return trace<T1>();
+        return trace(T1);
     }else {
         using contracted_types = remove_ith_jth_concat_tuple<pos1, pos2, typename decltype(T1)::tuple_indices>::type;
 
