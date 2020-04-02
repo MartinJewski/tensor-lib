@@ -27,21 +27,27 @@ auto speed_test_forLoop_reorder(){
     std::vector<tensor<T, up_t, up_t>> secondTest;
 
     srand(time(0));
+    auto times = 0;
 
-    auto t3 = std::chrono::high_resolution_clock::now();
+    //auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){
-        auto result = fl_reorder.for_loop_reordering_2D(tensor_generator.pick_random_tensor_2D());
+        auto t3 = std::chrono::high_resolution_clock::now();
+        volatile auto result = fl_reorder.for_loop_reordering_2D(tensor_generator.pick_random_tensor_2D());
+        auto t4 = std::chrono::high_resolution_clock::now();
+        auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
+        times += duration2;
         //secondTest.push_back(result);
     }
-    auto t4 = std::chrono::high_resolution_clock::now();
+    //auto t4 = std::chrono::high_resolution_clock::now();
 
-    auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
-    count2 = duration2 / reps;
+    //auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
+    //count2 = duration2 / reps;
 
     //std::cout << "REORDER_FOR_LOOP(nano sec) :" << count2 << std::endl;
     //std::cout << std::endl;
 
-    return count2;
+    //return count2;
+    return times/reps;
 }
 
 
@@ -60,20 +66,27 @@ auto speed_test_forLoop_reorder3D(){
 
     srand(time(0));
 
-    auto t3 = std::chrono::high_resolution_clock::now();
-    for(int i = 0; i < reps; i++){
-        auto result = fl_reorder.for_loop_reordering_3D(tensor_generator.pick_random_tensor_3D());
-        //secondTest.push_back(result);
-    }
-    auto t4 = std::chrono::high_resolution_clock::now();
+    auto times = 0;
 
-    auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
-    count2 = duration2 / reps;
+    //auto t3 = std::chrono::high_resolution_clock::now();
+    for(int i = 0; i < reps; i++){
+        auto t3 = std::chrono::high_resolution_clock::now();
+        volatile auto result = fl_reorder.for_loop_reordering_3D(tensor_generator.pick_random_tensor_3D());
+        //secondTest.push_back(result);
+        auto t4 = std::chrono::high_resolution_clock::now();
+        auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
+        times += duration2;
+    }
+    //auto t4 = std::chrono::high_resolution_clock::now();
+
+    //auto duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>( t4 - t3 ).count();
+    //count2 = duration2 / reps;
 
    // std::cout << "REORDER_FOR_LOOP(nano sec) :" << count2 << std::endl;
    // std::cout << std::endl;
 
-    return count2;
+    //return count2;
+    return times/reps;
 }
 
 
