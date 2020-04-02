@@ -24,26 +24,33 @@ auto speed_test_runtime_trace(){
 
     std::vector<int> firstTest;
 
+    auto times = 0;
+
     srand(time(0));
 
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_2D());
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_2D());
+        auto t2 = std::chrono::high_resolution_clock::now();
         //firstTest.push_back(result);
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
+        times += duration1;
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
     //std::cout << "TRACE_ALGO(nano sec) :" << count1 << std::endl;
     //std::cout << std::endl;
 
-    return count1;
+    //return count1;
+    return (times/reps);
 }
 
 
@@ -59,26 +66,34 @@ auto speed_test_runtime_trace3D(){
 
     std::vector<int> firstTest;
 
+    auto times = 0;
+
     srand(time(0));
 
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_3D());
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_3D());
         //firstTest.push_back(result);
+        auto t2 = std::chrono::high_resolution_clock::now();
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+
+        times += duration1;
 
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
     //std::cout << "TRACE_ALGO(nano sec) :" << count1 << std::endl;
     //std::cout << std::endl;
 
-    return count1;
+    //return count1;
+    return (times/reps);
 }
 
 #endif //UNTITELED1_SPEED_TEST_RUNTIME_TRACE_H

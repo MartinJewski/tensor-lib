@@ -30,20 +30,25 @@ auto speed_test_runtime_contraction(){
 
     std::vector<tensor<T, up_t, up_t>> firstTest;
 
+    std::vector<int> times{0};
     srand(time(0));
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D());
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D());
+        auto t2 = std::chrono::high_resolution_clock::now();
 
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+        times[0] += duration1;
 
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
 
     //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
@@ -51,7 +56,8 @@ auto speed_test_runtime_contraction(){
 
     //std::cout << std::endl;
 
-    return count1;
+    //return count1;
+    return (times[0]/reps);
 }
 
 
@@ -68,22 +74,28 @@ auto speed_test_runtime_double_contraction(){
 
     std::vector<tensor<T, up_t, up_t>> firstTest;
 
+    std::vector<int> times{0};
+
     srand(time(0));
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
                 contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D()));
+        auto t2 = std::chrono::high_resolution_clock::now();
         //firstTest.push_back(result);
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
+        times[0] += duration1;
 
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
 
     //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
@@ -91,7 +103,8 @@ auto speed_test_runtime_double_contraction(){
 
     //std::cout << std::endl;
 
-    return count1;
+    //return count1;
+    return (times[0]/reps);
 }
 
 
@@ -107,29 +120,38 @@ auto speed_test_runtime_triple_contraction(){
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     std::vector<tensor<T, up_t, up_t>> firstTest;
 
+    std::vector<int> times{0};
+
     srand(time(0));
 
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
                 contraction<0,1>(tensor_generator.pick_random_tensor_2D(),
                                        contraction<0,1>(tensor_generator.pick_random_tensor_2D(), tensor_generator.pick_random_tensor_2D())));
         //firstTest.push_back(result);
+        auto t2 = std::chrono::high_resolution_clock::now();
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+
+        times[0] += duration1;
+
 
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
     //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
     //std::cout << std::endl;
 
-    return count1;
+    //return count1;
+    return (times[0]/reps);
 }
 
 /**
@@ -151,20 +173,26 @@ auto speed_test_runtime_contraction3D(){
 
     std::vector<tensor<T, up_t, up_t, up_t, up_t>> firstTest;
 
+    std::vector<int> times{0};
+
     srand(time(0));
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = contraction<0,1>(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D());
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = contraction<0,1>(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D());
         //firstTest.push_back(result);
+        auto t2 = std::chrono::high_resolution_clock::now();
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
+        times[0] += duration1;
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
 
     //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
@@ -172,7 +200,8 @@ auto speed_test_runtime_contraction3D(){
 
     //std::cout << std::endl;
 
-    return count1;
+    //return count1;
+    return (times[0]/reps);
 }
 
 
@@ -189,23 +218,27 @@ auto speed_test_runtime_double_contraction3D(){
 
     std::vector<tensor<T, up_t, up_t, up_t, up_t, up_t>> firstTest;
 
+    std::vector<int> times{0};
     srand(time(0));
 
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = contraction<1,0>(tensor_generator.pick_random_tensor_3D(),
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = contraction<1,0>(tensor_generator.pick_random_tensor_3D(),
                                        contraction<0,1>(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D()));
-
+        auto t2 = std::chrono::high_resolution_clock::now();
         //firstTest.push_back(result);
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+        times[0] += duration1;
 
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
 
     //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
@@ -213,7 +246,8 @@ auto speed_test_runtime_double_contraction3D(){
 
     //std::cout << std::endl;
 
-    return count1;
+    //return count1;
+    return (times[0]/reps);
 }
 
 
@@ -229,28 +263,35 @@ auto speed_test_runtime_triple_contraction3D(){
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     std::vector<tensor<T, up_t, up_t, up_t, up_t, up_t, up_t>> firstTest;
 
+    std::vector<int> times{0};
+
     srand(time(0));
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
-        auto result = contraction<0,1>(tensor_generator.pick_random_tensor_3D(),
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = contraction<0,1>(tensor_generator.pick_random_tensor_3D(),
                                        contraction<0,1>(tensor_generator.pick_random_tensor_3D(),
                                                         contraction<0,1>(tensor_generator.pick_random_tensor_3D(), tensor_generator.pick_random_tensor_3D())));
         //firstTest.push_back(result);
+        auto t2 = std::chrono::high_resolution_clock::now();
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+        times[0] += duration1;
 
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
     //std::cout << "CONTRACTION_ALGO(nano sec) :" << count1 << std::endl;
 
     //std::cout << std::endl;
 
-    return count1;
+    //return count1;
+    return times[0];
 }
 
 

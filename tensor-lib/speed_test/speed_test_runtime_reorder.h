@@ -30,23 +30,30 @@ auto speed_test_runtime_reorder(){
 
     srand(time(0));
 
+    auto times = 0;
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
-        auto result = reorder<1,0>(tensor_generator.pick_random_tensor_2D());
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = reorder<1,0>(tensor_generator.pick_random_tensor_2D());
+        auto t2 = std::chrono::high_resolution_clock::now();
         //firstTest.push_back(result);
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+        times += duration1;
 
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
     //std::cout << "REORDER_ALGO(nano sec) :" << count1 << std::endl;
     //std::cout  << std::endl;
 
-    return count1;
+    //return count1;
+    return (times/reps);
 }
 
 
@@ -61,26 +68,33 @@ auto speed_test_runtime_reorder3D(){
     constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
-
     srand(time(0));
 
+    auto times = 0;
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+
+    //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
-        auto result = reorder<2,1,0>(tensor_generator.pick_random_tensor_3D());
+
+        auto t1 = std::chrono::high_resolution_clock::now();
+        volatile auto result = reorder<2,1,0>(tensor_generator.pick_random_tensor_3D());
+        auto t2 = std::chrono::high_resolution_clock::now();
+        auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
         //firstTest.push_back(result);
+        times += duration1;
 
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
+    //auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    //auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
-    count1 = duration1 / reps;
+    //count1 = duration1 / reps;
 
     //std::cout << "REORDER_ALGO(nano sec) :" << count1 << std::endl;
     //std::cout  << std::endl;
 
-    return count1;
+    //return count1;
+    return (times/reps);
 }
 
 #endif //UNTITELED1_COMPONENT_TEST_RUNTIME_REORDER_H
