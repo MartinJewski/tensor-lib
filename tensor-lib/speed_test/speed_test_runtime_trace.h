@@ -20,11 +20,11 @@ auto speed_test_runtime_trace(){
     int count1 = 0;
     int reps = REP;
 
-    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
+     random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::vector<int> firstTest;
 
-    auto times = 0;
+    std::size_t times = 0;
 
     srand(time(0));
 
@@ -33,11 +33,11 @@ auto speed_test_runtime_trace(){
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_2D());
+        auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_2D());
         auto t2 = std::chrono::high_resolution_clock::now();
         //firstTest.push_back(result);
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
-
+        firstTest.push_back(result);
         times += duration1;
     }
     //auto t2 = std::chrono::high_resolution_clock::now();
@@ -62,24 +62,23 @@ auto speed_test_runtime_trace3D(){
     int count1 = 0;
     int reps = REP;
 
-    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
+    random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
-    std::vector<int> firstTest;
+    std::vector<tensorBase<int, std::tuple<up_t>>> firstTest;
 
-    auto times = 0;
+    std::size_t times = 0;
 
     srand(time(0));
-
 
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_3D());
+        auto result = trace_contraction<0,1>(tensor_generator.pick_random_tensor_3D());
         //firstTest.push_back(result);
         auto t2 = std::chrono::high_resolution_clock::now();
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
-
+        firstTest.push_back(result);
         times += duration1;
 
     }

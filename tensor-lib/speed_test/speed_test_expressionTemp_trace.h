@@ -40,10 +40,10 @@ auto speed_test_expressionTemp_trace2D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
     for(int val = 0; val < reps; val++){
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result =  trace<0,1>(et_tensors2D[random() % 10]);
+         auto result =  trace<0,1>(et_tensors2D[random() % 10]);
 
         auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -79,12 +79,12 @@ auto speed_test_expressionTemp_trace3D(){
     }
 
     srand(time(0));
-    auto times = 0;
+    std::size_t times = 0;
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = trace<0,1>(et_tensors3D[random() % 10]);
+         auto result = trace<0,1>(et_tensors3D[random() % 10]);
         auto t2 = std::chrono::high_resolution_clock::now();
 
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
@@ -124,12 +124,12 @@ auto speed_test_expressionTemp_LUP_trace2D(){
     }
 
     srand(time(0));
-    auto times = 0;
+    std::size_t times = 0;
 
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result =  trace<0,1>(et_tensors2D[random() % 10]);
+         auto result =  trace<0,1>(et_tensors2D[random() % 10]);
 
         auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -164,15 +164,15 @@ auto speed_test_expressionTemp_LUP_trace3D(){
     }
 
     srand(time(0));
-    auto times = 0;
+    std::size_t times = 0;
 
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = trace<0,1>(et_tensors3D[random() % 10]);
+         auto result = trace<0,1>(et_tensors3D[random() % 10]);
 
-        volatile tensor3_t<T, lower_t> temp(result);
+         tensor3_t<T, lower_t> temp(result);
         for(int i = 0; i < temp.m_data.size(); i++){
             temp[i];
         }

@@ -23,23 +23,24 @@ auto speed_test_runtime_reorder(){
     int count1 = 0;
     int reps = REP;
 
-    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
+    random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
 
     std::vector<tensor<T, up_t, up_t>> firstTest;
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
 
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = reorder<1,0>(tensor_generator.pick_random_tensor_2D());
+        auto result = reorder<1,0>(tensor_generator.pick_random_tensor_2D());
         auto t2 = std::chrono::high_resolution_clock::now();
-        //firstTest.push_back(result);
+
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+        firstTest.push_back(result);
         times += duration1;
 
     }
@@ -65,24 +66,24 @@ auto speed_test_runtime_reorder3D(){
     int count1 = 0;
     int reps = REP;
 
-    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
+     random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     std::vector<tensor<T, up_t, up_t, up_t>> firstTest;
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
 
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = reorder<2,1,0>(tensor_generator.pick_random_tensor_3D());
+        auto result = reorder<2,1,0>(tensor_generator.pick_random_tensor_3D());
         auto t2 = std::chrono::high_resolution_clock::now();
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
         //firstTest.push_back(result);
         times += duration1;
-
+        firstTest.push_back(result);
     }
     //auto t2 = std::chrono::high_resolution_clock::now();
 

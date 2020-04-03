@@ -31,7 +31,7 @@ auto speed_test_ranges_contraction(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
     int reps = REP;
 
     //auto t1 = std::chrono::high_resolution_clock::now();
@@ -71,7 +71,7 @@ auto speed_test_ranges_double_contraction(){
     srand(time(0));
 
     int reps = REP;
-    auto times = 0;
+    std::size_t times = 0;
 
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
@@ -109,7 +109,7 @@ auto speed_test_ranges_triple_contraction(){
     srand(time(0));
 
     int reps = REP;
-    auto times = 0;
+    std::size_t times = 0;
 
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
@@ -159,7 +159,7 @@ auto speed_test_ranges_contraction3D(){
 
     int reps = REP;
 
-    auto times = 0;
+    std::size_t times = 0;
    // auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
         auto t1 = std::chrono::high_resolution_clock::now();
@@ -198,7 +198,7 @@ auto speed_test_ranges_double_contraction3D(){
     srand(time(0));
 
     int reps = REP;
-    auto times = 0
+    std::size_t times = 0;
 
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){
@@ -240,7 +240,7 @@ auto speed_test_ranges_triple_contraction3D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
     int reps = REP;
 
     //auto t1 = std::chrono::high_resolution_clock::now();

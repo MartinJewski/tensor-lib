@@ -40,7 +40,6 @@ void speed_test_run_2D(std::string input_path){
     output_file << "ct_1x_contraction" << "\t";
     output_file << "ct_2x_contraction" << "\t";
     output_file << "ct_3x_contraction" << "\t";
-    output_file << "ct_4x_contraction" << "\t";
     output_file << "ct_reorder" << "\t";
     output_file << "ct_trace" << "\t";
 
@@ -56,12 +55,23 @@ void speed_test_run_2D(std::string input_path){
     output_file << "range_reorder" << "\t";
     output_file << "range_trace" << "\t";
 
+    output_file << "for_1x_contraction" << "\t";
+    output_file << "for_2x_contraction" << "\t";
+    output_file << "for_3x_contraction" << "\t";
+    output_file << "for_reorder" << "\t";
+    output_file << "for_trace" << "\t";
+
     output_file << "ET_1x_contraction" << "\t";
     output_file << "ET_2x_contraction" << "\t";
     output_file << "ET_3x_contraction" << "\t";
     output_file << "ET_reorder" << "\t";
     output_file << "ET_trace" << "\t";
 
+    output_file << "ET_1x_contraction_LUP" << "\t";
+    output_file << "ET_2x_contraction_LUP" << "\t";
+    output_file << "ET_3x_contraction_LUP" << "\t";
+    output_file << "ET_reorder_LUP" << "\t";
+    output_file << "ET_trace_LUP" << "\t";
 
     output_file << std::endl;
 
@@ -74,7 +84,6 @@ void speed_test_run_2D(std::string input_path){
         output_file << speed_test_compileTime_contraction<int>() << "\t";
         output_file << speed_test_double_compileTime_contraction<int>() << "\t";
         output_file << speed_test_triple_compileTime_contraction<int>() << "\t";
-        output_file << speed_test_quadruple_compileTime_contraction<int>() << "\t";
         output_file << speed_test_compileTime_reorder<int>() << "\t";
         output_file << speed_test_compileTime_trace<int>() << "\t";
 
@@ -101,6 +110,12 @@ void speed_test_run_2D(std::string input_path){
         output_file << speed_test_triple_expressionTemp_contraction2D<int>() << "\t";
         output_file << speed_test_expressionTemp_reorder2D<int>() << "\t";
         output_file << speed_test_expressionTemp_trace2D<int>() << "\t";
+
+        output_file << speed_test_expressionTemp_LUP_contraction2D<int>() << "\t";
+        output_file << speed_test_double_expressionTemp_LUP_contraction2D<int>() << "\t";
+        output_file << speed_test_triple_expressionTemp_LUP_contraction2D<int>() << "\t";
+        output_file << speed_test_expressionTemp_LUP_reorder2D<int>() << "\t";
+        output_file << speed_test_expressionTemp_LUP_trace2D<int>() << "\t";
 
         output_file << std::endl;
     }
@@ -141,6 +156,11 @@ void speed_test_run_3D(std::string input_path){
     output_file << "ET_2x_contraction_3D" << "\t";
     output_file << "ET_reorder_3D" << "\t";
     output_file << "ET_trace_3D" << "\t";
+
+    output_file << "ET_1x_contraction_LUP_3D" << "\t";
+    output_file << "ET_2x_contraction_LUP_3D" << "\t";
+    output_file << "ET_reorder_LUP_3D" << "\t";
+    output_file << "ET_trace_LUP_3D" << "\t";
     output_file << std::endl;
 
     for(int i = 0; i <= amount; i++){
@@ -174,6 +194,11 @@ void speed_test_run_3D(std::string input_path){
         output_file << speed_test_expressionTemp_reorder3D<int>() << "\t";
         output_file << speed_test_expressionTemp_trace3D<int>() << "\t";
 
+        output_file << speed_test_expressionTemp_LUP_contraction3D<int>() << "\t";
+        output_file << speed_test_double_expressionTemp_LUP_contraction3D<int>() << "\t";
+        output_file << speed_test_expressionTemp_LUP_reorder3D<int>() << "\t";
+        output_file << speed_test_expressionTemp_LUP_trace3D<int>() << "\t";
+
         output_file << std::endl;
     }
 
@@ -197,7 +222,6 @@ void speed_test_run_LUP_2D(std::string input_path){
     output_file << "ct_1x_contraction" << "\t";
     output_file << "ct_2x_contraction" << "\t";
     output_file << "ct_3x_contraction" << "\t";
-    output_file << "ct_4x_contraction" << "\t";
     output_file << "ct_reorder" << "\t";
     output_file << "ct_trace" << "\t";
 
@@ -212,6 +236,12 @@ void speed_test_run_LUP_2D(std::string input_path){
     output_file << "range_3x_contraction" << "\t";
     output_file << "range_reorder" << "\t";
     output_file << "range_trace" << "\t";
+
+    output_file << "for_1x_contraction" << "\t";
+    output_file << "for_2x_contraction" << "\t";
+    output_file << "for_3x_contraction" << "\t";
+    output_file << "for_reorder" << "\t";
+    output_file << "for_trace" << "\t";
 
     output_file << "ET_1x_contraction" << "\t";
     output_file << "ET_2x_contraction" << "\t";
@@ -231,7 +261,6 @@ void speed_test_run_LUP_2D(std::string input_path){
         output_file << speed_test_compileTime_contraction<int>() << "\t";
         output_file << speed_test_double_compileTime_contraction<int>() << "\t";
         output_file << speed_test_triple_compileTime_contraction<int>() << "\t";
-        output_file << speed_test_quadruple_compileTime_contraction<int>() << "\t";
         output_file << speed_test_compileTime_reorder<int>() << "\t";
         output_file << speed_test_compileTime_trace<int>() << "\t";
 

@@ -25,7 +25,7 @@ auto speed_test_ranges_trace(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     int reps = REP;
 
@@ -70,7 +70,7 @@ auto speed_test_ranges_trace3D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     int reps = REP;
 

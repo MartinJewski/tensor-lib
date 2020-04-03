@@ -38,12 +38,12 @@ auto speed_test_expressionTemp_contraction2D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
 
     for(int val = 0; val < reps; val++){
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0,0>(et_tensors2D[random() % 10], et_tensors2D[random() % 10]);
+         auto result = contract<0,0>(et_tensors2D[random() % 10], et_tensors2D[random() % 10]);
         auto t2 = std::chrono::high_resolution_clock::now();
 
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
@@ -71,12 +71,12 @@ auto speed_test_double_expressionTemp_contraction2D(){
     }
 
     srand(time(0));
-    auto times = 0;
+    std::size_t times = 0;
 
 
     for(int val = 0; val < reps; val++) {
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<1, 0>(et_tensors2D[random() % 10],
+         auto result = contract<1, 0>(et_tensors2D[random() % 10],
                                      contract<0, 1>(et_tensors2D[random() % 10], et_tensors2D[random() % 10]));
         auto t2 = std::chrono::high_resolution_clock::now();
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count();
@@ -104,11 +104,11 @@ auto speed_test_triple_expressionTemp_contraction2D() {
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     for (int val = 0; val < reps; val++) {
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0, 0>(et_tensors2D[random() % 10],
+         auto result = contract<0, 0>(et_tensors2D[random() % 10],
                                               contract<0, 0>(et_tensors2D[random() % 10],
                                                              contract<0, 1>(et_tensors2D[random() % 10],
                                                                             et_tensors2D[random() % 10])));
@@ -140,11 +140,11 @@ auto speed_test_expressionTemp_contraction3D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     for(int val = 0; val < reps; val++){
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0,0>(et_tensors3D[random() % 10], et_tensors3D[random() % 10]);
+         auto result = contract<0,0>(et_tensors3D[random() % 10], et_tensors3D[random() % 10]);
         auto t2 = std::chrono::high_resolution_clock::now();
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
         times += duration1;
@@ -170,12 +170,12 @@ auto speed_test_double_expressionTemp_contraction3D() {
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     for (int val = 0; val < reps; val++) {
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0, 0>(et_tensors3D[random() % 10],
+         auto result = contract<0, 0>(et_tensors3D[random() % 10],
                                      contract<0, 1>(et_tensors3D[random() % 10], et_tensors3D[random() % 10]));
         auto t2 = std::chrono::high_resolution_clock::now();
         auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count();
@@ -203,12 +203,12 @@ auto speed_test_triple_expressionTemp_contraction3D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
 
     for(int val = 0; val < reps; val++){
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0,0>(et_tensors3D[random() % 10],
+         auto result = contract<0,0>(et_tensors3D[random() % 10],
                 contract<0,0>(et_tensors3D[random() % 10],
                                     contract<0,0>(et_tensors3D[random() % 10], et_tensors3D[random() % 10])));
         auto t2 = std::chrono::high_resolution_clock::now();
@@ -217,7 +217,7 @@ auto speed_test_triple_expressionTemp_contraction3D(){
         times += duration1;
     }
 
-    return times/reps
+    return times/reps;
 }
 
 
@@ -244,12 +244,12 @@ auto speed_test_expressionTemp_LUP_contraction2D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0,1>(et_tensors2D[random() % 10], et_tensors2D[random() % 10]);
+        auto result = contract<0,1>(et_tensors2D[random() % 10], et_tensors2D[random() % 10]);
         tensor3_t<T, lower_t, upper_t> temp(result);
         for(int i = 0; i < temp.m_data.size(); i++){
             temp[i];
@@ -283,13 +283,13 @@ auto speed_test_double_expressionTemp_LUP_contraction2D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
 
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<1,1>(et_tensors2D[random() % 10], contract<0,1>(et_tensors2D[random() % 10], et_tensors2D[random() % 10]));
+        auto result = contract<1,1>(et_tensors2D[random() % 10], contract<0,1>(et_tensors2D[random() % 10], et_tensors2D[random() % 10]));
 
         tensor3_t<T, upper_t, lower_t> temp(result);
         for(int i = 0; i < temp.m_data.size(); i++){
@@ -321,13 +321,13 @@ auto speed_test_triple_expressionTemp_LUP_contraction2D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
 
     for(int val = 0; val < reps; val++){
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0,0>(et_tensors2D[random() % 10],
+         auto result = contract<0,0>(et_tensors2D[random() % 10],
                                     contract<0,0>(et_tensors2D[random() % 10], contract<0,1>(et_tensors2D[random() % 10], et_tensors2D[random() % 10])));
 
         tensor3_t<T, lower_t, upper_t> temp(result);
@@ -362,12 +362,12 @@ auto speed_test_expressionTemp_LUP_contraction3D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
 
     for(int val = 0; val < reps; val++){
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0,1>(et_tensors3D[random() % 10], et_tensors3D[random() % 10]);
+         auto result = contract<0,1>(et_tensors3D[random() % 10], et_tensors3D[random() % 10]);
 
         tensor3_t<T, lower_t, lower_t, upper_t, lower_t> temp(result);
         for(int i = 0; i < temp.m_data.size(); i++){
@@ -402,13 +402,13 @@ auto speed_test_double_expressionTemp_LUP_contraction3D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     for(int val = 0; val < reps; val++){
 
 
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0,0>(et_tensors3D[random() % 10],
+         auto result = contract<0,0>(et_tensors3D[random() % 10],
                                     contract<0,1>(et_tensors3D[random() % 10], et_tensors3D[random() % 10]));
 
         tensor3_t<T, lower_t, lower_t, lower_t, upper_t, lower_t> temp(result);
@@ -443,12 +443,12 @@ auto speed_test_triple_expressionTemp_LUP_contraction3D(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
 
     for(int val = 0; val < reps; val++){
         auto t1 = std::chrono::high_resolution_clock::now();
-        volatile auto result = contract<0,0>(et_tensors3D[random() % 10],
+         auto result = contract<0,0>(et_tensors3D[random() % 10],
                                     contract<0,0>(et_tensors3D[random() % 10],
                                                   contract<0,0>(et_tensors3D[random() % 10], et_tensors3D[random() % 10])));
 

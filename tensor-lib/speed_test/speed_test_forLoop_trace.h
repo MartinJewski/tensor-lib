@@ -27,14 +27,14 @@ auto speed_test_forLoop_trace(){
     int count2 = 0;
     int reps = REP;
 
-    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
+    random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_trace fl_trace;
 
     std::vector<T> secondTest;
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     //auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){
@@ -68,13 +68,13 @@ auto speed_test_forLoop_trace3D(){
     int count2 = 0;
     int reps = REP;
 
-    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
+     random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_trace fl_trace;
 
     std::vector<T> secondTest;
 
     srand(time(0));
-    auto times = 0;
+    std::size_t times = 0;
 
     //auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){

@@ -20,14 +20,14 @@ auto speed_test_forLoop_reorder(){
     int count2 = 0;
     int reps = REP;
 
-    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
+     random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
 
     for_loop_reorder fl_reorder;
 
     std::vector<tensor<T, up_t, up_t>> secondTest;
 
     srand(time(0));
-    auto times = 0;
+    std::size_t times = 0;
 
     //auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){
@@ -59,14 +59,14 @@ auto speed_test_forLoop_reorder3D(){
     int count2 = 0;
     int reps = REP;
 
-    constexpr random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
+     random_tensor_generator_compiletime<T, 10, 0, 10> tensor_generator;
     for_loop_reorder fl_reorder;
 
     std::vector<tensor<T, up_t, up_t, up_t>> secondTest;
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
 
     //auto t3 = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < reps; i++){

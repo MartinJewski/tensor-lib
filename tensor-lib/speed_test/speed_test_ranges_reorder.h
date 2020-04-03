@@ -24,7 +24,7 @@ auto speed_test_ranges_reorder(){
 
     srand(time(0));
 
-    auto times = 0;
+    std::size_t times = 0;
     int reps = REP;
 
     //auto t1 = std::chrono::high_resolution_clock::now();
@@ -67,7 +67,7 @@ auto speed_test_ranges_reorder3D(){
     srand(time(0));
 
     int reps = REP;
-    auto times = 0;
+    std::size_t times = 0;
 
     //auto t1 = std::chrono::high_resolution_clock::now();
     for(int val = 0; val < reps; val++){

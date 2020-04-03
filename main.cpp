@@ -119,12 +119,8 @@
 
 int main() {
 
-    speed_test_run_2D<20>("/home/martin/Schreibtisch/benchmark_1_2D.txt");
-    speed_test_run_3D<20>("/home/martin/Schreibtisch/benchmark_1_3D.txt");
-
-    speed_test_run_LUP_2D<20>("/home/martin/Schreibtisch/benchmark_2_2D.txt");
-    speed_test_run_LUP_3D<20>("/home/martin/Schreibtisch/benchmark_2_3D.txt");
-
+    speed_test_run_2D<20>("/home/martin/Schreibtisch/benchmark_2D.txt");
+    speed_test_run_3D<20>("/home/martin/Schreibtisch/benchmark_3D.txt");
 
 
 
