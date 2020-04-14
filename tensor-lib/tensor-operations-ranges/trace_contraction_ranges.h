@@ -1,5 +1,5 @@
 //
-// Created by martin on 28.03.20.
+// Created by martin machajewski on 28.03.20.
 //
 
 #ifndef UNTITELED1_TRACE_CONTRACTION_RANGES_H

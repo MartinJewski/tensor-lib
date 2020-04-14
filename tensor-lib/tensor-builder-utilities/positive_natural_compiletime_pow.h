@@ -1,5 +1,5 @@
 //
-// Created by martin on 04.01.20.
+// Created by martin machajewski  on 04.01.20.
 //
 
 #ifndef UNTITELED1_POW_H

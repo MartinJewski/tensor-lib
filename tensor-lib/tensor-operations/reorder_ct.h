@@ -1,5 +1,5 @@
 //
-// Created by martin on 07.01.20.
+// Created by martin machajewski on 07.01.20.
 //
 
 #ifndef UNTITELED1_REORDER_CT_H

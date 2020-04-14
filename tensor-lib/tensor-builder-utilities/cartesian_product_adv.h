@@ -1,10 +1,16 @@
 //
-// Created by martin on 08.03.20.
+// Created by martin machajewski on 08.03.20.
 //
 
 #ifndef UNTITELED1_CARTESIAN_PRODUCT_ADV_H
 #define UNTITELED1_CARTESIAN_PRODUCT_ADV_H
 
+
+////////////////////this c++ file contains code provided by/////////////
+//@author: Timo
+//reference: Stackoverflow
+//URL:https://stackoverflow.com/questions/60580444/cartesian-product-for-multiple-sets-at-compile-time/60585120#60585120
+/////////////////////////////////////////////////////////////////////////
 template <typename It, typename T>
 constexpr void setAll(It begin, It end, T value)
 {

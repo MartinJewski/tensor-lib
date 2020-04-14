@@ -1,5 +1,5 @@
 //
-// Created by martin on 29.02.20.
+// Created by martin machajewski on 29.02.20.
 //
 
 #ifndef UNTITELED1_SPEED_TEST_RANGES_TRACE_H

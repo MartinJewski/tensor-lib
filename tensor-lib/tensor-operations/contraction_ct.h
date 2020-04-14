@@ -1,5 +1,5 @@
 //
-// Created by martin on 03.01.20.
+// Created by martin machajewski on 03.01.20.
 //
 
 #ifndef UNTITELED1_CONTRACTION_CT_H

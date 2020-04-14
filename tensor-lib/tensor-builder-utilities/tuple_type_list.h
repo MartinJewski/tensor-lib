@@ -1,5 +1,5 @@
 //
-// Created by martin on 11.03.20.
+// Created by martin machajewski on 11.03.20.
 //
 
 #ifndef UNTITELED1_TUPLE_TYPE_LIST_H

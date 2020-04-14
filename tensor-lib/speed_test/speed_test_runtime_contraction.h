@@ -1,5 +1,5 @@
 //
-// Created by martin on 13.02.20.
+// Created by martin machajewski on 13.02.20.
 //
 
 #ifndef UNTITELED1_SPEED_TEST_RUNTIME_CONTRACTION_H

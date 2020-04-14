@@ -1,5 +1,5 @@
 //
-// Created by martin on 03.02.20.
+// Created by martin machajewski on 03.02.20.
 //
 
 #ifndef UNTITELED1_TRACE_RANGES_H

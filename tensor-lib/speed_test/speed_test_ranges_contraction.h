@@ -1,5 +1,5 @@
 //
-// Created by martin on 16.02.20.
+// Created by martin machajewski on 16.02.20.
 //
 
 #ifndef UNTITELED1_SPEED_TEST_RANGES_CONTRACTION_H

@@ -1,5 +1,5 @@
 //
-// Created by martin on 16.12.19.
+// Created by martin machajewski on 16.12.19.
 //
 
 #ifndef UNTITELED1_RECREATE_FOR_INDEX_SEQUENCE_H

@@ -1,5 +1,5 @@
 //
-// Created by martin on 04.01.20.
+// Created by martin machajewski on 04.01.20.
 //
 
 #ifndef UNTITELED1_POS_ND_TO_1D_H
@@ -8,6 +8,11 @@
 #include <tuple>
 #include "tensor_specification.h"
 
+////////////////////this c++ file contains code provided by/////////////
+//@author: max66
+//reference: Stackoverflow
+//URL: https://stackoverflow.com/a/58644311/7091177
+/////////////////////////////////////////////////////////////////////////
 template <auto ... as>
 auto constexpr pos_nd_to_1d ()
 {

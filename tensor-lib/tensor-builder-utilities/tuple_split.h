@@ -1,5 +1,5 @@
 //
-// Created by martin on 11.12.19.
+// Created by martin machajewski on 11.12.19.
 //
 
 #ifndef UNTITELED1_TUPLE_SPLIT_H

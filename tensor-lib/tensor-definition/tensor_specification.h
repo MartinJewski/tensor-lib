@@ -1,5 +1,7 @@
 //
-// Created by martin on 02.12.19.
+// Created by martin machajewski on 02.12.19.
+// base idea by Ludwig Jens Papenfort and  Elias R. Most
+// Goethe University Frankfurt am Main
 //
 
 #ifndef UNTITELED1_TENSOR_SPECIFICATION_H

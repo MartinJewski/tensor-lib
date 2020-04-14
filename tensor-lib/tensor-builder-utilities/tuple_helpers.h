@@ -8,6 +8,13 @@
 #include <tuple>
 
 //----------------------------------------------------------------------------
+
+////////////////////this c++ file contains code provided by/////////////
+//@author: Andy Prowl
+//reference: Stackoverflow
+//URL: https://stackoverflow.com/questions/14852593/removing-the-first-type-of-a-stdtuple
+////////////////////////////////////////////////////////////////////////
+
 /**
  * dummy definition of remove_ith_element
  * @tparam Count recursion times
@@ -42,6 +49,7 @@ struct remove_ith_element<Count, std::tuple<Head, Tail...>>{
                         )
             ) type;
 };
+
 //-----------------------------------------------------------------------------------------------------
 
 template<std::size_t pos1, std::size_t pos2, typename, typename>

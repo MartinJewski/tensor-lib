@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/*
 #include <range/v3/view/empty.hpp>
 #include <range/v3/view/repeat_n.hpp>
 #include <range/v3/algorithm/for_each.hpp>
@@ -41,7 +41,7 @@
 #include <range/v3/algorithm/for_each.hpp>
 #include <range/v3/algorithm/min.hpp>
 #include <range/v3/algorithm/max.hpp>
-
+*/
 
 #include "tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h"
 
@@ -95,7 +95,7 @@
 #include "math_utilities.h"
 
 
-
+/*
 #include "speed_test_expressionTemp_contraction.h"
 #include "speed_test_expressionTemp_reorder.h"
 #include "speed_test_expressionTemp_trace.h"
@@ -116,11 +116,13 @@
 #include "speed_test_runtime_trace.h"
 
 #include "speed_test_run.h"
+*/
 
 int main() {
 
-    speed_test_run_2D<20>("/home/martin/Schreibtisch/benchmark_2D.txt");
-    speed_test_run_3D<20>("/home/martin/Schreibtisch/benchmark_3D.txt");
+
+    //speed_test_run_2D<20>("/home/martin/Schreibtisch/benchmark_2D.txt");
+    //speed_test_run_3D<20>("/home/martin/Schreibtisch/benchmark_3D.txt");
 
 
 

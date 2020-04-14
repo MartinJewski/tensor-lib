@@ -1,5 +1,5 @@
 //
-// Created by martin on 10.12.19.
+// Created by martin machajewski on 10.12.19.
 //
 
 #ifndef UNTITELED1_CARTESIAN_PRODUCT_H

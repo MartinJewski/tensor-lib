@@ -1,5 +1,5 @@
 //
-// Created by martin on 19.02.20.
+// Created by martin machajewski on 19.02.20.
 //
 
 #ifndef UNTITELED1_RANDOM_NUMBER_H
@@ -10,6 +10,12 @@
 #include <time.h>
 #include <random>
 
+
+////////////////////this c++ file contains code provided by/////////////
+// @author:Ivan Prodanov
+// reference: Stackoverflow
+//URL: https://stackoverflow.com/a/686376/7091177
+/////////////////////////////////////////////////////////////////////////
 struct random_number{
 
     static double rand_DoubleRange(double a, double b)
@@ -29,7 +35,12 @@ struct random_number{
 
 };
 
-//https://mklimenko.github.io/english/2018/06/04/constexpr-random/
+
+////////////////////this c++ file contains code provided by/////////////
+//@author:Michael MKlimenko
+//reference: Github
+//URL: https://mklimenko.github.io/english/2018/06/04/constexpr-random/
+/////////////////////////////////////////////////////////////////////////
 
 constexpr int lce_a = 4096;
 constexpr int lce_c = 150889;

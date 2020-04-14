@@ -1,5 +1,5 @@
 //
-// Created by martin on 10.03.20.
+// Created by martin machajewski on 10.03.20.
 //
 
 #ifndef UNTITELED1_MATH_UTILITIES_H
@@ -9,7 +9,11 @@
 #include <math.h>
 #include <vector>
 
-//https://stackoverflow.com/questions/33268513/calculating-standard-deviation-variance-in-c
+////////////////////this c++ file contains code provided by/////////////
+// @author: D.Zadravec
+// reference: Stackoverflow
+// URL: https://stackoverflow.com/questions/33268513/calculating-standard-deviation-variance-in-c
+///////////////////////////////////////////////////////////////////////////////////////////
 
 double StandardDeviation(std::vector<double>);
 double Variance(std::vector<double>);

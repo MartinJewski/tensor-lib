@@ -1,5 +1,5 @@
 //
-// Created by martin on 04.03.20.
+// Created by martin machajewski on 04.03.20.
 //
 
 #ifndef UNTITELED1_SPEED_TEST_COMPILETIME_REORDER_H

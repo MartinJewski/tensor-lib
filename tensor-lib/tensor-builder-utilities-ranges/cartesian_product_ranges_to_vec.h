@@ -1,5 +1,5 @@
 //
-// Created by martin on 02.01.20.
+// Created by martin machajewski on 02.01.20.
 //
 
 #ifndef UNTITELED1_CARTESIAN_PRODUCT_RANGES_TO_VEC_H

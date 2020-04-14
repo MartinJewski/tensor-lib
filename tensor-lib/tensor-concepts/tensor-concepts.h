@@ -1,5 +1,5 @@
 //
-// Created by martin on 12.01.20.
+// Created by martin machajewski on 12.01.20.
 //
 
 #ifndef UNTITELED1_TENSOR_CONCEPTS_H
@@ -8,7 +8,7 @@
 #include <type_traits>
 #include "tensor.h"
 
-//concept tests
+//concept tests, not a part of the bachelor thesis
 
 template <typename T>
 concept constexpr bool Integral(){

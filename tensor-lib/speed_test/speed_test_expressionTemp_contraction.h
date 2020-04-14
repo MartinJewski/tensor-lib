@@ -1,5 +1,5 @@
 //
-// Created by martin on 09.03.20.
+// Created by martin machajewski on 09.03.20.
 //
 
 #ifndef UNTITELED1_SPEED_TEST_EXPRESSIONTEMP_CONTRACTION_H
