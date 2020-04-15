@@ -10,7 +10,8 @@
 //@author: Timo
 //reference: Stackoverflow
 //URL:https://stackoverflow.com/questions/60580444/cartesian-product-for-multiple-sets-at-compile-time/60585120#60585120
-/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
 template <typename It, typename T>
 constexpr void setAll(It begin, It end, T value)
 {
@@ -24,6 +25,7 @@ constexpr void increment(std::array<T, I>& counter, T max)
     for (auto idx = I; idx > 0;)
     {
         --idx;
+
         if (++counter[idx] >= max)
         {
             setAll(counter.begin() + idx, counter.end(), 0); // because std::fill is not constexpr yet

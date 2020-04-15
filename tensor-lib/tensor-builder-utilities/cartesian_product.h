@@ -5,8 +5,6 @@
 #ifndef UNTITELED1_CARTESIAN_PRODUCT_H
 #define UNTITELED1_CARTESIAN_PRODUCT_H
 
-
-
 #include <tuple>
 #include "tuple_show.h"
 
