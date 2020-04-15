@@ -89,7 +89,7 @@ add_compile_options(-fpermissive)
 add_compile_options(-ftemplate-depth=2000)
 
 
-add_executable(untiteled1 ${SOURCE_FILES} ${SOURCE_FILES2})
+add_executable(untiteled1 ${SOURCE_FILES})
 
 #nachdem add_executable befehl verlinkst du die libraries mit deiner exe
 target_link_libraries(untiteled1 range_v3) #link libraries to exe
@@ -103,11 +103,16 @@ target_link_libraries(untiteled1 range_v3) #link libraries to exe
 # project(proj_name C CXX)
 #
 # set(CMAKE_CXX_STANDARD 20)
+
+# include_directories(DIRS) #damit gibt man dem compiler an, wo er überall nach einer deiner files suchen soll
+#                           # das gilt nur für files die du erstellt hast, keine externen
+# set(SOURCE_FILES dirs) #hier listest du alle pfade zu files auf, die du in deiner exe verwendest und
+#                        # speicherst es in SOURCE_FILES, was wir später an die add_executable übergeben
 #
 # add_library(name_der_variable TAGS)   -füge deine externe library ein
 # set_target_properties(name_der_variable TAGS PATH_TO_tensor-library-v1) - setzt eigenschaften der library
 #
-# add_executable(proj_name dirs_to_source_files) -erzeuge deine exe
+# add_executable(proj_name ${SOURCE_FILES}) -erzeuge deine exe
 #
 # target_link_libraries(proj_name name_der_variable) - verlinke externe libraries zur exe
 #-----------------------------------------------------------------
