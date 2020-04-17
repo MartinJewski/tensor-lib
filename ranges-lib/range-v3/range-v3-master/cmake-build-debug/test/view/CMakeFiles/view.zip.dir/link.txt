@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.zip.dir/zip.cpp.o  -o view.zip 

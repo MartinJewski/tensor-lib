@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.partition_copy.dir/partition_copy.cpp.o  -o alg.partition_copy 

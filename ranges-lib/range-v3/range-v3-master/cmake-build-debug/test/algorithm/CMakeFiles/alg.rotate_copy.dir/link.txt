@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.rotate_copy.dir/rotate_copy.cpp.o  -o alg.rotate_copy 

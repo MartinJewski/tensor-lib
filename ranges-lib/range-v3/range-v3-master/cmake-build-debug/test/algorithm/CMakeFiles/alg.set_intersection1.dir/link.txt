@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.set_intersection1.dir/set_intersection1.cpp.o  -o alg.set_intersection1 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.tokenize.dir/tokenize.cpp.o  -o view.tokenize 

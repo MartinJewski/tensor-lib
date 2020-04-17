@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.find.dir/find.cpp.o  -o alg.find 

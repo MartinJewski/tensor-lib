@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.move.dir/move.cpp.o  -o alg.move 

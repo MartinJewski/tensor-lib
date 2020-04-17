@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.starts_with.dir/starts_with.cpp.o  -o alg.starts_with 

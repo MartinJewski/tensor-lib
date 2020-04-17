@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.ends_with.dir/ends_with.cpp.o  -o alg.ends_with 

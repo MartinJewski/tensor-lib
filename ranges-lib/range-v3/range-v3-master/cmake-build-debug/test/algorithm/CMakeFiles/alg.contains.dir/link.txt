@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.contains.dir/contains.cpp.o  -o alg.contains 

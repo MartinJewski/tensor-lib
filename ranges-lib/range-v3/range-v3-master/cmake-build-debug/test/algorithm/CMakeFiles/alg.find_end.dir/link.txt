@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.find_end.dir/find_end.cpp.o  -o alg.find_end 

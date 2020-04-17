@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.drop.dir/drop.cpp.o  -o act.drop 

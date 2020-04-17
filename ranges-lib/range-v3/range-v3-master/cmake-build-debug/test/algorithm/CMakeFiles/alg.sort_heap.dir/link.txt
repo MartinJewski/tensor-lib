@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.sort_heap.dir/sort_heap.cpp.o  -o alg.sort_heap 

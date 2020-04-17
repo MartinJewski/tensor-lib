@@ -1,0 +1,542 @@
+The system is: Linux - 5.0.0-36-generic - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.out"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d9c16/fast && /usr/bin/make -f CMakeFiles/cmTC_d9c16.dir/build.make CMakeFiles/cmTC_d9c16.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d9c16.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_d9c16.dir/testCXXCompiler.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_d9c16
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9c16.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_d9c16.dir/testCXXCompiler.cxx.o  -o cmTC_d9c16 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ecdb7/fast && /usr/bin/make -f CMakeFiles/cmTC_ecdb7.dir/build.make CMakeFiles/cmTC_ecdb7.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++    -v -o CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o -c /home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/8/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/cc9lyaB8.s
+GNU C++14 (Ubuntu 8.3.0-6ubuntu1) version 8.3.0 (x86_64-linux-gnu)
+	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/8"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/include/c++/8
+ /usr/include/x86_64-linux-gnu/c++/8
+ /usr/include/c++/8/backward
+ /usr/lib/gcc/x86_64-linux-gnu/8/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++14 (Ubuntu 8.3.0-6ubuntu1) version 8.3.0 (x86_64-linux-gnu)
+	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 1110442b7b958f151ae10a1cb5af9032
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc9lyaB8.s
+GNU assembler version 2.32 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.32
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_ecdb7
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ecdb7.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ecdb7 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ecdb7' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccToFwde.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ecdb7 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ecdb7' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/include/c++/8]
+    add: [/usr/include/x86_64-linux-gnu/c++/8]
+    add: [/usr/include/c++/8/backward]
+    add: [/usr/lib/gcc/x86_64-linux-gnu/8/include]
+    add: [/usr/local/include]
+    add: [/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/include/c++/8] ==> [/usr/include/c++/8]
+  collapse include dir [/usr/include/x86_64-linux-gnu/c++/8] ==> [/usr/include/x86_64-linux-gnu/c++/8]
+  collapse include dir [/usr/include/c++/8/backward] ==> [/usr/include/c++/8/backward]
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/8/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/8/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed] ==> [/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/include/c++/8;/usr/include/x86_64-linux-gnu/c++/8;/usr/include/c++/8/backward;/usr/lib/gcc/x86_64-linux-gnu/8/include;/usr/local/include;/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_ecdb7/fast && /usr/bin/make -f CMakeFiles/cmTC_ecdb7.dir/build.make CMakeFiles/cmTC_ecdb7.dir/build]
+  ignore line: [make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o -c /home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/8/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/cc9lyaB8.s]
+  ignore line: [GNU C++14 (Ubuntu 8.3.0-6ubuntu1) version 8.3.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/8"]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/include/c++/8]
+  ignore line: [ /usr/include/x86_64-linux-gnu/c++/8]
+  ignore line: [ /usr/include/c++/8/backward]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/8/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (Ubuntu 8.3.0-6ubuntu1) version 8.3.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 1110442b7b958f151ae10a1cb5af9032]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc9lyaB8.s]
+  ignore line: [GNU assembler version 2.32 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.32]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_ecdb7]
+  ignore line: [/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ecdb7.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ecdb7 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ecdb7' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccToFwde.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ecdb7 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccToFwde.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_ecdb7] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..]
+    arg [CMakeFiles/cmTC_ecdb7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+Performing C++ SOURCE FILE Test RANGES_HAS_CXXSTD succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5b81d/fast && /usr/bin/make -f CMakeFiles/cmTC_5b81d.dir/build.make CMakeFiles/cmTC_5b81d.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5b81d.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_CXXSTD   -std=c++14 -o CMakeFiles/cmTC_5b81d.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5b81d
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b81d.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_CXXSTD    CMakeFiles/cmTC_5b81d.dir/src.cxx.o  -o cmTC_5b81d 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WALL succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d7935/fast && /usr/bin/make -f CMakeFiles/cmTC_d7935.dir/build.make CMakeFiles/cmTC_d7935.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d7935.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WALL   -Wall -o CMakeFiles/cmTC_d7935.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d7935
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7935.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_WALL    CMakeFiles/cmTC_d7935.dir/src.cxx.o  -o cmTC_d7935 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WEXTRA succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_96c44/fast && /usr/bin/make -f CMakeFiles/cmTC_96c44.dir/build.make CMakeFiles/cmTC_96c44.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_96c44.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WEXTRA   -Wextra -o CMakeFiles/cmTC_96c44.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_96c44
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96c44.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_WEXTRA    CMakeFiles/cmTC_96c44.dir/src.cxx.o  -o cmTC_96c44 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WERROR succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d290c/fast && /usr/bin/make -f CMakeFiles/cmTC_d290c.dir/build.make CMakeFiles/cmTC_d290c.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d290c.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WERROR   -Werror -o CMakeFiles/cmTC_d290c.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d290c
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d290c.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_WERROR    CMakeFiles/cmTC_d290c.dir/src.cxx.o  -o cmTC_d290c 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_FDIAGNOSTIC_SHOW_TEMPLATE_TREE succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f81d6/fast && /usr/bin/make -f CMakeFiles/cmTC_f81d6.dir/build.make CMakeFiles/cmTC_f81d6.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f81d6.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_FDIAGNOSTIC_SHOW_TEMPLATE_TREE   -fdiagnostics-show-template-tree -o CMakeFiles/cmTC_f81d6.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f81d6
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f81d6.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_FDIAGNOSTIC_SHOW_TEMPLATE_TREE    CMakeFiles/cmTC_f81d6.dir/src.cxx.o  -o cmTC_f81d6 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_FTEMPLATE_BACKTRACE_LIMIT succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a1031/fast && /usr/bin/make -f CMakeFiles/cmTC_a1031.dir/build.make CMakeFiles/cmTC_a1031.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a1031.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_FTEMPLATE_BACKTRACE_LIMIT   -ftemplate-backtrace-limit=0 -o CMakeFiles/cmTC_a1031.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a1031
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1031.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_FTEMPLATE_BACKTRACE_LIMIT    CMakeFiles/cmTC_a1031.dir/src.cxx.o  -o cmTC_a1031 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_O0 succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_147f9/fast && /usr/bin/make -f CMakeFiles/cmTC_147f9.dir/build.make CMakeFiles/cmTC_147f9.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_147f9.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_O0   -O0 -o CMakeFiles/cmTC_147f9.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_147f9
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_147f9.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_O0    CMakeFiles/cmTC_147f9.dir/src.cxx.o  -o cmTC_147f9 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_NO_INLINE succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_62474/fast && /usr/bin/make -f CMakeFiles/cmTC_62474.dir/build.make CMakeFiles/cmTC_62474.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_62474.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_NO_INLINE   -fno-inline -o CMakeFiles/cmTC_62474.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_62474
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62474.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_NO_INLINE    CMakeFiles/cmTC_62474.dir/src.cxx.o  -o cmTC_62474 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_STACK_PROTECTOR_ALL succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_96e9a/fast && /usr/bin/make -f CMakeFiles/cmTC_96e9a.dir/build.make CMakeFiles/cmTC_96e9a.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_96e9a.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_STACK_PROTECTOR_ALL   -fstack-protector-all -o CMakeFiles/cmTC_96e9a.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_96e9a
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96e9a.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_STACK_PROTECTOR_ALL    CMakeFiles/cmTC_96e9a.dir/src.cxx.o  -o cmTC_96e9a 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_G3 succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d061f/fast && /usr/bin/make -f CMakeFiles/cmTC_d061f.dir/build.make CMakeFiles/cmTC_d061f.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d061f.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_G3   -g3 -o CMakeFiles/cmTC_d061f.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d061f
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d061f.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_G3    CMakeFiles/cmTC_d061f.dir/src.cxx.o  -o cmTC_d061f 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_MARCH_NATIVE succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ae4bc/fast && /usr/bin/make -f CMakeFiles/cmTC_ae4bc.dir/build.make CMakeFiles/cmTC_ae4bc.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ae4bc.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_MARCH_NATIVE   -march=native -o CMakeFiles/cmTC_ae4bc.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ae4bc
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae4bc.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_MARCH_NATIVE    CMakeFiles/cmTC_ae4bc.dir/src.cxx.o  -o cmTC_ae4bc 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_MTUNE_NATIVE succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ce7fe/fast && /usr/bin/make -f CMakeFiles/cmTC_ce7fe.dir/build.make CMakeFiles/cmTC_ce7fe.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ce7fe.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_MTUNE_NATIVE   -mtune=native -o CMakeFiles/cmTC_ce7fe.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ce7fe
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce7fe.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_MTUNE_NATIVE    CMakeFiles/cmTC_ce7fe.dir/src.cxx.o  -o cmTC_ce7fe 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGE_V3_HAS_FCONCEPTS succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ba5cb/fast && /usr/bin/make -f CMakeFiles/cmTC_ba5cb.dir/build.make CMakeFiles/cmTC_ba5cb.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ba5cb.dir/src.cxx.o
+/usr/bin/c++    -DRANGE_V3_HAS_FCONCEPTS -fconcepts -std=c++14   -o CMakeFiles/cmTC_ba5cb.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ba5cb
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba5cb.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGE_V3_HAS_FCONCEPTS -fconcepts -std=c++14    CMakeFiles/cmTC_ba5cb.dir/src.cxx.o  -o cmTC_ba5cb 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+template<class>
+concept bool True = true;
+
+template<class T>
+constexpr bool test(T)
+{
+    return false;
+}
+
+template<True T>
+constexpr bool test(T)
+{
+    return true;
+}
+
+int main()
+{
+    static_assert(::test(42), "");
+}
+
+Performing C++ SOURCE FILE Test RANGES_HAS_PEDANTIC succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7a882/fast && /usr/bin/make -f CMakeFiles/cmTC_7a882.dir/build.make CMakeFiles/cmTC_7a882.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7a882.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_PEDANTIC   -pedantic -o CMakeFiles/cmTC_7a882.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_7a882
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a882.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_PEDANTIC    CMakeFiles/cmTC_7a882.dir/src.cxx.o  -o cmTC_7a882 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_PEDANTIC_ERRORS succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ffda0/fast && /usr/bin/make -f CMakeFiles/cmTC_ffda0.dir/build.make CMakeFiles/cmTC_ffda0.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ffda0.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_PEDANTIC_ERRORS   -pedantic-errors -o CMakeFiles/cmTC_ffda0.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ffda0
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffda0.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_PEDANTIC_ERRORS    CMakeFiles/cmTC_ffda0.dir/src.cxx.o  -o cmTC_ffda0 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_PADDED succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b6d43/fast && /usr/bin/make -f CMakeFiles/cmTC_b6d43.dir/build.make CMakeFiles/cmTC_b6d43.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b6d43.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_PADDED   -Wpadded -o CMakeFiles/cmTC_b6d43.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b6d43
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6d43.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_WNO_PADDED    CMakeFiles/cmTC_b6d43.dir/src.cxx.o  -o cmTC_b6d43 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_OLD_STYLE_CAST succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2cee4/fast && /usr/bin/make -f CMakeFiles/cmTC_2cee4.dir/build.make CMakeFiles/cmTC_2cee4.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2cee4.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_OLD_STYLE_CAST   -Wold-style-cast -o CMakeFiles/cmTC_2cee4.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2cee4
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cee4.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_WNO_OLD_STYLE_CAST    CMakeFiles/cmTC_2cee4.dir/src.cxx.o  -o cmTC_2cee4 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_NOEXCEPT_TYPE succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e8621/fast && /usr/bin/make -f CMakeFiles/cmTC_e8621.dir/build.make CMakeFiles/cmTC_e8621.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e8621.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_NOEXCEPT_TYPE   -Wnoexcept-type -o CMakeFiles/cmTC_e8621.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e8621
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8621.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_WNO_NOEXCEPT_TYPE    CMakeFiles/cmTC_e8621.dir/src.cxx.o  -o cmTC_e8621 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_MISSING_BRACES succeeded with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_29582/fast && /usr/bin/make -f CMakeFiles/cmTC_29582.dir/build.make CMakeFiles/cmTC_29582.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_29582.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_MISSING_BRACES   -Wmissing-braces -o CMakeFiles/cmTC_29582.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_29582
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29582.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_WNO_MISSING_BRACES    CMakeFiles/cmTC_29582.dir/src.cxx.o  -o cmTC_29582 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }

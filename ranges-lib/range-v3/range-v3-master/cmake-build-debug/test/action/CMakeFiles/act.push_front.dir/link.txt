@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.push_front.dir/push_front.cpp.o  -o act.push_front 

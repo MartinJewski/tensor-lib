@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.split.dir/split.cpp.o  -o view.split 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.is_partitioned.dir/is_partitioned.cpp.o  -o alg.is_partitioned 

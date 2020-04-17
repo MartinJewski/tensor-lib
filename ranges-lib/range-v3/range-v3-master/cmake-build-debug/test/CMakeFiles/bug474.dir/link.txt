@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/bug474.dir/bug474.cpp.o  -o bug474 

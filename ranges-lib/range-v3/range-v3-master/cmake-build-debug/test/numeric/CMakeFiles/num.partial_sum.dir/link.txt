@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/num.partial_sum.dir/partial_sum.cpp.o  -o num.partial_sum 

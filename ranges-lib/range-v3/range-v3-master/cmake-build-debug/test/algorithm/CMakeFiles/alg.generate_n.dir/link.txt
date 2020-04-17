@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.generate_n.dir/generate_n.cpp.o  -o alg.generate_n 

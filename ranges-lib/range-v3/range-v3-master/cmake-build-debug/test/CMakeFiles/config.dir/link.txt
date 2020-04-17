@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/config.dir/config.cpp.o  -o config 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.copy_backward.dir/copy_backward.cpp.o  -o alg.copy_backward 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.all.dir/all.cpp.o  -o view.all 

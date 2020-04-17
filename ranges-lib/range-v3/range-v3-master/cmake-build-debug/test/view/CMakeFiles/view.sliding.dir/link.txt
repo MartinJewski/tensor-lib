@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.sliding.dir/sliding.cpp.o  -o view.sliding 

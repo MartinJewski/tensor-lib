@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.set_union2.dir/set_union2.cpp.o  -o alg.set_union2 

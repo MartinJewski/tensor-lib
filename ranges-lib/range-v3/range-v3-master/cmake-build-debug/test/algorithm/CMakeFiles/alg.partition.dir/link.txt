@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.partition.dir/partition.cpp.o  -o alg.partition 

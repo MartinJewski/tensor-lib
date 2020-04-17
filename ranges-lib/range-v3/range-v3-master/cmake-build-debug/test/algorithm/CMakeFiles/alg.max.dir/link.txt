@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.max.dir/max.cpp.o  -o alg.max 

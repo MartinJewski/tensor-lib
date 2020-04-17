@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.equal.dir/equal.cpp.o  -o alg.equal 

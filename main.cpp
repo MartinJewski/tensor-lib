@@ -118,13 +118,8 @@
 #include "speed_test_run.h"
 */
 
+#include <array>
 int main() {
-
-
-    //speed_test_run_2D<20>("/home/martin/Schreibtisch/benchmark_2D.txt");
-    //speed_test_run_3D<20>("/home/martin/Schreibtisch/benchmark_3D.txt");
-
-
 
     return 0;
 }

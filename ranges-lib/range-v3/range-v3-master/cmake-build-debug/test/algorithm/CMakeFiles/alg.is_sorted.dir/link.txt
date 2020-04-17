@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.is_sorted.dir/is_sorted.cpp.o  -o alg.is_sorted 

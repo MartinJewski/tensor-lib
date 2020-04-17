@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/bug566.dir/bug566.cpp.o  -o bug566 

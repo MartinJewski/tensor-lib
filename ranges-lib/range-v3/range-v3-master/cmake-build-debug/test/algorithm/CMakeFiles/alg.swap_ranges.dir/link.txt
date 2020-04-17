@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.swap_ranges.dir/swap_ranges.cpp.o  -o alg.swap_ranges 

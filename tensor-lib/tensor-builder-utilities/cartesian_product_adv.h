@@ -9,7 +9,7 @@
 ////////////////////this c++ file contains code provided by/////////////
 //@author: Timo
 //reference: Stackoverflow
-//URL:https://stackoverflow.com/questions/60580444/cartesian-product-for-multiple-sets-at-compile-time/60585120#60585120
+//URL: https://stackoverflow.com/a/60581028/7091177
 ////////////////////////////////////////////////////////////////////////
 
 template <typename It, typename T>

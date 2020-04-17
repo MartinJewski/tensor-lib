@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.slice.dir/slice.cpp.o  -o act.slice 

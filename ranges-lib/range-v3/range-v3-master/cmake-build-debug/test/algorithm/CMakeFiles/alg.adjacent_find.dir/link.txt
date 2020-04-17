@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.adjacent_find.dir/adjacent_find.cpp.o  -o alg.adjacent_find 

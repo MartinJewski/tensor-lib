@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.stable_sort.dir/stable_sort.cpp.o  -o alg.stable_sort 

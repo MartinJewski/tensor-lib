@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.push_heap.dir/push_heap.cpp.o  -o alg.push_heap 

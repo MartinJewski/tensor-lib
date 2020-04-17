@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.view.dir/view.cpp.o  -o view.view 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/bug1335.dir/bug1335.cpp.o  -o bug1335 

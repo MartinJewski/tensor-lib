@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.for_each.dir/for_each.cpp.o  -o alg.for_each 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.search_n.dir/search_n.cpp.o  -o alg.search_n 

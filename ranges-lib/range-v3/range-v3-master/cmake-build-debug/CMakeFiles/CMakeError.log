@@ -1,0 +1,203 @@
+Performing C++ SOURCE FILE Test RANGES_HAS_FMACRO_BACKTRACE_LIMIT failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0b8e5/fast && /usr/bin/make -f CMakeFiles/cmTC_0b8e5.dir/build.make CMakeFiles/cmTC_0b8e5.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0b8e5.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_FMACRO_BACKTRACE_LIMIT   -fmacro-backtrace-limit=1 -o CMakeFiles/cmTC_0b8e5.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-fmacro-backtrace-limit=1'; did you mean '-ftemplate-backtrace-limit='?
+make[1]: *** [CMakeFiles/cmTC_0b8e5.dir/build.make:66: CMakeFiles/cmTC_0b8e5.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_0b8e5/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGE_V3_ALIGNED_NEW_PROBE failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_344cb/fast && /usr/bin/make -f CMakeFiles/cmTC_344cb.dir/build.make CMakeFiles/cmTC_344cb.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_344cb.dir/src.cxx.o
+/usr/bin/c++    -DRANGE_V3_ALIGNED_NEW_PROBE -std=c++14   -o CMakeFiles/cmTC_344cb.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:4:20: error: ‘__STDCPP_DEFAULT_NEW_ALIGNMENT__’ was not declared in this scope
+     struct alignas(__STDCPP_DEFAULT_NEW_ALIGNMENT__ * 4) S {};
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:4:5: error: expected primary-expression before ‘struct’
+     struct alignas(__STDCPP_DEFAULT_NEW_ALIGNMENT__ * 4) S {};
+     ^~~~~~
+/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:5:34: error: ‘S’ was not declared in this scope
+     (void) ::operator new(sizeof(S), static_cast<std::align_val_t>(alignof(S)));
+                                  ^
+/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:5:55: error: ‘align_val_t’ in namespace ‘std’ does not name a type
+     (void) ::operator new(sizeof(S), static_cast<std::align_val_t>(alignof(S)));
+                                                       ^~~~~~~~~~~
+/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:5:50: note: suggested alternative: ‘alignment_of’
+     (void) ::operator new(sizeof(S), static_cast<std::align_val_t>(alignof(S)));
+                                                  ^~~
+                                                  alignment_of
+make[1]: *** [CMakeFiles/cmTC_344cb.dir/build.make:66: CMakeFiles/cmTC_344cb.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_344cb/fast] Error 2
+
+
+Source file was:
+#include <new>
+
+int main() {
+    struct alignas(__STDCPP_DEFAULT_NEW_ALIGNMENT__ * 4) S {};
+    (void) ::operator new(sizeof(S), static_cast<std::align_val_t>(alignof(S)));
+}
+
+Performing C++ SOURCE FILE Test RANGES_HAS_WEVERYTHING failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ed2d6/fast && /usr/bin/make -f CMakeFiles/cmTC_ed2d6.dir/build.make CMakeFiles/cmTC_ed2d6.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ed2d6.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WEVERYTHING   -Weverything -o CMakeFiles/cmTC_ed2d6.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Weverything'
+make[1]: *** [CMakeFiles/cmTC_ed2d6.dir/build.make:66: CMakeFiles/cmTC_ed2d6.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ed2d6/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_CXX98_COMPAT failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_48364/fast && /usr/bin/make -f CMakeFiles/cmTC_48364.dir/build.make CMakeFiles/cmTC_48364.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_48364.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_CXX98_COMPAT   -Wc++98-compat -o CMakeFiles/cmTC_48364.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wc++98-compat'; did you mean '-Wc++-compat'?
+make[1]: *** [CMakeFiles/cmTC_48364.dir/build.make:66: CMakeFiles/cmTC_48364.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_48364/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_CXX98_COMPAT_PEDANTIC failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d9092/fast && /usr/bin/make -f CMakeFiles/cmTC_d9092.dir/build.make CMakeFiles/cmTC_d9092.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d9092.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_CXX98_COMPAT_PEDANTIC   -Wc++98-compat-pedantic -o CMakeFiles/cmTC_d9092.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wc++98-compat-pedantic'; did you mean '-Wc++-compat'?
+make[1]: *** [CMakeFiles/cmTC_d9092.dir/build.make:66: CMakeFiles/cmTC_d9092.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d9092/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_WEAK_VTABLES failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f9c3a/fast && /usr/bin/make -f CMakeFiles/cmTC_f9c3a.dir/build.make CMakeFiles/cmTC_f9c3a.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f9c3a.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_WEAK_VTABLES   -Wweak-vtables -o CMakeFiles/cmTC_f9c3a.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wweak-vtables'; did you mean '-fjump-tables'?
+make[1]: *** [CMakeFiles/cmTC_f9c3a.dir/build.make:66: CMakeFiles/cmTC_f9c3a.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_f9c3a/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_MISSING_PROTOTYPES failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_56d08/fast && /usr/bin/make -f CMakeFiles/cmTC_56d08.dir/build.make CMakeFiles/cmTC_56d08.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_56d08.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_MISSING_PROTOTYPES   -Wmissing-prototypes -o CMakeFiles/cmTC_56d08.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++
+Linking CXX executable cmTC_56d08
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56d08.dir/link.txt --verbose=1
+/usr/bin/c++   -DRANGES_HAS_WNO_MISSING_PROTOTYPES    CMakeFiles/cmTC_56d08.dir/src.cxx.o  -o cmTC_56d08 
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_MISSING_VARIABLE_DECLARATIONS failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_04972/fast && /usr/bin/make -f CMakeFiles/cmTC_04972.dir/build.make CMakeFiles/cmTC_04972.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_04972.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_MISSING_VARIABLE_DECLARATIONS   -Wmissing-variable-declarations -o CMakeFiles/cmTC_04972.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wmissing-variable-declarations'; did you mean '-Wmissing-declarations'?
+make[1]: *** [CMakeFiles/cmTC_04972.dir/build.make:66: CMakeFiles/cmTC_04972.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_04972/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_DOCUMENTATION failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cf970/fast && /usr/bin/make -f CMakeFiles/cmTC_cf970.dir/build.make CMakeFiles/cmTC_cf970.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cf970.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_DOCUMENTATION   -Wdocumentation -o CMakeFiles/cmTC_cf970.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wdocumentation'
+make[1]: *** [CMakeFiles/cmTC_cf970.dir/build.make:66: CMakeFiles/cmTC_cf970.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_cf970/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_DOCUMENTATION_UNKNOWN_COMMAND failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7895c/fast && /usr/bin/make -f CMakeFiles/cmTC_7895c.dir/build.make CMakeFiles/cmTC_7895c.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7895c.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_DOCUMENTATION_UNKNOWN_COMMAND   -Wdocumentation-unknown-command -o CMakeFiles/cmTC_7895c.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wdocumentation-unknown-command'
+make[1]: *** [CMakeFiles/cmTC_7895c.dir/build.make:66: CMakeFiles/cmTC_7895c.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7895c/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_SHORTEN_64_TO_32 failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_951d0/fast && /usr/bin/make -f CMakeFiles/cmTC_951d0.dir/build.make CMakeFiles/cmTC_951d0.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_951d0.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_SHORTEN_64_TO_32   -Wshorten-64-to-32 -o CMakeFiles/cmTC_951d0.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wshorten-64-to-32'
+make[1]: *** [CMakeFiles/cmTC_951d0.dir/build.make:66: CMakeFiles/cmTC_951d0.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_951d0/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test RANGES_HAS_WNO_GLOBAL_CONSTRUCTORS failed with the following output:
+Change Dir: /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_07763/fast && /usr/bin/make -f CMakeFiles/cmTC_07763.dir/build.make CMakeFiles/cmTC_07763.dir/build
+make[1]: Entering directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_07763.dir/src.cxx.o
+/usr/bin/c++    -DRANGES_HAS_WNO_GLOBAL_CONSTRUCTORS   -Wglobal-constructors -o CMakeFiles/cmTC_07763.dir/src.cxx.o -c /home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wglobal-constructors'; did you mean '-felide-constructors'?
+make[1]: *** [CMakeFiles/cmTC_07763.dir/build.make:66: CMakeFiles/cmTC_07763.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_07763/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.adaptor.dir/adaptor.cpp.o  -o view.adaptor 

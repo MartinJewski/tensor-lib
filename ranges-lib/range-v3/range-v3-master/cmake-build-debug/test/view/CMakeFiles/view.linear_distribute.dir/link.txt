@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.linear_distribute.dir/linear_distribute.cpp.o  -o view.linear_distribute 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.sort.dir/sort.cpp.o  -o alg.sort 

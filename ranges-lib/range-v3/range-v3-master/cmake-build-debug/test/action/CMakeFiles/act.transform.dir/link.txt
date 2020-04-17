@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.transform.dir/transform.cpp.o  -o act.transform 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.min.dir/min.cpp.o  -o alg.min 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/counted_insertion_sort.dir/counted_insertion_sort.cpp.o  -o counted_insertion_sort 

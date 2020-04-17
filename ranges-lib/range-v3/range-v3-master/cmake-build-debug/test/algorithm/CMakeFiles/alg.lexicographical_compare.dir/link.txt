@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.lexicographical_compare.dir/lexicographical_compare.cpp.o  -o alg.lexicographical_compare 

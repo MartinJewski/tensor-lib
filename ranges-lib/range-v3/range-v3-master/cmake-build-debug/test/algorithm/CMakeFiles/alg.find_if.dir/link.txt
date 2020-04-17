@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.find_if.dir/find_if.cpp.o  -o alg.find_if 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.all_of.dir/all_of.cpp.o  -o alg.all_of 

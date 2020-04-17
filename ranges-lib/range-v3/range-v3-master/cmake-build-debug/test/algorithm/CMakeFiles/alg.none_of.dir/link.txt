@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.none_of.dir/none_of.cpp.o  -o alg.none_of 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.facade.dir/facade.cpp.o  -o view.facade 

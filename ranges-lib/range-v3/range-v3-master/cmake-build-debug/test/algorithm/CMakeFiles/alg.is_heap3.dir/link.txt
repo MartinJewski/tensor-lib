@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.is_heap3.dir/is_heap3.cpp.o  -o alg.is_heap3 

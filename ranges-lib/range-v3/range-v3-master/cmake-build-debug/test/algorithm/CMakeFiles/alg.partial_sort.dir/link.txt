@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.partial_sort.dir/partial_sort.cpp.o  -o alg.partial_sort 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.drop_last.dir/drop_last.cpp.o  -o view.drop_last 

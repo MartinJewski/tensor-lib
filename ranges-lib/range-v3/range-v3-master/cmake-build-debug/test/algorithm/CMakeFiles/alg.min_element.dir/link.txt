@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.min_element.dir/min_element.cpp.o  -o alg.min_element 

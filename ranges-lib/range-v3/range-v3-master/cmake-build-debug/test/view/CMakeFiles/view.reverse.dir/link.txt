@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.reverse.dir/reverse.cpp.o  -o view.reverse 

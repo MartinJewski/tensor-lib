@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/range.index.dir/index.cpp.o  -o range.index 

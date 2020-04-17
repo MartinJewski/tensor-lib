@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.reverse_copy.dir/reverse_copy.cpp.o  -o alg.reverse_copy 

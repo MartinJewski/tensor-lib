@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.copy.dir/copy.cpp.o  -o alg.copy 

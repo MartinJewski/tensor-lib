@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.push_back.dir/push_back.cpp.o  -o act.push_back 

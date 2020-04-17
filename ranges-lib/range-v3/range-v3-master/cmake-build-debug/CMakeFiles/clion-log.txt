@@ -1,0 +1,28 @@
+/home/martin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.10/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/martin/CLionProjects/range-v3/range-v3-master
+CMake Error at CMakeLists.txt:28 (add_library):
+  add_library INTERFACE library requires no source arguments.
+
+
+CMake Error at CMakeLists.txt:29 (target_include_directories):
+  Cannot specify include directories for target "concepts" which is not built
+  by this project.
+
+
+CMake Error at CMakeLists.txt:30 (target_include_directories):
+  Cannot specify include directories for target "concepts" which is not built
+  by this project.
+
+
+CMake Error at CMakeLists.txt:31 (target_compile_options):
+  Cannot specify compile options for target "concepts" which is not built by
+  this project.
+
+
+CMake Error at CMakeLists.txt:32 (target_link_libraries):
+  Cannot specify link libraries for target "concepts" which is not built by
+  this project.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/martin/CLionProjects/range-v3/range-v3-master/cmake-build-debug/CMakeFiles/CMakeError.log".

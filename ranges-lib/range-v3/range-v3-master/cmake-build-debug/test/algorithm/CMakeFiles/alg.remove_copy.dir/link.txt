@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.remove_copy.dir/remove_copy.cpp.o  -o alg.remove_copy 

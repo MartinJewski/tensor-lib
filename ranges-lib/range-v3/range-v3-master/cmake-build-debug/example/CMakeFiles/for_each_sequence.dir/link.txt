@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/for_each_sequence.dir/for_each_sequence.cpp.o  -o for_each_sequence 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.generate.dir/generate.cpp.o  -o view.generate 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.is_heap_until2.dir/is_heap_until2.cpp.o  -o alg.is_heap_until2 

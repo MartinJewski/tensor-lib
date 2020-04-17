@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.tail.dir/tail.cpp.o  -o view.tail 

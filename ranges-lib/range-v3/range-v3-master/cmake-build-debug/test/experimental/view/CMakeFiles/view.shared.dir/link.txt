@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.shared.dir/shared.cpp.o  -o view.shared 

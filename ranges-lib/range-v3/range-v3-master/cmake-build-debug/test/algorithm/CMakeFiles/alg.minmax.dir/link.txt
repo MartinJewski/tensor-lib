@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.minmax.dir/minmax.cpp.o  -o alg.minmax 

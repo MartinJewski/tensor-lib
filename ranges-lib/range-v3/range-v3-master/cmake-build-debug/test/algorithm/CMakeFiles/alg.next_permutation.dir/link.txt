@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.next_permutation.dir/next_permutation.cpp.o  -o alg.next_permutation 

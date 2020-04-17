@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.sort_n_with_buffer.dir/sort_n_with_buffer.cpp.o  -o alg.sort_n_with_buffer 

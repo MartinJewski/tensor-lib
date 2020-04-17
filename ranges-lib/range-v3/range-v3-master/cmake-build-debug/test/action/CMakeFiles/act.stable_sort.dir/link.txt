@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.stable_sort.dir/stable_sort.cpp.o  -o act.stable_sort 

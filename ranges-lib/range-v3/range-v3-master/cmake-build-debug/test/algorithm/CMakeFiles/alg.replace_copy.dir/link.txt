@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.replace_copy.dir/replace_copy.cpp.o  -o alg.replace_copy 

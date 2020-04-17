@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.replace.dir/replace.cpp.o  -o alg.replace 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.counted.dir/counted.cpp.o  -o view.counted 

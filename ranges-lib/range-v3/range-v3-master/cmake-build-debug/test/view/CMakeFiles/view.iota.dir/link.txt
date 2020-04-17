@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.iota.dir/iota.cpp.o  -o view.iota 

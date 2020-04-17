@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/num.inner_product.dir/inner_product.cpp.o  -o num.inner_product 

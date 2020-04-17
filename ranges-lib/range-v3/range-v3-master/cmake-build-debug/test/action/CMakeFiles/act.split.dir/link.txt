@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.split.dir/split.cpp.o  -o act.split 

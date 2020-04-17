@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.span.dir/span.cpp.o  -o view.span 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/view.stride.dir/stride.cpp.o  -o view.stride 

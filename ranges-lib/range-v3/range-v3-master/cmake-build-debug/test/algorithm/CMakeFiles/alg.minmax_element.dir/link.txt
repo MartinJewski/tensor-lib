@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.minmax_element.dir/minmax_element.cpp.o  -o alg.minmax_element 

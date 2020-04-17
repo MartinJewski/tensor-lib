@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.adjacent_remove_if.dir/adjacent_remove_if.cpp.o  -o alg.adjacent_remove_if 

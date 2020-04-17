@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.take.dir/take.cpp.o  -o act.take 

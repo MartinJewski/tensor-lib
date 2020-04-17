@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/act.adjacent_remove_if.dir/adjacent_remove_if.cpp.o  -o act.adjacent_remove_if 

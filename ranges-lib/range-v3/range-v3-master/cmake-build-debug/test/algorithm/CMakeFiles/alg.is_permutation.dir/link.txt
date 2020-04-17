@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.is_permutation.dir/is_permutation.cpp.o  -o alg.is_permutation 

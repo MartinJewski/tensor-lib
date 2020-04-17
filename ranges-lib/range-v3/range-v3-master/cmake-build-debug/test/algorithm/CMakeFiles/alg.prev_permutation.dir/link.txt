@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/alg.prev_permutation.dir/prev_permutation.cpp.o  -o alg.prev_permutation 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/multiple.dir/multiple1.cpp.o CMakeFiles/multiple.dir/multiple2.cpp.o  -o multiple 
