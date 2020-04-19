@@ -152,12 +152,12 @@ constexpr auto add_scalar(Scalar scalar, tensorBase<T2, ArgsT2> tensor, std::ind
  */
 template<std::size_t t1_skipPos, std::size_t t2_skipPos, typename T1, typename ArgsT1, typename T2, typename ArgsT2>
 constexpr auto contraction(tensorBase<T1, ArgsT1> tensor1, tensorBase<T2, ArgsT2> tensor2){
-/*
+
     using skip_type_t1 = tuple_type_list<ArgsT1>::template type<t1_skipPos>;
     using skip_type_t2 = tuple_type_list<ArgsT2>::template type<t2_skipPos>;
     static_assert((std::is_same<skip_type_t1, skip_type_t2>::value == false), "Cannot contract over the same index level."
                                                                              "E.g contraction over two up_t indices is not possible!");
-*/
+
     if constexpr ((tensorBase<T1, ArgsT1>::indices_amount == 1) && (tensorBase<T2, ArgsT2>::indices_amount == 1)) {
 
         auto l = contraction_1D(tensor1, tensor2, std::make_index_sequence<dim_length_n>{});

@@ -109,12 +109,12 @@ constexpr auto contraction_ct_1D(std::index_sequence<is...>){
  */
 template<std::size_t t1_skipPos, std::size_t t2_skipPos, tensorBase T1, tensorBase T2>
 constexpr auto contraction(){
-    /*
+
     using skip_type_t1 = tuple_type_list<typename decltype(T1)::tuple_indices>::template type<t1_skipPos>;
     using skip_type_t2 = tuple_type_list<typename decltype(T2)::tuple_indices>::template type<t2_skipPos>;
     static_assert((std::is_same<skip_type_t1, skip_type_t2>::value == false), "Cannot contract over the same index level."
                                                                              "E.g contraction over two up_t indices is not possible!");
-     */
+
 
     if constexpr ((T1.indices_amount == 1) && (T2.indices_amount == 1)){
         //1D contraction results in a value
