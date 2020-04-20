@@ -13,7 +13,7 @@
 #include "tensor_specification.h"
 #include <array>
 #include "positive_natural_compiletime_pow.h"
-#include "cartesian_product.h"
+#include "cartesian_product_adv.h"
 #include <type_traits>
 
 #include <range/v3/view/all.hpp>

@@ -87,6 +87,4 @@ constexpr auto cartesian_product_adv()
     return array_to_tuple(products, std::make_index_sequence<power(range, sets)>{});
 }
 
-//https://stackoverflow.com/questions/60580444/cartesian-product-for-multiple-sets-at-compile-time/60585120#60585120
-
 #endif //UNTITELED1_CARTESIAN_PRODUCT_ADV_H

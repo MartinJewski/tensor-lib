@@ -2786,11 +2786,7 @@ tuple
 tuple_show.h
 ../tensor-lib/tensor-builder-utilities-ranges/tuple_show.h
 
-../tensor-lib/tensor-builder-utilities/cartesian_product.h
-tuple
--
-tuple_show.h
-../tensor-lib/tensor-builder-utilities/tuple_show.h
+../tensor-lib/tensor-builder-utilities/cartesian_product_adv.h
 
 ../tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h
 tuple
@@ -2808,6 +2804,26 @@ stdlib.h
 time.h
 -
 random
+-
+
+../tensor-lib/tensor-builder-utilities/save_recreated_index_sequence.h
+recreate_for_index_sequence.h
+../tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h
+range/v3/view/for_each.hpp
+-
+range/v3/algorithm/for_each.hpp
+-
+range/v3/view/repeat_n.hpp
+-
+tuple_show.h
+../tensor-lib/tensor-builder-utilities/tuple_show.h
+range/v3/range/conversion.hpp
+-
+range/v3/view/indices.hpp
+-
+range/v3/view/common.hpp
+-
+vector
 -
 
 ../tensor-lib/tensor-builder-utilities/tuple_helpers.h
@@ -2857,8 +2873,8 @@ array
 -
 positive_natural_compiletime_pow.h
 ../tensor-lib/tensor-definition/positive_natural_compiletime_pow.h
-cartesian_product.h
-../tensor-lib/tensor-definition/cartesian_product.h
+cartesian_product_adv.h
+../tensor-lib/tensor-definition/cartesian_product_adv.h
 type_traits
 -
 range/v3/view/all.hpp
@@ -3007,8 +3023,6 @@ tensor-lib/tensor-definition/tensor_specification.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h
 tensor-lib/tensor-operations/contraction_ct.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction_ct.h
-tensor-lib/tensor-operations/trace_ct.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h
 tensor-lib/tensor-operations/trace_contraction_ct.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction_ct.h
 tensor-lib/tensor-operations/trace_contraction.h
@@ -3017,12 +3031,8 @@ tensor-lib/tensor-operations/reorder_ct.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h
 tensor-lib/tensor-operations/contraction.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h
-tensor-lib/tensor-operations/trace.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h
 tensor-lib/tensor-operations/reorder.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h
-tensor-lib/tensor-operations-ranges/trace_ranges.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_ranges.h
 tensor-lib/tensor-operations-ranges/reorder_ranges.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/reorder_ranges.h
 tensor-lib/tensor-operations-ranges/contraction_ranges.h
@@ -3065,8 +3075,6 @@ speed_test_runtime_contraction.h
 /home/martin/CLionProjects/tensor-library-v1/speed_test_runtime_contraction.h
 speed_test_ranges_contraction.h
 /home/martin/CLionProjects/tensor-library-v1/speed_test_ranges_contraction.h
-speed_test_tensors.h
-/home/martin/CLionProjects/tensor-library-v1/speed_test_tensors.h
 speed_test_ranges_reorder.h
 /home/martin/CLionProjects/tensor-library-v1/speed_test_ranges_reorder.h
 speed_test_runtime_reorder.h
@@ -3077,8 +3085,8 @@ speed_test_runtime_trace.h
 /home/martin/CLionProjects/tensor-library-v1/speed_test_runtime_trace.h
 speed_test_run.h
 /home/martin/CLionProjects/tensor-library-v1/speed_test_run.h
-array
--
+speed_test_tensors.h
+/home/martin/CLionProjects/tensor-library-v1/speed_test_tensors.h
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h
 range/v3/view/indices.hpp
@@ -3179,8 +3187,8 @@ array
 -
 positive_natural_compiletime_pow.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/positive_natural_compiletime_pow.h
-cartesian_product.h
-/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/cartesian_product.h
+cartesian_product_adv.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/cartesian_product_adv.h
 type_traits
 -
 range/v3/view/all.hpp
@@ -3211,6 +3219,8 @@ recreate_for_index_sequence.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/recreate_for_index_sequence.h
 contraction.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/contraction.h
+range/v3/numeric/accumulate.hpp
+-
 
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/reorder_ranges.h
 reorder.h
@@ -3301,6 +3311,8 @@ type_traits
 -
 tuple_type_list.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_type_list.h
+save_recreated_index_sequence.h
+/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/save_recreated_index_sequence.h
 tuple_helpers.h
 /home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/tuple_helpers.h
 

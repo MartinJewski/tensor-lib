@@ -19,6 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   ".././tensor-lib/tensor-definition-ranges"
   "../tensor-lib/math"
   "../ranges-lib-update/range-v3/range-v3-master/include"
+  "/home/martin/CLionProjects/ET_Tensor_Library"
   )
 
 # Targets to which this target links.

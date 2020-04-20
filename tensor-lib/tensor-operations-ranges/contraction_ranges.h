@@ -15,6 +15,7 @@
 #include <range/v3/view/transform.hpp>
 #include "recreate_for_index_sequence.h"
 #include "contraction.h"
+#include <range/v3/numeric/accumulate.hpp>
 
 /**
  * Calculates the contraction between two given tensors

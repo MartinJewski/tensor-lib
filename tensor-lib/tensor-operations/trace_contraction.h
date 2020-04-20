@@ -47,12 +47,12 @@ constexpr auto calculate_value_trace(tensorBase<T, Args> T1, SRIST1 sris1, std::
 template<std::size_t pos1, std::size_t pos2, typename T, typename Args, std::size_t ...is>
 constexpr auto trace_contraction_i(tensorBase<T, Args> T1, std::index_sequence<is...>){
 
+
     static_assert((T1.indices_amount > 1), "You need at least 2 indices!");
     using skip_type_t1 = tuple_type_list<typename decltype(T1)::tuple_indices>::template type<pos1>;
     using skip_type_t2 = tuple_type_list<typename decltype(T1)::tuple_indices>::template type<pos2>;
     static_assert((std::is_same<skip_type_t1, skip_type_t2>::value == false), "Cannot contract over the same index level."
                                                                               "E.g contraction over two up_t indices is not possible!");
-
 
     if constexpr (T1.indices_amount == 2){
         return trace(T1);
