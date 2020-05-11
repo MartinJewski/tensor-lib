@@ -8,200 +8,192 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug"/>
+				<Option working_dir="/home/martin/CLionProjects/tensor-lib/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug"/>
+				<Option working_dir="/home/martin/CLionProjects/tensor-lib/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untiteled1">
-				<Option output="/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/untiteled1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug"/>
+				<Option output="/home/martin/CLionProjects/tensor-lib/cmake-build-debug/untiteled1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/martin/CLionProjects/tensor-lib/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities-ranges"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-concepts"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations-ranges"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition-ranges"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/math"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/ranges-lib-update/range-v3/range-v3-master/include"/>
-					<Add directory="/home/martin/CLionProjects/ET_Tensor_Library"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-linux-gnu"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/include"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-builder-utilities"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-builder-utilities-ranges"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-definition"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-operations"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-concepts"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-operations-ranges"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-definition-ranges"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/tensor-lib/math"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/ranges-lib-update/range-v3/range-v3-master/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 untiteled1"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 untiteled1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untiteled1/fast">
-				<Option output="/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/untiteled1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug"/>
+				<Option output="/home/martin/CLionProjects/tensor-lib/cmake-build-debug/untiteled1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/martin/CLionProjects/tensor-lib/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-builder-utilities-ranges"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-concepts"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-operations-ranges"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/./tensor-lib/tensor-definition-ranges"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/math"/>
-					<Add directory="/home/martin/CLionProjects/tensor-library-v1/ranges-lib-update/range-v3/range-v3-master/include"/>
-					<Add directory="/home/martin/CLionProjects/ET_Tensor_Library"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0/x86_64-linux-gnu"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/../../../../include/c++/9.2.0/backward"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/include"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-builder-utilities"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-builder-utilities-ranges"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-definition"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-operations"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-concepts"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-operations-ranges"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/./tensor-lib/tensor-definition-ranges"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/tensor-lib/math"/>
+					<Add directory="/home/martin/CLionProjects/tensor-lib/ranges-lib-update/range-v3/range-v3-master/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/lib/gcc/x86_64-linux-gnu/9.2.0/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 untiteled1/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 untiteled1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug"/>
+				<Option working_dir="/home/martin/CLionProjects/tensor-lib/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/martin/CLionProjects/tensor-lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/main.cpp">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/main.cpp">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/math/math_utilities.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/math/math_utilities.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities-ranges/cartesian_product_ranges_to_vec.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/cartesian_product.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/cartesian_product_adv.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/cartesian_product_adv.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/make_index_sequence_from.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/make_index_sequence_from.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/pos_nd_to_1d.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/positive_natural_compiletime_pow.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/random_number.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/random_number.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/recreate_for_index_sequence.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/recreate_index_tuple.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/recreate_index_tuple.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_helpers.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/tuple_helpers.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_show.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/tuple_show.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_split.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/tuple_split.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_split_from.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/tuple_split_from.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-builder-utilities/tuple_type_list.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-builder-utilities/tuple_type_list.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-concepts/tensor-concepts.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-concepts/tensor-concepts.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition-ranges/tensor_range.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-definition-ranges/tensor_range.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-definition/tensor.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-definition/tensor_specification.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-definition/tensor_specification.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations-ranges/trace_contraction_ranges.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations-ranges/trace_ranges.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations-ranges/trace_ranges.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations/contraction.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/contraction_ct.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations/contraction_ct.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations/reorder.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/reorder_ct.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations/reorder_ct.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations/trace.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations/trace_contraction.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_contraction_ct.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations/trace_contraction_ct.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/tensor-lib/tensor-operations/trace_ct.h">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/tensor-lib/tensor-operations/trace_ct.h">
 			<Option target="untiteled1"/>
 		</Unit>
-		<Unit filename="/home/martin/CLionProjects/tensor-library-v1/CMakeLists.txt">
+		<Unit filename="/home/martin/CLionProjects/tensor-lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

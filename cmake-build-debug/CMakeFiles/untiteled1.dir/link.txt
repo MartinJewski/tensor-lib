@@ -1,1 +1,1 @@
-/usr/local/bin/g++  -g   CMakeFiles/untiteled1.dir/main.cpp.o  -o untiteled1 
+/usr/bin/c++  -g   CMakeFiles/untiteled1.dir/main.cpp.o  -o untiteled1 

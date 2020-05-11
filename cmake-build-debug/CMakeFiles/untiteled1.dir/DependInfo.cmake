@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/martin/CLionProjects/tensor-library-v1/main.cpp" "/home/martin/CLionProjects/tensor-library-v1/cmake-build-debug/CMakeFiles/untiteled1.dir/main.cpp.o"
+  "/home/martin/CLionProjects/tensor-lib/main.cpp" "/home/martin/CLionProjects/tensor-lib/cmake-build-debug/CMakeFiles/untiteled1.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,7 +19,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   ".././tensor-lib/tensor-definition-ranges"
   "../tensor-lib/math"
   "../ranges-lib-update/range-v3/range-v3-master/include"
-  "/home/martin/CLionProjects/ET_Tensor_Library"
   )
 
 # Targets to which this target links.
