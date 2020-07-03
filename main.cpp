@@ -147,5 +147,24 @@ int main() {
 
     auto tensorR3_rt = trace_contraction_ranges<0,1>(tensorR1);
 
+
+    constexpr std::array<std::tuple<int,int,int,int>, 2> arr{std::tuple(1,2,3,4)};
+
+    constexpr auto ct_sris_tensor2 = save_recreated_index_sequence<0, 3, 0, 4, 3> (arr);
+    //decltype(ct_sris_tensor2)::foo = 1
+    std::cout << std::get<0>(std::get<0>(ct_sris_tensor2)) << std::endl;
+    std::cout << std::get<1>(std::get<0>(ct_sris_tensor2)) << std::endl;
+    std::cout << std::get<2>(std::get<0>(ct_sris_tensor2)) << std::endl;
+
+    std::cout << " "<< std::endl;
+
+    //start value, steps
+    constexpr auto ct_sris_tensor3 = save_recreated_index_sequence<3, 1, 0, 2, 3> (arr);
+    //decltype(ct_sris_tensor2)::foo = 1
+    std::cout << std::get<0>(std::get<0>(ct_sris_tensor3)) << std::endl;
+    std::cout << std::get<1>(std::get<0>(ct_sris_tensor3)) << std::endl;
+    std::cout << std::get<2>(std::get<0>(ct_sris_tensor3)) << std::endl;
+
+
     return 0;
 }
